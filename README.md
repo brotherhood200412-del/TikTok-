@@ -23,9 +23,11 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | Datei | Inhalt |
 |---|---|
 | `videos/07_one_year_salary.mp4` | Ein Jahr, gleiches Gehalt: links ist das Geld jeden Monat weg, rechts füllt sich das Glas. Schluss: „He didn't earn more. He kept more.“ (63,5 s) |
+| `videos/08_alarm_6am.mp4` | Alarm 6:00: Beide starten mit 110 kg. Links Snooze, Snacks und Handy (114 kg), rechts Training und gesundes Essen (82 kg). Schluss: „Same 24 hours. Different choices.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
+python3 generator/wecker_video.py skripte/zimmer/08_alarm_6am.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 

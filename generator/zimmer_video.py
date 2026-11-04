@@ -307,7 +307,7 @@ SHELF = (300, 470, 985)
 DOOR = (14, 112)
 
 
-def build_base(month):
+def build_base(month, door=True):
     img = Image.new("RGBA", (W, H))
     arr = np.zeros((H, W, 3), np.float32)
     yy = np.linspace(0, 1, H)[:, None]
@@ -349,7 +349,8 @@ def build_base(month):
         # Regal
         d.rectangle((x0 + SHELF[0], SHELF[2], x0 + SHELF[1], SHELF[2] + 10), fill=WOOD, outline=OUT, width=3)
         # Tür-Rahmen
-        d.rectangle((x0 + DOOR[0] - 6, FL - 304, x0 + DOOR[1] + 6, FL), fill=(48, 44, 52))
+        if door:
+            d.rectangle((x0 + DOOR[0] - 6, FL - 304, x0 + DOOR[1] + 6, FL), fill=(48, 44, 52))
         # Boden + Leiste
         d.rectangle((x0, FL - 10, x0 + RW, FL), fill=(58, 46, 40))
         # Lampe

@@ -1,0 +1,19 @@
+{
+  "title": "Alarm 6:00. Same 24 hours.",
+  "caption": "Same alarm. Same 24 hours. Different choices. Which one are you? ⏰ #discipline #mindset #fitness #weightloss #motivation #habits #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME ALARM · 6:00",
+  "start_weight": 110,
+  "goal_weight": 82,
+  "punch1": "Same 24 hours.",
+  "punch2": "Different choices.",
+  "months": [
+    {"month": "JAN", "left": 110, "right": 107, "workout": "jacks"},
+    {"month": "MAR", "left": 111, "right": 102, "workout": "dumbbell", "zoom": ["L", 1.0, 3.6]},
+    {"month": "MAY", "left": 111, "right": 98,  "workout": "run",      "zoom": ["R", 2.1, 4.9]},
+    {"month": "JUL", "left": 112, "right": 93,  "workout": "jacks",    "zoom": ["L", 4.9, 7.0]},
+    {"month": "SEP", "left": 113, "right": 89,  "workout": "dumbbell", "zoom": ["R", 2.1, 4.9]},
+    {"month": "NOV", "left": 113, "right": 85,  "workout": "run",      "zoom": ["L", 7.1, 8.9]},
+    {"month": "DEC", "left": 114, "right": 82,  "workout": "jacks",    "dur": 11.0}
+  ]
+}
