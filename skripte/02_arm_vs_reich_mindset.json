@@ -1,0 +1,78 @@
+{
+  "title": "Arm vs. Reich: Der Unterschied ist im Kopf",
+  "tag": "MINDSET  •  GELD",
+  "theme": "green",
+  "caption": "Dein Kontostand ist ein Spiegel deines Mindsets 🧠💸 Speicher dir das Video! #mindset #geld #reichdenken #motivation #erfolg #finanzen #fyp",
+  "scenes": [
+    {
+      "type": "hook",
+      "dur": 4.0,
+      "text": "Dein Kontostand ist ein *Spiegel deines !Kopfes.",
+      "sub": "Hör genau zu."
+    },
+    {
+      "type": "versus",
+      "dur": 6.0,
+      "label": "GEDANKE 1",
+      "bad": "Das kann ich mir nicht leisten.",
+      "good": "Wie kann ich mir das leisten?"
+    },
+    {
+      "type": "text",
+      "dur": 5.0,
+      "text": "Die erste Frage *schließt dein Gehirn ab.",
+      "sub": "Die zweite zwingt es, Lösungen zu finden."
+    },
+    {
+      "type": "versus",
+      "dur": 6.0,
+      "label": "GEDANKE 2",
+      "bad": "Ich tausche Zeit gegen Geld.",
+      "good": "Ich tausche Wert gegen Geld."
+    },
+    {
+      "type": "versus",
+      "dur": 6.0,
+      "label": "GEDANKE 3",
+      "bad": "Geld ist schlecht.",
+      "good": "Geld ist ein Werkzeug."
+    },
+    {
+      "type": "versus",
+      "dur": 6.0,
+      "label": "GEDANKE 4",
+      "bad": "Ich spare, was übrig bleibt.",
+      "good": "Ich gebe aus, was nach dem Sparen übrig bleibt."
+    },
+    {
+      "type": "versus",
+      "dur": 6.0,
+      "label": "GEDANKE 5",
+      "bad": "Investieren ist zu riskant.",
+      "good": "Nicht investieren ist das größte Risiko."
+    },
+    {
+      "type": "counter",
+      "dur": 6.5,
+      "label": "INFLATION",
+      "pre": "10.000 € auf dem Konto – nach 20 Jahren bei 3 % Inflation:",
+      "from": 10000,
+      "to": 5537,
+      "suffix": " €",
+      "sub": "So viel Kaufkraft bleibt übrig. Nichtstun kostet.",
+      "negative": true
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "text": "Du musst nicht mehr +verdienen.",
+      "sub": "Du musst zuerst anders denken."
+    },
+    {
+      "type": "cta",
+      "dur": 10.5,
+      "text": "Welcher Gedanke hat dich *getroffen?",
+      "sub": "Kommentier die Nummer & folge für tägliches Geld-Mindset."
+    }
+  ]
+}

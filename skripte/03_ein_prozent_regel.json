@@ -1,0 +1,86 @@
+{
+  "title": "Die 1-%-Regel, die dein Leben verändert",
+  "tag": "DISZIPLIN  •  GELD",
+  "theme": "purple",
+  "caption": "1 % besser jeden Tag = 37x besser in einem Jahr 📈 Fang heute an. #mindset #disziplin #geld #gewohnheiten #motivation #selbstverbesserung #fyp",
+  "scenes": [
+    {
+      "type": "hook",
+      "dur": 4.0,
+      "text": "Diese *1-%-Regel macht dich !37x besser.",
+      "sub": "Mathematisch bewiesen."
+    },
+    {
+      "type": "text",
+      "dur": 5.0,
+      "text": "Jeden Tag nur *1 % besser werden.",
+      "sub": "Klingt nach nichts, oder?"
+    },
+    {
+      "type": "counter",
+      "dur": 6.5,
+      "label": "1,01 HOCH 365",
+      "pre": "Nach einem Jahr bist du ...",
+      "from": 1,
+      "to": 37.78,
+      "decimals": 2,
+      "suffix": "x",
+      "sub": "... fast 38-mal besser als heute."
+    },
+    {
+      "type": "counter",
+      "dur": 6.0,
+      "label": "0,99 HOCH 365",
+      "pre": "Jeden Tag 1 % schlechter:",
+      "from": 1,
+      "to": 0.03,
+      "decimals": 2,
+      "suffix": "x",
+      "sub": "Von dir bleibt fast nichts übrig.",
+      "negative": true
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "text": "Mit Geld funktioniert es !genauso.",
+      "sub": "Kleine Beträge. Jeden Tag. Über Jahre."
+    },
+    {
+      "type": "counter",
+      "dur": 6.5,
+      "label": "5 € AM TAG",
+      "pre": "5 € täglich investiert, 25 Jahre, 8 %:",
+      "from": 0,
+      "to": 145713,
+      "suffix": " €",
+      "sub": "Das ist ein Kaffee to go am Tag."
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "label": "SCHRITT 1",
+      "text": "Wähle *eine Gewohnheit.",
+      "sub": "10 Seiten lesen. 5 € sparen. 20 Minuten Sport."
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "label": "SCHRITT 2",
+      "text": "Mach sie *so klein, dass du nicht scheitern kannst.",
+      "sub": "Motivation ist ein Gefühl. System ist eine Entscheidung."
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "label": "SCHRITT 3",
+      "text": "Brich die Kette !niemals zweimal.",
+      "sub": "Einmal auslassen ist ein Fehler. Zweimal ist eine neue Gewohnheit."
+    },
+    {
+      "type": "cta",
+      "dur": 11.5,
+      "text": "Welche *1 % startest du heute?",
+      "sub": "Schreib es in die Kommentare – und folge, damit du dranbleibst."
+    }
+  ]
+}

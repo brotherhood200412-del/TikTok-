@@ -1,0 +1,77 @@
+{
+  "title": "5 Geld-Regeln, die Reiche niemals brechen",
+  "tag": "GELD  •  MINDSET",
+  "theme": "gold",
+  "caption": "5 Geld-Regeln, die Reiche NIE brechen 💰 Welche befolgst du schon? #geld #mindset #finanzen #reichwerden #sparen #investieren #fyp",
+  "scenes": [
+    {
+      "type": "hook",
+      "dur": 4.0,
+      "text": "Reiche brechen diese *5 *Regeln *NIE.",
+      "sub": "Bleib bis Regel 5."
+    },
+    {
+      "type": "text",
+      "dur": 4.5,
+      "text": "Und genau deshalb bleibt die !Mittelschicht !pleite.",
+      "sub": "Egal wie viel sie verdient."
+    },
+    {
+      "type": "text",
+      "dur": 6.5,
+      "label": "REGEL 1",
+      "text": "Bezahl dich *zuerst *selbst.",
+      "sub": "10 % von jedem Gehalt gehen weg – bevor Miete, Netflix oder Shopping."
+    },
+    {
+      "type": "counter",
+      "dur": 6.5,
+      "label": "BEISPIEL",
+      "pre": "200 € im Monat, 30 Jahre, 7 %",
+      "from": 0,
+      "to": 243994,
+      "suffix": " €",
+      "sub": "Das macht der Zinseszins aus 72.000 € Einzahlung."
+    },
+    {
+      "type": "text",
+      "dur": 6.0,
+      "label": "REGEL 2",
+      "text": "Kauf +Vermögen, keine !Verbindlichkeiten.",
+      "sub": "Vermögen bringt dir Geld. Alles andere kostet dich Geld."
+    },
+    {
+      "type": "text",
+      "dur": 6.0,
+      "label": "REGEL 3",
+      "text": "Lifestyle wächst *NICHT mit dem Gehalt.",
+      "sub": "Mehr Geld = mehr investieren. Nicht: größeres Auto."
+    },
+    {
+      "type": "text",
+      "dur": 6.0,
+      "label": "REGEL 4",
+      "text": "Ein Einkommen ist !gefährlich.",
+      "sub": "Ein Jobverlust – und alles bricht weg. Bau dir eine zweite Quelle."
+    },
+    {
+      "type": "text",
+      "dur": 6.5,
+      "label": "REGEL 5",
+      "text": "Investier in deinen *Kopf.",
+      "sub": "Bücher, Skills, Kurse. Das ist das einzige Investment, das dir keiner nehmen kann."
+    },
+    {
+      "type": "text",
+      "dur": 5.5,
+      "text": "Reich wirst du nicht durch +Glück.",
+      "sub": "Sondern durch Regeln, die du jeden Tag befolgst."
+    },
+    {
+      "type": "cta",
+      "dur": 10.0,
+      "text": "Welche Regel *brichst du gerade?",
+      "sub": "Schreib die Nummer in die Kommentare & folge für Teil 2."
+    }
+  ]
+}
