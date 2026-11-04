@@ -1,0 +1,16 @@
+{
+  "title": "One year. Same salary.",
+  "caption": "Same salary. Different year. Which one are you? 💸 #money #mindset #saving #personalfinance #moneytips #financialfreedom #fyp",
+  "watermark": "",
+  "punch1": "He didn't earn more.",
+  "punch2": "He kept more.",
+  "months": [
+    {"month": "JAN", "saved": 600,  "item": "tv",       "price": "-$1,200", "taps": ["-$38", "-$24"]},
+    {"month": "MAR", "saved": 1800, "item": "sneakers", "price": "-$250",   "taps": ["-$61", "-$19", "-$45"], "zoom": ["L", 5.6, 8.2]},
+    {"month": "MAY", "saved": 3000, "item": "phone",    "price": "-$1,100", "taps": ["-$32", "-$54"],         "zoom": ["R", 2.3, 4.3]},
+    {"month": "JUL", "saved": 4200, "item": "console",  "price": "-$500",   "taps": ["-$70", "-$28", "-$41"], "zoom": ["L", 2.8, 4.7]},
+    {"month": "SEP", "saved": 5400, "item": "watch",    "price": "-$700",   "taps": ["-$36", "-$58"],         "zoom": ["R", 2.3, 4.3]},
+    {"month": "NOV", "saved": 6600, "item": "bags",     "price": "-$900",   "taps": ["-$49", "-$83", "-$27"], "zoom": ["L", 5.6, 8.2]},
+    {"month": "DEC", "saved": 7200, "item": "gifts",    "price": "-$1,850", "debt": 1850, "dur": 9.5}
+  ]
+}

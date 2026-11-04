@@ -14,6 +14,21 @@ Zu jedem Video gibt es dazu:
 - `*_cover.png` – Titelbild für TikTok
 - `*_caption.txt` – Beschreibung mit Hashtags zum Reinkopieren
 
+## NEU: „Zwei Zimmer“ (ohne Sprecher, ohne Musik)
+
+Zwei gleiche Wohnungen nebeneinander: links ohne Mindset, rechts mit Mindset. Beide bekommen dasselbe Gehalt.
+Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte auf Englisch.
+**Keine Musik**, nur leise Soundeffekte. Den Sound legst du in TikTok beim Hochladen drauf.
+
+| Datei | Inhalt |
+|---|---|
+| `videos/07_one_year_salary.mp4` | Ein Jahr, gleiches Gehalt: links ist das Geld jeden Monat weg, rechts füllt sich das Glas. Schluss: „He didn't earn more. He kept more.“ (63,5 s) |
+
+```bash
+python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
+```
+Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
+
 ## NEU: Figuren-Stil (schwarz, leuchtende Figuren)
 
 Im Stil deines Vorbild-Videos: schwarzer Sternenhimmel, leuchtende weiße Figuren und eine Metapher pro Szene, dazu farbige Akzente (Gold = Erfolg/Geld, Rot = Komfort/Ausreden, Grün = Wachstum).
