@@ -1,0 +1,17 @@
+{
+  "title": "Disziplin schlägt Motivation",
+  "tint": ["purple", "red"],
+  "caption": "Motivation kommt und geht. Disziplin bleibt. 🔥 Deine Zahl von 1–10? #disziplin #mindset #motivation #erfolg #gewohnheiten #geld #fyp #viral",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "headline": "*Disziplin schlägt Motivation. Immer.", "headline_size": 88, "caption": "Hier ist der Beweis."},
+    {"type": "tug", "dur": 6, "headline": "Jeden Morgen dasselbe *Duell.", "left": "ZIELE", "left_color": "gold", "right": "AUSREDEN", "right_color": "red", "winner": "right", "caption": "Disziplin"},
+    {"type": "wall", "dur": 6, "headline": "!Zweifel sind nur eine Wand.", "wall": "ZWEIFEL", "reward": "STÄRKE"},
+    {"type": "stairs", "dur": 6, "headline": "Kleine Schritte. *Jeden Tag.", "steps": ["5 MIN", "10 MIN", "20 MIN", "30 MIN", "1 STD"], "caption": "Steigere dich langsam."},
+    {"type": "load", "dur": 5.5, "headline": "Lass los, was dich !bremst.", "box": "ABLENKUNG", "caption": "Fokus ist deine Superkraft."},
+    {"type": "crowd", "dur": 6, "headline": "Sie !scrollen. *Du baust.", "crowd": "SIE", "you": "DU"},
+    {"type": "fork", "dur": 6, "headline": "*Jetzt oder !später?", "bad": "SPÄTER", "good": "JETZT"},
+    {"type": "tree", "dur": 6.5, "headline": "*Geduld ist der geheime Zinseszins.", "seed": "TAG 1", "caption": "Ergebnisse brauchen Zeit."},
+    {"type": "tug", "dur": 6, "headline": "Bis Disziplin zur *Gewohnheit wird.", "left": "ZIELE", "left_color": "gold", "right": "AUSREDEN", "right_color": "red", "winner": "left", "caption": "Disziplin"},
+    {"type": "cta", "dur": 10, "headline": "Wie *diszipliniert bist du? 1–10", "caption": "Kommentier deine Zahl & folge."}
+  ]
+}

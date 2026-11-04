@@ -1,0 +1,21 @@
+{
+  "title": "Die Geld-Falle",
+  "tint": ["green", "blue"],
+  "caption": "So kommst du aus der Geld-Falle raus 💸📈 Speicher dir das! #geld #finanzen #sparen #investieren #mindset #reichwerden #fyp #viral",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "headline": "So bleibst du für immer !pleite.", "headline_size": 88, "caption": "Und so kommst du raus."},
+    {"type": "seesaw", "dur": 6, "headline": "Du gibst mehr aus, als du !verdienst.", "left": "EINNAHMEN", "left_color": "green", "right": "AUSGABEN", "right_color": "red", "mode": "bad"},
+    {"type": "load", "dur": 5.5, "headline": "!Schulden ziehen dich jeden Tag runter.", "box": "SCHULDEN", "caption": "Zahl sie zuerst ab."},
+    {"type": "fork", "dur": 6, "headline": "Jeder Euro hat *zwei Wege.", "bad": "KONSUM", "good": "INVESTIEREN"},
+    {"type": "coins", "dur": 6.5, "headline": "Zinseszins ist dein *stärkster Freund.", "stacks": [
+      {"label": "JAHR 1", "value": "1.245 €", "coins": 1},
+      {"label": "JAHR 5", "value": "7.348 €", "coins": 3},
+      {"label": "JAHR 10", "value": "18.295 €", "coins": 6},
+      {"label": "JAHR 20", "value": "58.902 €", "coins": 17}], "caption": "100 € im Monat · 8 % pro Jahr"},
+    {"type": "tree", "dur": 6, "headline": "Lass dein Geld für *dich arbeiten.", "seed": "100 €", "caption": "Geld muss wachsen."},
+    {"type": "stairs", "dur": 6, "headline": "Der Weg zur *finanziellen Freiheit.", "steps": ["SPAREN", "SCHULDENFREI", "INVESTIEREN", "FREIHEIT"]},
+    {"type": "crowd", "dur": 6, "headline": "Mach nicht, was *alle machen.", "crowd": "ALLE KAUFEN", "you": "DU INVESTIERST"},
+    {"type": "seesaw", "dur": 6, "headline": "Dreh das Spiel *um.", "left": "EINNAHMEN", "left_color": "green", "right": "AUSGABEN", "right_color": "red", "mode": "good"},
+    {"type": "cta", "dur": 10, "headline": "Was ist dein nächster *Schritt?", "caption": "Folge für mehr Geld-Wissen."}
+  ]
+}

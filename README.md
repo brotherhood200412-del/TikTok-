@@ -14,6 +14,24 @@ Zu jedem Video gibt es dazu:
 - `*_cover.png` – Titelbild für TikTok
 - `*_caption.txt` – Beschreibung mit Hashtags zum Reinkopieren
 
+## NEU: Figuren-Stil (schwarz, leuchtende Figuren)
+
+Im Stil deines Vorbild-Videos: schwarzer Sternenhimmel, leuchtende weiße Figuren und eine Metapher pro Szene, dazu farbige Akzente (Gold = Erfolg/Geld, Rot = Komfort/Ausreden, Grün = Wachstum).
+
+| Datei | Thema |
+|---|---|
+| `videos/04_traeume_vs_komfort.mp4` | Träume vs. Komfort (Mindset) |
+| `videos/05_geld_falle.mp4` | Die Geld-Falle: Ausgaben, Schulden, Zinseszins |
+| `videos/06_disziplin.mp4` | Disziplin schlägt Motivation |
+
+**Szenen-Typen:** `hook` (Figur im Spotlight), `tug` (Tauziehen), `fork` (Weggabelung), `load` (Last fallen lassen),
+`wall` (Mauer durchbrechen), `stairs` (Treppe), `tree` (Baum mit Münzen), `crowd` (du vs. alle), `seesaw` (Waage),
+`coins` (Münzstapel/Zinseszins), `cta` (Abschluss mit Folgen-Button).
+
+```bash
+python3 generator/figuren_video.py skripte/figuren/04_traeume_vs_komfort.json
+```
+
 ## Soundeffekte
 
 Alle Sounds und die Musik werden vom Skript selbst erzeugt, deshalb gibt es **keine Urheberrechtsprobleme**:

@@ -1,0 +1,17 @@
+{
+  "title": "Träume vs. Komfort",
+  "tint": ["gold", "purple"],
+  "caption": "Welche Seite gewinnt bei dir? 🧠⚔️ #mindset #motivation #disziplin #geld #erfolg #selbstverbesserung #fyp #viral",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "headline": "Warum die meisten *nie reich werden.", "headline_size": 88, "caption": "Schau bis zum Ende."},
+    {"type": "tug", "dur": 6, "headline": "In dir kämpfen jeden Tag *zwei Seiten.", "left": "TRÄUME", "left_color": "gold", "right": "KOMFORT", "right_color": "red", "winner": "right", "caption": "Mindset"},
+    {"type": "fork", "dur": 6, "headline": "Jeden Morgen triffst du eine *Wahl.", "bad": "BEQUEM", "good": "DISZIPLIN"},
+    {"type": "load", "dur": 5.5, "headline": "!Ausreden machen dich langsam.", "box": "AUSREDEN", "caption": "Lass sie fallen."},
+    {"type": "wall", "dur": 6, "headline": "Was du willst, liegt hinter deiner !Angst.", "wall": "ANGST", "reward": "ERFOLG"},
+    {"type": "stairs", "dur": 6, "headline": "Nur *1 % besser. Jeden Tag.", "steps": ["TAG 1", "TAG 30", "TAG 90", "TAG 180", "TAG 270", "TAG 365"], "caption": "= 37x besser"},
+    {"type": "tree", "dur": 6.5, "headline": "Was du heute *säst, erntest du morgen.", "seed": "HEUTE", "caption": "Investiere in dich."},
+    {"type": "crowd", "dur": 6, "headline": "Wenn alle !chillen, arbeitest *du.", "crowd": "ALLE", "you": "DU"},
+    {"type": "tug", "dur": 6, "headline": "Bis deine *Träume stärker sind.", "left": "TRÄUME", "left_color": "gold", "right": "KOMFORT", "right_color": "red", "winner": "left", "caption": "Mindset"},
+    {"type": "cta", "dur": 10, "headline": "Welche Seite *gewinnt bei dir?", "caption": "Folge für tägliches Mindset."}
+  ]
+}
