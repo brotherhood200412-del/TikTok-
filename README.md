@@ -25,11 +25,13 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | `videos/07_one_year_salary.mp4` | Ein Jahr, gleiches Gehalt: links ist das Geld jeden Monat weg, rechts füllt sich das Glas. Schluss: „He didn't earn more. He kept more.“ (63,5 s) |
 | `videos/08_alarm_6am.mp4` | Alarm 6:00: Beide starten mit 110 kg. Links Snooze, Snacks und Handy (114 kg), rechts Training und gesundes Essen (82 kg). Schluss: „Same 24 hours. Different choices.“ (65 s) |
 | `videos/09_cigarettes_vs_running.mp4` | Cigarettes vs. Running: Gleiche 10 $ am Tag über 10 Jahre. Links Zigaretten (SPENT $36,500), rechts Laufband und Sparen (SAVED $52,647). Schluss: „He didn't just save money. He saved his health.“ (65 s) |
+| `videos/10_scroll_vs_post.mp4` | Scroll vs. Post: Gleiches Handy, 2 Stunden am Tag, 365 Tage. Links scrollt er im Bett (SCROLLED 730 h) und liked dabei die Videos des Rechten. Rechts nimmt er jeden Tag ein Video auf und postet es (FOLLOWERS 10,000). Schluss: „One watched. One built.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
 python3 generator/wecker_video.py skripte/zimmer/08_alarm_6am.json
 python3 generator/rauchen_video.py skripte/zimmer/09_cigarettes_vs_running.json
+python3 generator/scroll_video.py skripte/zimmer/10_scroll_vs_post.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 

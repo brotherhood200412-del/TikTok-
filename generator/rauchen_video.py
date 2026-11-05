@@ -114,7 +114,7 @@ def draw_treadmill(c, d, x0, km_text, running, t):
     return d
 
 
-def year_calendar(i, label, prev_label, t):
+def year_calendar(i, label, prev_label, t, header="YEAR"):
     w, h = 300, 230
     img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -122,11 +122,12 @@ def year_calendar(i, label, prev_label, t):
     d.rounded_rectangle((x0, y0, x1, y1), 16, fill=(244, 241, 234), outline=OUT, width=5)
     d.rounded_rectangle((x0, y0, x1, y0 + 46), 16, fill=(205, 62, 76), outline=OUT, width=5)
     d.rectangle((x0 + 4, y0 + 28, x1 - 4, y0 + 44), fill=(205, 62, 76))
-    paste_scaled(img, sprite(spaced("YEAR"), 26, (250, 245, 240), F_BOLD), 150, y0 + 25, 1, 1)
+    paste_scaled(img, sprite(spaced(header), 26, (250, 245, 240), F_BOLD), 150, y0 + 25, 1, 1)
     for ox in (-90, 90):
         d.rounded_rectangle((150 + ox - 8, y0 - 18, 150 + ox + 8, y0 + 18), 6, fill=(200, 200, 210), outline=OUT, width=3)
     pop = ease_out_back(seg(t, 0.0, 0.35)) if i == 0 else 1
-    paste_scaled(img, sprite(label, 104, (32, 32, 40)), 150, (y0 + 46 + y1) / 2 + 4, pop, 1)
+    big = 104 if len(label) <= 2 else 88
+    paste_scaled(img, sprite(label, big, (32, 32, 40)), 150, (y0 + 46 + y1) / 2 + 4, pop, 1)
     if i > 0 and t < 0.6:
         k = smooth(t / 0.55)
         hgt = (y1 - y0 - 46) * (1 - k)
@@ -134,7 +135,7 @@ def year_calendar(i, label, prev_label, t):
         if hgt > 2:
             d = ImageDraw.Draw(img)
             d.rectangle((x0 + 4, top, x1 - 4, top + hgt), fill=(250, 248, 242), outline=(180, 175, 165), width=2)
-            spr = sprite(prev_label, 104, (32, 32, 40))
+            spr = sprite(prev_label, 104 if len(prev_label) <= 2 else 88, (32, 32, 40))
             sp = spr.resize((spr.width, max(1, int(spr.height * max(0.05, 1 - k)))))
             paste_scaled(img, sp, 150, top + hgt / 2, 1, 1 - k)
     return img

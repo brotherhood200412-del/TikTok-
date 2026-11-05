@@ -1,0 +1,17 @@
+{
+  "title": "Scroll vs. Post",
+  "caption": "Same phone. Same 2 hours a day. One watched, one built. Which one are you? 📱 #mindset #contentcreator #discipline #motivation #socialmedia #growth #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME PHONE · 2 HOURS A DAY",
+  "punch1": "One watched.",
+  "punch2": "One built.",
+  "stages": [
+    {"day": 1,   "hours": 2,   "followers": 3,     "sky": "JAN"},
+    {"day": 30,  "hours": 60,  "followers": 85,    "sky": "MAR", "zoom": ["L", 6.0, 8.6]},
+    {"day": 60,  "hours": 120, "followers": 410,   "sky": "MAY", "zoom": ["R", 1.1, 3.8]},
+    {"day": 100, "hours": 200, "followers": 1250,  "sky": "JUL", "zoom": ["R", 5.2, 7.9]},
+    {"day": 180, "hours": 360, "followers": 3900,  "sky": "SEP", "zoom": ["L", 6.0, 8.6]},
+    {"day": 270, "hours": 540, "followers": 7200,  "sky": "NOV", "zoom": ["R", 5.2, 7.9]},
+    {"day": 365, "hours": 730, "followers": 10000, "sky": "DEC", "dur": 11.0}
+  ]
+}
