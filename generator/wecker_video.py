@@ -42,7 +42,8 @@ BLANKET = (86, 132, 214)
 
 # ----------------------------------------------------------------- figure (mit Körperfülle)
 def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood=0.0, look=0.0,
-               head_drop=0.0, bob=0.0, s=S):
+               head_drop=0.0, bob=0.0, s=S, skin=SKIN, shake=0.0, mouth_o=False, lean=0.0):
+    x = x + shake
     leg = 84 * s
     hipy = fy - leg - 8 * s - bob
     lw = (22 + 12 * fat) * s
@@ -52,23 +53,25 @@ def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood
         capsule(d, (x + sg * spread * 0.45, hipy), (fx, fy - 10 * s - bob * 0.2), lw, PANTS)
         d.ellipse((fx - 15 * s, fy - 16 * s - bob * 0.2, fx + (15 + look * 6) * s, fy + 1 - bob * 0.2), fill=OUT)
     tw = (62 + 54 * fat) * s
-    neck = (x, hipy - 92 * s)
+    neck = (x + math.sin(lean) * 92 * s, hipy - math.cos(lean) * 92 * s)
     capsule(d, (x, hipy - 14 * s - 6 * fat * s), neck, tw, SHIRT)
     if fat > 0.3:  # Bauch-Linie
         d.arc((x - tw * 0.34, hipy - 70 * s, x + tw * 0.34, hipy - 8 * s), 20, 160, fill=(58, 90, 200), width=3)
-    sh_y = hipy - 78 * s
+    sh_y = hipy - 78 * s * math.cos(lean)
+    x_sh = x + math.sin(lean) * 78 * s
     sh_off = (24 + 22 * fat) * s
     aw = (17 + 8 * fat) * s
     hand_pts = []
     for side, h in zip((-1, 1), hands):
-        sp = (x + side * sh_off, sh_y)
+        sp = (x_sh + side * sh_off, sh_y)
         if h is None:
             h = (sp[0] + side * (12 + 14 * fat) * s, sp[1] + 82 * s)
         capsule(d, sp, h, aw, SHIRT)
         hand_pts.append(h)
     r = (37 + 4 * fat) * s
-    hc = (x + (look * 4 + head_drop * look * 8) * s, neck[1] - (36 + 6 * fat) * s + head_drop * 14 * s)
-    circle(d, hc[0], hc[1], r, SKIN)
+    hc = (neck[0] + math.sin(lean) * 36 * s + (look * 4 + head_drop * look * 8) * s,
+          neck[1] - (36 + 6 * fat) * s * math.cos(lean) + head_drop * 14 * s)
+    circle(d, hc[0], hc[1], r, skin)
     if fat > 0.4:  # Pausbacken
         for sg in (-1, 1):
             d.ellipse((hc[0] + sg * r * 0.55 - 7 * s, hc[1] + 6 * s, hc[0] + sg * r * 0.55 + 7 * s, hc[1] + 16 * s),
@@ -78,15 +81,17 @@ def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood
         d.ellipse((hc[0] + ex + (sg * 12 - 4.5) * s, ey - 5.5 * s, hc[0] + ex + (sg * 12 + 4.5) * s, ey + 5.5 * s), fill=OUT)
     mx, my = hc[0] + ex * 0.8, hc[1] + (16 + head_drop * 4) * s
     lwid = max(3, int(4 * s))
-    if mood > 0.25:
+    if mouth_o:
+        d.ellipse((mx - 8 * s, my - 4 * s, mx + 8 * s, my + 12 * s), fill=OUT)
+    elif mood > 0.25:
         d.arc((mx - 13 * s, my - 12 * s, mx + 13 * s, my + 8 * s), 20, 160, fill=OUT, width=lwid)
     elif mood < -0.25:
         d.arc((mx - 11 * s, my - 2 * s, mx + 11 * s, my + 14 * s), 205, 335, fill=OUT, width=lwid)
     else:
         d.line((mx - 9 * s, my + s, mx + 9 * s, my + s), fill=OUT, width=lwid)
     for h in hand_pts:
-        circle(d, h[0], h[1], 10 * s, SKIN, 3)
-    return dict(head=hc, hands=hand_pts, r=r)
+        circle(d, h[0], h[1], 10 * s, skin, 3)
+    return dict(head=hc, hands=hand_pts, r=r, mouth=(mx, my + 4 * s))
 
 
 # ----------------------------------------------------------------- props

@@ -1,0 +1,17 @@
+{
+  "title": "Cigarettes vs. Running",
+  "caption": "Same $10 a day. 10 years later... Which one are you? 🚬🏃 #mindset #health #money #discipline #quitsmoking #running #motivation #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME $10 A DAY",
+  "punch1": "He didn't just save money.",
+  "punch2": "He saved his health.",
+  "stages": [
+    {"year": 1,  "spent": 3650,  "saved": 3769,  "km": 2,    "sky": "JAN"},
+    {"year": 2,  "spent": 7300,  "saved": 7811,  "km": 3,    "sky": "MAR", "zoom": ["L", 3.0, 5.0]},
+    {"year": 3,  "spent": 10950, "saved": 12145, "km": 5,    "sky": "MAY", "zoom": ["R", 1.5, 4.0]},
+    {"year": 5,  "spent": 18250, "saved": 21776, "km": 8,    "sky": "JUL", "zoom": ["L", 6.8, 8.8]},
+    {"year": 7,  "spent": 25550, "saved": 32850, "km": 10,   "sky": "SEP", "zoom": ["R", 1.5, 4.0]},
+    {"year": 9,  "spent": 32850, "saved": 45582, "km": 15,   "sky": "NOV", "zoom": ["L", 3.0, 5.2]},
+    {"year": 10, "spent": 36500, "saved": 52647, "km": 21.1, "sky": "DEC", "dur": 11.0}
+  ]
+}
