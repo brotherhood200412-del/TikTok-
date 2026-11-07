@@ -1,0 +1,17 @@
+{
+  "title": "Car on Credit",
+  "caption": "Same $600 a month. 6 years later... New car on credit or used car + investing? 🚗💸 #money #cars #investing #personalfinance #debt #mindset #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME $600 A MONTH",
+  "punch1": "One lost value.",
+  "punch2": "One built it.",
+  "stages": [
+    {"label": "1", "header": "DAY",  "intro": true, "value": 36000, "loan": 0,     "port": 0,     "sky": "JAN", "dur": 8.0},
+    {"label": "1", "value": 28800, "loan": 7200,  "port": 7436,  "sky": "MAR", "zoom": ["L", 4.5, 6.5]},
+    {"label": "2", "value": 24480, "loan": 14400, "port": 15409, "sky": "MAY", "zoom": ["R", 0.5, 2.7]},
+    {"label": "3", "value": 20808, "loan": 21600, "port": 23958, "sky": "JUL", "zoom": ["L", 3.2, 5.9]},
+    {"label": "4", "value": 17687, "loan": 28800, "port": 33126, "sky": "SEP", "zoom": ["R", 4.9, 6.5]},
+    {"label": "5", "value": 15034, "loan": 36000, "port": 42956, "sky": "NOV", "zoom": ["L", 4.6, 6.6]},
+    {"label": "6", "value": 12779, "loan": 43200, "port": 53497, "sky": "DEC", "dur": 11.0}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "$1,000,000 now or 1 cent doubled for 30 days?",
+  "caption": "$1,000,000 today or 1 cent doubled every day for 30 days? Be honest, which one would you take? 🤑 #money #compoundinterest #mindset #wouldyourather #finance #rich #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "WHICH WOULD YOU TAKE?",
+  "punch1": "1 cent beat 1 million.",
+  "punch2": "Never underestimate doubling.",
+  "stages": [
+    {"day": 1,  "sky": "JAN"},
+    {"day": 10, "sky": "MAR"},
+    {"day": 15, "sky": "MAY", "zoom": ["L", 5.4, 7.6]},
+    {"day": 20, "sky": "JUL", "zoom": ["R", 0.9, 5.2]},
+    {"day": 25, "sky": "SEP"},
+    {"day": 28, "sky": "NOV", "zoom": ["R", 3.6, 6.2]},
+    {"day": 30, "sky": "DEC", "dur": 11.0}
+  ]
+}

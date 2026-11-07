@@ -26,12 +26,16 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | `videos/08_alarm_6am.mp4` | Alarm 6:00: Beide starten mit 110 kg. Links Snooze, Snacks und Handy (114 kg), rechts Training und gesundes Essen (82 kg). Schluss: „Same 24 hours. Different choices.“ (65 s) |
 | `videos/09_cigarettes_vs_running.mp4` | Cigarettes vs. Running: Gleiche 10 $ am Tag über 10 Jahre. Links Zigaretten (SPENT $36,500), rechts Laufband und Sparen (SAVED $52,647). Schluss: „He didn't just save money. He saved his health.“ (65 s) |
 | `videos/10_scroll_vs_post.mp4` | Scroll vs. Post: Gleiches Handy, 2 Stunden am Tag, 365 Tage. Links scrollt er im Bett (SCROLLED 730 h) und liked dabei die Videos des Rechten. Rechts nimmt er jeden Tag ein Video auf und postet es (FOLLOWERS 10,000). Schluss: „One watched. One built.“ (65 s) |
+| `videos/11_car_on_credit.mp4` | Car on Credit: Gleiche 600 $ im Monat, 6 Jahre. Links neues Auto auf Raten (LOAN PAID $43,200, Wert fällt von $36,000 auf $12,779), rechts Gebrauchtwagen bar und investiert (PORTFOLIO $53,497). Schluss: „One lost value. One built it.“ (64 s) |
+| `videos/12_penny_doubling.mp4` | Penny Doubling: $1,000,000 sofort oder 1 Cent, der sich 30 Tage verdoppelt. An Tag 28 überholt der Cent, an Tag 30 sind es $5,368,709.12. Schluss: „1 cent beat 1 million. Never underestimate doubling.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
 python3 generator/wecker_video.py skripte/zimmer/08_alarm_6am.json
 python3 generator/rauchen_video.py skripte/zimmer/09_cigarettes_vs_running.json
 python3 generator/scroll_video.py skripte/zimmer/10_scroll_vs_post.json
+python3 generator/auto_video.py skripte/zimmer/11_car_on_credit.json
+python3 generator/penny_video.py skripte/zimmer/12_penny_doubling.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 
