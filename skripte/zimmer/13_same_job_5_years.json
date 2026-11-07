@@ -1,0 +1,18 @@
+{
+  "title": "Same Job. 5 Years.",
+  "caption": "Same job. Same $30K start. 5 years later... What do you do after work? 💼📈 #career #skills #money #mindset #selfimprovement #coding #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME JOB · SAME $30K START",
+  "start": 30000,
+  "punch1": "Same job. Same start.",
+  "punch2": "Your skills are your salary.",
+  "stages": [
+    {"month": 1,  "left": 30000, "right": 30000, "sky": "JAN"},
+    {"month": 6,  "left": 30000, "right": 30000, "certs": 1, "sky": "MAR", "zoom": ["R", 1.6, 4.2]},
+    {"month": 12, "left": 30600, "right": 38000, "certs": 2, "title_right": "JUNIOR DEV", "sky": "MAY", "zoom": ["L", 1.5, 4.2]},
+    {"month": 24, "left": 31200, "right": 52000, "certs": 3, "title_right": "DEVELOPER", "sky": "JUL", "zoom": ["R", 6.8, 8.9]},
+    {"month": 36, "left": 31800, "right": 65000, "certs": 4, "title_right": "SENIOR DEV", "tie": true, "sky": "SEP", "zoom": ["L", 5.9, 8.0]},
+    {"month": 48, "left": 32500, "right": 78000, "certs": 5, "title_right": "LEAD DEV", "tie": true, "sky": "NOV", "zoom": ["R", 6.8, 8.9]},
+    {"month": 60, "left": 33100, "right": 90000, "certs": 6, "title_right": "ENG. MANAGER", "tie": true, "sky": "DEC", "dur": 11.0}
+  ]
+}
