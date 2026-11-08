@@ -1,0 +1,75 @@
+{
+  "title": "Sports Betting vs. Investing",
+  "caption": "Same game. Same $50 a week. One bets, one invests. 10 years later... 🎰⚽ #sportsbetting #money #investing #mindset #personalfinance #gambling #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME GAME · SAME $50 A WEEK",
+  "punch1": "The house always wins.",
+  "punch2": "Be the house.",
+  "stages": [
+    {
+      "year": 1,
+      "spent": 2600,
+      "inv": 2685,
+      "sky": "JAN"
+    },
+    {
+      "year": 2,
+      "spent": 5200,
+      "inv": 5564,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        3.3,
+        5.0
+      ],
+      "win": true
+    },
+    {
+      "year": 3,
+      "spent": 7800,
+      "inv": 8652,
+      "sky": "MAY",
+      "zoom": [
+        "R",
+        3.3,
+        4.9
+      ]
+    },
+    {
+      "year": 5,
+      "spent": 13000,
+      "inv": 15512,
+      "sky": "JUL",
+      "zoom": [
+        "L",
+        5.8,
+        8.0
+      ]
+    },
+    {
+      "year": 7,
+      "spent": 18200,
+      "inv": 23400,
+      "sky": "SEP",
+      "win": true
+    },
+    {
+      "year": 9,
+      "spent": 23400,
+      "inv": 32469,
+      "sky": "NOV",
+      "zoom": [
+        "L",
+        3.3,
+        5.0
+      ]
+    },
+    {
+      "year": 10,
+      "spent": 26000,
+      "inv": 37502,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}

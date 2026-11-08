@@ -1,0 +1,75 @@
+{
+  "title": "The Wedding",
+  "caption": "$30,000 dream wedding vs. $5,000 wedding + $25,000 invested. 30 years later... Which would you choose? 💍 #wedding #money #investing #marriage #personalfinance #mindset #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME LOVE · SAME $30,000",
+  "punch1": "Same love.",
+  "punch2": "Different future.",
+  "stages": [
+    {
+      "label": "DAY",
+      "header": "WEDDING",
+      "intro": true,
+      "inv": 25000,
+      "sky": "MAY",
+      "dur": 10.0
+    },
+    {
+      "label": 5,
+      "inv": 35064,
+      "age": 0.15625,
+      "sky": "JUL",
+      "zoom": [
+        "L",
+        1.0,
+        3.8
+      ],
+      "dur": 8.8
+    },
+    {
+      "label": 10,
+      "inv": 49179,
+      "age": 0.3125,
+      "sky": "SEP",
+      "dur": 8.8
+    },
+    {
+      "label": 15,
+      "inv": 68976,
+      "age": 0.46875,
+      "sky": "NOV",
+      "zoom": [
+        "R",
+        0.6,
+        2.6
+      ],
+      "dur": 8.8
+    },
+    {
+      "label": 20,
+      "inv": 96742,
+      "age": 0.625,
+      "sky": "JAN",
+      "dur": 8.8
+    },
+    {
+      "label": 25,
+      "inv": 135686,
+      "age": 0.78125,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        1.0,
+        3.8
+      ],
+      "dur": 8.8
+    },
+    {
+      "label": 30,
+      "inv": 190306,
+      "age": 0.9375,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}

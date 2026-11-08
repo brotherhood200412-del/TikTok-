@@ -42,7 +42,8 @@ BLANKET = (86, 132, 214)
 
 # ----------------------------------------------------------------- figure (mit Körperfülle)
 def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood=0.0, look=0.0,
-               head_drop=0.0, bob=0.0, s=S, skin=SKIN, shake=0.0, mouth_o=False, lean=0.0):
+               head_drop=0.0, bob=0.0, s=S, skin=SKIN, shake=0.0, mouth_o=False, lean=0.0,
+               shirt=SHIRT, pants=PANTS, hair=None, long_hair=None):
     x = x + shake
     leg = 84 * s
     hipy = fy - leg - 8 * s - bob
@@ -50,11 +51,11 @@ def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood
     spread = (14 + 12 * fat) * s + stance * s
     sw = math.sin(walk) * 18 * s
     for sg, fx in ((-1, x - spread + sw), (1, x + spread - sw)):
-        capsule(d, (x + sg * spread * 0.45, hipy), (fx, fy - 10 * s - bob * 0.2), lw, PANTS)
+        capsule(d, (x + sg * spread * 0.45, hipy), (fx, fy - 10 * s - bob * 0.2), lw, pants)
         d.ellipse((fx - 15 * s, fy - 16 * s - bob * 0.2, fx + (15 + look * 6) * s, fy + 1 - bob * 0.2), fill=OUT)
     tw = (62 + 54 * fat) * s
     neck = (x + math.sin(lean) * 92 * s, hipy - math.cos(lean) * 92 * s)
-    capsule(d, (x, hipy - 14 * s - 6 * fat * s), neck, tw, SHIRT)
+    capsule(d, (x, hipy - 14 * s - 6 * fat * s), neck, tw, shirt)
     if fat > 0.3:  # Bauch-Linie
         d.arc((x - tw * 0.34, hipy - 70 * s, x + tw * 0.34, hipy - 8 * s), 20, 160, fill=(58, 90, 200), width=3)
     sh_y = hipy - 78 * s * math.cos(lean)
@@ -66,12 +67,16 @@ def person_fat(d, x, fy, fat=0.0, hands=(None, None), walk=0.0, stance=0.0, mood
         sp = (x_sh + side * sh_off, sh_y)
         if h is None:
             h = (sp[0] + side * (12 + 14 * fat) * s, sp[1] + 82 * s)
-        capsule(d, sp, h, aw, SHIRT)
+        capsule(d, sp, h, aw, shirt)
         hand_pts.append(h)
     r = (37 + 4 * fat) * s
     hc = (neck[0] + math.sin(lean) * 36 * s + (look * 4 + head_drop * look * 8) * s,
           neck[1] - (36 + 6 * fat) * s * math.cos(lean) + head_drop * 14 * s)
+    if long_hair is not None:
+        d.rounded_rectangle((hc[0] - r * 1.15, hc[1] - r * 1.1, hc[0] + r * 1.15, hc[1] + r * 1.55), int(r), fill=long_hair, outline=OUT, width=3)
     circle(d, hc[0], hc[1], r, skin)
+    if hair is not None:
+        d.chord((hc[0] - r - 1, hc[1] - r - 3, hc[0] + r + 1, hc[1] + r * 0.6), 190, 350, fill=hair, outline=OUT, width=3)
     if fat > 0.4:  # Pausbacken
         for sg in (-1, 1):
             d.ellipse((hc[0] + sg * r * 0.55 - 7 * s, hc[1] + 6 * s, hc[0] + sg * r * 0.55 + 7 * s, hc[1] + 16 * s),

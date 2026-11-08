@@ -1,0 +1,78 @@
+{
+  "title": "Food Delivery vs. Cooking",
+  "caption": "$25 delivery every night vs. cooking for $8 and investing the rest. 10 years later... Guess how much 👇 #money #fooddelivery #cooking #investing #personalfinance #mindset #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME DINNER · EVERY NIGHT",
+  "punch1": "Convenience is expensive.",
+  "punch2": "$89,500 expensive.",
+  "stages": [
+    {
+      "year": 1,
+      "spent": 9125,
+      "inv": 6408,
+      "sky": "JAN"
+    },
+    {
+      "year": 2,
+      "spent": 18250,
+      "inv": 13279,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        1.4,
+        3.1
+      ]
+    },
+    {
+      "year": 3,
+      "spent": 27375,
+      "inv": 20647,
+      "sky": "MAY",
+      "zoom": [
+        "R",
+        0.9,
+        3.8
+      ]
+    },
+    {
+      "year": 5,
+      "spent": 45625,
+      "inv": 37019,
+      "sky": "JUL",
+      "zoom": [
+        "L",
+        3.0,
+        5.8
+      ]
+    },
+    {
+      "year": 7,
+      "spent": 63875,
+      "inv": 55844,
+      "sky": "SEP",
+      "zoom": [
+        "R",
+        5.4,
+        6.8
+      ]
+    },
+    {
+      "year": 9,
+      "spent": 82125,
+      "inv": 77490,
+      "sky": "NOV",
+      "zoom": [
+        "L",
+        5.6,
+        7.4
+      ]
+    },
+    {
+      "year": 10,
+      "spent": 91250,
+      "inv": 89499,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}

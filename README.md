@@ -29,6 +29,9 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | `videos/11_car_on_credit.mp4` | Car on Credit: Gleiche 600 $ im Monat, 6 Jahre. Links neues Auto auf Raten (LOAN PAID $43,200, Wert fällt von $36,000 auf $12,779), rechts Gebrauchtwagen bar und investiert (PORTFOLIO $53,497). Schluss: „One lost value. One built it.“ (64 s) |
 | `videos/12_penny_doubling.mp4` | Penny Doubling: $1,000,000 sofort oder 1 Cent, der sich 30 Tage verdoppelt. An Tag 28 überholt der Cent, an Tag 30 sind es $5,368,709.12. Schluss: „1 cent beat 1 million. Never underestimate doubling.“ (65 s) |
 | `videos/13_same_job_5_years.mp4` | Same Job, 5 Years: Gleicher Job, gleiches Startgehalt von $30K. Links nach Feierabend Sofa, TV und Chips ($33,100/yr). Rechts lernt er abends Programmieren, sammelt Zertifikate und wird befördert ($90,000/yr). Schluss: „Same job. Same start. Your skills are your salary.“ (65 s) |
+| `videos/14_food_delivery.mp4` | Food Delivery vs. Cooking: 25 $ Lieferung gegen 8 $ selbst kochen, 10 Jahre. SPENT $91,250 gegen INVESTED $89,499. Schluss: „Convenience is expensive. $89,500 expensive.“ (65 s) |
+| `videos/15_the_wedding.mp4` | The Wedding: $30,000 Traumhochzeit gegen $5,000 Hochzeit + $25,000 investiert. Nach 30 Jahren $0 gegen $190,306. Schluss: „Same love. Different future.“ (65 s) |
+| `videos/16_sports_betting.mp4` | Sports Betting vs. Investing: Gleiches Spiel, 50 $ pro Woche. SPENT ON BETS $26,000 gegen INVESTED $37,502. Schluss: „The house always wins. Be the house.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
@@ -38,6 +41,9 @@ python3 generator/scroll_video.py skripte/zimmer/10_scroll_vs_post.json
 python3 generator/auto_video.py skripte/zimmer/11_car_on_credit.json
 python3 generator/penny_video.py skripte/zimmer/12_penny_doubling.json
 python3 generator/job_video.py skripte/zimmer/13_same_job_5_years.json
+python3 generator/food_video.py skripte/zimmer/14_food_delivery.json
+python3 generator/wedding_video.py skripte/zimmer/15_the_wedding.json
+python3 generator/betting_video.py skripte/zimmer/16_sports_betting.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 
