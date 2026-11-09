@@ -1,0 +1,74 @@
+{
+  "title": "Your 20s: Party vs. Build",
+  "caption": "$100 every weekend in your 20s. Party or invest? 30 years later... 🎉💸 #yolo #money #investing #20s #mindset #personalfinance #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME $100 · EVERY WEEKEND",
+  "punch1": "YOLO cost him",
+  "punch2": "$570,945.",
+  "stages": [
+    {
+      "age": 21,
+      "spent": 5200,
+      "inv": 5370,
+      "sky": "JAN"
+    },
+    {
+      "age": 23,
+      "spent": 15600,
+      "inv": 17303,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        1.0,
+        3.8
+      ]
+    },
+    {
+      "age": 25,
+      "spent": 26000,
+      "inv": 31024,
+      "sky": "MAY",
+      "zoom": [
+        "R",
+        4.2,
+        6.6
+      ]
+    },
+    {
+      "age": 27,
+      "spent": 36400,
+      "inv": 46800,
+      "sky": "JUL",
+      "zoom": [
+        "L",
+        4.1,
+        6.8
+      ]
+    },
+    {
+      "age": 29,
+      "spent": 46800,
+      "inv": 64939,
+      "sky": "SEP",
+      "zoom": [
+        "L",
+        0.7,
+        2.4
+      ]
+    },
+    {
+      "age": 30,
+      "spent": 52000,
+      "inv": 75003,
+      "sky": "NOV"
+    },
+    {
+      "age": 60,
+      "later": true,
+      "spent": 52000,
+      "inv": 570945,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}

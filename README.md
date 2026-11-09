@@ -32,6 +32,8 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | `videos/14_food_delivery.mp4` | Food Delivery vs. Cooking: 25 $ Lieferung gegen 8 $ selbst kochen, 10 Jahre. SPENT $91,250 gegen INVESTED $89,499. Schluss: „Convenience is expensive. $89,500 expensive.“ (65 s) |
 | `videos/15_the_wedding.mp4` | The Wedding: $30,000 Traumhochzeit gegen $5,000 Hochzeit + $25,000 investiert. Nach 30 Jahren $0 gegen $190,306. Schluss: „Same love. Different future.“ (65 s) |
 | `videos/16_sports_betting.mp4` | Sports Betting vs. Investing: Gleiches Spiel, 50 $ pro Woche. SPENT ON BETS $26,000 gegen INVESTED $37,502. Schluss: „The house always wins. Be the house.“ (65 s) |
+| `videos/17_party_vs_build.mp4` | Your 20s: Party vs. Build: 100 $ jedes Wochenende von 20 bis 30 feiern oder investieren. SPENT $52,000 gegen $75,003, und 30 Jahre später $570,945. Schluss: „YOLO cost him $570,945.“ (65 s) |
+| `videos/18_gaming_skins.mp4` | Gaming Skins: 40 $ im Monat von 12 bis 32 für Skins oder investiert. Am Ende SERVER SHUTDOWN. SPENT $9,600 gegen INVESTED $20,837. Schluss: „Skins don't appreciate. Investments do.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
@@ -44,6 +46,8 @@ python3 generator/job_video.py skripte/zimmer/13_same_job_5_years.json
 python3 generator/food_video.py skripte/zimmer/14_food_delivery.json
 python3 generator/wedding_video.py skripte/zimmer/15_the_wedding.json
 python3 generator/betting_video.py skripte/zimmer/16_sports_betting.json
+python3 generator/party_video.py skripte/zimmer/17_party_vs_build.json
+python3 generator/skins_video.py skripte/zimmer/18_gaming_skins.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 

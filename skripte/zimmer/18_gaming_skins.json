@@ -1,0 +1,73 @@
+{
+  "title": "Gaming Skins",
+  "caption": "$40 a month on skins from age 12 to 32... or invested? Same game, same fun. 🎮💸 #gaming #skins #money #investing #gamer #mindset #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME GAME · SAME $40 A MONTH",
+  "punch1": "Skins don't appreciate.",
+  "punch2": "Investments do.",
+  "stages": [
+    {
+      "age": 13,
+      "spent": 480,
+      "inv": 496,
+      "sky": "JAN"
+    },
+    {
+      "age": 15,
+      "spent": 1440,
+      "inv": 1597,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        0.5,
+        2.4
+      ]
+    },
+    {
+      "age": 17,
+      "spent": 2400,
+      "inv": 2864,
+      "sky": "MAY",
+      "zoom": [
+        "R",
+        0.5,
+        1.9
+      ]
+    },
+    {
+      "age": 20,
+      "spent": 3840,
+      "inv": 5128,
+      "sky": "JUL",
+      "zoom": [
+        "L",
+        5.2,
+        6.8
+      ]
+    },
+    {
+      "age": 24,
+      "spent": 5760,
+      "inv": 8988,
+      "sky": "SEP"
+    },
+    {
+      "age": 28,
+      "spent": 7680,
+      "inv": 14091,
+      "sky": "NOV",
+      "zoom": [
+        "R",
+        5.2,
+        6.8
+      ]
+    },
+    {
+      "age": 32,
+      "spent": 9600,
+      "inv": 20837,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}
