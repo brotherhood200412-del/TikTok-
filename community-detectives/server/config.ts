@@ -27,7 +27,8 @@ const schema = z.object({
   TRUST_PROXY: bool(false),
 });
 
-const parsed = schema.safeParse(process.env);
+// Auf Render ist die öffentliche Adresse automatisch bekannt.
+const parsed = schema.safeParse({ ...process.env, PUBLIC_URL: process.env.PUBLIC_URL || process.env.RENDER_EXTERNAL_URL || undefined });
 if (!parsed.success) {
   console.error('Ungültige Konfiguration:\n' + parsed.error.issues.map((i) => ` - ${i.path.join('.')}: ${i.message}`).join('\n'));
   process.exit(1);

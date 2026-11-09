@@ -1,0 +1,38 @@
+# Render-Blueprint für COMMUNITY DETECTIVES (Testbetrieb ohne Twitch).
+# Render liest diese Datei und richtet App + Datenbank automatisch ein.
+services:
+  - type: web
+    name: community-detectives
+    runtime: node
+    plan: free
+    rootDir: community-detectives
+    buildCommand: npm ci --include=dev && npx prisma generate && npm run build
+    startCommand: npx prisma migrate deploy && npm run cases:import && npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: community-detectives-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: TOKEN_ENCRYPTION_KEY
+        generateValue: true
+      - key: TRUST_PROXY
+        value: "true"
+      # Testmodus: Anmeldung ohne Twitch + Chat-Simulator, alle Fälle freigeschaltet.
+      # Sobald Twitch eingerichtet ist, ALLOW_DEV_LOGIN auf "false" setzen.
+      - key: ALLOW_DEV_LOGIN
+        value: "true"
+      - key: ENABLE_CHAT_SIMULATOR
+        value: "true"
+      - key: DEFAULT_PLAN
+        value: premium
+
+databases:
+  - name: community-detectives-db
+    plan: free
+    databaseName: community_detectives
+    user: detectives
