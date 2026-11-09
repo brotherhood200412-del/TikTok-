@@ -26,7 +26,9 @@ interface Props {
 /** Interaktive Darstellung eines Beweisstücks mit markierbaren Details. */
 export function EvidenceViewer({ evidence, insights, onMark, hotspotItems, busy }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
-  useEffect(() => setSelected(null), [evidence.id]);
+  useEffect(() => {
+    setSelected(null);
+  }, [evidence.id]);
   const c = evidence.content;
   const found = evidence.found;
   const detail = useMemo(() => itemDetail(c, selected), [c, selected]);

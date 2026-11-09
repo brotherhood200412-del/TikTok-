@@ -25,7 +25,9 @@ export default function Admin() {
   const [open, setOpen] = useState<string | null>(null);
   const toast = useToast();
   const load = useCallback(() => api<{ cases: AdminCase[] }>('/admin/cases').then((r) => setCases(r.cases)).catch((e) => setError(e.message)), []);
-  useEffect(() => void load(), [load]);
+  useEffect(() => {
+    void load();
+  }, [load]);
   if (error) return <FullPageMessage title="Kein Zugriff">{error}</FullPageMessage>;
   if (!cases) return <FullPageMessage title="Lade Fallverwaltung …"><Spinner /></FullPageMessage>;
   return (

@@ -594,7 +594,9 @@ export function TheoryForm({ view, onSubmit }: { view: PublicCaseView; onSubmit:
 export function Discussion({ messages, onSend, onHide, enabled }: { messages: DiscussionMessage[]; onSend?: (t: string) => Promise<boolean>; onHide?: (id: string) => void; enabled: boolean }) {
   const [text, setText] = useState('');
   const end = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => end.current?.scrollIntoView({ block: 'nearest' }), [messages.length]);
+  useLayoutEffect(() => {
+    end.current?.scrollIntoView({ block: 'nearest' });
+  }, [messages.length]);
   return (
     <div className="card flex h-[420px] flex-col">
       <div className="scroll-thin flex-1 space-y-2 overflow-y-auto p-3">

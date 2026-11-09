@@ -175,7 +175,7 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'team', label: 'Team', icon: 'trophy' },
 ];
 
-function Investigation({ code, guestName }: { code: string; guestName?: string }) {
+export function Investigation({ code, guestName }: { code: string; guestName?: string }) {
   const hs = useMemo(() => ({ mode: 'viewer' as const, code, guestName }), [code, guestName]);
   const live = useLive<ViewerState>(hs);
   const { state: view, me } = live;

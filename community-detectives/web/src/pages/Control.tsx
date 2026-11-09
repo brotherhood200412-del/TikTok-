@@ -429,7 +429,9 @@ function ChatBadge({ status }: { status: { enabled: boolean; connected: boolean;
 
 function TaskEditor({ current, onSave }: { current: string | null; onSave: (t: string) => void }) {
   const [t, setT] = useState(current ?? '');
-  useEffect(() => setT(current ?? ''), [current]);
+  useEffect(() => {
+    setT(current ?? '');
+  }, [current]);
   return (
     <form
       className="mt-4"

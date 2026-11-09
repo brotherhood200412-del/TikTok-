@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { io, type Socket } from 'socket.io-client';
 import type { DiscussionMessage, OverlayView, PersonalState, PublicCaseView, PublicVote, StreamerSecrets } from '../../../shared/views';
 
@@ -21,7 +21,29 @@ export type OwnerState = ViewerState & {
   overlayPreview: OverlayView;
 };
 
-type Handshake = { mode: 'viewer'; code: string; guestName?: string } | { mode: 'control'; sessionId: string } | { mode: 'overlay'; overlayToken: string };
+export type Handshake = { mode: 'viewer'; code: string; guestName?: string } | { mode: 'control'; sessionId: string } | { mode: 'overlay'; overlayToken: string };
+
+/**
+ * Alternative Verbindung ohne Server (Browser-Vorschau). Ist sie gesetzt,
+ * nutzt useLive sie statt Socket.IO – die Oberflächen bleiben identisch.
+ */
+export interface LocalHandlers {
+  snapshot(s: unknown): void;
+  patch(p: unknown): void;
+  me(m: PersonalState): void;
+  overlay(o: OverlayView | null): void;
+  notice(n: { kind: string; text: string; at: number }): void;
+  bot(b: { text: string; at: number }): void;
+  fatal(e: { message: string; code: string }): void;
+}
+export interface LocalConnection {
+  emit(event: string, action: string, payload: unknown): Promise<AckResult<any>>;
+  close(): void;
+}
+export interface LocalTransport {
+  connect(hs: Handshake, h: LocalHandlers): LocalConnection;
+}
+export const LocalTransportContext = createContext<LocalTransport | null>(null);
 
 /**
  * Verbindung zur Live-Sitzung mit automatischer Wiederverbindung.
@@ -39,11 +61,34 @@ export function useLive<S extends object>(handshake: Handshake | null) {
   const [chatStatus, setChatStatus] = useState<{ enabled: boolean; connected: boolean; status: string; lastError: string | null } | null>(null);
   const [clockOffset, setClockOffset] = useState(0);
   const sockRef = useRef<Socket | null>(null);
+  const localRef = useRef<LocalConnection | null>(null);
+  const local = useContext(LocalTransportContext);
   const key = handshake ? JSON.stringify(handshake) : null;
 
   useEffect(() => {
     if (!key) return;
     const hs = JSON.parse(key) as Handshake;
+    if (local) {
+      const conn = local.connect(hs, {
+        snapshot: (s) => setState(s as S),
+        patch: (p) => setState((prev) => (prev ? { ...prev, ...(p as object) } : prev)),
+        me: setMe,
+        overlay: setOverlay,
+        notice: (n) => setNotices((l) => [...l.slice(-9), n]),
+        bot: (b) => setBot((l) => [...l.slice(-49), b]),
+        fatal: (e) => {
+          setError(e);
+          setStatus('fatal');
+        },
+      });
+      localRef.current = conn;
+      setStatus('online');
+      setChatStatus({ enabled: false, connected: false, status: 'disabled', lastError: null });
+      return () => {
+        conn.close();
+        localRef.current = null;
+      };
+    }
     const socket = io({ path: '/socket.io', auth: hs, transports: ['websocket', 'polling'], reconnectionDelayMax: 8000, withCredentials: true });
     sockRef.current = socket;
     setStatus('connecting');
@@ -84,9 +129,10 @@ export function useLive<S extends object>(handshake: Handshake | null) {
       socket.disconnect();
       sockRef.current = null;
     };
-  }, [key]);
+  }, [key, local]);
 
   const emit = useCallback(<T,>(event: string, action: string, payload: unknown = {}): Promise<AckResult<T>> => {
+    if (localRef.current) return localRef.current.emit(event, action, payload) as Promise<AckResult<T>>;
     return new Promise((resolve) => {
       const s = sockRef.current;
       if (!s || !s.connected) return resolve({ ok: false, message: 'Keine Verbindung – wird wiederhergestellt …', code: 'offline' });
