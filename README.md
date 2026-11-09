@@ -1,3 +1,5 @@
+> **Neu in diesem Repository:** [`community-detectives/`](community-detectives/README.md) – COMMUNITY DETECTIVES, eine interaktive Krimi-Plattform für Twitch-Streamer (eigenständiges Projekt).
+
 # TikTok – Geld & Mindset Videos
 
 Fertige Hochkant-Videos (1080×1920, 30 fps, **61,5 Sekunden**, also über 1 Minute für das Creator-Rewards-Programm) mit animierter Typo, Farb-Highlights, Zähler- und Diagramm-Animationen, Hintergrund-Beat und Soundeffekten.

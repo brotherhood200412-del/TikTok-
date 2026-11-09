@@ -1,0 +1,1077 @@
+# COMMUNITY DETECTIVES – Fall: Das Geheimnis der Villa Falkenstein
+# Alle Personen, Orte und Unternehmen sind frei erfunden.
+id: villa-falkenstein
+version: 1
+title: Das Geheimnis der Villa Falkenstein
+tagline: Ein verschlossenes Zimmer, ein natürlicher Tod – und eine Familie, die zu viel zu verlieren hat.
+genre: mysterioes
+difficulty: experte
+tier: creator
+estimatedMinutes: 100
+accent: "#6b4f8a"
+
+briefing:
+  location: Villa Falkenstein am Rauhsee, Seeberg
+  date: Sonntag, 15. Juni – der 80. Geburtstag
+  intro: |
+    Die ganze Familie ist angereist: Henriette von Falkenstein wird achtzig. Für Sonntagmittag ist ein Fest geplant, Henriette hat eine Rede angekündigt – „über Dinge, die ich euch lange schuldig geblieben bin“.
+    Am Sonntagmorgen öffnet niemand die Bibliothek. Um 8:15 Uhr bricht ihr Sohn Konstantin die Tür auf. Henriette sitzt tot an ihrem Schreibtisch. Die Tür war von innen verschlossen, der Schlüssel steckte, das Fenster ist verriegelt.
+    Der Hausarzt Dr. Wiesinger stellt um 8:50 Uhr den Totenschein aus: Herzversagen, natürlicher Tod. Henriette war herzkrank.
+    Doch die Pflegerin Paula Brandt besteht darauf, dass Henriette am Abend „vollkommen klar und kräftig“ war. Die Familie will die Sache auf sich beruhen lassen. Ihr nicht.
+  objective: Klärt, ob Henriette eines natürlichen Todes starb. Wenn nicht – wie konnte jemand in ein verschlossenes Zimmer hinein töten?
+  question: Wer ist für den Tod von Henriette von Falkenstein verantwortlich?
+
+phases:
+  - id: bibliothek
+    title: Das verschlossene Zimmer
+    goal: Untersucht die Bibliothek. War es wirklich ein natürlicher Tod – und wie war das Zimmer verschlossen?
+  - id: familie
+    title: Die Familie
+    goal: Wer war am Samstagabend wo? Rekonstruiert die letzten Stunden der Henriette von Falkenstein.
+  - id: wahrheit
+    title: Die alte Wahrheit
+    goal: Welches Geheimnis wollte Henriette an ihrem Geburtstag lüften – und wer konnte das nicht ertragen?
+
+characters:
+  - id: henriette
+    name: Henriette von Falkenstein
+    role: victim
+    age: 79
+    occupation: Herrin der Villa Falkenstein
+    color: "#6b4f8a"
+    profile: Seit dem Tod ihres Mannes Albrecht (2009) führt sie die Familienstiftung. Herzkrank, nimmt täglich Digoxin. Schreibt jeden Abend Tagebuch – private Stellen verschlüsselt.
+    personality: Scharfsinnig, stolz, liebevoll auf ihre eigene, strenge Art.
+    relation: Das Opfer.
+    secret: Konstantin ist nicht Albrechts leiblicher Sohn, sondern der von Dr. Johann Wiesinger. Sie wollte das Geheimnis für immer bewahren.
+  - id: konstantin
+    name: Konstantin von Falkenstein
+    role: suspect
+    age: 52
+    occupation: Unternehmer, ältester Sohn
+    color: "#7a6a4f"
+    profile: Betreibt eine Bootswerft am See, die kurz vor der Pleite steht. Hat 180.000 Euro Schulden.
+    personality: Laut, impulsiv, unter der Oberfläche unsicher.
+    relation: Sohn. Hat die Tür zur Bibliothek aufgebrochen.
+    alibi: War nach dem Abendessen im Bootshaus und hat dort übernachtet.
+    motive: Massive Schulden; lauter Streit mit der Mutter beim Abendessen.
+    secret: Weiß nichts von seiner Herkunft. Seine Mutter hatte ihm beim Streit versprochen, die Schulden am Montag zu begleichen – er schämt sich und schweigt darüber.
+  - id: valerie
+    name: Valerie Falkenstein-Roth
+    role: suspect
+    age: 48
+    occupation: Apothekerin
+    color: "#4f6a7a"
+    profile: Betreibt eine Apotheke in der Stadt. Hat ihrer Mutter am Freitag eine neue Packung Digoxin mitgebracht.
+    personality: Kontrolliert, sachlich, distanziert zur Familie.
+    relation: Tochter.
+    alibi: Hat die Villa um 20:45 Uhr verlassen und im Hotel Seeblick übernachtet.
+    motive: Erbt viel; hat Zugang zu Medikamenten und das Wissen.
+    secret: Ihre Ehe ist am Ende, sie wollte die Familie nicht damit belasten und übernachtete deshalb im Hotel.
+  - id: moritz
+    name: Moritz von Falkenstein
+    role: suspect
+    age: 24
+    occupation: Musiker, Enkel
+    color: "#5a7a4f"
+    profile: Konstantins Sohn, Gitarrist in einer Band. Henriettes Lieblingsenkel. Lebt von den Erträgen der Familienstiftung. Eine Narbe quer über dem rechten Zeigefinger erinnert an eine gerissene Saite.
+    personality: Charmant, sensibel, wirkt jünger als er ist.
+    relation: Enkel. Brachte der Großmutter jeden Abend ihren Kakao.
+    alibi: War nach dem Kakao in seinem Zimmer und hat Gitarre geübt.
+    motive: Keines erkennbar – er liebte seine Großmutter.
+    secret: Hat am Freitag ein Gespräch belauscht und alte Briefe gefunden. Er glaubte, Henriette würde am Geburtstag enthüllen, dass Konstantin nicht Albrechts Sohn ist – damit wären Vater und Sohn aus der Stiftung gefallen. Er vergiftete sie mit Digoxin im Kakao.
+  - id: paula
+    name: Paula Brandt
+    role: suspect
+    age: 31
+    occupation: Pflegerin, wohnt in der Villa
+    color: "#7a4f4f"
+    profile: Pflegt Henriette seit drei Jahren. Stellt jeden Sonntag die Wochendosette mit den Medikamenten zusammen.
+    personality: Gewissenhaft, direkt, lässt sich nichts gefallen.
+    relation: Pflegerin, enge Vertraute.
+    alibi: War ab 21:30 Uhr in ihrem Zimmer, kam um 21:45 Uhr noch einmal in die Küche.
+    motive: Hat jeden Tag Zugang zu Henriettes Medikamenten. Im neuen Testament soll sie bedacht werden.
+    secret: Weiß, dass Henriette ihr 20.000 Euro vermachen wollte – sie hat es nie gewollt und fürchtet, deshalb verdächtigt zu werden.
+  - id: wiesinger
+    name: Dr. Johann Wiesinger
+    role: suspect
+    age: 81
+    occupation: Hausarzt im Ruhestand, Freund der Familie
+    color: "#7a7a5a"
+    profile: Seit fünfzig Jahren Hausarzt der Falkensteins. Macht noch Notdienste im Dorf.
+    personality: Höflich, altmodisch, wirkt müde und traurig.
+    relation: Ältester Freund der Familie. Stellte den Totenschein aus.
+    alibi: Hatte Notdienst im Dorf.
+    motive: Stellte auffällig schnell einen natürlichen Tod fest.
+    secret: Ist Konstantins leiblicher Vater. Hat den Totenschein aus Trauer und Gewohnheit zu schnell ausgestellt – nicht, um etwas zu vertuschen.
+  - id: kraemer
+    name: Eduard Krämer
+    role: suspect
+    age: 63
+    occupation: Verwalter der Villa
+    color: "#5d5d5d"
+    profile: Seit 31 Jahren im Haus. Verwahrt alle Schlüssel – auch den Zweitschlüssel zur Bibliothek – und versiegelt den Schlüsselschrank jede Nacht.
+    personality: Förmlich, verschwiegen, beobachtet alles.
+    relation: Verwalter. Kennt jedes Geräusch im Haus.
+    alibi: Hat um 23:00 Uhr den Schlüsselschrank versiegelt und ist zu Bett gegangen.
+    motive: Besitzt den einzigen Zweitschlüssel zur Bibliothek.
+    secret: Hat die Familie über Jahrzehnte gedeckt und weiß mehr über Henriettes Vergangenheit, als er sagt. Unschuldig.
+
+insights:
+  - id: in_schluessel_innen
+    title: Schlüssel innen
+    text: Der Bibliotheksschlüssel steckte von innen im Schloss. Konstantin musste die Tür aufbrechen.
+    category: spur
+  - id: in_fenster_verriegelt
+    title: Fenster verriegelt
+    text: Das einzige Fenster der Bibliothek ist von innen verriegelt, die Riegel sind verstaubt und unberührt.
+    category: spur
+  - id: in_todeszeit_villa
+    title: Tod zwischen 1 und 3 Uhr
+    text: Laut Totenschein starb Henriette zwischen 1:00 und 3:00 Uhr nachts.
+    category: zeitlinie
+    timeline: { time: "01:00–03:00", sort: 90, text: "Henriette stirbt allein in der Bibliothek." }
+  - id: in_gelbsehen
+    title: Gelbe Höfe
+    text: "Henriettes letzter Tagebucheintrag: Die Kerzen hätten „seltsame gelbe Höfe“, ihr sei übel."
+    category: spur
+    characters: [henriette]
+  - id: in_kakao_bitter
+    title: Der bittere Kakao
+    text: "Im Tagebuch: „Der Kakao war heute so bitter – Moritz hat es gut gemeint.“"
+    category: spur
+    characters: [moritz]
+  - id: in_digoxin
+    title: Digoxin-Vergiftung
+    text: Gelbsehen, Übelkeit, Herzversagen – exakt die Symptome einer Digoxin-Überdosis. Henriette starb nicht einfach an ihrem kranken Herzen.
+    category: wendung
+  - id: in_obduktion
+    title: Neunfacher Digoxin-Spiegel
+    text: Die Obduktion zeigt einen neunfach erhöhten Digoxin-Spiegel. Aufgenommen zwischen 21 und 22 Uhr, gelöst in Milch.
+    category: wendung
+    timeline: { time: "21:00–22:00", sort: 35, text: "Henriette nimmt das Gift mit Milch auf." }
+  - id: in_dosette_korrekt
+    title: Die Dosette ist korrekt
+    text: In Paulas Wochendosette liegen genau die richtigen Tabletten. Samstag früh wurde eine Tablette genommen – wie verordnet. Das Gift kam nicht aus der Dosette.
+    category: entlastung
+    characters: [paula]
+  - id: in_tabletten_fehlen
+    title: Zwölf Tabletten fehlen
+    text: Aus der neuen, am Freitag versiegelt gekauften Digoxin-Packung fehlen zwölf Tabletten – obwohl sie noch gar nicht gebraucht wurde.
+    category: spur
+  - id: in_moritz_kueche
+    title: Moritz in der Küche
+    text: Krämer sah Moritz um 21:20 Uhr in der Küche Milch warm machen – für den allabendlichen Kakao.
+    category: zeitlinie
+    characters: [moritz]
+    timeline: { time: "21:20", sort: 30, text: "Moritz macht in der Küche Milch für den Kakao warm." }
+  - id: in_kakao_salon
+    title: Kakao im Salon
+    text: Um 21:30 Uhr trank Henriette im Salon den Kakao, den Moritz ihr brachte.
+    category: zeitlinie
+    characters: [moritz]
+    timeline: { time: "21:30", sort: 40, text: "Henriette trinkt im Salon Moritz' Kakao." }
+  - id: in_kakao_gespuelt
+    title: Die gespülte Tasse
+    text: Um 21:45 Uhr spülte Moritz die Kakaotasse von Hand – Paula sagt, das habe er noch nie getan.
+    category: widerspruch
+    characters: [moritz]
+    timeline: { time: "21:45", sort: 45, text: "Moritz spült die Kakaotasse von Hand." }
+  - id: in_kakao_giftraeger
+    title: Das Gift war im Kakao
+    text: Bitterer Geschmack, Aufnahme mit Milch zwischen 21 und 22 Uhr, die sofort gespülte Tasse – das Digoxin war im Kakao.
+    category: wendung
+    characters: [moritz]
+  - id: in_eingeschlossen_2200
+    title: Um 22 Uhr schloss sie ab
+    text: Krämer hörte um 22:00 Uhr, wie Henriette die Bibliothek von innen abschloss – wie immer, wenn sie schrieb.
+    category: zeitlinie
+    characters: [henriette]
+    timeline: { time: "22:00", sort: 50, text: "Henriette schließt sich in der Bibliothek ein." }
+  - id: in_anruf_2215
+    title: Anruf um 22:15
+    text: Um 22:15 Uhr rief Henriette aus der Bibliothek Dr. Wiesinger an. Vier Minuten Gespräch.
+    category: zeitlinie
+    characters: [wiesinger]
+    timeline: { time: "22:15", sort: 55, text: "Henriette telefoniert mit Dr. Wiesinger." }
+  - id: in_tagebuch_2240
+    title: Letzter Eintrag 22:40
+    text: Um 22:40 Uhr schrieb Henriette ihren letzten Tagebucheintrag.
+    category: zeitlinie
+    timeline: { time: "22:40", sort: 60, text: "Letzter Tagebucheintrag." }
+  - id: in_zweitschluessel_versiegelt
+    title: Der Zweitschlüssel war versiegelt
+    text: Der Schlüsselschrank wurde um 23:00 Uhr mit Plombe 3392 versiegelt. Am Morgen war die Plombe unversehrt. Niemand hat den Zweitschlüssel benutzt.
+    category: entlastung
+    characters: [kraemer]
+  - id: in_allein_eingeschlossen
+    title: Kein Mord im verschlossenen Zimmer
+    text: Henriette hat sich selbst eingeschlossen. Niemand war bei ihr. Das Gift hatte sie schon vorher aufgenommen – das verschlossene Zimmer ist kein Rätsel, sondern eine Ablenkung.
+    category: wendung
+  - id: in_abend_rekonstruiert
+    title: Der Abend, rekonstruiert
+    text: Nach 22:00 Uhr kam niemand mehr an Henriette heran. Die einzige Gelegenheit, ihr etwas zu geben, war der Kakao um 21:30 Uhr.
+    category: spur
+  - id: in_valerie_hotel
+    title: Valerie im Hotel
+    text: Valerie checkte um 21:05 Uhr im Hotel Seeblick ein und verließ es laut Nachtportier erst um 8:30 Uhr.
+    category: entlastung
+    characters: [valerie]
+    timeline: { time: "20:45", sort: 20, text: "Valerie verlässt die Villa." }
+  - id: in_wiesinger_notdienst
+    title: Wiesinger im Notdienst
+    text: Dr. Wiesinger war von 21:05 bis 23:35 Uhr bei einer Patientin im Dorf. Das Telefonat um 22:15 führte er von dort.
+    category: entlastung
+    characters: [wiesinger]
+  - id: in_konstantin_bezahlt
+    title: Die Schulden wären bezahlt worden
+    text: Henriette hatte am Samstag einen Überweisungsauftrag über 180.000 € an Konstantins Gläubiger unterschrieben – fällig Montag. Durch ihren Tod ist der Auftrag ungültig. Konstantin verliert.
+    category: entlastung
+    characters: [konstantin]
+  - id: in_streit_dinner
+    title: Streit beim Abendessen
+    text: "Beim Abendessen um 19:40 Uhr schrie Konstantin: „Du wirst mich nicht ruinieren!“"
+    category: motiv
+    characters: [konstantin]
+    timeline: { time: "19:40", sort: 10, text: "Lauter Streit zwischen Konstantin und Henriette beim Abendessen." }
+  - id: in_notartermin
+    title: Termin beim Notar
+    text: Für Montag 10 Uhr war ein Notartermin vereinbart – Testamentsänderung und eine Schenkung „an Ihren Sohn“.
+    category: motiv
+    characters: [konstantin]
+  - id: in_stiftung_leiblich
+    title: Nur leibliche Nachkommen
+    text: Laut Stiftungsurkunde gehen die Erträge der Falkenstein-Stiftung ausschließlich an „leibliche Nachkommen Albrechts von Falkenstein“.
+    category: motiv
+  - id: in_geheimnis_vater
+    title: Konstantins wahrer Vater
+    text: "Henriettes verschlüsselte Zeile lautet: „Konstantins Vater ist Johann.“ – Dr. Johann Wiesinger."
+    category: wendung
+    characters: [konstantin, wiesinger]
+  - id: in_folge_stiftung
+    title: Wer verliert, wenn es herauskommt?
+    text: Ist Konstantin nicht Albrechts Sohn, fallen er und sein Sohn Moritz aus der Stiftung. Moritz lebt ausschließlich von den Erträgen.
+    category: motiv
+    characters: [moritz, konstantin]
+  - id: in_briefe_1971
+    title: Die Briefe von 1971
+    text: "Im Dachboden: Briefe von „J.“ an Henriette aus dem Jahr 1971. „Unser Sohn soll nie erfahren, wer ich bin.“"
+    category: wendung
+    characters: [wiesinger]
+  - id: in_plektrum
+    title: Ein Plektrum im Staub
+    text: Neben dem geöffneten Briefkoffer auf dem Dachboden liegt ein Gitarrenplektrum. Die Staubspuren am Koffer sind frisch.
+    category: spur
+    characters: [moritz]
+  - id: in_abdruck_moritz
+    title: Der Fingerabdruck auf dem Blister
+    text: Der Teilabdruck auf dem geleerten Blisterstreifen – Schleife rechts, drei Gabelungen, quer verlaufende Narbe – stammt von Moritz.
+    category: identitaet
+    characters: [moritz]
+  - id: in_moritz_motiv
+    title: „Dann sind Papa und ich raus“
+    text: "Moritz an seine Freundin Jana, Freitag 16:42 Uhr: „Wenn das mit den Briefen rauskommt, sind Papa und ich raus aus der Stiftung. Alles weg.“"
+    category: motiv
+    characters: [moritz]
+  - id: in_erledigt
+    title: „Es ist erledigt“
+    text: "Samstag, 23:10 Uhr, Moritz an Jana: „Es ist erledigt. Sie wird nichts sagen.“"
+    category: wendung
+    characters: [moritz]
+    timeline: { time: "23:10", sort: 70, text: "Moritz schreibt: „Es ist erledigt. Sie wird nichts sagen.“" }
+  - id: in_rede_keine_enthuellung
+    title: Die Rede, die nie gehalten wurde
+    text: Der halb verbrannte Redeentwurf zeigt – Henriette wollte die Wahrheit nie enthüllen. Sie wollte Konstantin am Montag ihr eigenes Vermögen schenken, damit er nie etwas verliert.
+    category: wendung
+    characters: [henriette]
+
+evidence:
+  - id: ev_bibliothek
+    title: Die Bibliothek am Sonntagmorgen
+    summary: Aufnahme kurz nach dem Aufbrechen der Tür, 8:20 Uhr.
+    source: Polizei Seeberg
+    content:
+      kind: photo
+      scene: archive
+      caption: Bibliothek, Blick vom Türrahmen zum Schreibtisch
+      timestamp: "15.06. 08:20"
+      elements:
+        - { id: henriette_tisch, label: Henriette am Schreibtisch, detail: "Sie sitzt zurückgelehnt im Lehnstuhl, den Füller noch in der Hand. Keine Verletzungen, keine Kampfspuren.", x: 40, y: 34, w: 14, h: 40, shape: person }
+        - { id: schloss, label: Türschloss, detail: "Der Schlüssel steckt von innen. Das Schließblech ist beim Aufbrechen herausgerissen.", x: 2, y: 30, w: 8, h: 40, shape: door }
+        - { id: fenster, label: Fenster, detail: "Das Fenster ist geschlossen und verriegelt. Auf den Riegeln liegt eine dünne, unberührte Staubschicht.", x: 74, y: 8, w: 16, h: 32, shape: window }
+        - { id: kerzen, label: Kerzenleuchter, detail: "Drei Kerzen, vollständig heruntergebrannt.", x: 58, y: 30, w: 6, h: 14, shape: lamp }
+        - { id: tagebuch_tisch, label: Tagebuch, detail: "Ein ledergebundenes Tagebuch, aufgeschlagen beim Eintrag vom Samstag.", x: 46, y: 60, w: 10, h: 8, shape: paper }
+        - { id: standuhr, label: Standuhr, detail: "Die Standuhr ist um 2:47 Uhr stehen geblieben. Krämer zieht sie nur sonntags auf.", x: 90, y: 20, w: 8, h: 54, shape: clock }
+        - { id: regal, label: Bücherregal, detail: "Familienchroniken, Jahrgänge 1950–2009. Lücke im Fach 1971.", x: 14, y: 6, w: 20, h: 60, shape: shelf }
+    hotspots:
+      - { item: schloss, insight: in_schluessel_innen }
+      - { item: fenster, insight: in_fenster_verriegelt }
+
+  - id: ev_totenschein
+    title: Totenschein
+    summary: Ausgestellt von Dr. Johann Wiesinger, 8:50 Uhr.
+    source: Dr. J. Wiesinger
+    content:
+      kind: document
+      docType: form
+      heading: Todesbescheinigung – vertraulicher Teil
+      meta:
+        - { label: Verstorbene, value: "Henriette von Falkenstein, *15.06." }
+        - { label: Ausgestellt, value: "15.06., 08:50 Uhr" }
+      lines:
+        - { id: ts1, text: "Todesart: natürlich" }
+        - { id: ts2, text: "Unmittelbare Todesursache: Herzversagen bei bekannter Herzinsuffizienz" }
+        - { id: ts3, text: "Geschätzter Todeszeitpunkt: zwischen 01:00 und 03:00 Uhr" }
+        - { id: ts4, text: "Leichenschau: keine Hinweise auf äußere Gewalt" }
+    hotspots:
+      - { item: ts3, insight: in_todeszeit_villa }
+
+  - id: ev_tagebuch
+    title: Henriettes Tagebuch
+    summary: Die letzten beiden Einträge. Eine Zeile ist verschlüsselt.
+    source: Bibliothek
+    content:
+      kind: document
+      docType: diary
+      heading: Tagebuch H. v. F.
+      lines:
+        - { id: tb1, text: "Freitag. Johann war hier. Ich habe ihm gesagt: Am Sonntag sage ich ihnen die Wahrheit – über mein Testament. Er sah erleichtert aus." }
+        - { id: tb2, text: "Verschlüsselt, wie immer verschoben um Albrechts Glückszahl:" }
+        - { id: tb3, text: "RVUZAHUAPUZ CHALY PZA QVOHUU" }
+        - { id: tb4, text: "Samstag, 22:40. Die Kerzen haben heute so seltsame gelbe Höfe." }
+        - { id: tb5, text: "Mir ist übel. Der Kakao war heute so bitter – Moritz hat es gut gemeint." }
+        - { id: tb6, text: "Morgen werde ich achtzig. Ich bin müde, aber ich habe meinen Frieden gemacht." }
+    hotspots:
+      - { item: tb4, insight: in_gelbsehen }
+      - { item: tb5, insight: in_kakao_bitter }
+      - { item: tb6, insight: in_tagebuch_2240 }
+
+  - id: ev_portraet
+    title: Porträt Albrecht von Falkenstein
+    summary: Ölgemälde im Salon, über dem Kamin.
+    source: Salon
+    content:
+      kind: photo
+      scene: gallery
+      caption: Salon, Kaminwand
+      elements:
+        - { id: gemaelde, label: Gemälde, detail: "Albrecht von Falkenstein im Jagdrock, um 1975. Er blickt streng auf den See.", x: 34, y: 6, w: 32, h: 48, shape: frame }
+        - { id: plakette, label: Messingplakette, detail: "„Albrecht v. F. 1931–2009 · Sieben Seen, sieben Leben“ – darunter klein: „Seine Glückszahl blieb immer die Sieben.“", x: 42, y: 58, w: 16, h: 6, shape: box }
+        - { id: kamin, label: Kamin, detail: "Kalte Asche. Darin einige verkohlte Papierreste.", x: 30, y: 66, w: 40, h: 30, shape: rect }
+        - { id: sessel, label: Ohrensessel, detail: "Henriettes Lieblingssessel. Daneben ein Beistelltisch mit Untersetzer – ohne Tasse.", x: 76, y: 50, w: 18, h: 40, shape: table }
+        - { id: vase, label: Vase, detail: "Pfingstrosen aus dem Garten, Geburtstagsdekoration.", x: 8, y: 40, w: 10, h: 26, shape: bottle }
+
+  - id: ev_beipackzettel
+    title: Beipackzettel Digoxin
+    summary: Aus Valeries Apothekentasche – sie hat ihn bereitwillig vorgelegt.
+    source: Valerie Falkenstein-Roth
+    unlock: { topic: valerie.medikamente }
+    content:
+      kind: document
+      docType: report
+      heading: Gebrauchsinformation – Digoxin 0,1 mg
+      lines:
+        - { id: bz1, text: "Anwendung: Herzschwäche, Vorhofflimmern. Täglich 1 Tablette." }
+        - { id: bz2, text: "Geringe therapeutische Breite: Schon die mehrfache Dosis kann lebensgefährlich sein." }
+        - { id: bz3, text: "Zeichen einer Überdosierung: Übelkeit, Erbrechen, Sehstörungen (Gelb- oder Grünsehen, farbige Höfe um Lichtquellen)," }
+        - { id: bz4, text: "Herzrhythmusstörungen, Herzstillstand – häufig mehrere Stunden nach der Einnahme." }
+        - { id: bz5, text: "Bitterer Geschmack beim Zerkleinern der Tabletten möglich." }
+
+  - id: ev_dosette
+    title: Wochendosette
+    summary: Henriettes Medikamentenbox, von Paula jeden Sonntag befüllt.
+    source: Paula Brandt
+    unlock: { topic: paula.medikamente }
+    content:
+      kind: table
+      heading: Dosette KW 24 – Inhalt laut Labor
+      columns: [Fach, Morgens, Abends, Befund]
+      rows:
+        - { id: do_mo, cells: ["Mo–Fr", "genommen", "genommen", "–"] }
+        - { id: do_sa, cells: ["Samstag", "genommen", "genommen", "Reste: Digoxin 0,1 mg (1×), Ramipril"] }
+        - { id: do_so, cells: ["Sonntag", "voll", "voll", "1× Digoxin 0,1 mg, 1× Ramipril, 1× ASS – korrekt"] }
+      note: Laborbefund 16.06. – alle Tabletten entsprechen der Verordnung. Keine Manipulation erkennbar.
+    hotspots:
+      - { item: do_so, insight: in_dosette_korrekt }
+      - { item: do_sa, insight: in_dosette_korrekt }
+
+  - id: ev_blister
+    title: Die neue Digoxin-Packung
+    summary: Sichergestellt in der Küchenschublade. Valerie hat sie am Freitag mitgebracht.
+    source: Polizei Seeberg
+    unlock: { topic: valerie.packung }
+    content:
+      kind: table
+      heading: Digoxin 0,1 mg – N3 (100 Tabletten), gekauft Fr 13.06., Siegel aufgerissen
+      columns: [Blisterstreifen, Tabletten enthalten, Bemerkung]
+      rows:
+        - { id: bl1, cells: ["Streifen 1", "10 von 10", "–"] }
+        - { id: bl2, cells: ["Streifen 2", "10 von 10", "–"] }
+        - { id: bl3, cells: ["Streifen 3", "10 von 10", "–"] }
+        - { id: bl4, cells: ["Streifen 4", "3 von 10", "Folie sauber eingedrückt"] }
+        - { id: bl5, cells: ["Streifen 5", "5 von 10", "Teilabdruck auf der Folie"] }
+        - { id: bl6, cells: ["Streifen 6–10", "je 10 von 10", "–"] }
+      note: Laut Paula wurde die neue Packung noch nicht für die Dosette verwendet – dafür war die alte Packung noch halb voll.
+
+  - id: ev_aussage_kraemer
+    title: Aussage Eduard Krämer
+    summary: Der Verwalter hat ein Gedächtnis wie ein Uhrwerk.
+    source: Polizei Seeberg
+    unlock: { phase: familie }
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugenaussage – Eduard Krämer, 63
+      lines:
+        - { id: kr1, text: "Das Abendessen war um 19 Uhr. Um 19:40 schrie Herr Konstantin: „Du wirst mich nicht ruinieren!“ und verließ den Raum." }
+        - { id: kr2, text: "Frau Valerie fuhr um Viertel vor neun ab, ins Hotel." }
+        - { id: kr3, text: "Um 21:20 stand der junge Herr Moritz in der Küche und machte Milch warm. Wie jeden Abend für den Kakao der gnädigen Frau." }
+        - { id: kr4, text: "Um 22:00 hörte ich, wie die gnädige Frau die Bibliothek abschloss. Zweimal herumgedreht, wie immer." }
+        - { id: kr5, text: "Um 23:00 habe ich den Schlüsselschrank versiegelt und bin zu Bett gegangen." }
+    hotspots:
+      - { item: kr1, insight: in_streit_dinner }
+      - { item: kr3, insight: in_moritz_kueche }
+      - { item: kr4, insight: in_eingeschlossen_2200 }
+      - { item: kr2, insight: in_valerie_hotel }
+
+  - id: ev_siegelbuch
+    title: Siegelbuch Schlüsselschrank
+    summary: Krämers Protokoll der nächtlichen Versiegelung.
+    source: Eduard Krämer
+    unlock: { topic: kraemer.schluessel }
+    content:
+      kind: table
+      heading: Siegelbuch – Schlüsselschrank Erdgeschoss
+      columns: [Datum, Uhrzeit, Vorgang, Plombe]
+      rows:
+        - { id: sg1, cells: ["13.06.", "23:02", "versiegelt", "3390"] }
+        - { id: sg2, cells: ["14.06.", "07:10", "geöffnet, unversehrt", "3390"] }
+        - { id: sg3, cells: ["14.06.", "23:00", "versiegelt", "3392"] }
+        - { id: sg4, cells: ["15.06.", "08:40", "geöffnet durch Polizei, unversehrt", "3392"] }
+      note: Der Zweitschlüssel zur Bibliothek hängt an Haken 14 im Schrank.
+    hotspots:
+      - { item: sg4, insight: in_zweitschluessel_versiegelt }
+      - { item: sg3, insight: in_zweitschluessel_versiegelt }
+
+  - id: ev_telefon
+    title: Verbindungsnachweis Festnetz
+    summary: Anrufe vom Bibliotheksanschluss am Samstag.
+    source: Telefongesellschaft
+    unlock: { phase: familie }
+    content:
+      kind: table
+      heading: Einzelverbindungsnachweis Anschluss Bibliothek
+      columns: [Datum, Uhrzeit, Ziel, Dauer]
+      rows:
+        - { id: tf1, cells: ["14.06.", "11:02", "Konditorei Sommer", "2:10"] }
+        - { id: tf2, cells: ["14.06.", "22:15", "Mobil Dr. J. Wiesinger", "4:02"] }
+    hotspots:
+      - { item: tf2, insight: in_anruf_2215 }
+
+  - id: ev_notdienst
+    title: Notdienstprotokoll Dr. Wiesinger
+    summary: Vom ärztlichen Bereitschaftsdienst bestätigt.
+    source: Bereitschaftsdienst Seeberg
+    unlock: { topic: wiesinger.abend }
+    content:
+      kind: document
+      docType: log
+      heading: Bereitschaftsdienst – Samstag, 14.06.
+      lines:
+        - { id: nd1, text: "21:05  Hausbesuch Familie Lindner, Seeberg, Dorfstraße 8 – Patientin 92 J., Atemnot" }
+        - { id: nd2, text: "22:15  Privatanruf (4 Min.), Arzt bleibt vor Ort" }
+        - { id: nd3, text: "23:35  Patientin stabil, Arzt verlässt das Haus" }
+        - { id: nd4, text: "Bestätigt: Angehörige Lindner" }
+    hotspots:
+      - { item: nd1, insight: in_wiesinger_notdienst }
+      - { item: nd3, insight: in_wiesinger_notdienst }
+
+  - id: ev_hotel
+    title: Meldeschein Hotel Seeblick
+    summary: Mit Notiz des Nachtportiers.
+    source: Hotel Seeblick
+    unlock: { topic: valerie.abend }
+    content:
+      kind: document
+      docType: receipt
+      heading: Hotel Seeblick – Zimmer 12
+      lines:
+        - { id: ho1, text: "Gast: V. Falkenstein-Roth – Check-in 14.06., 21:05" }
+        - { id: ho2, text: "Nachtportier: Gast verließ das Haus nicht. Eingang ab 22 Uhr nur mit Klingel." }
+        - { id: ho3, text: "Check-out 15.06., 08:30 (nach Anruf der Familie)" }
+    hotspots:
+      - { item: ho1, insight: in_valerie_hotel }
+      - { item: ho2, insight: in_valerie_hotel }
+
+  - id: ev_bankauftrag
+    title: Überweisungsauftrag
+    summary: Gefunden in Henriettes Schreibtischschublade.
+    source: Bibliothek
+    unlock: { topic: konstantin.streit }
+    content:
+      kind: document
+      docType: form
+      heading: Seebank – Überweisungsauftrag
+      meta:
+        - { label: Auftraggeberin, value: "Henriette von Falkenstein (Privatkonto)" }
+        - { label: Unterschrieben, value: "Samstag, 14.06." }
+        - { label: Ausführung, value: "Montag, 16.06." }
+      lines:
+        - { id: ba1, text: "Empfänger: Gläubigerbank Werftbetrieb K. v. Falkenstein" }
+        - { id: ba2, text: "Betrag: 180.000,00 EUR" }
+        - { id: ba3, text: "Hinweis der Bank: Aufträge Verstorbener werden nicht ausgeführt." }
+
+  - id: ev_aussage_paula
+    title: Aussage Paula Brandt
+    summary: Die Pflegerin war die Letzte, die Henriette im Salon sah.
+    source: Polizei Seeberg
+    unlock: { phase: familie }
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugenaussage – Paula Brandt, 31
+      lines:
+        - { id: pa1, text: "Frau von Falkenstein war am Abend klar und kräftig. Sie hat noch über meine Witze gelacht." }
+        - { id: pa2, text: "Um halb zehn brachte Moritz ihr den Kakao in den Salon. Ich bin dann in mein Zimmer." }
+        - { id: pa3, text: "Um Viertel vor zehn kam ich in die Küche, um Wasser zu holen. Moritz stand am Spülbecken und spülte die Kakaotasse. Von Hand!" }
+        - { id: pa4, text: "Das hat er noch nie gemacht. Sonst bleibt die Tasse bis morgens stehen." }
+    hotspots:
+      - { item: pa3, insight: in_kakao_gespuelt }
+      - { item: pa4, insight: in_kakao_gespuelt }
+      - { item: pa2, insight: in_kakao_salon }
+
+  - id: ev_notar
+    title: Anrufbeantworter – Notariat Seeberg
+    summary: Nachricht auf dem Anrufbeantworter der Villa, Freitagnachmittag.
+    source: Villa Falkenstein
+    unlock: { phase: familie }
+    content:
+      kind: audio
+      duration: "0:21"
+      recordedAt: "Fr 13.06., 15:12"
+      lines:
+        - { id: no1, t: "0:00", speaker: "Notariat", text: "Guten Tag Frau von Falkenstein, hier das Notariat Dr. Behrens." }
+        - { id: no2, t: "0:05", speaker: "Notariat", text: "Ihr Termin am Montag um zehn Uhr ist bestätigt – Änderung des Testaments." }
+        - { id: no3, t: "0:12", speaker: "Notariat", text: "Die Unterlagen für die Schenkung an Ihren Sohn liegen bereit. Auf Wiederhören." }
+    hotspots:
+      - { item: no2, insight: in_notartermin }
+      - { item: no3, insight: in_notartermin }
+
+  - id: ev_stiftung
+    title: Stiftungsurkunde
+    summary: Auszug aus der Satzung der Falkenstein-Stiftung von 1998.
+    source: Familienarchiv
+    unlock: { any: [{ topic: konstantin.geld }, { topic: moritz.geld }] }
+    content:
+      kind: document
+      docType: report
+      heading: Satzung der Falkenstein-Stiftung – § 4 Begünstigte
+      lines:
+        - { id: st1, text: "(1) Die Erträge der Stiftung stehen ausschließlich den leiblichen Nachkommen Albrechts von Falkenstein zu." }
+        - { id: st2, text: "(2) Adoptierte oder nicht leibliche Nachkommen sind ausgeschlossen." }
+        - { id: st3, text: "(3) Über Zweifel entscheidet der Stiftungsrat nach Anhörung." }
+    hotspots:
+      - { item: st1, insight: in_stiftung_leiblich }
+      - { item: st2, insight: in_stiftung_leiblich }
+
+  - id: ev_dachboden
+    title: Der Dachboden
+    summary: Nach dem entschlüsselten Tagebuch durchsucht.
+    source: Polizei Seeberg
+    unlock: { insight: in_geheimnis_vater }
+    content:
+      kind: photo
+      scene: archive
+      caption: Dachboden, Westgiebel
+      elements:
+        - { id: koffer, label: Briefkoffer, detail: "Ein alter Lederkoffer, geöffnet. Darin Briefbündel, mit Seidenband verschnürt – eines ist aufgeknotet.", x: 34, y: 50, w: 26, h: 20, shape: box }
+        - { id: staub, label: Staubspuren, detail: "Frische Handabdrücke im Staub auf dem Kofferdeckel. Höchstens ein paar Tage alt.", x: 36, y: 44, w: 22, h: 6, shape: rect }
+        - { id: plektrum, label: Kleines Plastikteil, detail: "Ein dreieckiges, rotes Plastikplättchen mit dem Aufdruck „Medium 0.73“ – ein Gitarrenplektrum.", x: 64, y: 70, w: 4, h: 4, shape: round }
+        - { id: lampe_d, label: Petroleumlampe, detail: "Eine alte Lampe, seit Jahren nicht benutzt.", x: 82, y: 30, w: 8, h: 30, shape: lamp }
+        - { id: kisten, label: Umzugskisten, detail: "Beschriftet „Chroniken 1960–1980“. Die Kiste mit 1971 ist leer.", x: 4, y: 40, w: 22, h: 40, shape: box }
+    hotspots:
+      - { item: plektrum, insight: in_plektrum, feedback: "Wer in dieser Familie spielt Gitarre?" }
+      - { item: staub, insight: in_plektrum }
+
+  - id: ev_briefe
+    title: Brief von „J.“, 1971
+    summary: Aus dem Briefkoffer auf dem Dachboden.
+    source: Dachboden
+    unlock: { evidence: ev_dachboden }
+    content:
+      kind: document
+      docType: letter
+      heading: Seeberg, 9. Oktober 1971
+      lines:
+        - { id: br1, text: "Liebste H.," }
+        - { id: br2, text: "ich habe ihn heute im Kinderwagen gesehen, am Steg. Er hat deine Augen." }
+        - { id: br3, text: "Unser Sohn soll nie erfahren, wer ich bin. Albrecht wird ihm ein guter Vater sein." }
+        - { id: br4, text: "Ich bleibe euer Arzt. Mehr darf ich nicht sein. – J." }
+    hotspots:
+      - { item: br3, insight: in_briefe_1971 }
+
+  - id: ev_obduktionsbericht
+    title: Obduktionsbericht
+    summary: Nach Anordnung der Staatsanwaltschaft.
+    source: Rechtsmedizin
+    unlock: { event: ev_obduktion }
+    content:
+      kind: document
+      docType: report
+      heading: Obduktionsbefund – H. v. Falkenstein
+      lines:
+        - { id: ob1, text: "Digoxin-Serumspiegel: 18,2 ng/ml (therapeutischer Bereich bis 2,0) – etwa neunfach erhöht." }
+        - { id: ob2, text: "Mageninhalt: Milch, Kakao, zerkleinerte Tablettenreste." }
+        - { id: ob3, text: "Aufnahme des Wirkstoffs: geschätzt zwischen 21:00 und 22:00 Uhr." }
+        - { id: ob4, text: "Todesursache: Kammerflimmern infolge Digoxin-Intoxikation. Todesart: nicht natürlich." }
+    hotspots:
+      - { item: ob1, insight: in_obduktion }
+      - { item: ob3, insight: in_obduktion }
+
+  - id: ev_labor
+    title: Daktyloskopisches Gutachten
+    summary: Spurenauswertung der Digoxin-Packung.
+    source: Landeskriminalamt
+    unlock: { all: [{ insight: in_tabletten_fehlen }, { event: ev_obduktion }] }
+    content:
+      kind: table
+      heading: Spurenträger Digoxin N3 – Ergebnisse
+      columns: [Spurenträger, Befund, Merkmale]
+      rows:
+        - { id: la1, cells: ["Faltschachtel", "mehrere Abdrücke", "zugeordnet: V. Falkenstein-Roth (Kauf), P. Brandt (Einräumen)"] }
+        - { id: la2, cells: ["Blister Streifen 4", "verwischt", "nicht auswertbar"] }
+        - { id: la3, cells: ["Blister Streifen 5", "Teilabdruck, rechter Zeigefinger", "Schleife rechts, 3 Gabelungen, quer verlaufende Narbe"] }
+      note: Vergleichsabdrücke der Hausbewohner wurden freiwillig abgegeben.
+
+  - id: ev_vergleich
+    title: Vergleichsabdrücke der Hausbewohner
+    summary: Freiwillig abgegebene Fingerabdrücke, rechter Zeigefinger.
+    source: Landeskriminalamt
+    unlock: { evidence: ev_labor }
+    content:
+      kind: table
+      heading: Vergleichskarten – rechter Zeigefinger
+      columns: [Person, Grundmuster, Gabelungen, Besonderheit]
+      rows:
+        - { id: vg1, cells: ["Konstantin v. F.", "Wirbel", "4", "–"] }
+        - { id: vg2, cells: ["Valerie F.-R.", "Schleife links", "3", "–"] }
+        - { id: vg3, cells: ["Moritz v. F.", "Schleife rechts", "3", "Narbe quer"] }
+        - { id: vg4, cells: ["Paula Brandt", "Schleife rechts", "2", "–"] }
+        - { id: vg5, cells: ["Eduard Krämer", "Bogen", "1", "–"] }
+        - { id: vg6, cells: ["Dr. J. Wiesinger", "Schleife rechts", "3", "–"] }
+
+  - id: ev_jana
+    title: Chat zwischen Moritz und Jana
+    summary: Jana Rehm, Moritz' Freundin, hat die Polizei selbst angerufen.
+    source: Jana Rehm
+    unlock: { event: ev_jana_meldet }
+    content:
+      kind: messages
+      app: Messenger
+      owner: Jana
+      messages:
+        - { id: ja1, from: Moritz, time: "Fr 16:40", text: "Hab Oma und Wiesinger belauscht. Sonntag will sie 'allen die Wahrheit sagen'." }
+        - { id: ja2, from: Moritz, time: "Fr 16:42", text: "Ich hab auf dem Dachboden Briefe gefunden. Papa ist nicht Opas Sohn. Wenn das rauskommt, sind Papa und ich raus aus der Stiftung. Alles weg." }
+        - { id: ja3, from: Jana, time: "Fr 16:50", text: "Rede doch mit ihr!!" }
+        - { id: ja4, from: Moritz, time: "Sa 23:10", text: "Es ist erledigt. Sie wird nichts sagen." }
+        - { id: ja5, from: Jana, time: "Sa 23:12", text: "Was meinst du damit??" }
+    hotspots:
+      - { item: ja2, insight: in_moritz_motiv }
+      - { item: ja4, insight: in_erledigt }
+
+  - id: ev_rede
+    title: Halb verbrannter Redeentwurf
+    summary: Krämer hat ihn beim Ausräumen des Salonkamins gefunden.
+    source: Eduard Krämer
+    unlock: { event: ev_kamin }
+    content:
+      kind: document
+      docType: note
+      heading: „Für meinen Geburtstag“ (Fragment)
+      lines:
+        - { id: re1, text: "…meine Lieben, ich werde euch heute nicht mit der Vergangenheit belasten. Manche Wahrheiten" }
+        - { id: re2, text: "…nehme ich mit, und das ist gut so." }
+        - { id: re3, text: "…Konstantin, du hast immer geglaubt, du müsstest mehr leisten als alle anderen. Morgen beim Notar" }
+        - { id: re4, text: "…mein eigenes Vermögen, damit du nie wieder Angst haben musst, etwas zu verlieren." }
+    hotspots:
+      - { item: re1, insight: in_rede_keine_enthuellung }
+      - { item: re4, insight: in_rede_keine_enthuellung }
+
+connections:
+  - { id: c_digoxin, a: ev_tagebuch, b: ev_beipackzettel, insight: in_digoxin }
+  - { id: c_kakao, a: in_kakao_bitter, b: in_kakao_gespuelt, insight: in_kakao_giftraeger }
+  - { id: c_konstantin, a: ev_bankauftrag, b: konstantin, insight: in_konstantin_bezahlt }
+  - { id: c_stiftung, a: in_stiftung_leiblich, b: in_geheimnis_vater, insight: in_folge_stiftung }
+
+interrogations:
+  - character: konstantin
+    intro: Konstantin läuft im Salon auf und ab. Seine Knöchel sind vom Aufbrechen der Tür noch aufgeschürft.
+    topics:
+      - id: tuer
+        question: Erzählen Sie vom Sonntagmorgen.
+        responses:
+          - mood: verzweifelt
+            stress: 30
+            text: "Paula hat um halb acht geklopft, nichts. Ich habe gerufen, nichts. Um Viertel nach acht habe ich die Tür eingetreten. Der Schlüssel steckte innen. Sie saß einfach da, als würde sie schreiben."
+      - id: streit
+        question: Worüber haben Sie beim Abendessen gestritten?
+        responses:
+          - when: { insight: in_konstantin_bezahlt }
+            mood: gebrochen
+            stress: 40
+            text: "Sie hat es also unterschrieben. Sie wollte meine Schulden bezahlen – am Montag. Ich habe sie angeschrien, weil ich mich so geschämt habe. Ich wollte ihr Geld nicht. Und jetzt ist es zu spät."
+          - mood: wuetend
+            stress: 55
+            text: "Geld. Was sonst. Die Werft. Das geht niemanden etwas an. Aber in ihrem Schreibtisch werden Sie sicher Papiere finden, die Sie interessieren."
+      - id: abend
+        question: Wo waren Sie nach dem Abendessen?
+        responses:
+          - mood: ruhig
+            text: "Im Bootshaus. Ich schlafe dort, wenn ich wütend bin. Das wissen alle. Zeugen gibt es keine, außer den Enten."
+      - id: geld
+        question: Wovon leben Sie und Ihr Sohn?
+        unlock: { phase: familie }
+        responses:
+          - mood: ausweichend
+            stress: 30
+            text: "Ich von der Werft – theoretisch. Moritz von der Familienstiftung. Wie wir alle, irgendwie. Albrechts Stiftung hält diese Familie zusammen."
+      - id: vater
+        question: Wussten Sie, dass Albrecht nicht Ihr leiblicher Vater war?
+        unlock: { insight: in_geheimnis_vater }
+        responses:
+          - mood: gebrochen
+            stress: 70
+            text: "… Was? Nein. Das ist … Johann? Der alte Johann? … Mein Gott. Sie hat es mir nie gesagt. Sie wollte es mir nie sagen, oder?"
+
+  - character: valerie
+    intro: Valerie sitzt mit übereinandergeschlagenen Beinen da und mustert die Ermittler wie einen Kunden mit gefälschtem Rezept.
+    topics:
+      - id: abend
+        question: Warum haben Sie im Hotel übernachtet?
+        responses:
+          - mood: ausweichend
+            stress: 20
+            text: "Private Gründe. Ich bin um Viertel vor neun gefahren und war ab kurz nach neun im Hotel Seeblick. Der Nachtportier kann das bestätigen."
+      - id: medikamente
+        question: Welche Medikamente nahm Ihre Mutter?
+        responses:
+          - mood: kooperativ
+            text: "Digoxin, Ramipril, ASS. Digoxin ist tückisch – schon die mehrfache Dosis ist tödlich. Den Beipackzettel habe ich hier, falls Sie die Symptome einer Überdosis nachlesen wollen."
+      - id: packung
+        question: Haben Sie Digoxin mitgebracht?
+        responses:
+          - mood: ruhig
+            text: "Ja, am Freitag. Eine neue Packung, versiegelt, liegt in der Küchenschublade. Paula braucht sie erst nächste Woche."
+      - id: verdacht
+        question: Sie sind Apothekerin. Sie hätten das Wissen.
+        unlock: { insight: in_digoxin }
+        responses:
+          - when: { insight: in_tabletten_fehlen }
+            mood: wuetend
+            stress: 50
+            text: "Zwölf Tabletten aus einer Packung, die ich selbst gekauft habe, mit meinem Namen auf der Rechnung? Wenn ich jemanden vergiften wollte, wäre ich nicht so dumm. Suchen Sie lieber nach dem, der sie herausgedrückt hat."
+          - mood: arrogant
+            stress: 35
+            text: "Wissen haben heute alle. Es steht auf jedem Beipackzettel. Und ich war im Hotel."
+
+  - character: moritz
+    intro: Moritz hat verweinte Augen. Er dreht unablässig ein Plektrum zwischen den Fingern.
+    topics:
+      - id: kakao
+        question: Sie haben Ihrer Großmutter den Kakao gebracht?
+        responses:
+          - when: { insight: in_kakao_gespuelt }
+            mood: nervoes
+            stress: 60
+            text: "Ja, ich … ich habe die Tasse gespült. Ich wollte Krämer Arbeit abnehmen. Ist das jetzt verboten? Sie hat gesagt, er war ein bisschen bitter. Ich hatte zu wenig Zucker genommen."
+          - mood: kooperativ
+            stress: 10
+            text: "Jeden Abend, seit ich sechs bin. Um halb zehn, im Salon. Sie hat gelacht und gesagt, ich sei der Einzige, der ihn richtig macht."
+      - id: abend
+        question: Was haben Sie danach gemacht?
+        responses:
+          - mood: ruhig
+            text: "In meinem Zimmer Gitarre gespielt. Kopfhörer auf. Ich habe nichts gehört."
+      - id: dachboden
+        question: Waren Sie in letzter Zeit auf dem Dachboden?
+        unlock: { insight: in_plektrum }
+        responses:
+          - mood: ausweichend
+            stress: 70
+            text: "Vielleicht. Ich suche da manchmal alte Platten von Opa. Plektren verliere ich überall."
+      - id: geld
+        question: Wovon leben Sie?
+        unlock: { phase: familie }
+        responses:
+          - mood: nervoes
+            stress: 30
+            text: "Von der Stiftung. Die Band verdient nichts. Ohne Opas Stiftung könnte ich gleich aufhören. Warum fragen Sie das?"
+      - id: abdruck
+        question: Ihr Fingerabdruck ist auf dem Blister.
+        unlock: { insight: in_abdruck_moritz }
+        responses:
+          - when: { insight: in_rede_keine_enthuellung }
+            mood: gebrochen
+            stress: 100
+            text: "Sie wollte es gar nicht sagen? … Sie wollte Papa helfen? … Ich habe gehört ‚am Sonntag sage ich ihnen die Wahrheit‘ und dachte … ich dachte, sie zerstört alles. Ich habe zwölf Tabletten in den Kakao gerührt. Für nichts. Für gar nichts."
+          - when: { insight: in_moritz_motiv }
+            mood: verzweifelt
+            stress: 95
+            text: "Sie wollte uns alles nehmen! Am Sonntag, vor allen! Papa wäre zerbrochen. Ich wollte doch nur … ich wollte, dass sie schweigt."
+          - mood: wuetend
+            stress: 85
+            text: "Ich habe die Packung vielleicht mal angefasst, als ich Zucker gesucht habe. Das beweist gar nichts!"
+
+  - character: paula
+    intro: Paula sitzt aufrecht, die Hände im Schoß verkrampft. Sie hat nicht geschlafen.
+    topics:
+      - id: abend
+        question: Wie ging es Henriette am Abend?
+        responses:
+          - mood: wuetend
+            stress: 20
+            text: "Gut! Das sage ich doch die ganze Zeit. Sie war klar, sie war kräftig, sie hat sich auf ihre Rede gefreut. So stirbt niemand ‚einfach so‘ in derselben Nacht."
+      - id: medikamente
+        question: Wer stellt die Medikamente zusammen?
+        responses:
+          - mood: kooperativ
+            text: "Ich, jeden Sonntag. Die Dosette steht in ihrem Zimmer, sie können sie gern untersuchen lassen. Ich habe nichts falsch gemacht."
+      - id: kueche
+        question: Haben Sie am Abend jemanden in der Küche gesehen?
+        unlock: { phase: familie }
+        responses:
+          - mood: ruhig
+            text: "Um Viertel vor zehn Moritz. Er hat die Kakaotasse gespült, von Hand. Ich habe noch gescherzt, ob er krank sei. Er hat nicht gelacht."
+      - id: erbe
+        question: Sie stehen im neuen Testament.
+        unlock: { insight: in_notartermin }
+        responses:
+          - mood: verzweifelt
+            stress: 45
+            text: "Ich weiß. Zwanzigtausend Euro. Ich habe ihr gesagt, ich will das nicht. Genau deshalb hatte ich Angst, dass Sie mich verdächtigen."
+
+  - character: wiesinger
+    intro: Dr. Wiesinger sitzt in Henriettes Ohrensessel und sieht plötzlich sehr alt aus.
+    topics:
+      - id: totenschein
+        question: Warum haben Sie so schnell einen natürlichen Tod festgestellt?
+        responses:
+          - when: { insight: in_digoxin }
+            mood: gebrochen
+            stress: 60
+            text: "Gelbsehen … Sie haben recht. Ich hätte es sehen müssen. Ich habe sie gesehen und nur noch an … an unsere Vergangenheit gedacht. Ich war ein schlechter Arzt an diesem Morgen."
+          - mood: ruhig
+            stress: 20
+            text: "Sie war 79 und herzkrank. Ich kenne ihr Herz seit fünfzig Jahren. Es war müde."
+      - id: abend
+        question: Wo waren Sie am Samstagabend?
+        responses:
+          - mood: kooperativ
+            text: "Notdienst. Bei der alten Frau Lindner im Dorf, von neun bis halb zwölf. Henriette hat mich dort um Viertel nach zehn angerufen. Sie sagte, ihr sei etwas übel, aber das sei die Aufregung."
+      - id: anruf
+        question: Worüber haben Sie um 22:15 Uhr gesprochen?
+        unlock: { insight: in_anruf_2215 }
+        responses:
+          - mood: verzweifelt
+            stress: 40
+            text: "Sie sagte: ‚Johann, ich sage es ihnen nicht. Ich nehme es mit.‘ Und dass ihr übel sei und sie farbige Ringe um die Kerzen sehe. Ich habe gesagt, sie solle schlafen gehen. Ich habe nicht nachgedacht."
+      - id: vergangenheit
+        question: Wer ist „J.“ in den Briefen von 1971?
+        unlock: { insight: in_briefe_1971 }
+        responses:
+          - mood: gebrochen
+            stress: 70
+            text: "Ich. Konstantin ist mein Sohn. Fünfzig Jahre habe ich geschwiegen. Henriette wollte es am Freitag nicht enthüllen – sie wollte ihm nur ihr Geld schenken, damit die Stiftung nie mehr eine Rolle spielt."
+
+  - character: kraemer
+    intro: Krämer steht, obwohl ihm ein Stuhl angeboten wird. Er trägt schwarze Handschuhe.
+    topics:
+      - id: abend
+        question: Was haben Sie am Abend beobachtet?
+        responses:
+          - mood: ruhig
+            text: "Alles Wesentliche steht in meiner Aussage. Wenn Sie erlauben: Ich kenne die Zeiten dieses Hauses auf die Minute."
+      - id: schluessel
+        question: Wer hat Schlüssel zur Bibliothek?
+        responses:
+          - mood: kooperativ
+            text: "Die gnädige Frau selbst. Und der Zweitschlüssel im Schlüsselschrank, den ich jede Nacht versiegle. Mein Siegelbuch steht Ihnen zur Verfügung."
+      - id: kamin
+        question: Haben Sie am Sonntag etwas entsorgt?
+        unlock: { minutes: 1 }
+        responses:
+          - mood: ruhig
+            text: "Ich räume am Sonntag die Kamine aus. Im Salon lagen Papierreste. Ich habe sie aufbewahrt – ich werfe in diesem Haus nie etwas Geschriebenes weg."
+      - id: familie
+        question: Kennen Sie die Geheimnisse der Familie?
+        unlock: { insight: in_geheimnis_vater }
+        responses:
+          - mood: ausweichend
+            stress: 30
+            text: "Ich habe einunddreißig Jahre lang nichts gesehen und nichts gehört. Das ist mein Beruf. Aber dass der Herr Doktor und die gnädige Frau … nun. Das wusste ich."
+
+puzzles:
+  - id: p_zimmer
+    title: Das verschlossene Zimmer
+    type: logic
+    prompt: Wie wurde die Bibliothek in der Nacht verschlossen?
+    evidence: [ev_bibliothek, ev_siegelbuch, ev_aussage_kraemer]
+    unlock: { all: [{ insight: in_schluessel_innen }, { insight: in_fenster_verriegelt }, { insight: in_zweitschluessel_versiegelt }] }
+    input:
+      kind: choice
+      options:
+        - { id: z_zweit, label: "Jemand schloss mit dem Zweitschlüssel von außen ab" }
+        - { id: z_fenster, label: "Der Täter floh durch das Fenster" }
+        - { id: z_selbst, label: "Henriette schloss selbst von innen ab – sie war allein" }
+        - { id: z_tuer, label: "Konstantin schloss beim Aufbrechen nachträglich ab" }
+    answer: { choice: z_selbst }
+    hints:
+      - Der Zweitschlüssel war versiegelt, das Fenster unberührt. Krämer hörte um 22 Uhr den Schlüssel.
+      - Wenn niemand bei ihr war – dann muss das Gift sie schon vorher erreicht haben.
+    reveals: [in_allein_eingeschlossen]
+    success: Henriette war allein. Das verschlossene Zimmer ist kein Tatort – der Mord geschah früher.
+
+  - id: p_tabletten
+    title: Die angebrochene Packung
+    type: compare
+    prompt: Wie viele Tabletten fehlen aus der neuen Digoxin-Packung?
+    evidence: [ev_blister]
+    unlock: { evidence: ev_blister }
+    input: { kind: text, placeholder: "Anzahl" }
+    answer: { accept: ["12", "zwölf", "zwoelf"] }
+    hints:
+      - Jeder Streifen hat zehn Tabletten. Zählt nur die Streifen, in denen etwas fehlt.
+      - "Streifen 4: 7 fehlen. Streifen 5: 5 fehlen."
+    reveals: [in_tabletten_fehlen]
+    success: Zwölf Tabletten – das Zwölffache der Tagesdosis. Aus einer Packung, die noch niemand hätte öffnen sollen.
+
+  - id: p_chiffre
+    title: Henriettes Chiffre
+    type: cipher
+    prompt: "Henriette verschlüsselte private Zeilen „wie immer verschoben um Albrechts Glückszahl“. Entschlüsselt RVUZAHUAPUZ CHALY PZA QVOHUU. Wer ist gemeint? (Name eingeben)"
+    evidence: [ev_tagebuch, ev_portraet]
+    unlock: { evidence: ev_tagebuch }
+    input: { kind: text, placeholder: "Name" }
+    answer: { accept: ["Johann", "Johann Wiesinger", "Wiesinger", "Dr. Johann Wiesinger", "Konstantins Vater ist Johann", "Dr. Wiesinger"] }
+    hints:
+      - Albrechts Glückszahl steht auf der Plakette unter seinem Porträt im Salon.
+      - "Jeder Buchstabe ist um 7 Stellen im Alphabet nach hinten verschoben: R → K, V → O …"
+      - "KONSTANTINS VATER IST …"
+    reveals: [in_geheimnis_vater]
+    success: "„Konstantins Vater ist Johann.“ – Henriettes größtes Geheimnis."
+
+  - id: p_abend
+    title: Der letzte Abend
+    type: order
+    prompt: Bringt die Ereignisse des Samstagabends in die richtige Reihenfolge.
+    evidence: [ev_aussage_kraemer, ev_aussage_paula, ev_telefon, ev_tagebuch]
+    unlock: { all: [{ insight: in_moritz_kueche }, { insight: in_eingeschlossen_2200 }] }
+    input:
+      kind: order
+      items:
+        - { id: a_tagebuch, label: "Letzter Tagebucheintrag" }
+        - { id: a_milch, label: "Moritz macht Milch warm" }
+        - { id: a_valerie, label: "Valerie fährt ins Hotel" }
+        - { id: a_abschliessen, label: "Henriette schließt die Bibliothek ab" }
+        - { id: a_spuelen, label: "Moritz spült die Tasse" }
+        - { id: a_anruf, label: "Anruf bei Dr. Wiesinger" }
+    answer: { order: [a_valerie, a_milch, a_spuelen, a_abschliessen, a_anruf, a_tagebuch] }
+    hints:
+      - Krämer, Paula, der Verbindungsnachweis und das Tagebuch nennen alle Uhrzeiten.
+      - "20:45 – 21:20 – 21:45 – 22:00 – 22:15 – 22:40."
+    reveals: [in_abend_rekonstruiert]
+    success: Nach 22 Uhr kam niemand mehr an sie heran. Die einzige Gelegenheit war der Kakao.
+
+  - id: p_abdruck
+    title: Der Teilabdruck
+    type: image
+    prompt: Wem gehört der Teilabdruck auf Blisterstreifen 5?
+    evidence: [ev_labor, ev_vergleich]
+    unlock: { evidence: ev_vergleich }
+    input:
+      kind: choice
+      options:
+        - { id: f_konstantin, label: Konstantin von Falkenstein }
+        - { id: f_valerie, label: Valerie Falkenstein-Roth }
+        - { id: f_moritz, label: Moritz von Falkenstein }
+        - { id: f_paula, label: Paula Brandt }
+        - { id: f_wiesinger, label: Dr. Johann Wiesinger }
+    answer: { choice: f_moritz }
+    hints:
+      - Vergleicht Grundmuster, Anzahl der Gabelungen und Besonderheiten.
+      - Zwei Personen haben „Schleife rechts, 3 Gabelungen“ – aber nur eine die Narbe.
+    reveals: [in_abdruck_moritz]
+    success: Schleife rechts, drei Gabelungen, eine quer verlaufende Narbe – die Narbe der gerissenen Gitarrensaite.
+
+events:
+  - id: ev_obduktion
+    title: Die Staatsanwaltschaft ordnet die Obduktion an
+    source: Staatsanwaltschaft
+    text: Angesichts der Symptome im Tagebuch wird der Totenschein zurückgezogen. Die Rechtsmedizin arbeitet die Nacht durch.
+    trigger: { when: { insight: in_digoxin } }
+  - id: ev_kamin
+    title: Papierreste im Kamin
+    source: Eduard Krämer
+    text: "Krämer bringt einen Umschlag: „Die Reste aus dem Salonkamin. Ich dachte, Sie sollten das sehen – die gnädige Frau hat Samstagnachmittag einen Entwurf verbrannt und neu geschrieben.“"
+    trigger: { minutes: 35, when: { phase: familie } }
+  - id: ev_jana_meldet
+    title: Jana Rehm meldet sich
+    source: Hinweistelefon
+    text: "Eine junge Frau ruft weinend an: „Ich bin Moritz' Freundin. Er hat mir Samstagnacht etwas geschrieben, das mir keine Ruhe lässt. Ich schicke Ihnen den Verlauf.“"
+    trigger: { when: { all: [{ insight: in_kakao_giftraeger }, { insight: in_tabletten_fehlen }] } }
+  - id: ev_paula_erinnert
+    title: Paula erinnert sich
+    source: Paula Brandt
+    text: "„Mir ist noch etwas eingefallen. Die Tasse! Moritz hat sie am Samstag von Hand gespült. Das hat er noch nie getan.“"
+    trigger: { when: { wrongAccusations: 1 } }
+    reveals: [in_kakao_gespuelt]
+
+accusation:
+  question: Wer ist für den Tod von Henriette von Falkenstein verantwortlich?
+  proof:
+    question: Welcher Beweis überführt den Täter am eindeutigsten?
+    options:
+      - { id: pr_abdruck, label: "Der Fingerabdruck mit der Narbe auf dem geleerten Blisterstreifen", correct: true }
+      - { id: pr_stiftung, label: "Die Stiftungsurkunde" }
+      - { id: pr_siegel, label: "Das Siegelbuch des Schlüsselschranks" }
+      - { id: pr_totenschein, label: "Der vorschnelle Totenschein" }
+
+gmNotes:
+  - { phase: bibliothek, text: "Das verschlossene Zimmer ist eine Ablenkung. Der entscheidende Hinweis steht im Tagebuch: gelbe Höfe + bitterer Kakao. Valerie gibt auf Nachfrage den Beipackzettel heraus." }
+  - { phase: familie, text: "Krämer, Paula und der Verbindungsnachweis rekonstruieren den Abend. Konstantins Schreibtischpapiere (Bankauftrag) entlasten ihn." }
+  - { phase: wahrheit, text: "Chiffre: Verschiebung um 7 (Plakette im Salon). Das Geheimnis führt zum Dachboden (Plektrum) und zum Stiftungsmotiv. Der Redeentwurf im Kamin zeigt die Tragik: Henriette wollte nie etwas enthüllen." }
+  - { text: "Falsche Fährten: Konstantin (Streit, Schulden), Valerie (Apothekerin, Packung), Paula (Dosette, Erbe), Wiesinger (Totenschein, Geheimnis), Krämer (Zweitschlüssel)." }
+
+solution:
+  culprit: moritz
+  headline: Moritz von Falkenstein – der Lieblingsenkel vergiftete seine Großmutter, um ein Geheimnis zu schützen, das sie nie verraten wollte.
+  motive: Moritz belauschte am Freitag, wie Henriette zu Wiesinger sagte, sie werde „am Sonntag die Wahrheit sagen“. Kurz zuvor hatte er auf dem Dachboden die Briefe von 1971 gefunden. Er glaubte, sie werde enthüllen, dass Konstantin nicht Albrechts Sohn ist – dann wären Vater und Sohn aus der Stiftung gefallen, von der Moritz lebt. Tatsächlich meinte Henriette nur ihr Testament und wollte Konstantin ihr eigenes Vermögen schenken.
+  method: Moritz drückte zwölf Digoxin-Tabletten aus der neuen Packung in der Küche, zerstieß sie und rührte sie um 21:30 Uhr in den allabendlichen Kakao. Danach spülte er die Tasse von Hand. Henriette zog sich um 22 Uhr in die Bibliothek zurück, schloss wie immer ab und spürte die ersten Symptome – Übelkeit, gelbe Höfe um die Kerzen. Sie starb in der Nacht allein an Kammerflimmern.
+  summary: Das verschlossene Zimmer war kein Rätsel – Henriette hatte das Gift schon vorher getrunken. Gelbsehen und bitterer Geschmack verrieten Digoxin, die Obduktion bestätigte es. Aus der neuen Packung fehlten zwölf Tabletten, und auf dem Blister fand sich ein Abdruck mit der Narbe von Moritz' Gitarrensaite. Er brachte den Kakao, spülte die Tasse und schrieb um 23:10 „Es ist erledigt“.
+  keyInsights: [in_digoxin, in_allein_eingeschlossen, in_kakao_giftraeger, in_tabletten_fehlen, in_abdruck_moritz, in_moritz_motiv]
+  chain:
+    - { insight: in_gelbsehen, explanation: "Gelbe Höfe um die Kerzen – ein klassisches Zeichen einer Digoxin-Vergiftung." }
+    - { insight: in_digoxin, explanation: "Tagebuch und Beipackzettel zusammen entlarven den „natürlichen Tod“." }
+    - { insight: in_allein_eingeschlossen, explanation: "Niemand war in der Bibliothek. Das Gift muss vor 22 Uhr verabreicht worden sein." }
+    - { insight: in_kakao_giftraeger, explanation: "Der Kakao war bitter, und Moritz spülte die Tasse sofort – gegen jede Gewohnheit." }
+    - { insight: in_tabletten_fehlen, explanation: "Zwölf Tabletten fehlten aus einer Packung, die noch niemand brauchte." }
+    - { insight: in_abdruck_moritz, explanation: "Der Teilabdruck mit der Saitennarbe gehört Moritz." }
+    - { insight: in_moritz_motiv, explanation: "Er glaubte, die Enthüllung würde ihn und seinen Vater aus der Stiftung werfen." }
+    - { insight: in_rede_keine_enthuellung, explanation: "Die bittere Wahrheit: Henriette hatte nie vor, das Geheimnis preiszugeben." }
+  truthTimeline:
+    - { time: "Fr 13.06.", text: "Valerie bringt eine neue Packung Digoxin. Moritz findet auf dem Dachboden die Briefe von 1971." }
+    - { time: "Fr 16:40", text: "Moritz belauscht Henriette: „Am Sonntag sage ich ihnen die Wahrheit.“" }
+    - { time: "Sa 19:40", text: "Streit mit Konstantin. Henriette verspricht, seine Schulden zu bezahlen." }
+    - { time: "Sa 21:20", text: "Moritz zerstößt zwölf Tabletten und macht den Kakao." }
+    - { time: "Sa 21:30", text: "Henriette trinkt den bitteren Kakao im Salon." }
+    - { time: "Sa 21:45", text: "Moritz spült die Tasse." }
+    - { time: "Sa 22:00", text: "Henriette schließt sich in der Bibliothek ein." }
+    - { time: "Sa 22:15", text: "Sie ruft Wiesinger an: Sie werde das Geheimnis mitnehmen. Ihr sei übel." }
+    - { time: "Sa 23:10", text: "Moritz an Jana: „Es ist erledigt.“" }
+    - { time: "So 01:00–03:00", text: "Henriette stirbt an Kammerflimmern." }
+  redHerrings:
+    - { character: konstantin, clue: "Schulden und ein lautstarker Streit", debunkedBy: in_konstantin_bezahlt, explanation: "Henriette wollte am Montag seine Schulden bezahlen – ihr Tod hat ihn das Geld gekostet." }
+    - { character: valerie, clue: "Die Apothekerin brachte das Digoxin", debunkedBy: in_valerie_hotel, explanation: "Sie war ab 21:05 im Hotel. Der Kakao wurde um 21:30 getrunken." }
+    - { character: paula, clue: "Sie stellt die Medikamente zusammen und erbt", debunkedBy: in_dosette_korrekt, explanation: "Die Dosette war korrekt. Das Gift kam aus der neuen Packung – über den Kakao." }
+    - { character: wiesinger, clue: "Der vorschnelle Totenschein und das alte Geheimnis", debunkedBy: in_wiesinger_notdienst, explanation: "Er war den ganzen Abend im Notdienst und hatte keinen Zugang zum Kakao." }
+    - { character: kraemer, clue: "Der einzige Zweitschlüssel", debunkedBy: in_zweitschluessel_versiegelt, explanation: "Die Plombe war unversehrt – und das verschlossene Zimmer spielt ohnehin keine Rolle." }
+  epilogue: Moritz gestand noch am selben Abend. Konstantin erfuhr die Wahrheit über seine Herkunft aus dem Mund seines Sohnes. Der Stiftungsrat beschloss, die Frage nie offiziell zu prüfen. Dr. Wiesinger und Konstantin gehen seitdem jeden Sonntag gemeinsam am Rauhsee spazieren. Die Rede zum achtzigsten Geburtstag hat Krämer gerahmt.

@@ -1,0 +1,921 @@
+# COMMUNITY DETECTIVES – Fall: Die verschwundene Identität
+# Alle Personen, Orte und Unternehmen sind frei erfunden.
+id: die-verschwundene-identitaet
+version: 1
+title: Die verschwundene Identität
+tagline: Clara Weiß ist verschwunden. Doch irgendjemand lebt seit Sonntag ihr Leben weiter.
+genre: vermisst
+difficulty: fortgeschritten
+tier: creator
+estimatedMinutes: 80
+accent: "#2f7a6b"
+
+briefing:
+  location: Hafenau
+  date: Montag, 22. September, 08:00 Uhr
+  intro: |
+    Leonie Kramer meldet ihre Mitbewohnerin als vermisst: Clara Weiß, 29, Datenanalystin beim Zahlungsdienstleister Novapay, ist seit Samstagabend nicht nach Hause gekommen.
+    Die Polizei winkt zunächst ab. Denn „Clara“ ist sehr aktiv: Am Sonntag hob sie Geld ab, postete ein Foto aus Lissabon („Brauche eine Auszeit“), kündigte per E-Mail ihren Job und schickte ihrem Vermieter die Kündigung der Wohnung.
+    Leonie ist sich sicher: „Das ist nicht Clara. So schreibt sie nicht.“
+  objective: Findet heraus, ob Clara freiwillig gegangen ist. Wenn nicht – wer gibt sich als sie aus, warum, und wo ist sie?
+  question: Wer ist für Claras Verschwinden verantwortlich?
+
+phases:
+  - id: spuren
+    title: Ein Leben aus zweiter Hand
+    goal: Prüft alle Lebenszeichen seit Sonntag. Was davon stammt wirklich von Clara?
+  - id: umfeld
+    title: Claras Welt
+    goal: Wer hätte einen Grund, Clara verschwinden zu lassen? Prüft Alibis und Motive.
+  - id: suche
+    title: Die Suche
+    goal: Findet heraus, wo Clara ist – bevor es zu spät ist.
+
+characters:
+  - id: clara
+    name: Clara Weiß
+    role: victim
+    age: 29
+    occupation: Datenanalystin bei Novapay
+    color: "#2f7a6b"
+    profile: Analytisch, gewissenhaft, rechtshändig, keine Tattoos. Unterschreibt seit Jahren mit „Liebe Grüße, C.“ und nennt ihre Mitbewohnerin nur „Leo“.
+    personality: Ruhig, beharrlich, lässt nicht locker, wenn Zahlen nicht stimmen.
+    relation: Die Vermisste.
+    secret: Hat entdeckt, dass im Team von Fabian Lorenz Konten mit gestohlenen Identitäten angelegt werden.
+  - id: lorenz
+    name: Fabian Lorenz
+    role: suspect
+    age: 36
+    occupation: Teamleiter Kontoeröffnung bei Novapay
+    color: "#4f5f7a"
+    profile: Claras Vorgesetzter. Gilt als brillant und charmant. Seine Familie besitzt ein Wochenendhaus am Moorsee.
+    personality: Selbstbewusst, schlagfertig, perfektionistisch.
+    relation: Claras Chef.
+    alibi: War am Samstag den ganzen Abend mit seiner Freundin Mareike zu Hause in Hafenau.
+    motive: Keins bekannt – er lobte Clara stets.
+    secret: Betreibt mit falschen Identitäten eine Kontofabrik für Geldwäsche. Lockte Clara zum Wochenendhaus, betäubte sie und sperrte sie im Keller ein.
+  - id: mareike
+    name: Mareike Sauer
+    role: suspect
+    age: 28
+    occupation: Friseurin, Fabians Freundin
+    color: "#7a4f6a"
+    profile: Betreibt einen kleinen Salon. Hat dunkelblond gefärbtes Haar – ähnlich wie Clara. Linkes Handgelenk mit einer kleinen Schwalbe tätowiert.
+    personality: Freundlich, unsicher, tut alles für Fabian.
+    relation: Kennt Clara nur flüchtig von einer Firmenfeier.
+    alibi: Saß am Samstagabend mit Fabian auf dem Sofa.
+    motive: Keins bekannt.
+    secret: Hat sich am Sonntag als Clara ausgegeben – Geld abgehoben, das Foto gepostet, die Kündigungen verschickt.
+  - id: jonas
+    name: Jonas Weiß
+    role: suspect
+    age: 33
+    occupation: Lagerarbeiter, Claras Bruder
+    color: "#7a6a4f"
+    profile: Hat Schulden und lieh sich immer wieder Geld von seiner Schwester. Bekam am Sonntag 2.000 Euro von Claras Konto überwiesen.
+    personality: Hitzköpfig, loyal, schlecht im Erklären.
+    relation: Bruder.
+    alibi: Hatte Samstag Nachtschicht im Lager.
+    motive: Geldnot. Die Überweisung ging an ihn.
+    secret: Hat die Überweisung nicht angefordert und sich nicht getraut, sie zu melden – er brauchte das Geld.
+  - id: leonie
+    name: Leonie Kramer
+    role: suspect
+    age: 29
+    occupation: Grafikdesignerin, Mitbewohnerin
+    color: "#6a7a4f"
+    profile: Wohnt seit vier Jahren mit Clara zusammen. Hat die Vermisstenanzeige erstattet.
+    personality: Laut, warmherzig, sehr hartnäckig.
+    relation: Mitbewohnerin und beste Freundin.
+    alibi: War am Samstag auf einer Hochzeit in Gerdau.
+    motive: Streit über die Miete; profitiert von der Wohnungskündigung nicht – oder doch?
+    secret: Hatte mit Clara Streit, weil sie ausziehen will. Fühlt sich schuldig.
+  - id: darius
+    name: Darius Mehr
+    role: suspect
+    age: 31
+    occupation: E-Sport-Spieler, Claras Exfreund
+    color: "#5a4f7a"
+    profile: Trennung vor drei Monaten. Hat Clara danach wochenlang Nachrichten geschrieben.
+    personality: Eifersüchtig, sprunghaft, gibt sich cool.
+    relation: Exfreund.
+    alibi: Spielte am Samstag ein Online-Turnier im Livestream.
+    motive: "Schrieb Clara im August: „Du wirst es noch bereuen.“"
+    secret: Wollte Clara zurück. Hat mit dem Verschwinden nichts zu tun.
+  - id: ostermann
+    name: Dr. Helga Ostermann
+    role: suspect
+    age: 58
+    occupation: Vorstandsvorsitzende von Novapay
+    color: "#5d5d5d"
+    profile: Führt Novapay seit der Gründung. Ein Skandal würde den geplanten Börsengang zerstören.
+    personality: Kühl, effizient, misstraut der Polizei.
+    relation: Claras oberste Chefin.
+    alibi: Seit Freitagabend auf Geschäftsreise in Oslo.
+    motive: Ein Datenskandal würde den Börsengang ruinieren.
+    secret: Hat Claras Warnung nie gelesen und macht sich deshalb Vorwürfe.
+
+insights:
+  - id: in_signatur_clara
+    title: „Liebe Grüße, C.“
+    text: Clara unterschreibt Nachrichten seit Jahren mit „Liebe Grüße, C.“ und nennt Leonie „Leo“. Die Nachrichten seit Sonntag sind mit „LG Clara“ unterschrieben.
+    category: identitaet
+    characters: [clara]
+  - id: in_mail_gefaelscht
+    title: Die Kündigung ist nicht von Clara
+    text: Stil, Unterschrift und Anrede passen nicht zu Clara. Die Kündigungsmail an Novapay hat jemand anderes geschrieben.
+    category: widerspruch
+  - id: in_foto_hafenau
+    title: Lissabon liegt in Hafenau
+    text: In der Fensterspiegelung des „Lissabon“-Fotos ist der Hafenauer Fernsehturm mit seinem roten Ring zu sehen. Das Foto entstand in Hafenau.
+    category: widerspruch
+  - id: in_atm_tattoo
+    title: Die Frau am Geldautomaten
+    text: Die Frau, die am Sonntag um 10:14 Uhr mit Claras Karte 1.000 € abhob, trägt eine Schirmmütze – und hat eine kleine Schwalbe auf das linke Handgelenk tätowiert.
+    category: spur
+    timeline: { time: "So 10:14", sort: 50, text: "Eine Frau hebt mit Claras Karte 1.000 € ab." }
+  - id: in_kein_tattoo
+    title: Clara hat keine Tattoos
+    text: Leonie bestätigt – Clara hat keine Tattoos. Die Frau am Automaten war nicht Clara.
+    category: identitaet
+    characters: [clara]
+  - id: in_tattoo_mareike
+    title: Die Schwalbe
+    text: Mareike Sauer hat genau diese Schwalbe auf dem linken Handgelenk – zu sehen auf dem Werbefoto ihres Salons.
+    category: identitaet
+    characters: [mareike]
+  - id: in_ueberweisung_jonas
+    title: 2.000 € an Jonas
+    text: Am Sonntag um 11:30 Uhr gingen 2.000 € von Claras Konto an ihren Bruder Jonas – per Onlinebanking aus Hafenau.
+    category: spur
+    characters: [jonas]
+    timeline: { time: "So 11:30", sort: 55, text: "Überweisung von 2.000 € an Jonas." }
+  - id: in_post_1412
+    title: Der Post um 14:12
+    text: "Sonntag 14:12 Uhr erscheint auf Claras Profil das „Lissabon“-Foto: „Brauche eine Auszeit. Sucht mich nicht.“"
+    category: zeitlinie
+    timeline: { time: "So 14:12", sort: 60, text: "„Lissabon“-Foto auf Claras Profil." }
+  - id: in_kuendigung_2247
+    title: Kündigung um 22:47
+    text: Die Kündigungsmail an Novapay wurde am Sonntag um 22:47 Uhr verschickt – von Claras privater Adresse, angemeldet in Hafenau.
+    category: zeitlinie
+    timeline: { time: "So 22:47", sort: 70, text: "Kündigungsmail an Novapay." }
+  - id: in_unterschrift_falsch
+    title: Die falsche Unterschrift
+    text: Bei der Wohnungskündigung fehlt der typische Querstrich durch das W – Claras Unterschrift wurde nachgemacht.
+    category: widerspruch
+  - id: in_kalender_moorsee
+    title: „F. – Moorsee, reden“
+    text: "Claras Kalender (synchronisiert auf ihr Tablet): Samstag 18:30 Uhr „F. – Moorsee, reden“."
+    category: spur
+    characters: [clara]
+    timeline: { time: "Sa 18:30", sort: 20, text: "Clara hat einen Termin: „F. – Moorsee, reden“." }
+  - id: in_letzter_ping
+    title: Letztes Lebenszeichen am Moorsee
+    text: "Claras Handy war zuletzt am Samstag um 19:40 Uhr in der Funkzelle Moorsee-Süd eingeloggt. Danach: ausgeschaltet."
+    category: zeitlinie
+    characters: [clara]
+    timeline: { time: "Sa 19:40", sort: 30, text: "Claras Handy loggt sich zuletzt in Moorsee-Süd ein." }
+  - id: in_ladesaeule
+    title: Ladesäule Moorsee, 18:55
+    text: Das Firmenauto mit dem Kennzeichen HF-NP 36 wurde am Samstag um 18:55 Uhr am Ladepark Moorsee geladen.
+    category: spur
+    timeline: { time: "Sa 18:55", sort: 25, text: "Firmenwagen HF-NP 36 lädt am Moorsee." }
+  - id: in_auto_lorenz
+    title: Lorenz war am Moorsee
+    text: HF-NP 36 ist laut Fuhrparkliste Fabian Lorenz zugeteilt. Sein Alibi „den ganzen Abend zu Hause“ ist falsch.
+    category: widerspruch
+    characters: [lorenz]
+  - id: in_wochenendhaus
+    title: Das Wochenendhaus der Lorenz
+    text: Familie Lorenz besitzt ein Wochenendhaus am Seeweg 7 am Moorsee – mitten in der Funkzelle Moorsee-Süd.
+    category: spur
+    characters: [lorenz]
+  - id: in_mail_ostermann
+    title: Claras Warnung
+    text: "Freitag 17:02 Uhr schrieb Clara an die Vorstandschefin: „Ich muss Ihnen dringend etwas über Konten im Team Lorenz zeigen. Bitte nur persönlich.“ Die Mail ist ungelesen."
+    category: motiv
+    characters: [lorenz, clara]
+    timeline: { time: "Fr 17:02", sort: 10, text: "Clara warnt die Vorstandschefin per Mail – ungelesen." }
+  - id: in_schuhkarton
+    title: Der Schuhkarton
+    text: "Auf Claras Tablet steht: „Kopie im Schuhkarton, falls was ist.“ Leonie findet darin einen USB-Stick."
+    category: spur
+    characters: [clara]
+  - id: in_konten_lorenz
+    title: Die Kontofabrik
+    text: Alle 80 verdächtigen Konten auf Claras Liste wurden mit dem Benutzerkürzel FLZ angelegt – Fabian Lorenz.
+    category: motiv
+    characters: [lorenz]
+  - id: in_ostermann_oslo
+    title: Ostermann in Oslo
+    text: Ostermann flog am Freitag um 19:05 Uhr nach Oslo und kehrte erst am Montag zurück. Claras Mail hat sie nie geöffnet.
+    category: entlastung
+    characters: [ostermann]
+  - id: in_jonas_schicht
+    title: Jonas in der Nachtschicht
+    text: Laut Zeiterfassung arbeitete Jonas von Samstag 18:00 bis Sonntag 02:10 Uhr im Lager in Hafenau-Ost.
+    category: entlastung
+    characters: [jonas]
+  - id: in_darius_stream
+    title: Darius im Livestream
+    text: Darius spielte am Samstag von 17:00 bis 23:20 Uhr ununterbrochen live – mit Kamera.
+    category: entlastung
+    characters: [darius]
+  - id: in_leonie_hochzeit
+    title: Leonie auf der Hochzeit
+    text: Leonie war von Samstagmittag bis Sonntagnachmittag auf einer Hochzeit in Gerdau, 200 Kilometer entfernt.
+    category: entlastung
+    characters: [leonie]
+  - id: in_leo
+    title: „Mach dir keine Sorgen, Leonie“
+    text: "Die Nachricht vom Sonntag nennt Leonie bei vollem Namen – Clara schreibt seit Jahren nur „Leo“."
+    category: widerspruch
+  - id: in_ort_clara
+    title: Clara ist am Moorsee
+    text: Termin, letzter Handy-Kontakt, Ladesäule und Wochenendhaus zeigen auf denselben Ort – das Haus der Familie Lorenz am Seeweg 7.
+    category: wendung
+    characters: [lorenz]
+  - id: in_clara_gefunden
+    title: Clara lebt
+    text: Die Polizei findet Clara im Kellerraum des Wochenendhauses am Seeweg 7 – geschwächt, betäubt, aber am Leben. Ihr Laptop liegt zerschlagen im Kamin.
+    category: wendung
+    characters: [lorenz, clara]
+  - id: in_lorenz_mareike_alibi
+    title: Ein gegenseitiges Alibi
+    text: Fabian und Mareike geben sich gegenseitig ein Alibi für Samstagabend – und beide behaupten, Clara kaum zu kennen.
+    category: alibi
+    characters: [lorenz, mareike]
+  - id: in_salon_sonntag
+    title: Der Salon war geschlossen
+    text: Mareikes Salon war am Sonntag geschlossen. Für Sonntag hat sie kein Alibi – sie sagt, sie sei „spazieren“ gewesen.
+    category: alibi
+    characters: [mareike]
+
+evidence:
+  - id: ev_lissabon
+    title: Das „Lissabon“-Foto
+    summary: Gepostet am Sonntag um 14:12 Uhr auf Claras Profil.
+    source: Soziales Netzwerk
+    content:
+      kind: photo
+      scene: street
+      caption: "„Brauche eine Auszeit. Sucht mich nicht. LG Clara“"
+      timestamp: "So 14:12"
+      elements:
+        - { id: tasse, label: Galão-Glas, detail: "Ein Glas Milchkaffee, wie man ihn in Portugal trinkt.", x: 20, y: 50, w: 12, h: 20, shape: bottle }
+        - { id: fliesen, label: Blaue Fliesen, detail: "Ein Tischset mit blau-weißen Fliesenmustern – gibt es in jedem Souvenirladen.", x: 36, y: 62, w: 30, h: 12, shape: rect }
+        - { id: fenster_l, label: Fensterscheibe, detail: "In der Spiegelung der Scheibe: ein schlanker Turm mit einem auffälligen roten Ring unterhalb der Spitze.", x: 60, y: 6, w: 34, h: 40, shape: window }
+        - { id: hand, label: Hand am Glas, detail: "Eine Hand mit langem Ärmel hält das Glas. Das Handgelenk ist verdeckt.", x: 22, y: 36, w: 10, h: 14, shape: round }
+        - { id: tram, label: Postkarte Straßenbahn, detail: "Eine Postkarte mit der gelben Straßenbahn 28. Der Kartenständer ist unscharf im Hintergrund.", x: 4, y: 20, w: 12, h: 18, shape: paper }
+
+  - id: ev_kuendigung_mail
+    title: Kündigungsmail an Novapay
+    summary: Weitergeleitet von der Personalabteilung.
+    source: Novapay Personal
+    content:
+      kind: document
+      docType: email
+      heading: Kündigung
+      meta:
+        - { label: Von, value: "clara.weiss@mailpost.example" }
+        - { label: An, value: "personal@novapay.example" }
+        - { label: Gesendet, value: "So 21.09., 22:47" }
+      lines:
+        - { id: km1, text: "Hallo zusammen," }
+        - { id: km2, text: "hiermit kündige ich fristlos. Ich brauche eine Auszeit und bin im Ausland." }
+        - { id: km3, text: "Bitte schickt meine Sachen nicht nach, ich melde mich, wenn ich zurück bin. Meinen Firmenlaptop habe ich leider verloren." }
+        - { id: km4, text: "Danke an Herrn Lorentz für alles!" }
+        - { id: km5, text: "LG Clara" }
+    hotspots:
+      - { item: km5, insight: in_kuendigung_2247 }
+      - { item: km4, insight: in_kuendigung_2247 }
+
+  - id: ev_nachrichten_leonie
+    title: Chat zwischen Clara und Leonie
+    summary: Von Leonie vorgelegt – ältere Nachrichten und die vom Sonntag.
+    source: Leonie Kramer
+    content:
+      kind: messages
+      app: Messenger
+      owner: Leonie
+      messages:
+        - { id: nl1, from: Clara, time: "Di 19:12", text: "Leo, ich bring Pizza mit. Liebe Grüße, C." }
+        - { id: nl2, from: Clara, time: "Do 08:03", text: "Bin heute spät, Riesenchaos auf Arbeit. Erzähl ich dir am Wochenende. Liebe Grüße, C." }
+        - { id: nl3, from: Clara, time: "Fr 22:40", text: "Leo, ich hab was rausgefunden. Morgen Abend kläre ich das. Wenn was ist: Schuhkarton. Liebe Grüße, C." }
+        - { id: nl4, from: Clara, time: "So 14:20", text: "Hallo Leonie, mach dir keine Sorgen, bin in Lissabon. Brauche Zeit für mich. LG Clara" }
+        - { id: nl5, from: Leonie, time: "So 14:22", text: "LISSABON?!? Seit wann??? Ruf mich an!!!" }
+    hotspots:
+      - { item: nl4, insight: in_leo }
+      - { item: nl1, insight: in_signatur_clara }
+      - { item: nl3, insight: in_schuhkarton }
+
+  - id: ev_wohnungskuendigung
+    title: Kündigung des Mietvertrags
+    summary: Am Montag beim Vermieter eingegangen.
+    source: Hausverwaltung Ostkai
+    content:
+      kind: document
+      docType: letter
+      heading: Kündigung Mietverhältnis Hafenstraße 14, 3. OG links
+      meta:
+        - { label: Poststempel, value: "So 21.09., Hafenau-Nord" }
+      lines:
+        - { id: wk1, text: "Hiermit kündige ich meinen Anteil am Mietvertrag zum nächstmöglichen Zeitpunkt." }
+        - { id: wk2, text: "Meine Mitbewohnerin ist informiert." }
+        - { id: wk3, text: "Unterschrift: Clara Weiss (ohne Querstrich, „ss“ statt „ß“)" }
+
+  - id: ev_unterschriften
+    title: Unterschriftenvergleich
+    summary: Drei Unterschriften Claras aus Verträgen und die der Kündigung.
+    source: Polizei Hafenau
+    unlock: { topic: leonie.clara }
+    content:
+      kind: table
+      heading: Schriftvergleich – Merkmale
+      columns: [Dokument, Schreibweise, W, Endung, Neigung]
+      rows:
+        - { id: us1, cells: ["Mietvertrag 2021", "Clara Weiß", "Querstrich durch das W", "ß mit Bogen", "rechts"] }
+        - { id: us2, cells: ["Arbeitsvertrag Novapay", "Clara Weiß", "Querstrich durch das W", "ß mit Bogen", "rechts"] }
+        - { id: us3, cells: ["Personalausweis", "Clara Weiß", "Querstrich durch das W", "ß mit Bogen", "rechts"] }
+        - { id: us4, cells: ["Wohnungskündigung", "Clara Weiss", "kein Querstrich", "ss", "links"] }
+      note: Linksgeneigte Schrift deutet häufig auf eine linkshändige Person hin. Clara ist Rechtshänderin.
+
+  - id: ev_atm
+    title: Standbild Geldautomat Hafenau-Nord
+    summary: Von der Bank nach der Verdachtsmeldung übermittelt.
+    source: Sparkasse Hafenau
+    unlock: { event: ev_bank_meldet }
+    content:
+      kind: photo
+      scene: street
+      caption: Geldautomat Marktplatz Hafenau-Nord
+      timestamp: "So 21.09. 10:14"
+      elements:
+        - { id: frau, label: Person mit Mütze, detail: "Eine Frau mit dunkelblondem Haar unter einer Schirmmütze, Gesicht abgewandt.", x: 36, y: 14, w: 16, h: 56, shape: person }
+        - { id: handgelenk, label: Linkes Handgelenk, detail: "Beim Eintippen der PIN rutscht der Ärmel hoch: Auf dem linken Handgelenk ist eine kleine Schwalbe tätowiert. Sie tippt mit links.", x: 54, y: 40, w: 8, h: 8, shape: round }
+        - { id: automat, label: Geldautomat, detail: "Auszahlung 1.000,00 EUR – Karte: C. Weiß.", x: 64, y: 16, w: 20, h: 50, shape: screen }
+        - { id: tasche_atm, label: Stofftasche, detail: "Eine Stofftasche mit Aufdruck: „Schnittwerk – Haare mit Herz“.", x: 30, y: 54, w: 8, h: 14, shape: bag }
+    hotspots:
+      - { item: handgelenk, insight: in_atm_tattoo, feedback: "Eine Tätowierung – hatte Clara eine?" }
+
+  - id: ev_kontoauszug
+    title: Umsätze Girokonto Clara Weiß
+    summary: Die Bank meldet ungewöhnliche Bewegungen.
+    source: Sparkasse Hafenau
+    unlock: { event: ev_bank_meldet }
+    content:
+      kind: table
+      heading: Girokonto C. Weiß – 19.–22.09.
+      columns: [Datum, Uhrzeit, Vorgang, Betrag]
+      rows:
+        - { id: ko1, cells: ["Fr 19.09.", "12:30", "Kantine Novapay", "-6,40"] }
+        - { id: ko2, cells: ["Sa 20.09.", "17:48", "Tankstelle Ringstraße", "-12,00"] }
+        - { id: ko3, cells: ["So 21.09.", "10:14", "Auszahlung GA Hafenau-Nord", "-1.000,00"] }
+        - { id: ko4, cells: ["So 21.09.", "11:30", "Online-Überweisung an Jonas Weiß (IP Hafenau)", "-2.000,00"] }
+        - { id: ko5, cells: ["So 21.09.", "13:55", "Copyshop Bahnhof, Briefmarke", "-0,95"] }
+      note: Keine einzige Buchung im Ausland.
+    hotspots:
+      - { item: ko4, insight: in_ueberweisung_jonas }
+
+  - id: ev_profil
+    title: Claras Profil – Beitragsdaten
+    summary: Vom Netzwerk auf richterliche Anordnung herausgegeben.
+    source: Soziales Netzwerk
+    unlock: { phase: umfeld }
+    content:
+      kind: table
+      heading: Beiträge und Anmeldungen des Kontos „clara.wss“
+      columns: [Zeitpunkt, Aktion, Gerät, Standort (IP)]
+      rows:
+        - { id: pr1, cells: ["Sa 20.09., 19:31", "Story angesehen", "Lumen X2 (Claras Handy)", "Mobilfunk"] }
+        - { id: pr2, cells: ["So 21.09., 14:09", "Neue Anmeldung", "Orbis S9 (unbekanntes Gerät)", "Hafenau"] }
+        - { id: pr3, cells: ["So 21.09., 14:12", "Foto gepostet", "Orbis S9", "Hafenau"] }
+        - { id: pr4, cells: ["So 21.09., 14:20", "Nachricht an Leonie", "Orbis S9", "Hafenau"] }
+    hotspots:
+      - { item: pr3, insight: in_post_1412 }
+
+  - id: ev_tablet
+    title: Claras Tablet – Kalender
+    summary: Von Leonie aus Claras Zimmer geholt; der Kalender ist synchronisiert.
+    source: Leonie Kramer
+    unlock: { topic: leonie.zimmer }
+    content:
+      kind: table
+      heading: Kalender – Woche 38
+      columns: [Tag, Uhrzeit, Eintrag]
+      rows:
+        - { id: tb_fr, cells: ["Freitag", "17:00", "Mail an Dr. O. – NUR persönlich!"] }
+        - { id: tb_sa, cells: ["Samstag", "18:30", "F. – Moorsee, reden"] }
+        - { id: tb_so, cells: ["Sonntag", "15:00", "Leo vom Bahnhof abholen"] }
+        - { id: tb_notiz, cells: ["Notiz", "–", "Kopie im Schuhkarton, falls was ist."] }
+    hotspots:
+      - { item: tb_sa, insight: in_kalender_moorsee }
+      - { item: tb_notiz, insight: in_schuhkarton }
+
+  - id: ev_funkzellen
+    title: Funkzellenauswertung
+    summary: Karte mit den letzten Einwahlen von Claras Handy.
+    source: Polizei Hafenau
+    unlock: { phase: suche }
+    content:
+      kind: map
+      title: Hafenau und Moorsee – Einwahlen Lumen X2 (Clara)
+      places:
+        - { id: wohnung, label: Wohnung Hafenstraße, detail: "Claras Wohnung. Letzte Einwahl hier: Samstag 17:40.", x: 20, y: 30 }
+        - { id: novapay, label: Novapay, detail: "Firmensitz am Kai. Keine Einwahl am Wochenende.", x: 30, y: 60 }
+        - { id: ladepark, label: Ladepark Moorsee, detail: "Schnellladesäulen an der Landstraße. Funkzelle Moorsee-Nord.", x: 66, y: 34 }
+        - { id: moorsee_sued, label: Funkzelle Moorsee-Süd, detail: "Letzte Einwahl Claras: Samstag 19:40. Die Zelle deckt nur das Südufer mit etwa zwölf Wochenendhäusern ab.", x: 80, y: 70 }
+        - { id: seeweg, label: Seeweg (Südufer), detail: "Wochenendhäuser Seeweg 1–14.", x: 86, y: 80 }
+        - { id: bahnhof, label: Bahnhof Hafenau, detail: "Keine Einwahl Claras.", x: 12, y: 70 }
+      routes:
+        - { id: r_land, from: wohnung, to: ladepark, label: "35 Min. Auto", detail: "Landstraße L 112." }
+        - { id: r_ufer, from: ladepark, to: moorsee_sued, label: "8 Min.", detail: "Uferweg zum Südufer." }
+    hotspots:
+      - { item: moorsee_sued, insight: in_letzter_ping }
+      - { item: seeweg, insight: in_letzter_ping }
+
+  - id: ev_ladelog
+    title: Ladeprotokoll Ladepark Moorsee
+    summary: Vom Betreiber auf Anfrage herausgegeben.
+    source: Voltwerk Ladenetz
+    unlock: { insight: in_kalender_moorsee }
+    content:
+      kind: table
+      heading: Ladevorgänge Samstag, 20.09., 17–21 Uhr
+      columns: [Start, Ende, Kennzeichen, Ladekarte]
+      rows:
+        - { id: ll1, cells: ["17:12", "17:40", "HF-KR 1022", "privat"] }
+        - { id: ll2, cells: ["18:55", "19:20", "HF-NP 36", "Novapay Flottenkarte"] }
+        - { id: ll3, cells: ["20:41", "21:05", "GD-LL 7", "privat"] }
+    hotspots:
+      - { item: ll2, insight: in_ladesaeule }
+
+  - id: ev_fuhrpark
+    title: Fuhrparkliste Novapay
+    summary: Dienstwagen und ihre Nutzer.
+    source: Novapay
+    unlock: { topic: ostermann.novapay }
+    content:
+      kind: table
+      heading: Novapay – Dienstwagen (Stand September)
+      columns: [Kennzeichen, Modell, Nutzer]
+      rows:
+        - { id: fp_1, cells: ["HF-NP 10", "Limousine elektrisch", "Dr. H. Ostermann"] }
+        - { id: fp_2, cells: ["HF-NP 22", "Kombi elektrisch", "Pool (Vertrieb)"] }
+        - { id: fp_3, cells: ["HF-NP 36", "SUV elektrisch", "F. Lorenz"] }
+        - { id: fp_4, cells: ["HF-NP 41", "Kleinwagen", "Pool (IT)"] }
+
+  - id: ev_grundbuch
+    title: Auskunft Grundbuchamt
+    summary: Eigentümer der Wochenendhäuser am Südufer.
+    source: Grundbuchamt Hafenau
+    unlock: { insight: in_letzter_ping }
+    content:
+      kind: table
+      heading: Moorsee Südufer – Seeweg 1–14 (Auszug)
+      columns: [Adresse, Eigentümer]
+      rows:
+        - { id: gb1, cells: ["Seeweg 3", "Erbengemeinschaft Haller"] }
+        - { id: gb2, cells: ["Seeweg 5", "Dr. med. R. Kunze"] }
+        - { id: gb3, cells: ["Seeweg 7", "Familie Lorenz (Eheleute G. und H. Lorenz)"] }
+        - { id: gb4, cells: ["Seeweg 9", "Segelclub Hafenau e. V."] }
+        - { id: gb5, cells: ["Seeweg 12", "M. und P. Ostrowski"] }
+    hotspots:
+      - { item: gb3, insight: in_wochenendhaus }
+
+  - id: ev_mail_ostermann
+    title: Claras Mail an die Vorstandschefin
+    summary: Aus dem Posteingang von Dr. Ostermann – Status ungelesen.
+    source: Novapay IT
+    unlock: { topic: ostermann.clara }
+    content:
+      kind: document
+      docType: email
+      heading: Vertraulich – bitte nur persönlich
+      meta:
+        - { label: Von, value: "c.weiss@novapay.example" }
+        - { label: An, value: "h.ostermann@novapay.example" }
+        - { label: Gesendet, value: "Fr 19.09., 17:02 – ungelesen" }
+      lines:
+        - { id: mo1, text: "Sehr geehrte Frau Dr. Ostermann," }
+        - { id: mo2, text: "ich muss Ihnen dringend etwas über Konten zeigen, die im Team Lorenz eröffnet wurden." }
+        - { id: mo3, text: "Ich möchte das nicht per Mail besprechen. Bitte nur persönlich, am liebsten Montag früh." }
+        - { id: mo4, text: "Liebe Grüße, C. Weiß" }
+    hotspots:
+      - { item: mo2, insight: in_mail_ostermann }
+
+  - id: ev_usb
+    title: Claras Liste vom USB-Stick
+    summary: Aus dem Schuhkarton in Claras Zimmer.
+    source: Leonie Kramer
+    unlock: { insight: in_schuhkarton }
+    content:
+      kind: table
+      heading: auffaellige_konten.xlsx (Auszug)
+      columns: [Kontobereich, Anzahl, Ausweise, Angelegt von (Kürzel)]
+      rows:
+        - { id: ub1, cells: ["4711–4730", "20", "Ausweise Verstorbener", "FLZ"] }
+        - { id: ub2, cells: ["4731–4750", "20", "Ausweise aus Datenleck 2022", "FLZ"] }
+        - { id: ub3, cells: ["4751–4770", "20", "Ausweise mit Fotomontage", "FLZ"] }
+        - { id: ub4, cells: ["4771–4790", "20", "Ausweise Verstorbener", "FLZ"] }
+      note: "Claras Kommentar: „Kürzel siehe Organigramm. Alle Konten bekommen innerhalb von 48 h hohe Einzahlungen aus dem Ausland.“"
+
+  - id: ev_organigramm
+    title: Organigramm Kontoeröffnung
+    summary: Benutzerkürzel des Teams.
+    source: Novapay
+    unlock: { insight: in_schuhkarton }
+    content:
+      kind: table
+      heading: Team Kontoeröffnung – Benutzerkürzel
+      columns: [Kürzel, Name, Rolle]
+      rows:
+        - { id: og1, cells: ["CWE", "Clara Weiß", "Analyse"] }
+        - { id: og2, cells: ["FLZ", "Fabian Lorenz", "Teamleitung"] }
+        - { id: og3, cells: ["SBA", "Sven Bahr", "Sachbearbeitung"] }
+        - { id: og4, cells: ["TKN", "Tanja Klein", "Sachbearbeitung"] }
+
+  - id: ev_salon
+    title: Werbefoto „Schnittwerk“
+    summary: Aus dem Schaufenster von Mareikes Salon.
+    source: Salon Schnittwerk
+    unlock: { topic: mareike.sonntag }
+    content:
+      kind: photo
+      scene: interior
+      caption: "„Schnittwerk – Haare mit Herz. Inhaberin Mareike Sauer“"
+      elements:
+        - { id: mareike_bild, label: Mareike mit Schere, detail: "Mareike hält die Schere in der linken Hand. Auf ihrem linken Handgelenk: eine kleine tätowierte Schwalbe.", x: 34, y: 14, w: 20, h: 60, shape: person }
+        - { id: spiegel, label: Spiegel, detail: "Ein runder Frisierspiegel mit Lichtern.", x: 60, y: 10, w: 24, h: 40, shape: round }
+        - { id: tueten, label: Stofftaschen, detail: "Ein Stapel Stofftaschen mit Aufdruck „Schnittwerk – Haare mit Herz“.", x: 70, y: 62, w: 16, h: 14, shape: bag }
+        - { id: oeffnung, label: Öffnungszeiten, detail: "Di–Sa 9–18 Uhr. So & Mo geschlossen.", x: 6, y: 20, w: 16, h: 20, shape: paper }
+    hotspots:
+      - { item: oeffnung, insight: in_salon_sonntag }
+
+  - id: ev_alibis
+    title: Alibi-Überprüfungen
+    summary: Ergebnisse der Streifenpolizei.
+    source: Polizei Hafenau
+    unlock: { phase: umfeld }
+    content:
+      kind: table
+      heading: Überprüfte Alibis
+      columns: [Person, Angabe, Überprüfung]
+      rows:
+        - { id: al_jonas, cells: ["Jonas Weiß", "Nachtschicht Sa", "Zeiterfassung: Sa 18:00 – So 02:10, Lager Hafenau-Ost"] }
+        - { id: al_darius, cells: ["Darius Mehr", "Turnier-Livestream", "Stream mit Kamera Sa 17:00–23:20, keine Unterbrechung"] }
+        - { id: al_leonie, cells: ["Leonie Kramer", "Hochzeit in Gerdau", "Fotos und Gästeliste: Sa 12:00 – So 13:00"] }
+        - { id: al_ostermann, cells: ["Dr. H. Ostermann", "Dienstreise Oslo", "Flug Fr 19:05, Rückflug Mo 07:15"] }
+        - { id: al_lorenz, cells: ["Fabian Lorenz", "Sa zu Hause mit M. Sauer", "nur durch M. Sauer bestätigt"] }
+        - { id: al_mareike, cells: ["Mareike Sauer", "Sa zu Hause mit F. Lorenz", "nur durch F. Lorenz bestätigt"] }
+    hotspots:
+      - { item: al_jonas, insight: in_jonas_schicht }
+      - { item: al_darius, insight: in_darius_stream }
+      - { item: al_leonie, insight: in_leonie_hochzeit }
+      - { item: al_ostermann, insight: in_ostermann_oslo }
+      - { item: al_lorenz, insight: in_lorenz_mareike_alibi }
+      - { item: al_mareike, insight: in_lorenz_mareike_alibi }
+
+connections:
+  - { id: c_tattoo, a: in_atm_tattoo, b: ev_salon, insight: in_tattoo_mareike }
+  - { id: c_kein_tattoo, a: in_atm_tattoo, b: clara, insight: in_kein_tattoo }
+  - { id: c_auto, a: ev_ladelog, b: ev_fuhrpark, insight: in_auto_lorenz }
+
+interrogations:
+  - character: leonie
+    intro: Leonie hat Augenringe und einen Stapel ausgedruckter Screenshots dabei. Sie redet, bevor jemand fragt.
+    topics:
+      - id: clara
+        question: Warum glauben Sie, dass die Nachrichten nicht von Clara sind?
+        responses:
+          - mood: wuetend
+            stress: 20
+            text: "Weil Clara seit Jahren „Liebe Grüße, C.“ schreibt! Und sie nennt mich Leo, niemals Leonie! Und die Unterschrift auf der Wohnungskündigung – da fehlt der Strich durchs W. Hier, ich hab ihre alten Verträge mitgebracht."
+      - id: zimmer
+        question: Hat Clara etwas zurückgelassen?
+        responses:
+          - mood: kooperativ
+            text: "Ihr Tablet lag auf dem Schreibtisch. Der Kalender ist mit ihrem Handy synchronisiert. Ich hab nicht reingeschaut … okay, doch. Da steht was von Samstag."
+      - id: tattoo
+        question: Hat Clara Tattoos?
+        unlock: { insight: in_atm_tattoo }
+        responses:
+          - mood: ruhig
+            text: "Clara? Niemals. Sie fällt schon beim Blutabnehmen in Ohnmacht. Keine Tattoos, keine Piercings, nichts."
+      - id: streit
+        question: Hatten Sie Streit mit Clara?
+        responses:
+          - mood: verzweifelt
+            stress: 40
+            text: "Ja. Ich will mit meinem Freund zusammenziehen, sie war sauer wegen der Miete. Aber ich hätte doch nie ihre Wohnung gekündigt! Ich war das ganze Wochenende auf einer Hochzeit in Gerdau."
+
+  - character: lorenz
+    intro: Fabian Lorenz lehnt sich zurück, die Beine übereinandergeschlagen. Er wirkt eher besorgt als nervös.
+    topics:
+      - id: clara
+        question: Wie war Ihr Verhältnis zu Clara?
+        responses:
+          - mood: kooperativ
+            text: "Hervorragend. Sie ist meine beste Analystin. Sie war in letzter Zeit etwas überarbeitet – ehrlich gesagt überrascht mich so eine Auszeit nicht."
+      - id: samstag
+        question: Wo waren Sie am Samstagabend?
+        responses:
+          - when: { insight: in_auto_lorenz }
+            mood: wuetend
+            stress: 70
+            text: "Ich war kurz am See, ja! Ich habe nach dem Haus meiner Eltern gesehen. Das ist nicht verboten. Clara habe ich dort nicht gesehen."
+          - mood: ruhig
+            stress: 10
+            text: "Zu Hause, mit meiner Freundin Mareike. Wir haben eine Serie geschaut. Den ganzen Abend."
+      - id: termin
+        question: "Clara hatte einen Termin: „F. – Moorsee“. Waren Sie F.?"
+        unlock: { insight: in_kalender_moorsee }
+        responses:
+          - mood: ausweichend
+            stress: 60
+            text: "F. kann jeder sein. Ihr Exfreund heißt Darius, aber vielleicht ein Freund, eine Frank, ein Florian … Ich weiß nichts von einem Termin."
+      - id: konten
+        question: Was sagt Ihnen das Kürzel FLZ auf 80 verdächtigen Konten?
+        unlock: { insight: in_konten_lorenz }
+        responses:
+          - when: { insight: in_clara_gefunden }
+            mood: gebrochen
+            stress: 100
+            text: "Sie haben sie gefunden? … Gott sei Dank. Ich wollte ihr nichts tun. Ich wollte nur Zeit. Zwei Wochen, bis alles verschoben ist. Mareike sollte nur so tun, als wäre sie weg. Es ist alles außer Kontrolle geraten."
+          - mood: arrogant
+            stress: 85
+            text: "Meine Kennung wird vom halben Team benutzt. Passwörter kleben bei uns an jedem Bildschirm. Das beweist gar nichts."
+      - id: wochenendhaus
+        question: Wem gehört das Haus Seeweg 7?
+        unlock: { insight: in_wochenendhaus }
+        responses:
+          - mood: nervoes
+            stress: 75
+            text: "Meinen Eltern. Sie sind in Spanien. Ich habe den Schlüssel, ja. Wollen Sie etwa da rein? Dafür brauchen Sie einen Beschluss."
+
+  - character: mareike
+    intro: Mareike Sauer zieht die Ärmel ihres Pullovers über die Hände. Sie sieht immer wieder zur Tür.
+    topics:
+      - id: samstag
+        question: Wo waren Sie am Samstagabend?
+        responses:
+          - mood: nervoes
+            stress: 30
+            text: "Bei Fabian. Auf dem Sofa. Serie. Das hat er doch schon gesagt."
+      - id: sonntag
+        question: Und am Sonntag?
+        responses:
+          - mood: ausweichend
+            stress: 45
+            text: "Mein Salon hat sonntags zu. Ich war … spazieren. Allein. Am Markt in Nord, glaube ich."
+      - id: clara
+        question: Kennen Sie Clara Weiß?
+        responses:
+          - mood: ausweichend
+            stress: 30
+            text: "Flüchtig. Von der Weihnachtsfeier. Sie hat … ähnliche Haare wie ich. Das hat sie mal gesagt."
+      - id: tattoo
+        question: Zeigen Sie uns bitte Ihr linkes Handgelenk.
+        unlock: { insight: in_tattoo_mareike }
+        responses:
+          - when: { insight: in_clara_gefunden }
+            mood: gebrochen
+            stress: 100
+            text: "Sie lebt? Gott sei Dank. … Fabian hat gesagt, sie sei nur im Haus, sie bekomme Essen, das sei nur für zwei Wochen. Ich habe das Geld abgehoben, das Foto gemacht, die Briefe geschrieben. Ich wollte nie, dass ihr etwas passiert."
+          - mood: verzweifelt
+            stress: 90
+            text: "Viele Frauen haben Schwalben-Tattoos! … Ich sage nichts mehr ohne Anwalt."
+      - id: handy
+        question: Welches Handy benutzen Sie?
+        unlock: { evidence: ev_profil }
+        responses:
+          - mood: nervoes
+            stress: 50
+            text: "Ein Orbis. Den S9. Warum? Den haben doch tausend Leute."
+
+  - character: jonas
+    intro: Jonas Weiß knetet seine Mütze. Er sieht aus, als habe er seit Tagen nicht geschlafen.
+    topics:
+      - id: geld
+        question: Warum hat Clara Ihnen 2.000 Euro überwiesen?
+        unlock: { insight: in_ueberweisung_jonas }
+        responses:
+          - mood: verzweifelt
+            stress: 60
+            text: "Ich weiß es nicht! Ich habe nicht gefragt. Ich dachte, sie will mir helfen, wie immer. Ich hab's ausgegeben, für Schulden. Ich hätte es melden müssen, ich weiß."
+      - id: samstag
+        question: Wo waren Sie am Samstag?
+        responses:
+          - mood: ruhig
+            text: "Nachtschicht im Lager, Hafenau-Ost. Von sechs bis nach zwei. Stempelkarte, Kollegen, alles."
+      - id: schwester
+        question: Wann haben Sie Clara zuletzt gesprochen?
+        responses:
+          - mood: kooperativ
+            text: "Donnerstag. Sie war komisch. Sie hat gesagt, sie hat bei der Arbeit was gefunden, das „ganz oben einschlagen“ wird. Und dass ihr Chef sie zum Reden eingeladen hat."
+
+  - character: darius
+    intro: Darius trägt einen Hoodie mit Teamlogo und kaut Kaugummi. Er gibt sich gelangweilt.
+    topics:
+      - id: drohung
+        question: "Sie schrieben Clara: „Du wirst es noch bereuen.“"
+        responses:
+          - mood: arrogant
+            stress: 40
+            text: "Ja, war dumm. Ich meinte, sie bereut die Trennung. Nicht dass ich ihr was tu. Ich bin kein Psycho."
+      - id: samstag
+        question: Wo waren Sie am Samstagabend?
+        responses:
+          - mood: arrogant
+            text: "Live. Turnier, sechs Stunden, mit Facecam. Zwölftausend Leute haben mir zugeguckt. Besseres Alibi gibt's nicht."
+      - id: lorenz
+        question: Kennen Sie Fabian Lorenz?
+        responses:
+          - mood: ruhig
+            text: "Ihren Chef? Den Schönling? Clara hat mal erzählt, dass er ihr zu nett ist. Und dass seine Freundin bei der Weihnachtsfeier dauernd ihre Frisur kopieren wollte."
+
+  - character: ostermann
+    intro: Dr. Ostermann kommt direkt vom Flughafen. Sie hat ihren Anwalt am Telefon.
+    topics:
+      - id: clara
+        question: Hat Clara Sie kontaktiert?
+        responses:
+          - mood: ausweichend
+            stress: 40
+            text: "Ich bekomme zweihundert Mails am Tag. Ich war in Oslo. Lassen Sie mich nachsehen … Freitag, 17:02. Ungelesen. Mein Gott."
+      - id: novapay
+        question: Wir brauchen Unterlagen aus Ihrem Unternehmen.
+        responses:
+          - mood: kooperativ
+            text: "Sie bekommen alles. Fuhrpark, Zugriffsprotokolle, was Sie wollen. Wenn in meinem Haus jemand betrügt, will ich es vor der Börsenaufsicht wissen."
+      - id: lorenz
+        question: Was halten Sie von Fabian Lorenz?
+        unlock: { insight: in_mail_ostermann }
+        responses:
+          - mood: ruhig
+            text: "Unser Wunderkind. Seine Abteilung hat die Neukundenzahl verdreifacht. Ich habe nie gefragt, wie. Das war wohl ein Fehler."
+
+puzzles:
+  - id: p_echt
+    title: Echt oder gefälscht?
+    type: contradiction
+    prompt: Welche dieser Nachrichten hat Clara mit Sicherheit NICHT selbst geschrieben?
+    evidence: [ev_nachrichten_leonie, ev_kuendigung_mail, ev_mail_ostermann]
+    unlock: { insight: in_signatur_clara }
+    input:
+      kind: choice
+      options:
+        - { id: m_pizza, label: "„Leo, ich bring Pizza mit.“ (Dienstag)" }
+        - { id: m_karton, label: "„Wenn was ist: Schuhkarton.“ (Freitag)" }
+        - { id: m_kuendigung, label: "„Danke an Herrn Lorentz für alles! LG Clara“ (Kündigungsmail)" }
+        - { id: m_chaos, label: "„Riesenchaos auf Arbeit.“ (Donnerstag)" }
+    answer: { choice: m_kuendigung }
+    hints:
+      - Wie unterschreibt Clara? Wie nennt sie Leonie?
+      - Achtet auch auf die Schreibweise des Namens ihres eigenen Chefs.
+    reveals: [in_mail_gefaelscht]
+    success: "„LG Clara“ statt „Liebe Grüße, C.“ – und den Namen ihres eigenen Chefs hätte Clara nie falsch geschrieben."
+
+  - id: p_foto
+    title: Wo entstand das Foto?
+    type: image
+    prompt: Wo wurde das „Lissabon“-Foto wirklich aufgenommen?
+    evidence: [ev_lissabon]
+    unlock: { phase: spuren }
+    input:
+      kind: choice
+      options:
+        - { id: o_lissabon, label: Lissabon }
+        - { id: o_porto, label: Porto }
+        - { id: o_hafenau, label: Hafenau }
+        - { id: o_moorsee, label: Am Moorsee }
+    answer: { choice: o_hafenau }
+    hints:
+      - Souvenirs kann man überall kaufen. Achtet auf das, was man nicht mitnehmen kann.
+      - Was spiegelt sich in der Fensterscheibe? Gibt es so einen Turm in Hafenau?
+    reveals: [in_foto_hafenau]
+    success: Der Fernsehturm mit dem roten Ring steht in Hafenau. Die Postkarte und die Fliesen sind Kulisse.
+
+  - id: p_unterschrift
+    title: Die Unterschrift
+    type: compare
+    prompt: Welches Merkmal der Wohnungskündigung beweist am deutlichsten, dass eine andere Person unterschrieben hat?
+    evidence: [ev_unterschriften, ev_wohnungskuendigung]
+    unlock: { evidence: ev_unterschriften }
+    input:
+      kind: choice
+      options:
+        - { id: u_papier, label: "Das Papierformat" }
+        - { id: u_neigung, label: "Linksneigung, kein Querstrich durchs W und „ss“ statt „ß“" }
+        - { id: u_stempel, label: "Der Poststempel Hafenau-Nord" }
+        - { id: u_datum, label: "Das fehlende Datum" }
+    answer: { choice: u_neigung }
+    hints:
+      - Vergleicht die Spalten der Tabelle Zeile für Zeile.
+      - Clara ist Rechtshänderin – welche Schriftneigung passt dazu?
+    reveals: [in_unterschrift_falsch]
+    success: Alle drei Merkmale weichen ab. Die Fälscherin schreibt mit links.
+
+  - id: p_kuerzel
+    title: Die Kontofabrik
+    type: compare
+    prompt: Wer hat die 80 verdächtigen Konten angelegt? Gebt den Namen ein.
+    evidence: [ev_usb, ev_organigramm]
+    unlock: { all: [{ evidence: ev_usb }, { evidence: ev_organigramm }] }
+    input: { kind: text, placeholder: "Vor- und Nachname" }
+    answer: { accept: ["Fabian Lorenz", "Lorenz", "F. Lorenz", "FLZ"] }
+    hints:
+      - Claras Liste nennt nur ein Kürzel.
+      - Das Organigramm löst das Kürzel auf.
+    reveals: [in_konten_lorenz]
+    success: Alle 80 Konten tragen das Kürzel FLZ – Fabian Lorenz.
+
+  - id: p_ort
+    title: Wo ist Clara?
+    type: map
+    prompt: Wo wird Clara vermutlich festgehalten? Entscheidet gut – die Polizei kann nur an einem Ort zugreifen.
+    evidence: [ev_funkzellen, ev_grundbuch, ev_ladelog, ev_tablet]
+    unlock: { all: [{ insight: in_letzter_ping }, { insight: in_wochenendhaus }] }
+    input:
+      kind: choice
+      options:
+        - { id: w_lissabon, label: "In Lissabon" }
+        - { id: w_wohnung, label: "In Mareikes Wohnung in Hafenau" }
+        - { id: w_seeweg7, label: "Im Wochenendhaus Seeweg 7 am Moorsee" }
+        - { id: w_novapay, label: "Im Archiv von Novapay" }
+        - { id: w_seeweg9, label: "Im Bootshaus des Segelclubs, Seeweg 9" }
+    answer: { choice: w_seeweg7 }
+    hints:
+      - Wo hat sich Claras Handy zuletzt eingewählt – und wem gehört dort ein Haus?
+      - Das Kalenderkürzel „F.“, das Ladeprotokoll und das Grundbuch zeigen auf dieselbe Familie.
+    reveals: [in_ort_clara]
+    success: Alles zeigt auf den Seeweg 7. Die Polizei rückt aus.
+
+events:
+  - id: ev_bank_meldet
+    title: Die Sparkasse meldet sich
+    source: Sparkasse Hafenau
+    text: "Die Bank hat nach der Vermisstenmeldung das Konto überprüft: „Es gab am Sonntag eine Barabhebung und eine Überweisung. Wir schicken Ihnen das Kamerabild vom Automaten.“"
+    trigger: { minutes: 12 }
+  - id: ev_zugriff
+    title: Zugriff am Moorsee
+    source: Polizei Hafenau
+    text: Ein Spezialeinsatzkommando öffnet um 21:12 Uhr das Wochenendhaus Seeweg 7. Im Keller finden die Beamten eine Frau, schwach, aber ansprechbar. Es ist Clara Weiß. Ein Notarzt bringt sie ins Krankenhaus. Sie ist noch zu benommen, um auszusagen.
+    trigger: { when: { insight: in_ort_clara } }
+    reveals: [in_clara_gefunden]
+  - id: ev_jonas_meldet
+    title: Jonas meldet sich
+    source: Jonas Weiß
+    text: "„Ich muss Ihnen was sagen. Clara hat mir Donnerstag erzählt, ihr Chef habe sie zum Reden an den See eingeladen. Ich hab's vergessen, ich Idiot.“"
+    trigger: { when: { wrongAccusations: 1 } }
+    reveals: [in_kalender_moorsee]
+
+accusation:
+  question: Wer ist für Claras Verschwinden verantwortlich?
+  proof:
+    question: Was beweist die Tat am deutlichsten?
+    options:
+      - { id: pr_kette, label: "Termin „F. – Moorsee“, sein Dienstwagen an der Ladesäule und Claras Fundort in seinem Familienhaus", correct: true }
+      - { id: pr_drohung, label: "Die Drohnachricht „Du wirst es noch bereuen“" }
+      - { id: pr_ueberweisung, label: "Die Überweisung von 2.000 Euro" }
+      - { id: pr_streit, label: "Der Streit um die Miete" }
+
+gmNotes:
+  - { phase: spuren, text: "Lebenszeichen prüfen: Signatur („Liebe Grüße, C.“ / „Leo“), das Spiegelbild des Fernsehturms, die Unterschrift. Die Bank meldet sich nach ca. 12 Minuten." }
+  - { phase: umfeld, text: "Die Alibi-Tabelle entlastet Jonas, Darius, Leonie, Ostermann – und zeigt, dass Lorenz und Mareike sich nur gegenseitig decken." }
+  - { phase: suche, text: "Tablet-Kalender → Ladeprotokoll + Fuhrpark → Funkzellen → Grundbuch → Rätsel „Wo ist Clara?“. Der Zugriff ist der emotionale Höhepunkt." }
+  - { text: "Täter: Fabian Lorenz, Komplizin: Mareike Sauer. Beide sind als Verdächtige wählbar; korrekt ist Lorenz als Hauptverantwortlicher." }
+
+solution:
+  culprit: lorenz
+  accomplices: [mareike]
+  headline: Fabian Lorenz ließ Clara verschwinden – und seine Freundin Mareike lebte ihr Leben weiter.
+  motive: Clara hatte entdeckt, dass Lorenz über 80 Konten mit gestohlenen Identitäten Geld wusch. Sie wollte es am Montag der Vorstandschefin zeigen. Lorenz brauchte Zeit, um das Geld zu verschieben und die Spuren zu löschen.
+  method: Lorenz lud Clara für Samstag 18:30 Uhr „zum Reden“ ins Wochenendhaus seiner Eltern am Moorsee ein. Er fuhr mit dem Dienstwagen hin (Ladesäule 18:55), betäubte sie, schaltete ihr Handy aus und sperrte sie in den Keller. Ihren Laptop zerstörte er. Ab Sonntag gab sich Mareike, die Clara ähnelt, als sie aus – Abhebung am Automaten, Überweisung an den Bruder, das „Lissabon“-Foto aus einem Hafenauer Café, die Kündigungen. Clara sollte als freiwillig untergetaucht gelten.
+  summary: Kein Lebenszeichen seit Sonntag stammte von Clara – falsche Grußformel, falscher Name des Chefs, ein Foto mit dem Hafenauer Fernsehturm und eine Linkshänderin mit Schwalben-Tattoo am Geldautomaten. Claras Kalender, ihr letzter Handy-Kontakt, Lorenz' Dienstwagen und das Grundbuch führten zum Seeweg 7 – wo die Polizei Clara lebend fand. Ihre Liste beweist das Motiv.
+  keyInsights: [in_mail_gefaelscht, in_tattoo_mareike, in_kalender_moorsee, in_auto_lorenz, in_konten_lorenz, in_clara_gefunden]
+  chain:
+    - { insight: in_mail_gefaelscht, explanation: "Die Nachrichten seit Sonntag waren nicht von Clara – jemand lebte ihr Leben weiter." }
+    - { insight: in_foto_hafenau, explanation: "Das „Lissabon“-Foto entstand in Hafenau." }
+    - { insight: in_tattoo_mareike, explanation: "Die Frau am Geldautomaten trug Mareikes Schwalben-Tattoo." }
+    - { insight: in_kalender_moorsee, explanation: "Claras letzter Termin: „F. – Moorsee, reden“." }
+    - { insight: in_auto_lorenz, explanation: "Lorenz' Dienstwagen lud um 18:55 am Moorsee – sein Alibi war falsch." }
+    - { insight: in_konten_lorenz, explanation: "Claras Liste: 80 Betrugskonten, alle angelegt von FLZ." }
+    - { insight: in_clara_gefunden, explanation: "Clara war im Keller des Lorenz-Hauses am Seeweg 7." }
+  truthTimeline:
+    - { time: "Do", text: "Clara erzählt ihrem Bruder, ihr Chef habe sie zum Reden eingeladen." }
+    - { time: "Fr 17:02", text: "Clara schreibt der Vorstandschefin – die Mail bleibt ungelesen." }
+    - { time: "Sa 18:30", text: "Clara trifft Lorenz am Wochenendhaus Seeweg 7." }
+    - { time: "Sa 18:55", text: "Lorenz' Dienstwagen lädt am Ladepark Moorsee." }
+    - { time: "Sa 19:40", text: "Lorenz betäubt Clara und schaltet ihr Handy aus." }
+    - { time: "So 10:14", text: "Mareike hebt mit Claras Karte 1.000 € ab." }
+    - { time: "So 14:12", text: "Mareike postet das „Lissabon“-Foto aus einem Café in Hafenau." }
+    - { time: "So 22:47", text: "Die gefälschte Kündigung geht an Novapay." }
+    - { time: "Mo 08:00", text: "Leonie meldet Clara als vermisst." }
+  redHerrings:
+    - { character: jonas, clue: "2.000 € gingen an den verschuldeten Bruder", debunkedBy: in_jonas_schicht, explanation: "Die Überweisung sollte ihn belasten. Er war in der Nachtschicht." }
+    - { character: darius, clue: "Die Drohnachricht des Exfreunds", debunkedBy: in_darius_stream, explanation: "Er spielte den ganzen Abend live vor Tausenden Zuschauern." }
+    - { character: leonie, clue: "Streit um die Miete und die Wohnungskündigung", debunkedBy: in_leonie_hochzeit, explanation: "Sie war auf einer Hochzeit in Gerdau – und war es, die Alarm schlug." }
+    - { character: ostermann, clue: "Die Chefin mit dem Börsengang", debunkedBy: in_ostermann_oslo, explanation: "Sie war in Oslo und hatte Claras Mail nie gelesen." }
+  epilogue: Clara erholte sich innerhalb weniger Tage. Ihre Aussage bestätigte alles. Novapay sagte den Börsengang ab und zeigte sich selbst bei der Finanzaufsicht an. Clara arbeitet heute für die Aufsicht – in der Abteilung für Identitätsbetrug. Ihre E-Mails unterschreibt sie weiterhin mit „Liebe Grüße, C.“.

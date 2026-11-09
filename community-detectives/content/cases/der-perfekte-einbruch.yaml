@@ -1,0 +1,806 @@
+# COMMUNITY DETECTIVES – Fall: Der perfekte Einbruch
+# Alle Personen, Orte und Unternehmen sind frei erfunden.
+id: der-perfekte-einbruch
+version: 1
+title: Der perfekte Einbruch
+tagline: Ein Fenster klirrt, ein Meisterwerk verschwindet – und niemand hat etwas gesehen.
+genre: kunstdiebstahl
+difficulty: einsteiger
+tier: free
+estimatedMinutes: 50
+accent: "#b8862e"
+
+briefing:
+  location: Kunsthaus Morgenroth, Lübenau
+  date: Freitag, 14. März, 21:31 Uhr
+  intro: |
+    Vernissage im Kunsthaus Morgenroth. Rund sechzig Gäste, Sekt, Streichquartett. Um 21:00 Uhr hält Galerist Viktor Hallmann seine Rede in der großen Halle.
+    Um 21:31 Uhr bemerkt die Wachfrau Selma Okafor, dass im Kabinett nur noch ein leerer Rahmen hängt. Gestohlen wurde „Die Nachtfischer“ (Jakob Brenner, 1911) – Schätzwert 1,2 Millionen Euro.
+    Das Fenster des Kabinetts ist eingeschlagen. Der Alarm hat nicht ausgelöst. Die Polizei spricht bereits vom „perfekten Einbruch“.
+  objective: Findet heraus, wie der Diebstahl ablief, wer ihn begangen hat und wo das Gemälde jetzt ist.
+  question: Wer hat „Die Nachtfischer“ gestohlen?
+
+phases:
+  - id: tatort
+    title: Der Tatort
+    goal: Untersucht das Kabinett und die Umgebung. Was stimmt am „Einbruch“ nicht?
+  - id: vernehmungen
+    title: Die Vernehmungen
+    goal: Befragt die Anwesenden. Wer war wann wo – und wer lügt?
+  - id: durchbruch
+    title: Der Durchbruch
+    goal: Rekonstruiert das Zeitfenster und findet das Gemälde.
+
+characters:
+  - id: hallmann
+    name: Viktor Hallmann
+    role: suspect
+    age: 58
+    occupation: Galerist, Inhaber des Kunsthauses
+    color: "#7a6a4f"
+    profile: Gründete das Kunsthaus vor 15 Jahren. Charmant, eitel, in der Stadt bestens vernetzt. Die Galerie steckt in finanziellen Schwierigkeiten.
+    personality: Redegewandt, schnell gekränkt, hasst es, die Kontrolle zu verlieren.
+    relation: Besitzer der Galerie und Leihnehmer des Gemäldes.
+    alibi: Hielt von 21:00 bis 21:30 Uhr seine Rede in der großen Halle.
+    motive: Versicherungsbetrug? Die Galerie hat Schulden.
+    secret: Er hat vergessen, die Versicherungsprämie zu zahlen – das Bild war zum Tatzeitpunkt nicht versichert. Ein Diebstahl ruiniert ihn. Er schämt sich und verschweigt es zunächst.
+  - id: okafor
+    name: Selma Okafor
+    role: suspect
+    age: 34
+    occupation: Wachfrau
+    color: "#4f6a7a"
+    profile: Seit 2016 im Haus, gilt als zuverlässig. Hat den Diebstahl entdeckt und die Polizei gerufen.
+    personality: Ruhig, präzise, misstrauisch gegenüber Fragen zu ihrer Arbeit.
+    relation: Für die Sicherheit an diesem Abend verantwortlich.
+    alibi: War auf ihrer Runde, um 21:10 Uhr im Ostflügel.
+    motive: Kennt Alarmanlage und Abläufe besser als jeder andere.
+    secret: Sie hat in der Pause heimlich geraucht (20:40–20:50) und fürchtet, deshalb ihren Job zu verlieren. Mit dem Diebstahl hat sie nichts zu tun.
+  - id: voss
+    name: Lennart Voss
+    role: suspect
+    age: 27
+    occupation: Kunststudent, Aushilfe beim Catering
+    color: "#5a7a4f"
+    profile: Studiert Malerei und jobbt beim Catering „Tafelwerk“. Wurde mit einer großen Mappe Richtung Hinterausgang gesehen.
+    personality: Nervös, ehrgeizig, redet schnell, wenn er unsicher ist.
+    relation: Kannte das Bild aus dem Studium und bewundert Brenner.
+    alibi: Hat Getränke serviert und war kurz draußen am Lieferwagen.
+    motive: Chronisch pleite; die Mappe war groß genug für eine Leinwand.
+    secret: In der Mappe waren seine eigenen Zeichnungen. Er wollte sie Hallmann nach der Rede zeigen, verlor aber den Mut und brachte sie zum Lieferwagen.
+  - id: brandauer
+    name: Dr. Ilse Brandauer
+    role: suspect
+    age: 61
+    occupation: Kunstsammlerin
+    color: "#7a4f6a"
+    profile: Eine der größten Privatsammlerinnen der Region. Wollte „Die Nachtfischer“ kaufen und wurde von Hallmann abgewiesen.
+    personality: Kühl, scharfzüngig, gewohnt zu bekommen, was sie will.
+    relation: Rivalin von Hallmann, Kaufinteressentin.
+    alibi: Ist bereits vor der Rede mit dem Taxi gefahren.
+    motive: Wollte das Bild unbedingt besitzen.
+    secret: Sie ging früh, weil sie sich über Hallmann geärgert hatte. Sie hat mit dem Diebstahl nichts zu tun.
+  - id: wendt
+    name: Jonas Wendt
+    role: suspect
+    age: 41
+    occupation: Restaurator des Kunsthauses
+    color: "#4f4f7a"
+    profile: Seit 2018 im Haus, arbeitet meist allein in der Werkstatt im Untergeschoss. Betreut auch Verpackung und Transporte.
+    personality: Leise, pedantisch, hält sich gern im Hintergrund.
+    relation: Hat das Gemälde im Herbst restauriert.
+    alibi: Behauptet, um 20:30 Uhr nach Hause gegangen zu sein.
+    motive: Kein offensichtliches.
+    secret: Er hat das Bild gestohlen. Hallmann hatte ihm zwei Tage zuvor gekündigt; ein privater Käufer bot ihm 80.000 Euro.
+  - id: roeder
+    name: Annika Röder
+    role: witness
+    age: 45
+    occupation: Architektin, Vernissage-Gast
+    color: "#6a6a6a"
+    profile: Stand während der Rede am Rand der großen Halle, nahe dem Gang zum Kabinett.
+    personality: Aufmerksam, hilfsbereit, etwas geschwätzig.
+    relation: Stammgast der Galerie.
+    secret: Sagt die Wahrheit, hat aber den falschen Schluss gezogen (hält den Kellner für verdächtig).
+
+insights:
+  - id: in_hallmann_rede
+    title: Die Rede beginnt
+    text: Hallmanns Rede begann um 21:00 Uhr und dauerte bis 21:30 Uhr. Fast alle Gäste und Hallmann selbst waren in der großen Halle.
+    category: zeitlinie
+    characters: [hallmann]
+    timeline: { time: "21:00", sort: 20, text: "Hallmann beginnt seine Rede in der großen Halle." }
+  - id: in_bild_2058
+    title: Um 20:58 hing das Bild noch
+    text: Laut Wachbuch hat Selma Okafor um 20:58 Uhr das Kabinett kontrolliert – das Gemälde hing an seinem Platz.
+    category: zeitlinie
+    characters: [okafor]
+    timeline: { time: "20:58", sort: 10, text: "Kontrollgang: Das Bild hängt noch." }
+  - id: in_alarm_2108
+    title: Alarm aus um 21:08 – Benutzer 04
+    text: Die Alarmzone 3 (Kabinett) wurde um 21:08 Uhr mit dem Code von „Benutzer 04“ unscharf geschaltet. Kein Einbruch von außen – jemand kannte den Code.
+    category: spur
+    timeline: { time: "21:08", sort: 30, text: "Zone 3 (Kabinett) wird mit Code 04 abgeschaltet." }
+  - id: in_klirren_2116
+    title: Glas klirrt um 21:16
+    text: Annika Röder hörte um 21:16 Uhr Glas klirren – während der Rede, aus Richtung Kabinett.
+    category: zeitlinie
+    timeline: { time: "21:16", sort: 40, text: "Glas klirrt im Kabinett." }
+  - id: in_alarm_2119
+    title: Alarm wieder an um 21:19
+    text: Um 21:19 Uhr wurde Zone 3 mit demselben Code 04 wieder scharf geschaltet. Ein Einbrecher, der durchs Fenster flieht, schaltet keinen Alarm wieder ein – das tut nur jemand, der den Diebstahl verschleiern will.
+    category: widerspruch
+    timeline: { time: "21:19", sort: 50, text: "Zone 3 wird mit Code 04 wieder scharf geschaltet." }
+  - id: in_wendt_2124
+    title: Wendt verlässt um 21:24 das Haus
+    text: Das Zutrittssystem verzeichnet um 21:24 Uhr den Mitarbeiterausweis von Jonas Wendt am Personalausgang.
+    category: zeitlinie
+    characters: [wendt]
+    timeline: { time: "21:24", sort: 60, text: "Wendts Ausweis öffnet den Personalausgang." }
+  - id: in_bild_weg_2131
+    title: Entdeckung um 21:31
+    text: Um 21:31 Uhr entdeckt Selma Okafor den leeren Rahmen und ruft um 21:33 Uhr die Polizei.
+    category: zeitlinie
+    characters: [okafor]
+    timeline: { time: "21:31", sort: 70, text: "Okafor entdeckt den leeren Rahmen." }
+  - id: in_von_innen
+    title: Von innen eingeschlagen
+    text: Die Scherben liegen draußen auf dem Gehweg, drinnen fast keine. Das Fenster wurde von innen eingeschlagen – der „Einbruch“ ist inszeniert.
+    category: widerspruch
+  - id: in_keine_spuren
+    title: Keine Spuren im Beet
+    text: Das frisch gegossene Blumenbeet unter dem Fenster ist unberührt. Niemand ist hier ein- oder ausgestiegen.
+    category: spur
+  - id: in_schnitt
+    title: Ein Schnitt wie vom Profi
+    text: Die Leinwand wurde mit einer extrem scharfen Klinge exakt am Innenrand des Keilrahmens herausgetrennt – ohne die Malschicht zu verletzen. Das war jemand mit Erfahrung.
+    category: spur
+  - id: in_zeitfenster
+    title: Das Zeitfenster
+    text: Der Diebstahl geschah zwischen 21:08 und 21:19 Uhr, während Hallmanns Rede. Der Täter kannte den Alarmcode und wusste, dass das Kabinett in dieser Zeit leer sein würde.
+    category: spur
+  - id: in_code04_wendt
+    title: Benutzer 04 ist Jonas Wendt
+    text: Benutzernummern werden in der Reihenfolge des Dienstantritts vergeben. Hallmann (2009) = 01, Sanders (2012) = 02, Okafor (2016) = 03, Wendt (2018) = 04.
+    category: identitaet
+    characters: [wendt]
+  - id: in_wendt_luegt
+    title: Wendts Alibi ist falsch
+    text: Wendt behauptet, um 20:30 Uhr gegangen zu sein – sein Ausweis wurde aber erst um 21:24 Uhr am Personalausgang benutzt.
+    category: widerspruch
+    characters: [wendt]
+  - id: in_skalpell
+    title: Eine Klinge fehlt
+    text: Im Skalpellset der Restaurierungswerkstatt fehlt genau eine Klinge der Stärke Nr. 11 – passend zum präzisen Schnitt am Rahmen.
+    category: spur
+    characters: [wendt]
+  - id: in_splitter
+    title: Glassplitter in der Schürze
+    text: In der Tasche von Wendts Arbeitsschürze stecken feine Glassplitter – Fensterglas, wie im Kabinett.
+    category: spur
+    characters: [wendt]
+  - id: in_kuendigung
+    title: Die Kündigung
+    text: Hallmann hat Wendt zwei Tage vor der Vernissage zum Monatsende gekündigt. Wendt hätte Haus und Werkstatt verlassen müssen.
+    category: motiv
+    characters: [wendt, hallmann]
+  - id: in_kiste14
+    title: Die Leinwand in Kiste K-14
+    text: Transportkiste K-14 wiegt 2,1 kg mehr als angegeben. Darin, zwischen zwei Schutzpappen, liegt die aufgerollte Leinwand der „Nachtfischer“. Gepackt und abgezeichnet von J. Wendt.
+    category: wendung
+    characters: [wendt]
+  - id: in_kaeufer
+    title: Der Käufer wartet
+    text: "Auf Wendts Mailbox: Ein Unbekannter bestätigt die „Abholung von Kiste vierzehn am Donnerstag“ und „den Rest der Summe nach Prüfung“."
+    category: motiv
+    characters: [wendt]
+  - id: in_versicherung
+    title: Nicht versichert
+    text: Die Versicherung teilt mit, dass die Police seit dem 1. März ruht – die Prämie wurde nicht bezahlt. Hallmann bekommt keinen Cent. Für ihn ist der Diebstahl eine Katastrophe.
+    category: entlastung
+    characters: [hallmann]
+  - id: in_mappe_harmlos
+    title: Nur Zeichnungen
+    text: Lennart Voss' Mappe enthält 14 eigene Kohlezeichnungen, alle signiert. Für eine Leinwand von 90 × 70 cm ist darin kein Platz – sie ist nur 60 cm breit.
+    category: entlastung
+    characters: [voss]
+  - id: in_brandauer_weg
+    title: Brandauer war längst weg
+    text: "Die Taxiquittung belegt: Dr. Brandauer wurde um 20:47 Uhr vor der Galerie abgeholt und um 21:06 Uhr zu Hause abgesetzt."
+    category: entlastung
+    characters: [brandauer]
+  - id: in_okafor_ost
+    title: Okafor im Ostflügel
+    text: Die Kamera im Ostflügel zeigt Selma Okafor von 21:09 bis 21:22 Uhr bei ihrer Runde. Ihr Code ist außerdem 03, nicht 04.
+    category: entlastung
+    characters: [okafor]
+
+evidence:
+  - id: ev_kabinett
+    title: Tatortfoto Kabinett
+    summary: Das Kabinett um 21:40 Uhr, aufgenommen von der Spurensicherung.
+    source: Spurensicherung
+    content:
+      kind: photo
+      scene: gallery
+      caption: Kabinett, Blick zur Fensterwand
+      timestamp: "14.03. 21:40"
+      elements:
+        - { id: rahmen, label: Leerer Rahmen, detail: "Der vergoldete Rahmen hängt noch. Die Leinwand fehlt – die Schnittkante verläuft exakt entlang des Innenrands, ohne ausgefranste Fäden.", x: 38, y: 18, w: 22, h: 30, shape: frame }
+        - { id: fenster, label: Eingeschlagenes Fenster, detail: "Die untere Scheibe ist eingeschlagen. Der Fenstergriff steht auf „geschlossen“.", x: 70, y: 12, w: 18, h: 40, shape: window }
+        - { id: boden, label: Boden unter dem Fenster, detail: "Auf dem Parkett unter dem Fenster liegen nur zwei winzige Splitter.", x: 66, y: 72, w: 26, h: 12, shape: rect }
+        - { id: melder, label: Bewegungsmelder, detail: "Ein Bewegungsmelder in der Ecke. Die Kontroll-LED ist grün – er war nicht defekt.", x: 88, y: 4, w: 6, h: 6, shape: round }
+        - { id: bank, label: Sitzbank, detail: "Eine Holzbank für Besucher. Darauf ein vergessenes Programmheft.", x: 10, y: 64, w: 24, h: 12, shape: table }
+        - { id: vitrine, label: Vitrine, detail: "Vitrine mit Skizzenbüchern Brenners. Unberührt, verschlossen.", x: 8, y: 30, w: 16, h: 28, shape: box }
+    hotspots:
+      - { item: rahmen, insight: in_schnitt, feedback: "Gut beobachtet: Dieser Schnitt ist viel zu sauber für einen hektischen Einbrecher." }
+      - { item: boden, insight: in_von_innen, feedback: "Fast keine Scherben drinnen? Wohin sind sie gefallen?" }
+
+  - id: ev_gehweg
+    title: Foto Gehweg vor dem Kabinett
+    summary: Außenaufnahme unter dem eingeschlagenen Fenster.
+    source: Spurensicherung
+    content:
+      kind: photo
+      scene: night
+      caption: Hofseite, Gehweg unter dem Kabinettfenster
+      timestamp: "14.03. 21:52"
+      elements:
+        - { id: scherben, label: Scherben auf dem Gehweg, detail: "Ein breiter Fächer aus Glasscherben, bis zu drei Meter vom Fenster entfernt.", x: 30, y: 70, w: 40, h: 14, shape: rect }
+        - { id: beet, label: Blumenbeet, detail: "Ein frisch gegossenes Beet direkt unter dem Fenster. Die Erde ist glatt, keine Abdrücke.", x: 34, y: 54, w: 32, h: 12, shape: plant }
+        - { id: fenster_aussen, label: Fenster von außen, detail: "Der Fensterrahmen ist außen unbeschädigt, keine Hebelspuren.", x: 40, y: 12, w: 20, h: 34, shape: window }
+        - { id: laterne, label: Laterne, detail: "Die Hoflaterne brennt. Der Hof ist gut einsehbar.", x: 82, y: 8, w: 6, h: 60, shape: lamp }
+        - { id: fahrrad, label: Fahrradständer, detail: "Drei angeschlossene Fahrräder. Eines gehört laut Schild dem Catering.", x: 4, y: 58, w: 20, h: 18, shape: rect }
+    hotspots:
+      - { item: scherben, insight: in_von_innen, feedback: "Die Scherben liegen außen – die Scheibe wurde von innen nach außen eingeschlagen." }
+      - { item: beet, insight: in_keine_spuren, feedback: "Unberührte Erde direkt unter dem Fenster. Hier ist niemand gestanden." }
+
+  - id: ev_alarm
+    title: Alarmprotokoll
+    summary: Ausdruck der Alarmzentrale für den 14. März.
+    source: Sicherheitsfirma Wallbrecht
+    content:
+      kind: table
+      heading: Alarmanlage Kunsthaus Morgenroth – Ereignisprotokoll 14.03.
+      columns: [Uhrzeit, Zone, Ereignis, Benutzer]
+      rows:
+        - { id: a1800, cells: ["18:00", "1–4", "scharf geschaltet", "03"] }
+        - { id: a1855, cells: ["18:55", "1 (Halle)", "unscharf (Veranstaltung)", "01"] }
+        - { id: a1856, cells: ["18:56", "4 (Foyer)", "unscharf (Veranstaltung)", "01"] }
+        - { id: a2108, cells: ["21:08", "3 (Kabinett)", "unscharf", "04"] }
+        - { id: a2119, cells: ["21:19", "3 (Kabinett)", "scharf", "04"] }
+        - { id: a2132, cells: ["21:32", "3 (Kabinett)", "Überfall manuell ausgelöst", "03"] }
+      note: Benutzernummern siehe Sicherheitshandbuch.
+    hotspots:
+      - { item: a2108, insight: in_alarm_2108 }
+      - { item: a2119, insight: in_alarm_2119, feedback: "Warum sollte ein Einbrecher den Alarm wieder einschalten?" }
+
+  - id: ev_wachbuch
+    title: Wachbuch Selma Okafor
+    summary: Handschriftliches Protokoll der Rundgänge.
+    source: Selma Okafor
+    content:
+      kind: document
+      docType: log
+      heading: Wachbuch – Fr. 14.03.
+      lines:
+        - { id: w1, text: "18:00  Dienstbeginn, Anlage scharf (Code 03)" }
+        - { id: w2, text: "18:55  Halle + Foyer für Veranstaltung frei (Hr. Hallmann)" }
+        - { id: w3, text: "20:30  Haupteingang, alles ruhig" }
+        - { id: w4, text: "20:58  Kabinett kontrolliert – Bild hängt, Fenster zu" }
+        - { id: w5, text: "21:10  Ostflügel, Lagertür geprüft" }
+        - { id: w6, text: "21:25  Westflügel, Toiletten" }
+        - { id: w7, text: "21:31  KABINETT: BILD FEHLT! Fenster kaputt." }
+        - { id: w8, text: "21:33  Polizei verständigt (110)" }
+      footer: "gez. S. Okafor"
+    hotspots:
+      - { item: w4, insight: in_bild_2058 }
+      - { item: w7, insight: in_bild_weg_2131 }
+
+  - id: ev_programm
+    title: Programm der Vernissage
+    summary: Gedrucktes Abendprogramm, lag auf allen Tischen.
+    source: Kunsthaus Morgenroth
+    content:
+      kind: document
+      docType: form
+      heading: "Vernissage „Brenner & die Nacht“"
+      lines:
+        - { id: p1, text: "19:00  Einlass & Sektempfang" }
+        - { id: p2, text: "20:00  Streichquartett Lübenau" }
+        - { id: p3, text: "21:00  Rede: Viktor Hallmann – „Warum Brenner uns heute noch sieht“ (große Halle)" }
+        - { id: p4, text: "21:30  Buffet & offener Ausklang" }
+        - { id: p5, text: "Das Kabinett bleibt während der Rede geschlossen." }
+    hotspots:
+      - { item: p3, insight: in_hallmann_rede }
+
+  - id: ev_aussage_roeder
+    title: Zeugenaussage Annika Röder
+    summary: Protokoll der Befragung durch die Streife.
+    source: Polizei Lübenau
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugenaussage – Annika Röder, 45
+      meta:
+        - { label: Aufgenommen, value: "14.03., 22:05 Uhr" }
+      lines:
+        - { id: r1, text: "Ich stand während der Rede ganz hinten, am Durchgang zum Kabinett." }
+        - { id: r2, text: "Herr Hallmann stand die ganze Zeit vorne am Pult. Er hat ja auch gut 30 Minuten geredet." }
+        - { id: r3, text: "Um 21:16 hörte ich ein Klirren, ich weiß die Zeit genau, ich hatte gerade auf die Uhr geschaut." }
+        - { id: r4, text: "Ich dachte, beim Catering ist ein Tablett heruntergefallen." }
+        - { id: r5, text: "Kurz vorher sah ich den jungen Kellner mit einer riesigen schwarzen Mappe Richtung Hinterausgang gehen." }
+        - { id: r6, text: "Das Kabinett selbst konnte ich von meinem Platz nicht sehen, der Gang macht einen Knick." }
+    hotspots:
+      - { item: r3, insight: in_klirren_2116 }
+      - { item: r2, insight: in_hallmann_rede }
+
+  - id: ev_personal
+    title: Personalliste
+    summary: Mitarbeitende mit Eintrittsdatum, aus der Buchhaltung.
+    source: Buchhaltung
+    content:
+      kind: table
+      heading: Kunsthaus Morgenroth – Personal (Stand März)
+      columns: [Name, Funktion, Im Haus seit]
+      rows:
+        - { id: pe_okafor, cells: ["Selma Okafor", "Sicherheit", "01.06.2016"] }
+        - { id: pe_wendt, cells: ["Jonas Wendt", "Restaurierung & Transport", "15.02.2018"] }
+        - { id: pe_hallmann, cells: ["Viktor Hallmann", "Inhaber", "01.04.2009"] }
+        - { id: pe_sanders, cells: ["Brigitte Sanders", "Buchhaltung", "01.09.2012"] }
+        - { id: pe_catering, cells: ["Tafelwerk (extern)", "Catering", "Veranstaltungsbasis"] }
+      note: Externe Dienstleister erhalten keinen Alarmcode.
+
+  - id: ev_handbuch
+    title: Auszug Sicherheitshandbuch
+    summary: Seite 4 des Sicherheitshandbuchs der Galerie.
+    source: Selma Okafor
+    unlock: { topic: okafor.alarm }
+    content:
+      kind: document
+      docType: report
+      heading: Sicherheitshandbuch – 2.3 Benutzercodes
+      lines:
+        - { id: h1, text: "Jede Person mit Zutritt erhält einen persönlichen Code." }
+        - { id: h2, text: "Die Benutzernummern werden in der Reihenfolge des Dienstantritts vergeben." }
+        - { id: h3, text: "Nummer 01 ist dem Inhaber vorbehalten." }
+        - { id: h4, text: "Codes dürfen nicht weitergegeben werden. Jede Schaltung wird protokolliert." }
+
+  - id: ev_ausgang
+    title: Zutrittsprotokoll Personalausgang
+    summary: Ausweisleser an der Hintertür, Auszug 20:00–22:00 Uhr.
+    source: Sicherheitsfirma Wallbrecht
+    unlock: { phase: vernehmungen }
+    content:
+      kind: table
+      heading: Personalausgang – Ausweisleser
+      columns: [Uhrzeit, Ausweis, Richtung]
+      rows:
+        - { id: z1, cells: ["20:12", "Catering 2 (Tafelwerk)", "raus"] }
+        - { id: z2, cells: ["20:19", "Catering 2 (Tafelwerk)", "rein"] }
+        - { id: z3, cells: ["20:40", "S. Okafor", "raus"] }
+        - { id: z4, cells: ["20:50", "S. Okafor", "rein"] }
+        - { id: z5, cells: ["21:13", "Catering 2 (Tafelwerk)", "raus"] }
+        - { id: z6, cells: ["21:18", "Catering 2 (Tafelwerk)", "rein"] }
+        - { id: z7, cells: ["21:24", "J. Wendt", "raus"] }
+      note: Kein weiterer Ausweis zwischen 20:00 und 22:00 Uhr.
+    hotspots:
+      - { item: z7, insight: in_wendt_2124 }
+
+  - id: ev_taxi
+    title: Taxiquittung
+    summary: Von Dr. Brandauer freiwillig vorgelegt.
+    source: Dr. Ilse Brandauer
+    unlock: { topic: brandauer.abend }
+    content:
+      kind: document
+      docType: receipt
+      heading: Taxi Lübenau – Wagen 31
+      lines:
+        - { id: t1, text: "Abholung: Kunsthaus Morgenroth, 20:47" }
+        - { id: t2, text: "Ziel: Lindenallee 4, an 21:06" }
+        - { id: t3, text: "Fahrpreis: 18,40 EUR, bar" }
+    hotspots:
+      - { item: t1, insight: in_brandauer_weg }
+      - { item: t2, insight: in_brandauer_weg }
+
+  - id: ev_mappe
+    title: Foto der Mappe von Lennart Voss
+    summary: Lennart hat die Mappe aus dem Lieferwagen geholt und zur Durchsicht übergeben.
+    source: Lennart Voss
+    unlock: { topic: voss.mappe }
+    content:
+      kind: photo
+      scene: interior
+      caption: Inhalt der schwarzen Mappe, ausgebreitet auf einem Tisch
+      elements:
+        - { id: zeichnungen, label: Kohlezeichnungen, detail: "14 Kohlezeichnungen, Hafenmotive. Unten rechts jeweils signiert: „L. Voss“.", x: 10, y: 20, w: 50, h: 50, shape: paper }
+        - { id: mappe, label: Mappe, detail: "Schwarze Zeichenmappe, Innenmaß 60 × 84 cm.", x: 64, y: 16, w: 30, h: 60, shape: bag }
+        - { id: brief, label: Notizzettel, detail: "„Herr Hallmann, darf ich Ihnen meine Arbeiten zeigen? – L.“", x: 20, y: 74, w: 22, h: 12, shape: paper }
+    hotspots:
+      - { item: mappe, insight: in_mappe_harmlos, feedback: "60 cm Breite – eine 90 cm breite Leinwand passt da nicht flach hinein." }
+      - { item: zeichnungen, insight: in_mappe_harmlos }
+
+  - id: ev_kamera_ost
+    title: Kameraprotokoll Ostflügel
+    summary: Bewegungsereignisse der einzigen Innenkamera.
+    source: Sicherheitsfirma Wallbrecht
+    unlock: { topic: okafor.runde }
+    content:
+      kind: table
+      heading: Kamera 2 (Ostflügel) – Bewegungserkennung
+      columns: [Von, Bis, Person]
+      rows:
+        - { id: k1, cells: ["20:31", "20:36", "Uniform (S. Okafor)"] }
+        - { id: k2, cells: ["21:09", "21:22", "Uniform (S. Okafor)"] }
+        - { id: k3, cells: ["21:41", "21:58", "Polizei"] }
+      note: Das Kabinett selbst ist nicht kameraüberwacht.
+    hotspots:
+      - { item: k2, insight: in_okafor_ost }
+
+  - id: ev_werkstatt
+    title: Foto der Restaurierungswerkstatt
+    summary: Die Werkstatt im Untergeschoss, nach Freigabe durch Hallmann durchsucht.
+    source: Spurensicherung
+    unlock: { any: [{ insight: in_schnitt }, { insight: in_code04_wendt }] }
+    content:
+      kind: photo
+      scene: interior
+      caption: Werkstatt UG, Arbeitstisch von J. Wendt
+      timestamp: "14.03. 23:10"
+      elements:
+        - { id: skalpell, label: Skalpellset, detail: "Ein Etui mit zehn Fächern für Klingen. Das Fach „Nr. 11“ ist leer, alle anderen sind belegt.", x: 12, y: 50, w: 20, h: 12, shape: box }
+        - { id: schuerze, label: Arbeitsschürze am Haken, detail: "Graue Schürze mit Namensschild „J. Wendt“. In der Brusttasche glitzert etwas – feine Glassplitter.", x: 74, y: 10, w: 14, h: 44, shape: person }
+        - { id: kalender, label: Wandkalender, detail: "Eintrag Donnerstag, 20.03.: „Transport Tessendorf – Kisten K-11 bis K-15“.", x: 40, y: 8, w: 18, h: 18, shape: paper }
+        - { id: lack, label: Lackdose, detail: "Dammarfirnis, Deckel fest verschlossen. Pinsel trocken und sauber.", x: 44, y: 56, w: 10, h: 12, shape: bottle }
+        - { id: lampe, label: Lupenleuchte, detail: "Ausgeschaltet. Die Glühbirne ist kalt.", x: 58, y: 30, w: 12, h: 24, shape: lamp }
+    hotspots:
+      - { item: skalpell, insight: in_skalpell }
+      - { item: schuerze, insight: in_splitter, feedback: "Glassplitter in der Schürze des Restaurators – wie kommen die dorthin?" }
+
+  - id: ev_kuendigung
+    title: Kündigungsschreiben
+    summary: Kopie aus Hallmanns Büroordner.
+    source: Viktor Hallmann
+    unlock: { topic: hallmann.personal }
+    content:
+      kind: document
+      docType: letter
+      heading: Kündigung des Arbeitsverhältnisses
+      meta:
+        - { label: Datum, value: "12. März" }
+        - { label: An, value: "Herrn Jonas Wendt" }
+      lines:
+        - { id: kd1, text: "Sehr geehrter Herr Wendt," }
+        - { id: kd2, text: "aus wirtschaftlichen Gründen kündige ich das Arbeitsverhältnis fristgerecht zum 31. März." }
+        - { id: kd3, text: "Die Werkstatt ist bis dahin zu räumen. Die Transporte nach Tessendorf erledigen Sie bitte noch wie geplant." }
+        - { id: kd4, text: "Mit freundlichen Grüßen, V. Hallmann" }
+    hotspots:
+      - { item: kd2, insight: in_kuendigung }
+
+  - id: ev_versandliste
+    title: Versandliste Transport Tessendorf
+    summary: Packliste der Kisten für den Leihverkehr ans Museum Tessendorf.
+    source: Werkstatt
+    unlock: { any: [{ insight: in_wendt_luegt }, { insight: in_splitter }] }
+    content:
+      kind: table
+      heading: Leihverkehr Museum Tessendorf – Abholung Do 20.03.
+      columns: [Kiste, Inhalt, Gewicht laut Liste, Gewicht gemessen, Gepackt von]
+      rows:
+        - { id: k11, cells: ["K-11", "Hafen bei Nacht (Öl, 60×80)", "14,2 kg", "14,2 kg", "J. W."] }
+        - { id: k12, cells: ["K-12", "Möwen I (Aquarell)", "6,8 kg", "6,7 kg", "J. W."] }
+        - { id: k13, cells: ["K-13", "Möwen II (Aquarell)", "6,8 kg", "6,8 kg", "J. W."] }
+        - { id: k14, cells: ["K-14", "Skizzenblatt Brenner (gerahmt)", "5,4 kg", "7,5 kg", "J. W."] }
+        - { id: k15, cells: ["K-15", "Leuchtturm (Öl, 40×50)", "9,9 kg", "10,0 kg", "J. W."] }
+      note: Messung durch die Polizei am 15.03., Waage ±0,1 kg.
+
+  - id: ev_mailbox
+    title: Mailbox-Nachricht
+    summary: Sichergestellt auf Wendts Diensthandy, nachdem die Leinwand gefunden wurde.
+    source: Polizei Lübenau
+    unlock: { puzzle: p_kiste }
+    content:
+      kind: audio
+      duration: "0:24"
+      recordedAt: "14.03., 22:47"
+      lines:
+        - { id: m1, t: "0:00", speaker: "Unbekannt", text: "Ja, ich bin's. Hab gehört, es lief." }
+        - { id: m2, t: "0:06", speaker: "Unbekannt", text: "Abholung von Kiste vierzehn wie besprochen am Donnerstag." }
+        - { id: m3, t: "0:13", speaker: "Unbekannt", text: "Den Rest der Summe gibt's nach Prüfung. Und lösch das hier." }
+    hotspots:
+      - { item: m2, insight: in_kaeufer }
+      - { item: m3, insight: in_kaeufer }
+
+  - id: ev_versicherung
+    title: Schreiben der Versicherung
+    summary: Per E-Mail eingegangen am Morgen nach der Tat.
+    source: Nordhanse Versicherung
+    unlock: { event: ev_versicherung_meldet }
+    content:
+      kind: document
+      docType: email
+      heading: "Ihr Schadensfall Nr. 2203-114"
+      meta:
+        - { label: Von, value: "schaden@nordhanse.example" }
+        - { label: An, value: "v.hallmann@morgenroth.example" }
+      lines:
+        - { id: v1, text: "Sehr geehrter Herr Hallmann," }
+        - { id: v2, text: "wir bedauern, Ihnen mitteilen zu müssen, dass der Versicherungsschutz für Ihre Ausstellung seit dem 01.03. ruht." }
+        - { id: v3, text: "Die Prämie für das erste Quartal ist trotz Mahnung nicht eingegangen. Eine Regulierung ist daher ausgeschlossen." }
+    hotspots:
+      - { item: v2, insight: in_versicherung }
+      - { item: v3, insight: in_versicherung }
+
+connections:
+  - { id: c_alibi_wendt, a: ev_ausgang, b: wendt, insight: in_wendt_luegt }
+  - { id: c_skalpell_schnitt, a: in_schnitt, b: ev_werkstatt, insight: in_skalpell }
+  - { id: c_code_handbuch, a: ev_handbuch, b: ev_personal, insight: in_code04_wendt }
+
+interrogations:
+  - character: hallmann
+    intro: Hallmann sitzt in seinem Büro, das Sakko über der Stuhllehne. Er wirkt erschöpft – und gereizt.
+    topics:
+      - id: abend
+        question: Wo waren Sie zwischen 21:00 und 21:30 Uhr?
+        responses:
+          - mood: arrogant
+            text: "Am Pult, vor sechzig Zeugen! Ich habe eine halbe Stunde über Brenner gesprochen. Fragen Sie irgendwen."
+      - id: versicherung
+        question: Ist das Bild versichert?
+        responses:
+          - when: { insight: in_versicherung }
+            mood: gebrochen
+            stress: 70
+            text: "…Sie wissen es also. Nein. Ich habe die Prämie nicht bezahlt, das Geld war einfach nicht da. Dieses Bild war eine Leihgabe. Ich muss es ersetzen. Ich bin ruiniert."
+          - mood: ausweichend
+            stress: 40
+            text: "Selbstverständlich ist alles ordnungsgemäß geregelt. Über Versicherungsdetails spreche ich nicht mit Ihnen."
+      - id: personal
+        question: Gab es zuletzt Ärger mit Mitarbeitenden?
+        responses:
+          - mood: ruhig
+            stress: 20
+            text: "Ärger? Ich musste sparen. Ich habe Herrn Wendt gekündigt, zum Monatsende. Er hat es … erstaunlich gefasst aufgenommen. Die Kopie liegt in meinem Ordner, bitte."
+      - id: codes
+        question: Wer kennt die Alarmcodes?
+        unlock: { insight: in_alarm_2108 }
+        responses:
+          - mood: ruhig
+            text: "Nur das feste Personal. Frau Okafor, Frau Sanders aus der Buchhaltung, Herr Wendt und ich. Das Catering selbstverständlich nicht."
+
+  - character: okafor
+    intro: Selma Okafor steht mit verschränkten Armen im Wachraum. Ihre Uniform ist makellos.
+    topics:
+      - id: runde
+        question: Wie lief Ihre Runde ab?
+        responses:
+          - mood: ruhig
+            text: "Wie immer. 20:58 Kabinett – Bild hing, Fenster zu. Danach Ostflügel, ab 21:10 etwa, dann Westflügel. Die Kamera im Ostflügel kann das bestätigen."
+      - id: alarm
+        question: Warum hat der Alarm nicht ausgelöst?
+        responses:
+          - when: { insight: in_alarm_2108 }
+            mood: nervoes
+            stress: 30
+            text: "Weil jemand Zone 3 mit einem gültigen Code abgeschaltet hat. Code 04. Welche Nummer wem gehört, steht im Sicherheitshandbuch. Ich gebe Ihnen die Seite."
+          - mood: ausweichend
+            stress: 15
+            text: "Das frage ich mich auch. Die Anlage ist neu. Schauen Sie ins Protokoll. Und wenn Sie wissen wollen, wer welche Nummer hat: Das steht im Sicherheitshandbuch."
+      - id: pause
+        question: Haben Sie Ihren Posten an diesem Abend verlassen?
+        unlock: { evidence: ev_ausgang }
+        responses:
+          - mood: verzweifelt
+            stress: 50
+            text: "…20:40 bis 20:50. Ich war draußen, eine rauchen. Das ist verboten im Dienst, ja. Aber da hing das Bild noch, ich habe es um 20:58 selbst gesehen! Bitte sagen Sie es nicht Herrn Hallmann."
+      - id: code
+        question: Welche Benutzernummer haben Sie?
+        unlock: { insight: in_alarm_2108 }
+        responses:
+          - mood: kooperativ
+            text: "Die 03. Ich habe heute um 18:00 scharf geschaltet und um 21:32 Überfall ausgelöst. Das war ich. Die 04 bin ich nicht."
+
+  - character: voss
+    intro: Lennart Voss knetet nervös seine Kellnerschürze. Er hat offenbar Angst.
+    topics:
+      - id: abend
+        question: Was haben Sie während der Rede gemacht?
+        responses:
+          - mood: nervoes
+            stress: 30
+            text: "Ich … ich war kurz draußen am Lieferwagen. So von 21:13 bis 21:18 vielleicht. Mit dem Catering-Ausweis. Dann wieder Gläser einsammeln."
+      - id: mappe
+        question: Was war in der großen schwarzen Mappe?
+        responses:
+          - mood: verzweifelt
+            stress: 45
+            text: "Meine Zeichnungen! Ich wollte sie Herrn Hallmann zeigen, nach der Rede. Dann hab ich mich nicht getraut und sie in den Wagen gebracht. Sie können sie sehen, sie liegt noch drin!"
+      - id: klirren
+        question: Haben Sie das Klirren um 21:16 gehört?
+        unlock: { insight: in_klirren_2116 }
+        responses:
+          - mood: ruhig
+            text: "Um 21:16? Da war ich draußen im Hof, auf der anderen Seite, am Lieferwagen. Ich habe etwas gehört, aber es klang gedämpft … von drinnen, nicht von draußen."
+
+  - character: brandauer
+    intro: Dr. Brandauer empfängt die Ermittler in ihrem Salon. Sie bietet keinen Tee an.
+    topics:
+      - id: abend
+        question: Wann haben Sie die Vernissage verlassen?
+        responses:
+          - mood: arrogant
+            text: "Vor dieser unerträglichen Rede. Kurz vor neun. Ich habe ein Taxi genommen – die Quittung habe ich noch, ich hebe alles auf."
+      - id: bild
+        question: Sie wollten das Bild kaufen?
+        responses:
+          - mood: arrogant
+            stress: 20
+            text: "Ich habe Hallmann ein großzügiges Angebot gemacht. Er hat abgelehnt, weil es eine Leihgabe ist. Wenn ich ein Bild will, kaufe ich es. Ich stehle nicht."
+      - id: wendt
+        question: Kennen Sie Jonas Wendt?
+        unlock: { insight: in_code04_wendt }
+        responses:
+          - mood: ruhig
+            text: "Der Restaurator? Er hat mir vor einem Monat seine Dienste angeboten – privat, schwarz. Ich lehnte ab. Er sagte, er „wisse, wie man an Dinge kommt“. Ich hielt das für Angeberei."
+
+  - character: wendt
+    intro: Jonas Wendt sitzt aufrecht, die Hände flach auf dem Tisch. Er wirkt vorbereitet.
+    topics:
+      - id: abend
+        question: Wo waren Sie am Abend der Vernissage?
+        responses:
+          - when: { insight: in_wendt_luegt }
+            mood: nervoes
+            stress: 60
+            text: "21:24? … Gut. Ich war noch in der Werkstatt. Ich habe gearbeitet und die Zeit vergessen. Das ist kein Verbrechen."
+          - mood: ruhig
+            stress: 10
+            text: "Zu Hause. Ich bin um halb neun gegangen. Vernissagen sind nicht meine Welt."
+      - id: werkstatt
+        question: Woran haben Sie in der Werkstatt gearbeitet?
+        unlock: { insight: in_wendt_luegt }
+        responses:
+          - when: { insight: in_skalpell }
+            mood: wuetend
+            stress: 75
+            text: "Ich … ich habe Firnis aufgetragen. Was weiß ich, wo die Klinge ist! Jeder kann in die Werkstatt gehen."
+          - mood: ausweichend
+            stress: 50
+            text: "Firnis aufgetragen. Am Rahmen von ‚Hafen bei Nacht‘. Das braucht Ruhe."
+      - id: code
+        question: Wer hat Ihren Alarmcode?
+        unlock: { insight: in_code04_wendt }
+        responses:
+          - mood: ausweichend
+            stress: 55
+            text: "Niemand. Aber Codes kann man ausspähen. Vielleicht hat mir jemand über die Schulter geschaut."
+      - id: kuendigung
+        question: Hallmann hat Ihnen gekündigt. Wie fühlen Sie sich damit?
+        unlock: { insight: in_kuendigung }
+        responses:
+          - mood: wuetend
+            stress: 60
+            text: "Neun Jahre. Ich habe jedes Bild in diesem Haus gerettet. Und dann ein Zettel. ‚Aus wirtschaftlichen Gründen.‘ Wie hätten Sie sich gefühlt?"
+      - id: kiste
+        question: Was ist in Kiste K-14?
+        unlock: { insight: in_kiste14 }
+        responses:
+          - when: { insight: in_splitter }
+            mood: gebrochen
+            stress: 100
+            text: "… Die Splitter. Natürlich. Ich hätte die Schürze verbrennen sollen. Ja. Ich war es. Ich habe es nicht für das Geld getan – nicht nur. Er sollte einmal spüren, wie es ist, etwas zu verlieren."
+          - mood: verzweifelt
+            stress: 85
+            text: "Ein Skizzenblatt. Wenn da etwas anderes drin ist, hat es jemand hineingelegt. Jeder kann an die Kisten."
+
+puzzles:
+  - id: p_reihenfolge
+    title: Das Zeitfenster
+    type: order
+    prompt: Bringt die Ereignisse des Abends in die richtige Reihenfolge. Die Uhrzeiten stehen verstreut in den Beweismitteln.
+    evidence: [ev_wachbuch, ev_programm, ev_alarm, ev_aussage_roeder]
+    unlock: { all: [{ insight: in_alarm_2108 }, { insight: in_bild_2058 }] }
+    input:
+      kind: order
+      items:
+        - { id: o_klirren, label: "Glas klirrt im Kabinett" }
+        - { id: o_rede, label: "Hallmanns Rede beginnt" }
+        - { id: o_kontrolle, label: "Kontrollgang: Bild hängt noch" }
+        - { id: o_scharf, label: "Zone 3 wird wieder scharf geschaltet" }
+        - { id: o_unscharf, label: "Zone 3 wird abgeschaltet" }
+        - { id: o_entdeckt, label: "Der leere Rahmen wird entdeckt" }
+    answer: { order: [o_kontrolle, o_rede, o_unscharf, o_klirren, o_scharf, o_entdeckt] }
+    hints:
+      - Das Wachbuch, das Programm, das Alarmprotokoll und Frau Röders Aussage enthalten zusammen alle Uhrzeiten.
+      - "Kontrollgang 20:58 – Rede 21:00 – Alarm aus 21:08 – Klirren 21:16 – Alarm an 21:19 – Entdeckung 21:31."
+    reveals: [in_zeitfenster]
+    success: Das Zeitfenster steht – 21:08 bis 21:19 Uhr, mitten in der Rede.
+
+  - id: p_benutzer04
+    title: Wer ist Benutzer 04?
+    type: compare
+    prompt: Das Alarmprotokoll nennt nur Nummern. Wem gehört der Code „04“? Gebt den Namen ein.
+    evidence: [ev_alarm, ev_personal, ev_handbuch]
+    unlock: { all: [{ insight: in_alarm_2108 }, { evidence: ev_handbuch }] }
+    input: { kind: text, placeholder: "Vor- und Nachname" }
+    answer: { accept: ["Jonas Wendt", "Wendt", "J. Wendt"] }
+    hints:
+      - Das Sicherheitshandbuch verrät, nach welcher Regel die Nummern vergeben werden.
+      - Sortiert die Personalliste nach dem Eintrittsdatum. Externe bekommen keinen Code.
+    reveals: [in_code04_wendt]
+    success: Benutzer 04 ist Jonas Wendt – der Mann, der angeblich um 20:30 Uhr gegangen ist.
+
+  - id: p_kiste
+    title: Die schwere Kiste
+    type: compare
+    prompt: Eine Leinwand von 90 × 70 cm wiegt aufgerollt mit Schutzpappe gut zwei Kilo. Welche Kiste versteckt sie?
+    evidence: [ev_versandliste]
+    unlock: { evidence: ev_versandliste }
+    input: { kind: text, placeholder: "Kistennummer, z. B. K-10" }
+    answer: { accept: ["K-14", "K14", "Kiste 14", "14"] }
+    hints:
+      - Vergleicht die angegebenen mit den gemessenen Gewichten.
+      - Die Waage misst auf 0,1 kg genau. Eine Abweichung ist deutlich größer als alle anderen.
+    reveals: [in_kiste14]
+    success: In Kiste K-14 liegt die aufgerollte Leinwand. Abgezeichnet von J. W.
+
+events:
+  - id: ev_versicherung_meldet
+    title: Post von der Versicherung
+    source: Nordhanse Versicherung
+    text: Hallmann leitet widerwillig eine E-Mail weiter, die heute früh eingegangen ist. Er sieht aus, als hätte er nicht geschlafen.
+    trigger: { minutes: 15 }
+  - id: ev_nachbarin
+    title: Eine Nachbarin meldet sich
+    source: Hinweistelefon
+    text: "„Ich wohne gegenüber vom Hof. Um kurz nach neun stand ein Mann im Kabinett am Fenster – von innen! Er trug eine graue Schürze, so wie Handwerker. Er hat mit etwas gegen die Scheibe geschlagen.“"
+    trigger: { when: { wrongAccusations: 1 } }
+    reveals: [in_von_innen]
+
+accusation:
+  question: Wer hat „Die Nachtfischer“ gestohlen?
+  proof:
+    question: Welcher Beweis überführt den Täter am stärksten?
+    options:
+      - { id: pr_kiste, label: "Die Leinwand in Kiste K-14 – gepackt von ihm selbst", correct: true }
+      - { id: pr_kuendigung, label: "Die Kündigung" }
+      - { id: pr_mappe, label: "Die schwarze Mappe" }
+      - { id: pr_versicherung, label: "Die ruhende Versicherung" }
+
+gmNotes:
+  - { phase: tatort, text: "Lenkt den Blick auf die beiden Fotos: Wo liegen die Scherben? Der Kern des Falls: Der Einbruch ist inszeniert." }
+  - { phase: vernehmungen, text: "Okafor nennt das Sicherheitshandbuch, wenn man nach dem Alarm fragt. Personalliste + Handbuch ergeben Benutzer 04." }
+  - { phase: durchbruch, text: "Wenn die Community hängt: die Versandliste freischalten lassen (Verbindung Ausgangsprotokoll ↔ Wendt)." }
+  - { text: "Falsche Fährten: Hallmann (Versicherung), Voss (Mappe, 21:13–21:18 draußen), Brandauer (Rivalin), Okafor (Rauchpause)." }
+
+solution:
+  culprit: wendt
+  headline: Jonas Wendt – der Restaurator stahl das Bild, das er selbst gerettet hatte.
+  motive: Hallmann hatte ihm zwei Tage zuvor gekündigt. Ein privater Käufer bot 80.000 Euro – und Wendt wollte Hallmann treffen, wo es weh tut.
+  method: Während der Rede schaltete Wendt um 21:08 Zone 3 mit seinem eigenen Code ab, schnitt die Leinwand mit einem Skalpell (Klinge Nr. 11) aus dem Rahmen, schlug um 21:16 das Fenster von innen ein, um einen Einbruch vorzutäuschen, und schaltete den Alarm um 21:19 wieder scharf. Die Leinwand versteckte er in Transportkiste K-14, die am Donnerstag ganz offiziell das Haus verlassen sollte. Um 21:24 ging er durch den Personalausgang.
+  summary: Der „perfekte Einbruch“ war gar keiner. Die Scherben lagen draußen, das Beet war unberührt, der Alarm wurde mit Code 04 aus- und wieder eingeschaltet. Code 04 gehört Wendt, der für die Tatzeit gelogen hat. Glassplitter in seiner Schürze, die fehlende Skalpellklinge und die zu schwere Kiste K-14 schließen den Fall.
+  keyInsights: [in_von_innen, in_alarm_2108, in_code04_wendt, in_wendt_luegt, in_splitter, in_kiste14]
+  chain:
+    - { insight: in_von_innen, explanation: "Die Scherben lagen draußen – das Fenster wurde von innen eingeschlagen. Der Täter war bereits im Haus." }
+    - { insight: in_alarm_2108, explanation: "Der Alarm wurde mit einem gültigen Code abgeschaltet – Benutzer 04." }
+    - { insight: in_alarm_2119, explanation: "Und wieder eingeschaltet. Das tut nur jemand, der den Diebstahl verschleiern will." }
+    - { insight: in_code04_wendt, explanation: "Nach Dienstantritt sortiert, ist Benutzer 04 Jonas Wendt." }
+    - { insight: in_wendt_luegt, explanation: "Wendt behauptete, um 20:30 gegangen zu sein – sein Ausweis öffnete um 21:24 den Personalausgang." }
+    - { insight: in_splitter, explanation: "Fensterglas in seiner Schürzentasche." }
+    - { insight: in_kiste14, explanation: "Die Leinwand lag in der Kiste, die er selbst gepackt hatte." }
+  truthTimeline:
+    - { time: "12.03.", text: "Hallmann kündigt Wendt zum Monatsende." }
+    - { time: "20:30", text: "Wendt verabschiedet sich demonstrativ – und geht hinunter in die Werkstatt." }
+    - { time: "21:00", text: "Hallmanns Rede beginnt. Das Kabinett ist leer." }
+    - { time: "21:08", text: "Wendt schaltet Zone 3 mit seinem Code ab und schneidet die Leinwand heraus." }
+    - { time: "21:16", text: "Er schlägt die Scheibe von innen ein. Splitter fallen in seine Schürzentasche." }
+    - { time: "21:19", text: "Zone 3 wieder scharf. Die Leinwand liegt aufgerollt in Kiste K-14." }
+    - { time: "21:24", text: "Wendt verlässt das Haus durch den Personalausgang." }
+    - { time: "21:31", text: "Okafor entdeckt den leeren Rahmen." }
+  redHerrings:
+    - { character: hallmann, clue: "Schulden und ein mögliches Versicherungsmotiv", debunkedBy: in_versicherung, explanation: "Die Police ruhte – der Diebstahl ruiniert Hallmann. Außerdem stand er die ganze Rede über am Pult." }
+    - { character: voss, clue: "Der Kellner mit der großen Mappe", debunkedBy: in_mappe_harmlos, explanation: "Die Mappe ist zu schmal für die Leinwand und enthielt seine eigenen Zeichnungen." }
+    - { character: brandauer, clue: "Die abgewiesene Sammlerin", debunkedBy: in_brandauer_weg, explanation: "Sie saß zur Tatzeit nachweislich im Taxi bzw. war zu Hause." }
+    - { character: okafor, clue: "Die Wachfrau kennt alle Codes und verließ ihren Posten", debunkedBy: in_okafor_ost, explanation: "Ihr Code ist 03, und die Kamera zeigt sie zur Tatzeit im Ostflügel. Die Rauchpause war vor 20:58." }
+  epilogue: Die Polizei stoppte den Transport nach Tessendorf. „Die Nachtfischer“ kehrte unbeschädigt zurück – Wendt hatte sorgfältig gearbeitet, wie immer. Der Käufer aus der Mailbox wird noch gesucht. Hallmann zahlte seine Versicherung am selben Tag.

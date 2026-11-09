@@ -1,0 +1,236 @@
+// COMMUNITY DETECTIVES – Datenmodell
+// Geheime Falllösungen liegen ausschließlich in CaseDefinition.data (serverseitig)
+// und werden niemals ungefiltert an Clients ausgeliefert.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../server/generated/prisma"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Plan {
+  free
+  creator
+  premium
+}
+
+model Streamer {
+  id             String   @id @default(cuid())
+  twitchUserId   String?  @unique
+  login          String   @unique
+  displayName    String
+  profileImage   String?
+  plan           Plan     @default(free)
+  overlayToken   String   @unique
+  settings       Json     @default("{}")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  token          TwitchToken?
+  sessions       GameSession[]
+  moderators     Moderator[]
+  reservations   CaseReservation[]
+}
+
+model TwitchToken {
+  streamerId     String   @id
+  streamer       Streamer @relation(fields: [streamerId], references: [id], onDelete: Cascade)
+  accessTokenEnc String
+  refreshTokenEnc String
+  scopes         String[]
+  expiresAt      DateTime
+  updatedAt      DateTime @updatedAt
+}
+
+model AuthSession {
+  id            String   @id // sha256(token)
+  kind          String   // "streamer" | "viewer"
+  streamerId    String?
+  twitchUserId  String?
+  login         String?
+  displayName   String?
+  expiresAt     DateTime
+  createdAt     DateTime @default(now())
+
+  @@index([expiresAt])
+}
+
+model Moderator {
+  id          String   @id @default(cuid())
+  streamerId  String
+  streamer    Streamer @relation(fields: [streamerId], references: [id], onDelete: Cascade)
+  twitchLogin String
+  createdAt   DateTime @default(now())
+
+  @@unique([streamerId, twitchLogin])
+}
+
+model CaseDefinition {
+  id          String   @id
+  version     Int
+  title       String
+  genre       String
+  difficulty  String
+  tier        Plan     @default(free)
+  published   Boolean  @default(false)
+  exclusive   Boolean  @default(false)
+  eventTag    String?
+  data        Json
+  checksum    String
+  validation  Json
+  importedAt  DateTime @default(now())
+
+  reservations CaseReservation[]
+  sessions     GameSession[]
+}
+
+model CaseReservation {
+  id         String   @id @default(cuid())
+  caseId     String
+  case       CaseDefinition @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  streamerId String
+  streamer   Streamer @relation(fields: [streamerId], references: [id], onDelete: Cascade)
+  note       String?
+  createdAt  DateTime @default(now())
+
+  @@unique([caseId, streamerId])
+}
+
+model GameSession {
+  id          String    @id @default(cuid())
+  streamerId  String
+  streamer    Streamer  @relation(fields: [streamerId], references: [id], onDelete: Cascade)
+  caseId      String
+  case        CaseDefinition @relation(fields: [caseId], references: [id])
+  caseVersion Int
+  joinCode    String    @unique
+  status      String    // lobby | active | paused | finale | revealed | ended
+  state       Json
+  settings    Json      @default("{}")
+  outcome     Json?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  endedAt     DateTime?
+
+  participants Participant[]
+  votes        Vote[]
+  theories     Theory[]
+  messages     Message[]
+  points       PointEntry[]
+  events       SessionEvent[]
+
+  @@index([streamerId, createdAt])
+  @@index([status])
+}
+
+model Participant {
+  id           String   @id @default(cuid())
+  sessionId    String
+  session      GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  twitchUserId String?
+  guestKey     String?
+  login        String?
+  displayName  String
+  source       String   // chat | web
+  team         String?
+  points       Int      @default(0)
+  banned       Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  lastSeenAt   DateTime @default(now())
+
+  pointEntries PointEntry[]
+  ballots      Ballot[]
+  theories     Theory[]
+  messages     Message[]
+
+  @@unique([sessionId, twitchUserId])
+  @@unique([sessionId, guestKey])
+  @@index([sessionId, points])
+}
+
+model PointEntry {
+  id            String   @id @default(cuid())
+  sessionId     String
+  session       GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participantId String
+  participant   Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  amount        Int
+  reason        String
+  ref           String
+  createdAt     DateTime @default(now())
+
+  @@unique([participantId, reason, ref])
+}
+
+model Vote {
+  id         String   @id @default(cuid())
+  sessionId  String
+  session    GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  kind       String
+  question   String
+  options    Json
+  status     String   // open | closed | cancelled
+  meta       Json     @default("{}")
+  result     Json?
+  startedAt  DateTime @default(now())
+  endsAt     DateTime
+  closedAt   DateTime?
+
+  ballots    Ballot[]
+  @@index([sessionId, startedAt])
+}
+
+model Ballot {
+  voteId        String
+  vote          Vote        @relation(fields: [voteId], references: [id], onDelete: Cascade)
+  participantId String
+  participant   Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  optionIndex   Int
+  createdAt     DateTime    @default(now())
+
+  @@id([voteId, participantId])
+}
+
+model Theory {
+  id            String   @id @default(cuid())
+  sessionId     String
+  session       GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participantId String
+  participant   Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  suspectId     String
+  text          String
+  evidenceIds   String[]
+  status        String   @default("visible") // visible | hidden | featured
+  upvoterIds    String[]
+  createdAt     DateTime @default(now())
+
+  @@index([sessionId, createdAt])
+}
+
+model Message {
+  id            String   @id @default(cuid())
+  sessionId     String
+  session       GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participantId String
+  participant   Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  text          String
+  hidden        Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  @@index([sessionId, createdAt])
+}
+
+model SessionEvent {
+  id         BigInt   @id @default(autoincrement())
+  sessionId  String
+  session    GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  type       String
+  payload    Json
+  createdAt  DateTime @default(now())
+
+  @@index([sessionId, id])
+}
