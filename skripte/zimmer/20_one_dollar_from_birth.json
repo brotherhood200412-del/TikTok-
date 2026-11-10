@@ -1,0 +1,73 @@
+{
+  "title": "$1 a Day From Birth",
+  "caption": "$1 a day from the day you're born. Spent or invested? At 65... 👶➡️👴 Tag a parent! #money #investing #parenting #compoundinterest #mindset #personalfinance #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME $1 · EVERY DAY",
+  "punch1": "Same $1 a day.",
+  "punch2": "$481,746.",
+  "stages": [
+    {
+      "age": 1,
+      "spent": 365,
+      "inv": 377,
+      "sky": "JAN"
+    },
+    {
+      "age": 5,
+      "spent": 1825,
+      "inv": 2178,
+      "sky": "MAR",
+      "zoom": [
+        "L",
+        0.5,
+        3.4
+      ]
+    },
+    {
+      "age": 10,
+      "spent": 3650,
+      "inv": 5265,
+      "sky": "MAY",
+      "zoom": [
+        "R",
+        0.5,
+        3.4
+      ]
+    },
+    {
+      "age": 18,
+      "spent": 6570,
+      "inv": 13101,
+      "sky": "JUL",
+      "zoom": [
+        "R",
+        3.2,
+        6.4
+      ]
+    },
+    {
+      "age": 30,
+      "spent": 10950,
+      "inv": 37107,
+      "sky": "SEP"
+    },
+    {
+      "age": 45,
+      "spent": 16425,
+      "inv": 115358,
+      "sky": "NOV",
+      "zoom": [
+        "L",
+        0.5,
+        3.4
+      ]
+    },
+    {
+      "age": 65,
+      "spent": 23725,
+      "inv": 481746,
+      "sky": "DEC",
+      "dur": 11.0
+    }
+  ]
+}

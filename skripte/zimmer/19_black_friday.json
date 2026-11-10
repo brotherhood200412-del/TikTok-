@@ -1,0 +1,68 @@
+{
+  "title": "Black Friday",
+  "caption": "\"I saved $500 on Black Friday!\" ...or did you spend $2,000? 🛍️💸 Be honest 👇 #blackfriday #money #shopping #deals #personalfinance #mindset #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME $2,000 IN THE BANK",
+  "punch1": "You didn't save $500.",
+  "punch2": "You spent $2,000.",
+  "stages": [
+    {
+      "item": "TV",
+      "was": 699,
+      "now": 549,
+      "sky": "NOV"
+    },
+    {
+      "item": "SNEAKERS",
+      "was": 179,
+      "now": 129,
+      "sky": "NOV",
+      "zoom": [
+        "L",
+        1.0,
+        3.6
+      ]
+    },
+    {
+      "item": "AIR FRYER",
+      "was": 139,
+      "now": 89,
+      "sky": "NOV"
+    },
+    {
+      "item": "HEADPHONES",
+      "was": 329,
+      "now": 249,
+      "sky": "NOV",
+      "zoom": [
+        "R",
+        0.3,
+        2.0
+      ]
+    },
+    {
+      "item": "HOODIE",
+      "was": 139,
+      "now": 99,
+      "sky": "NOV",
+      "zoom": [
+        "L",
+        2.0,
+        4.6
+      ]
+    },
+    {
+      "item": "GAMING CHAIR",
+      "was": 359,
+      "now": 299,
+      "sky": "NOV"
+    },
+    {
+      "item": "SMARTWATCH",
+      "was": 656,
+      "now": 586,
+      "sky": "NOV",
+      "dur": 11.0
+    }
+  ]
+}
