@@ -1,0 +1,17 @@
+{
+  "title": "Your 5 Friends",
+  "caption": "Same ideas. Different friends. Who are YOUR 5? 👥 Tag the friend who pushes you! #mindset #friends #motivation #selfimprovement #discipline #success #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME IDEAS · DIFFERENT FRIENDS",
+  "punch1": "You become",
+  "punch2": "who you sit with.",
+  "stages": [
+    {"year": 1, "goal": "hit the gym", "bad": ["Bro, just chill.", "Gym? You? lol"], "good": ["Gym at 6?", "I'll come with you!"], "sky": "JAN"},
+    {"year": 2, "goal": "read more", "bad": ["Books are boring.", "Just watch the movie."], "good": ["Read this one!", "Let's swap books."], "sky": "MAR", "zoom": ["L", 1.2, 4.0]},
+    {"year": 3, "goal": "learn to code", "bad": ["You? Coding? lol", "Too hard, bro."], "good": ["I'll teach you!", "You got this!"], "sky": "MAY", "zoom": ["R", 1.2, 4.0]},
+    {"year": 4, "goal": "save money", "bad": ["YOLO, bro!", "One more round!"], "good": ["Let's invest together!", "Proud of you!"], "sky": "JUL"},
+    {"year": 5, "goal": "run a marathon", "bad": ["That's cringe.", "You'll quit in a week."], "good": ["Let's train together!", "See you at 6!"], "sky": "SEP", "zoom": ["L", 1.2, 4.0]},
+    {"year": 6, "goal": "start a business", "bad": ["Get a real job.", "That never works."], "good": ["Do it now!", "I'll be your first customer!"], "sky": "NOV", "zoom": ["R", 4.0, 7.2]},
+    {"year": 7, "goal": "buy a house", "bad": ["Dream on, bro.", "Just rent forever."], "good": ["You earned it!", "Let's celebrate!"], "sky": "DEC", "dur": 11.0}
+  ]
+}

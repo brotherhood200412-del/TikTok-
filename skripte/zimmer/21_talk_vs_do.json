@@ -1,0 +1,17 @@
+{
+  "title": "Talk vs. Do",
+  "caption": "One talked about his dream. One built it in silence. 3 years later... 🤫 #mindset #motivation #business #discipline #moveinsilence #entrepreneur #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME DREAM · SAME START",
+  "punch1": "Stop announcing.",
+  "punch2": "Start doing.",
+  "stages": [
+    {"header": "DAY", "label": 1, "likes": 12, "cust": 0, "orders": 0, "sky": "JAN"},
+    {"header": "MONTH", "label": 1, "likes": 87, "cust": 0, "orders": 0, "sky": "MAR", "zoom": ["L", 0.6, 3.4]},
+    {"header": "MONTH", "label": 3, "likes": 210, "cust": 3, "orders": 1, "sky": "MAY", "zoom": ["R", 1.0, 3.2]},
+    {"header": "MONTH", "label": 6, "likes": 340, "cust": 41, "orders": 2, "sky": "JUL"},
+    {"header": "YEAR", "label": 1, "likes": 520, "cust": 380, "orders": 3, "sky": "SEP", "zoom": ["L", 0.6, 3.4]},
+    {"header": "YEAR", "label": 2, "likes": 610, "cust": 2450, "orders": 4, "sky": "NOV", "zoom": ["R", 1.0, 5.0]},
+    {"header": "YEAR", "label": 3, "likes": 640, "cust": 10000, "orders": 5, "sky": "DEC", "dur": 11.0}
+  ]
+}

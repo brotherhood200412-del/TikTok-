@@ -1,0 +1,18 @@
+{
+  "title": "Comfort Zone",
+  "caption": "Same fears. Same chances. One stayed in his comfort zone. One stepped out. ⭕ What's YOUR next challenge? 👇 #mindset #comfortzone #motivation #growth #selfimprovement #discipline #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME FEARS · SAME CHANCES",
+  "punch1": "Growth begins",
+  "punch2": "where comfort ends.",
+  "r_start": 120,
+  "stages": [
+    {"month": 1,  "challenge": "Give a speech",       "prop": "SPEAK",    "rl": 110, "rr": 140, "sky": "JAN"},
+    {"month": 2,  "challenge": "Join the gym",        "prop": "GYM",      "rl": 100, "rr": 160, "sky": "MAR", "zoom": ["R", 1.0, 3.4]},
+    {"month": 4,  "challenge": "Ask for a raise",     "prop": "RAISE",    "rl": 90,  "rr": 180, "sky": "MAY", "zoom": ["L", 0.2, 3.6]},
+    {"month": 6,  "challenge": "Learn a language",    "prop": "LANGUAGE", "rl": 80,  "rr": 195, "sky": "JUL"},
+    {"month": 9,  "challenge": "Travel alone",        "prop": "TRAVEL",   "rl": 70,  "rr": 210, "sky": "SEP", "zoom": ["R", 4.0, 6.6]},
+    {"month": 12, "challenge": "Start a business",    "prop": "BUSINESS", "rl": 60,  "rr": 225, "sky": "NOV", "zoom": ["L", 0.2, 3.6]},
+    {"month": 18, "challenge": "Run a marathon",      "prop": "GYM",      "rl": 50,  "rr": 238, "sky": "DEC", "dur": 11.0}
+  ]
+}
