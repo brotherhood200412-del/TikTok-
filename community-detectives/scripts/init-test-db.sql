@@ -1,0 +1,1 @@
+CREATE DATABASE community_detectives_test OWNER detectives;

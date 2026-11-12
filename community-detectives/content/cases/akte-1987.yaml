@@ -1,0 +1,1208 @@
+# COMMUNITY DETECTIVES – Fall: Akte 1987 – Der ungelöste Fall
+# Alle Personen, Orte und Unternehmen sind frei erfunden.
+id: akte-1987
+version: 1
+title: Akte 1987 – Der ungelöste Fall
+tagline: 39 Jahre lang galt Lena Haupts Tod als Unfall. Dann fällt im Kesselhaus eine Wand.
+genre: coldcase
+difficulty: meisterdetektiv
+tier: premium
+estimatedMinutes: 140
+accent: "#9a6b2f"
+
+briefing:
+  location: Wendelstedt
+  date: November 1987 / Oktober 2026
+  intro: |
+    In der Nacht zum 22. November 1987 verschwindet Lena Haupt, 19, Sängerin der Band „Nachtfalter“, nach einem Konzert im Jugendzentrum Kesselhaus. Drei Tage später wird sie im Mühlbach unterhalb des Wehrs gefunden. Die Polizei schließt den Fall nach acht Tagen: betrunken ins Wasser gestürzt, ein tragischer Unfall.
+    Zwei Jahre später stürmt das Lied „Nachtfalter“ die Charts – geschrieben, so steht es auf der Platte, von Lenas Bandkollegen Michael Gerstner.
+    Oktober 2026: Das Kesselhaus wird abgerissen. Hinter einer Wandverkleidung im alten Proberaum finden Bauarbeiter ein Tagebuch und eine Kassette. Die Podcasterin Nora Bach und die Cold-Case-Einheit des Landeskriminalamts öffnen die Akte noch einmal. Und ihr.
+  objective: Prüft die alte Akte, wertet die neuen Funde aus, entlarvt Lügen, die 39 Jahre alt sind – und findet heraus, was in jener Nacht wirklich geschah.
+  question: Wer ist für den Tod von Lena Haupt verantwortlich?
+
+phases:
+  - id: akte
+    title: Die alte Akte
+    goal: Lest die Akte von 1987 mit heutigen Augen. Passt der „Unfall“ zu den Befunden?
+  - id: funde
+    title: Die Funde im Kesselhaus
+    goal: Was verraten Tagebuch, Kassette und der alte Proberaum über Lenas letzte Wochen?
+  - id: luegen
+    title: 39 Jahre Lügen
+    goal: Wer hat damals gelogen – und warum? Prüft jedes Alibi neu.
+  - id: nacht
+    title: Die Nacht zum 22. November
+    goal: Rekonstruiert die Nacht Minute für Minute und überführt den Täter.
+
+characters:
+  - id: lena
+    name: Lena Haupt
+    role: victim
+    age: 19
+    occupation: Sängerin und Songschreiberin der Band „Nachtfalter“ (1987)
+    color: "#9a6b2f"
+    profile: Talentiert, eigensinnig, wollte nach Berlin. Spitzname in der Band „Motte“. Versteckte ihre Notizen gern hinter der Wandverkleidung des Proberaums.
+    personality: Mutig, idealistisch, konnte Ungerechtigkeit nicht ertragen.
+    relation: Das Opfer.
+    secret: Hatte herausgefunden, dass Mike Gerstner ihre Lieder unter seinem Namen angemeldet hatte, und wollte ihn nach dem Konzert zur Rede stellen.
+  - id: mike
+    name: Michael „Mike“ Gerstner
+    role: suspect
+    age: 60
+    occupation: Musikproduzent (1987 Gitarrist der Band, 21)
+    color: "#4f5f7a"
+    profile: Bandleader und Gitarrist von „Nachtfalter“, Spitzname „Falke“. Wurde 1989 mit dem Hit „Nachtfalter“ berühmt, heute erfolgreicher Produzent. Neffe des damaligen Bürgermeisters.
+    personality: Charismatisch, geschliffen, kontrolliert – nur selten blitzt Gereiztheit auf.
+    relation: Bandkollege und Freund – so sagt er.
+    alibi: Fuhr um 00:45 Uhr direkt nach Hause. Hat Lena nach dem Konzert nicht mehr gesehen.
+    motive: Keins bekannt – er spricht bis heute „voller Liebe“ von Lena.
+    secret: Hat Lenas Lieder als eigene angemeldet. Lena stellte ihn im Proberaum zur Rede; im Streit stieß er sie gegen die Kante seines Verstärkers. Sie starb. Er brachte sie in seinem Golf zum Mühlbach.
+  - id: rolf
+    name: Rolf Brenner
+    role: suspect
+    age: 63
+    occupation: Dachdecker (1987 Schlagzeuger, 24)
+    color: "#7a5a3c"
+    profile: Lenas Freund im Jahr 1987. Damals Hauptverdächtiger. Hat bis heute den Ruf des „Mörders, dem man nichts nachweisen konnte“.
+    personality: Rau, verbittert, unter der Schale tief verletzt.
+    relation: Lenas damaliger Freund.
+    alibi: War ab 00:30 Uhr mit Freunden im Imbiss am Markt.
+    motive: Eifersucht; heftiger Streit mit Lena nach dem Konzert. Hatte sie Wochen vorher am Arm verletzt.
+    secret: Hat Lena einmal grob am Arm gepackt und schämt sich seit 39 Jahren dafür. Mit ihrem Tod hat er nichts zu tun.
+  - id: sabine
+    name: Sabine Kaltenbach
+    role: suspect
+    age: 57
+    occupation: Musiklehrerin (1987 Keyboarderin, 18)
+    color: "#7a4f6a"
+    profile: Lenas beste Freundin. War heimlich in Rolf verliebt. Hat Lena als Letzte aus dem Freundeskreis gesehen.
+    personality: Leise, gewissenhaft, sehr schuldbewusst.
+    relation: Beste Freundin, Bandkollegin.
+    alibi: Fuhr um 00:20 Uhr mit ihrer Schwester nach Hause.
+    motive: Eifersucht auf Lena wegen Rolf.
+    secret: Kannte Lenas Versteck hinter der Wandverkleidung, hat es 1987 aber niemandem gesagt – aus Angst, das Tagebuch könnte ihre Gefühle für Rolf verraten.
+  - id: jojo
+    name: Jürgen „Jojo“ Pallas
+    role: suspect
+    age: 61
+    occupation: Gebrauchtwagenhändler (1987 Bassist, 22)
+    color: "#5a7a4f"
+    profile: Bassist der Band. Verkaufte 1987 hinter dem Kesselhaus Haschisch. Lena wollte ihn deshalb aus der Band werfen.
+    personality: Großspurig, ausweichend, wird kleinlaut, wenn es eng wird.
+    relation: Bandkollege.
+    alibi: Sei um 00:30 Uhr nach Hause gegangen.
+    motive: Lena drohte, seine Geschäfte auffliegen zu lassen.
+    secret: Stand bis 01:50 Uhr dealend hinter dem Kesselhaus und sah um 01:40 Uhr Mikes Golf ohne Licht vom Bandeingang Richtung Mühlweg fahren. Schwieg, um sich selbst zu schützen.
+  - id: werner
+    name: Werner Haupt
+    role: suspect
+    age: 86
+    occupation: Rentner, Lenas Vater (1987 Schreinermeister, 47)
+    color: "#5d5d5d"
+    profile: Streng, konservativ. Verbot Lena den Umzug nach Berlin. Fuhr in der Nacht allein durch die Stadt, um sie zu suchen.
+    personality: Stur, wortkarg, gebrochen.
+    relation: Vater.
+    alibi: Suchte seine Tochter und meldete sie auf der Wache als vermisst.
+    motive: Heftiger Streit über Berlin; keine Zeugen für seine Suchfahrt.
+    secret: Hat Lena an jenem Abend gesagt, sie brauche „gar nicht mehr nach Hause zu kommen“. Er hat sich das nie verziehen.
+  - id: klaus
+    name: Klaus Dietrich
+    role: suspect
+    age: 77
+    occupation: Rentner (1987 Hausmeister des Kesselhauses, 38)
+    color: "#6a6a4f"
+    profile: Hatte alle Schlüssel des Jugendzentrums. Über ihn kursierten Gerüchte. Putzte am Sonntagmorgen den Proberaum.
+    personality: Mürrisch, misstrauisch, hat sein Leben lang Angst vor Gerede.
+    relation: Hausmeister.
+    alibi: Schloss um 00:40 Uhr den Haupteingang ab und ging zum Stammtisch.
+    motive: Gerüchte über Annäherungsversuche an junge Frauen; putzte Spuren weg.
+    secret: Fand am Sonntagmorgen Blut am Verstärker im Proberaum und wischte es weg, weil er eine Schlägerei vermutete und die Schließung des Jugendzentrums fürchtete.
+  - id: sommer
+    name: Erich Sommer
+    role: suspect
+    age: 84
+    occupation: Polizeihauptkommissar a. D. (1987 Ermittler, 45)
+    color: "#4f6a7a"
+    profile: Leitete 1987 die Ermittlungen und schloss den Fall nach acht Tagen als Unglücksfall.
+    personality: Korrekt im Ton, defensiv in der Sache.
+    relation: Damaliger Ermittler.
+    alibi: Hatte in der Nacht Dienst auf der Wache.
+    motive: Schloss den Fall auffällig schnell, ignorierte Zeugen und Spuren.
+    secret: Schloss den Fall auf Weisung von Bürgermeister Helmut Gerstner – Mikes Onkel –, damit das Stadtfest nicht überschattet wird. Er wusste nicht, wen er damit schützte.
+  - id: tanja
+    name: Tanja Rudnik
+    role: witness
+    age: 56
+    occupation: Krankenpflegerin (1987 Fan der Band, 17)
+    color: "#6b4f8a"
+    profile: War 1987 als minderjähriger Fan heimlich beim Konzert. Hat damals aus Angst vor ihren Eltern nie ausgesagt.
+    personality: Nervös, ehrlich, erleichtert, endlich zu reden.
+    relation: Zeugin.
+    secret: Sah, wie Mike Lena um 00:25 Uhr in den Proberaum folgte.
+  - id: nora
+    name: Nora Bach
+    role: other
+    age: 34
+    occupation: Podcasterin („Akte Wendelstedt“)
+    color: "#2f7a6b"
+    profile: Hat den Fund im Kesselhaus öffentlich gemacht und Mike Gerstner für ihren Podcast interviewt.
+    personality: Hartnäckig, gründlich, fair.
+    relation: Recherchiert für ihren Podcast.
+    secret: Keins. Sie stellt ihre Rohaufnahmen zur Verfügung.
+
+insights:
+  - id: in_kleid_geheim
+    title: Das rote Kleid war Täterwissen
+    text: Die Kleidung der Toten – ein rotes Kleid – wurde 1987 bewusst nicht an die Presse gegeben. Nur wer Lena nach 00:10 Uhr sah, konnte davon wissen.
+    category: spur
+  - id: in_trockene_lunge
+    title: Trockene Lunge
+    text: Der Obduktionsbericht von 1987 vermerkt eine „auffallend trockene Lunge ohne Schaumbildung“ – und schließt trotzdem auf Ertrinken.
+    category: widerspruch
+  - id: in_leichenflecken
+    title: Leichenflecken am Rücken
+    text: Lena trieb bäuchlings im Wasser, doch die Leichenflecken sind am Rücken ausgeprägt und fixiert. Sie lag nach ihrem Tod stundenlang auf dem Rücken.
+    category: widerspruch
+  - id: in_kaum_alkohol
+    title: Kaum Alkohol
+    text: Blutalkohol 0,4 Promille. Von „betrunken ins Wasser gestürzt“ kann keine Rede sein.
+    category: widerspruch
+  - id: in_reifenspuren
+    title: Reifenspuren am Uferweg
+    text: Am Uferweg oberhalb des Wehrs sind Reifenspuren eines Pkw zu sehen. 1987 wurden sie nie ausgewertet.
+    category: spur
+  - id: in_tot_vor_wasser
+    title: Tot, bevor sie ins Wasser kam
+    text: Das Gutachten von 2026 ist eindeutig – Lena war bereits tot, als sie ins Wasser kam, und wurde nach ein bis zwei Stunden in Rückenlage dorthin gebracht.
+    category: wendung
+  - id: in_kante
+    title: Eine rechtwinklige Kante
+    text: Die Kopfwunde stammt von einer rechtwinkligen, harten Kante – nicht von der abgerundeten Betonkante des Wehrs.
+    category: spur
+  - id: in_buehne_jeans
+    title: Auf der Bühne in Jeans
+    text: Auf dem Konzertfoto trägt Lena Jeans und Lederjacke – und eine rote Haarspange.
+    category: spur
+    characters: [lena]
+  - id: in_rotes_kleid_0010
+    title: Umgezogen um 00:10
+    text: Laut Sabine zog sich Lena um 00:10 Uhr für die Aftershow um – in ein rotes Kleid.
+    category: zeitlinie
+    characters: [lena]
+    timeline: { time: "00:10", sort: 30, text: "Lena zieht sich für die Aftershow das rote Kleid an." }
+  - id: in_lena_proberaum
+    title: „Ich muss mit jemandem reden“
+    text: "Um 00:15 Uhr sagte Lena zu Sabine: „Ich hol noch was aus dem Proberaum. Ich muss mit jemandem reden.“"
+    category: zeitlinie
+    characters: [lena]
+    timeline: { time: "00:15", sort: 35, text: "Lena geht in den Proberaum – „Ich muss mit jemandem reden.“" }
+  - id: in_konzertende
+    title: Konzertende 23:30
+    text: Das Konzert endete um 23:30 Uhr. Um 23:40 Uhr stritten Lena und Rolf vor der Bühne.
+    category: zeitlinie
+    timeline: { time: "23:30", sort: 10, text: "Konzertende im Kesselhaus." }
+  - id: in_streit_rolf
+    title: Streit mit Rolf
+    text: Um 23:40 Uhr gab es lauten Streit zwischen Lena und Rolf – es ging um Berlin.
+    category: motiv
+    characters: [rolf]
+    timeline: { time: "23:40", sort: 20, text: "Lena und Rolf streiten vor der Bühne." }
+  - id: in_rolf_imbiss
+    title: Rolf im Imbiss
+    text: Der Imbisswirt bestätigte 1987, dass Rolf mit drei Freunden von 00:30 bis 02:00 Uhr bei ihm war.
+    category: entlastung
+    characters: [rolf]
+  - id: in_sabine_schwester
+    title: Sabine fuhr um 00:20
+    text: Sabines Schwester bestätigte 1987, dass sie Sabine um 00:20 Uhr abholte und nach Hause fuhr.
+    category: entlastung
+    characters: [sabine]
+  - id: in_werner_wache
+    title: Werner auf der Wache
+    text: Werner Haupt meldete Lena um 01:20 Uhr auf der Wache als vermisst und blieb bis 02:30 Uhr dort.
+    category: entlastung
+    characters: [werner]
+    timeline: { time: "01:20", sort: 60, text: "Werner Haupt meldet Lena auf der Wache als vermisst." }
+  - id: in_sommer_dienst
+    title: Sommer im Dienst
+    text: Erich Sommer hatte von 22 bis 6 Uhr Dienst auf der Wache und nahm Werners Vermisstenmeldung selbst auf.
+    category: entlastung
+    characters: [sommer]
+  - id: in_klaus_krone
+    title: Klaus beim Stammtisch
+    text: Der Wirt der „Krone“ bestätigte, dass Klaus Dietrich von 00:45 bis 03:10 Uhr am Stammtisch saß.
+    category: entlastung
+    characters: [klaus]
+  - id: in_klaus_putzte
+    title: Blut am Verstärker
+    text: Klaus Dietrich gibt zu, am Sonntagmorgen Blut an einem Verstärker im Proberaum weggewischt zu haben. Er dachte an eine Schlägerei.
+    category: wendung
+    characters: [klaus]
+  - id: in_mike_alibi_1987
+    title: Mikes Aussage 1987
+    text: Mike sagte 1987, er sei um 00:45 Uhr nach Hause gefahren und habe Lena nach dem Konzert nicht mehr gesehen.
+    category: alibi
+    characters: [mike]
+  - id: in_mike_ohne_alibi
+    title: Niemand bestätigt Mike
+    text: Mikes Mutter schlief. Sie gab 1987 nur wieder, was Mike ihr gesagt hatte. Für die Zeit nach 00:45 Uhr hat er kein Alibi.
+    category: alibi
+    characters: [mike]
+  - id: in_auto_muehlweg
+    title: Ein Auto ohne Licht
+    text: Landwirt Hinrichs sah um 01:45 Uhr einen hellen Kleinwagen ohne Licht auf dem Mühlweg. Am Heck ein Aufkleber der Band, das Kennzeichen endete auf 7.
+    category: spur
+    timeline: { time: "01:45", sort: 75, text: "Ein heller Kleinwagen ohne Licht fährt zum Mühlbach." }
+  - id: in_auto_mike
+    title: Mikes weißer Golf
+    text: Der einzige helle Kleinwagen mit Bandaufkleber und Endziffer 7 war Mikes weißer Golf, WS-MG 87.
+    category: identitaet
+    characters: [mike]
+  - id: in_spitznamen
+    title: Die Spitznamen der Band
+    text: "Auf dem Plakat: Lena „Motte“, Mike „Falke“, Rolf „Trommler“, Jojo „Brummbär“, Sabine „Taste“."
+    category: identitaet
+  - id: in_falke_mike
+    title: Falke ist Mike
+    text: Wenn Lena in ihrem Tagebuch von „Falke“ schreibt, meint sie Mike Gerstner.
+    category: identitaet
+    characters: [mike]
+  - id: in_demo_datum
+    title: Aufgenommen am 3. Oktober
+    text: Lena nahm „Nachtfalter“ am 3. Oktober 1987 auf – laut Tagebuch und Kassettenetikett.
+    category: zeitlinie
+    characters: [lena]
+  - id: in_falke_lieder
+    title: „Unter seinem Namen“
+    text: "Lena, 10. November: „Falke hat meine Lieder bei TONWERK angemeldet. Unter seinem Namen.“"
+    category: motiv
+    characters: [lena]
+  - id: in_konfrontation_plan
+    title: Der Plan für Samstag
+    text: "Lena, 20. November: „Morgen nach dem Konzert stelle ich ihn im Proberaum zur Rede. Wenn er es nicht zurücknimmt, gehe ich zur Zeitung.“"
+    category: motiv
+    characters: [lena]
+  - id: in_lena_autorin
+    title: „Text und Musik – Lena Haupt“
+    text: "Auf der Kassette sagt Lena selbst: „Das ist ‚Nachtfalter‘. Text und Musik: Lena Haupt.“"
+    category: identitaet
+    characters: [lena]
+  - id: in_anmeldung_0211
+    title: Angemeldet am 2. November
+    text: Bei der Verwertungsgesellschaft TONWERK ist „Nachtfalter“ seit dem 2. November 1987 auf Michael Gerstner als alleinigen Urheber angemeldet.
+    category: spur
+    characters: [mike]
+  - id: in_lied_von_lena
+    title: Mike stahl das Lied
+    text: Lena nahm „Nachtfalter“ einen Monat vor Mikes Anmeldung als ihr eigenes Lied auf. Der Hit, der Mike reich machte, war Lenas Lied.
+    category: motiv
+    characters: [mike]
+  - id: in_hit_1989
+    title: Der Hit von 1989
+    text: "1989 stürmt „Nachtfalter“ die Charts. Komponist laut Platte: Michael Gerstner. Er verdient bis heute daran."
+    category: motiv
+    characters: [mike]
+  - id: in_onkel_buergermeister
+    title: Der Onkel im Rathaus
+    text: Bürgermeister Helmut Gerstner (gest. 2015) war Mikes Onkel.
+    category: identitaet
+    characters: [mike]
+  - id: in_vertuschung
+    title: Abschluss auf Weisung
+    text: "Sommers Aktennotiz: Bürgermeister Gerstner wies an, den Fall vor dem Stadtfest als Unglück abzuschließen und Zeuge Hinrichs sowie die Reifenspuren „nicht weiter zu verfolgen“."
+    category: wendung
+    characters: [sommer]
+  - id: in_blut_amp
+    title: Anhaftungen am Verstärker
+    text: An der Ecke eines alten Verstärkers aus dem Proberaum – Aufkleber „Falke“ – finden sich dunkle, eingetrocknete Anhaftungen.
+    category: spur
+    characters: [mike]
+  - id: in_blut_lena
+    title: Lenas Blut
+    text: Die DNA-Analyse 2026 bestätigt – das Blut an der Verstärkerecke stammt von Lena Haupt.
+    category: wendung
+    characters: [lena]
+  - id: in_haarspange
+    title: Eine rote Haarspange
+    text: Unter den Bühnenbrettern des Proberaums liegt eine rote Haarspange.
+    category: spur
+  - id: in_spange_lena
+    title: Lenas Spange
+    text: Es ist dieselbe rote Haarspange, die Lena auf dem Konzertfoto trägt. Sie war im Proberaum – nach dem Konzert.
+    category: spur
+    characters: [lena]
+  - id: in_tatort_proberaum
+    title: Der wahre Tatort
+    text: Lena starb nicht am Mühlbach, sondern im Proberaum – an der Kante des Verstärkers. Danach wurde sie zum Wehr gebracht.
+    category: wendung
+  - id: in_mike_folgt
+    title: Mike folgt Lena
+    text: Tanja Rudnik sah um 00:25 Uhr, wie Mike Lena in den Proberaum folgte – mit dem Schlüssel des Bandleaders.
+    category: zeitlinie
+    characters: [mike]
+    timeline: { time: "00:25", sort: 40, text: "Mike folgt Lena in den Proberaum." }
+  - id: in_mike_luegt
+    title: Mike hat gelogen
+    text: Mike behauptete, Lena nach dem Konzert nicht mehr gesehen zu haben – doch Tanja sah ihn ihr in den Proberaum folgen.
+    category: widerspruch
+    characters: [mike]
+  - id: in_jojo_sah_golf
+    title: Jojo sah den Golf
+    text: Jojo stand bis 01:50 Uhr hinter dem Kesselhaus. Um 01:40 Uhr fuhr Mikes weißer Golf ohne Licht vom Bandeingang Richtung Mühlweg.
+    category: zeitlinie
+    characters: [mike, jojo]
+    timeline: { time: "01:40", sort: 70, text: "Mikes Golf verlässt ohne Licht den Bandeingang." }
+  - id: in_taeterwissen
+    title: Täterwissen im Podcast
+    text: Im Podcast sagt Mike, das Letzte, was er von Lena gesehen habe, sei „dieses rote Kleid“ gewesen. Auf der Bühne trug sie Jeans. Das rote Kleid sah nur, wer ihr nach 00:10 Uhr begegnete.
+    category: widerspruch
+    characters: [mike]
+  - id: in_nacht_rekonstruiert
+    title: Die Nacht, rekonstruiert
+    text: Zwischen 00:25 und 01:40 Uhr war Lena mit Mike im Proberaum. Danach wurde sie zum Mühlbach gebracht. Alle anderen haben für diese Zeit belastbare Alibis.
+    category: spur
+
+evidence:
+  - id: ev_deckblatt
+    title: Ermittlungsakte 1987 – Abschlussvermerk
+    summary: Das Deckblatt der alten Akte, vergilbt und mit Kaffeerand.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: document
+      docType: report
+      heading: Todesermittlung Haupt, Lena – Az. 4 Js 1187/87
+      meta:
+        - { label: Ermittler, value: "PHK E. Sommer" }
+        - { label: Abgeschlossen, value: "30.11.1987" }
+      lines:
+        - { id: d1, text: "Auffindung: 24.11.1987, Mühlbach unterhalb Wehr Nord, bäuchlings im Wasser treibend." }
+        - { id: d2, text: "Bekleidung: rotes Kleid, schwarze Strumpfhose, ein Schuh fehlt. – Bekleidung NICHT an Presse herausgeben (Täterwissen)." }
+        - { id: d3, text: "Ergebnis: Unglücksfall. Geschädigte vermutlich alkoholisiert am Wehr gestürzt und ertrunken." }
+        - { id: d4, text: "Fremdverschulden: nicht ersichtlich. Verfahren eingestellt." }
+        - { id: d5, text: "Anlagen: Obduktion, Fundortbericht, Zeugenaussagen (Band, Familie, Personal), Kfz-Abfrage." }
+    hotspots:
+      - { item: d2, insight: in_kleid_geheim }
+
+  - id: ev_obduktion_1987
+    title: Obduktionsbericht 1987
+    summary: Gerichtsmedizin, Kreisstadt. Maschinengeschrieben.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: document
+      docType: report
+      heading: Sektionsprotokoll Nr. 311/87
+      lines:
+        - { id: o1, text: "Kopfverletzung am Hinterkopf rechts, Knochen eingedrückt, Ränder geradlinig." }
+        - { id: o2, text: "Lungen auffallend trocken, keine Schaumbildung in den Atemwegen." }
+        - { id: o3, text: "Totenflecken am Rücken stark ausgeprägt und nicht mehr wegdrückbar." }
+        - { id: o4, text: "Blutalkohol: 0,4 Promille." }
+        - { id: o5, text: "Todeszeitpunkt: Nacht 21./22.11., etwa zwischen 0 und 2 Uhr." }
+        - { id: o6, text: "Ergebnis: Tod durch Ertrinken nach Sturz. Kein Hinweis auf Fremdeinwirkung." }
+    hotspots:
+      - { item: o2, insight: in_trockene_lunge }
+      - { item: o3, insight: in_leichenflecken }
+      - { item: o4, insight: in_kaum_alkohol }
+
+  - id: ev_fundort_1987
+    title: Fundortfoto 1987
+    summary: Schwarz-weiß-Abzug aus der Akte. Wehr Nord am Mühlbach.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: photo
+      scene: garden
+      caption: Mühlbach, Wehr Nord – 24.11.1987
+      timestamp: "24.11.87"
+      elements:
+        - { id: wehr, label: Wehr, detail: "Die Wehrkrone ist aus Beton mit stark abgerundeter, bemooster Kante.", x: 10, y: 50, w: 50, h: 10, shape: rect }
+        - { id: uferweg, label: Uferweg, detail: "Am Uferweg oberhalb des Wehrs: deutliche Reifenspuren eines Pkw im Schlamm. Kein Vermerk über eine Auswertung.", x: 56, y: 60, w: 30, h: 10, shape: car }
+        - { id: schuh, label: Schuh, detail: "Ein schwarzer Pumps im Uferschilf, 40 Meter oberhalb des Fundorts.", x: 74, y: 44, w: 6, h: 6, shape: round }
+        - { id: bruecke, label: Fußgängerbrücke, detail: "Eine schmale Holzbrücke. Geländer intakt.", x: 20, y: 20, w: 40, h: 8, shape: table }
+        - { id: weg, label: Mühlweg, detail: "Der unbefestigte Mühlweg führt vom Ortsrand zum Ufer. Nachts unbeleuchtet.", x: 84, y: 10, w: 14, h: 40, shape: rect }
+    hotspots:
+      - { item: uferweg, insight: in_reifenspuren }
+
+  - id: ev_konzertfoto
+    title: Konzertfoto 21.11.1987
+    summary: Aus dem Fotoalbum von Sabine Kaltenbach.
+    source: Sabine Kaltenbach
+    content:
+      kind: photo
+      scene: gallery
+      caption: "„Nachtfalter live im Kesselhaus, 21.11.87“"
+      timestamp: "21.11.87 22:50"
+      elements:
+        - { id: lena_buehne, label: Lena am Mikrofon, detail: "Lena in Jeans, Lederjacke und weißem T-Shirt. Im Haar eine rote Haarspange.", x: 40, y: 18, w: 14, h: 56, shape: person }
+        - { id: mike_buehne, label: Mike mit Gitarre, detail: "Mike Gerstner an der Gitarre. Auf dem Gitarrenkoffer: Aufkleber „Falke“.", x: 62, y: 22, w: 12, h: 50, shape: person }
+        - { id: amp, label: Verstärker, detail: "Ein großer, kantiger Röhrenverstärker mit Metallecken. Aufkleber „Falke“.", x: 76, y: 50, w: 14, h: 20, shape: box }
+        - { id: rolf_buehne, label: Rolf am Schlagzeug, detail: "Rolf hinter dem Schlagzeug, schweißnass.", x: 14, y: 30, w: 18, h: 40, shape: person }
+        - { id: banner, label: Banner, detail: "Ein selbstgemaltes Banner: „NACHTFALTER – Wendelstedt rockt!“", x: 20, y: 4, w: 60, h: 10, shape: paper }
+    hotspots:
+      - { item: lena_buehne, insight: in_buehne_jeans }
+
+  - id: ev_plakat
+    title: Konzertplakat
+    summary: Fotokopiertes Plakat, damals in der ganzen Stadt aufgehängt.
+    source: Stadtarchiv
+    content:
+      kind: document
+      docType: newspaper
+      heading: NACHTFALTER – live im Kesselhaus – Sa 21.11.87, 21 Uhr
+      lines:
+        - { id: pl1, text: "Lena „Motte“ Haupt – Gesang, Texte" }
+        - { id: pl2, text: "Mike „Falke“ Gerstner – Gitarre, Bandleitung" }
+        - { id: pl3, text: "Rolf „Trommler“ Brenner – Schlagzeug" }
+        - { id: pl4, text: "Jürgen „Brummbär“ Pallas – Bass" }
+        - { id: pl5, text: "Sabine „Taste“ Kaltenbach – Keyboard" }
+        - { id: pl6, text: "Eintritt 5 DM · Aftershow im Café des Kesselhauses" }
+    hotspots:
+      - { item: pl2, insight: in_spitznamen }
+      - { item: pl1, insight: in_spitznamen }
+
+  - id: ev_sabine_1987
+    title: Aussage Sabine Kaltenbach (1987)
+    summary: Vernehmungsprotokoll vom 23.11.1987.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugin Sabine Kaltenbach, 18
+      lines:
+        - { id: sb1, text: "Das Konzert war um halb zwölf zu Ende. Dann haben Lena und Rolf gestritten, wegen Berlin." }
+        - { id: sb2, text: "Um zehn nach zwölf hat Lena sich für die Aftershow umgezogen. Sie hatte ihr rotes Kleid dabei, das sie so liebte." }
+        - { id: sb3, text: "Um Viertel nach zwölf sagte sie: Ich hol noch was aus dem Proberaum. Ich muss mit jemandem reden." }
+        - { id: sb4, text: "Ich bin um zwanzig nach zwölf mit meiner Schwester nach Hause gefahren." }
+        - { id: sb5, text: "Rolf hat sie vor ein paar Wochen mal so fest am Arm gepackt, dass sie einen blauen Fleck hatte." }
+    hotspots:
+      - { item: sb2, insight: in_rotes_kleid_0010 }
+      - { item: sb3, insight: in_lena_proberaum }
+      - { item: sb1, insight: in_konzertende }
+
+  - id: ev_zeugen_1987
+    title: Alibiüberprüfungen 1987
+    summary: Zusammenfassung der damaligen Nachermittlungen.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: table
+      heading: Alibis Nacht 21./22.11.1987
+      columns: [Person, Angabe, Bestätigt durch]
+      rows:
+        - { id: z_rolf, cells: ["Rolf Brenner", "ab 00:30 Imbiss am Markt", "Imbisswirt Kowalski + 3 Freunde: 00:30–02:00"] }
+        - { id: z_sabine, cells: ["Sabine Kaltenbach", "00:20 nach Hause", "Schwester Ute Kaltenbach"] }
+        - { id: z_mike, cells: ["Michael Gerstner", "00:45 nach Hause gefahren", "Mutter (schlief, „Michael sagt, er kam um eins“)"] }
+        - { id: z_jojo, cells: ["Jürgen Pallas", "00:30 zu Fuß nach Hause", "niemand"] }
+        - { id: z_klaus, cells: ["Klaus Dietrich", "00:40 Haupteingang abgeschlossen, dann Stammtisch", "Wirt der „Krone“: 00:45–03:10"] }
+        - { id: z_werner, cells: ["Werner Haupt", "Suchfahrt, dann Wache", "Wachbuch"] }
+    hotspots:
+      - { item: z_rolf, insight: in_rolf_imbiss }
+      - { item: z_sabine, insight: in_sabine_schwester }
+      - { item: z_mike, insight: in_mike_ohne_alibi }
+      - { item: z_klaus, insight: in_klaus_krone }
+
+  - id: ev_mike_1987
+    title: Aussage Michael Gerstner (1987)
+    summary: Vernehmungsprotokoll vom 24.11.1987.
+    source: Polizeiarchiv Wendelstedt
+    content:
+      kind: document
+      docType: statement
+      heading: Zeuge Michael Gerstner, 21
+      lines:
+        - { id: mk1, text: "Nach dem Konzert habe ich abgebaut und bin um Viertel vor eins mit meinem Golf nach Hause." }
+        - { id: mk2, text: "Lena habe ich nach dem Konzert nicht mehr gesehen. Sie war mit Rolf beschäftigt." }
+        - { id: mk3, text: "Den Schlüssel zum Proberaum hatte nur ich als Bandleiter. Ich habe abgeschlossen, bevor ich ging." }
+        - { id: mk4, text: "Lena hat in letzter Zeit viel getrunken. Sie war oft am Bach." }
+    hotspots:
+      - { item: mk2, insight: in_mike_alibi_1987 }
+      - { item: mk1, insight: in_mike_alibi_1987 }
+
+  - id: ev_wachbuch
+    title: Wachbuch der Polizeistation 1987
+    summary: Einträge der Nacht zum 22.11.1987.
+    source: Polizeiarchiv Wendelstedt
+    unlock: { phase: luegen }
+    content:
+      kind: table
+      heading: Wachbuch Polizeistation Wendelstedt
+      columns: [Uhrzeit, Eintrag, Bearbeiter]
+      rows:
+        - { id: wb1, cells: ["22:00", "Dienstbeginn Nachtschicht", "PHK Sommer, PM Lutz"] }
+        - { id: wb2, cells: ["01:20", "Werner Haupt meldet Tochter Lena (19) vermisst", "PHK Sommer"] }
+        - { id: wb3, cells: ["02:30", "Herr Haupt verlässt die Wache, Streife informiert", "PHK Sommer"] }
+        - { id: wb4, cells: ["06:00", "Dienstende", "PHK Sommer"] }
+    hotspots:
+      - { item: wb2, insight: in_werner_wache }
+      - { item: wb3, insight: in_werner_wache }
+      - { item: wb1, insight: in_sommer_dienst }
+      - { item: wb4, insight: in_sommer_dienst }
+
+  - id: ev_hinrichs
+    title: Aussage Landwirt Hinrichs (1987)
+    summary: In der Akte abgeheftet – mit dem Vermerk „nicht relevant“.
+    source: Polizeiarchiv Wendelstedt
+    unlock: { phase: luegen }
+    content:
+      kind: document
+      docType: statement
+      heading: Zeuge Bernd Hinrichs, Landwirt, Mühlweg 2
+      footer: "Vermerk Sommer: nicht relevant – nicht weiter verfolgen."
+      lines:
+        - { id: hi1, text: "In der Nacht zum Sonntag war ich wegen einer kalbenden Kuh im Stall." }
+        - { id: hi2, text: "Gegen Viertel vor zwei fuhr ein heller Kleinwagen ohne Licht den Mühlweg runter zum Bach." }
+        - { id: hi3, text: "Hinten drauf so ein Aufkleber von der Band, die Motte mit den Flügeln. Das Kennzeichen hörte mit einer Sieben auf." }
+        - { id: hi4, text: "Nach etwa zwanzig Minuten kam er wieder hoch. Auch ohne Licht." }
+    hotspots:
+      - { item: hi2, insight: in_auto_muehlweg }
+      - { item: hi3, insight: in_auto_muehlweg }
+
+  - id: ev_kfz
+    title: Kfz-Abfrage 1987
+    summary: Fahrzeuge der Beteiligten laut Zulassungsstelle – und Notizen zu Aufklebern.
+    source: Polizeiarchiv Wendelstedt
+    unlock: { phase: luegen }
+    content:
+      kind: table
+      heading: Fahrzeuge der Beteiligten (Stand 11/1987)
+      columns: [Halter, Fahrzeug, Farbe, Kennzeichen, Bandaufkleber]
+      rows:
+        - { id: kz1, cells: ["Michael Gerstner", "VW Golf", "weiß", "WS-MG 87", "ja, Heckscheibe"] }
+        - { id: kz2, cells: ["Rolf Brenner", "Motorrad 250 ccm", "schwarz", "WS-RB 77", "ja, Tank"] }
+        - { id: kz3, cells: ["Ute Kaltenbach", "Fiat Panda", "rot", "WS-UK 12", "nein"] }
+        - { id: kz4, cells: ["Klaus Dietrich", "VW Bus", "hellblau", "WS-KD 401", "nein"] }
+        - { id: kz5, cells: ["Werner Haupt", "Opel Kadett", "beige", "WS-WH 3", "nein"] }
+        - { id: kz6, cells: ["Jürgen Pallas", "–", "–", "–", "–"] }
+
+  - id: ev_fund_wand
+    title: Der Fund im Kesselhaus (2026)
+    summary: Foto der Bauleitung, aufgenommen beim Entfernen der Wandverkleidung im alten Proberaum.
+    source: Bauleitung Abriss Kesselhaus
+    unlock: { phase: funde }
+    content:
+      kind: photo
+      scene: archive
+      caption: Proberaum Kesselhaus, Rückwand – 06.10.2026
+      timestamp: "06.10.26 09:41"
+      elements:
+        - { id: hohlraum, label: Hohlraum, detail: "Hinter einer losen Holzplatte: ein Hohlraum von etwa 30 × 40 cm.", x: 30, y: 20, w: 30, h: 40, shape: rect }
+        - { id: tagebuch_fund, label: Tagebuch, detail: "Ein Tagebuch mit Schmetterlingsaufkleber, eingewickelt in eine Plastiktüte.", x: 34, y: 34, w: 10, h: 12, shape: paper }
+        - { id: kassette_fund, label: Kassette, detail: "Eine Audiokassette, beschriftet: „Demo 3.10.87 – L.H.“", x: 48, y: 36, w: 8, h: 6, shape: box }
+        - { id: buehne, label: Bühnenbretter, detail: "Die Bühnenbretter wurden angehoben. Darunter Staub, Kronkorken – und eine rote Haarspange.", x: 4, y: 72, w: 60, h: 14, shape: table }
+        - { id: lager, label: Altes Equipment, detail: "In der Ecke: eingelagertes Equipment der Achtziger. Ein großer Röhrenverstärker mit Metallecken, Aufkleber „Falke“.", x: 72, y: 40, w: 22, h: 40, shape: box }
+    hotspots:
+      - { item: buehne, insight: in_haarspange }
+      - { item: lager, insight: in_blut_amp, feedback: "An einer Metallecke klebt etwas Dunkles. Ab ins Labor damit!" }
+
+  - id: ev_tagebuch
+    title: Lenas Tagebuch
+    summary: Drei Einträge aus den letzten Wochen.
+    source: Fund Kesselhaus
+    unlock: { phase: funde }
+    content:
+      kind: document
+      docType: diary
+      heading: Tagebuch L. H., Herbst 1987
+      lines:
+        - { id: lt1, text: "3. Oktober. Heute „Nachtfalter“ aufgenommen, allein im Proberaum. Mein bestes Lied. Vielleicht unser Ticket nach Berlin." }
+        - { id: lt2, text: "29. Oktober. Brummbär verkauft schon wieder hinterm Kesselhaus. Wenn das die Polizei mitkriegt, sind wir alle dran." }
+        - { id: lt3, text: "10. November. Falke hat meine Lieder bei TONWERK angemeldet. Unter seinem Namen. Er sagt, das sei „für die Band“." }
+        - { id: lt4, text: "20. November. Morgen nach dem Konzert stelle ich ihn im Proberaum zur Rede. Wenn er es nicht zurücknimmt, gehe ich zur Zeitung." }
+        - { id: lt5, text: "Papa sagt, ich brauche gar nicht mehr nach Hause zu kommen, wenn ich nach Berlin gehe. Er meint es nicht so. Hoffe ich." }
+    hotspots:
+      - { item: lt1, insight: in_demo_datum }
+      - { item: lt3, insight: in_falke_lieder }
+      - { item: lt4, insight: in_konfrontation_plan }
+
+  - id: ev_kassette
+    title: Kassette „Demo 3.10.87 – L.H.“
+    summary: Digitalisiert vom Landeskriminalamt.
+    source: Fund Kesselhaus
+    unlock: { phase: funde }
+    content:
+      kind: audio
+      duration: "4:12"
+      recordedAt: "3. Oktober 1987 (laut Etikett)"
+      lines:
+        - { id: ka1, t: "0:00", speaker: "Lena", text: "Okay, läuft. Das ist „Nachtfalter“. Text und Musik: Lena Haupt." }
+        - { id: ka2, t: "0:08", speaker: "Lena (singt)", text: "„Wir sind die Falter in der Nacht, die keiner sieht, die keiner hält …“" }
+        - { id: ka3, t: "1:40", speaker: "Lena (singt)", text: "„… und wenn das Licht ausgeht, sind wir noch da.“" }
+        - { id: ka4, t: "4:05", speaker: "Lena", text: "Für Papa. Auch wenn er's nicht hören will." }
+    hotspots:
+      - { item: ka1, insight: in_lena_autorin }
+
+  - id: ev_tonwerk
+    title: Werkeintrag TONWERK
+    summary: Auskunft der Verwertungsgesellschaft.
+    source: TONWERK Verwertungsgesellschaft
+    unlock: { insight: in_falke_lieder }
+    content:
+      kind: table
+      heading: Werkregister – Michael Gerstner (Auszug)
+      columns: [Titel, Urheber, Anmeldung, Veröffentlichung]
+      rows:
+        - { id: tw1, cells: ["Nachtfalter", "Michael Gerstner (Text/Musik)", "02.11.1987", "1989"] }
+        - { id: tw2, cells: ["Kesselhaus-Blues", "Michael Gerstner (Text/Musik)", "02.11.1987", "1990"] }
+        - { id: tw3, cells: ["Berlin im Regen", "Michael Gerstner (Text/Musik)", "02.11.1987", "1990"] }
+        - { id: tw4, cells: ["Falkenflug", "Michael Gerstner (Musik)", "14.03.1991", "1991"] }
+      note: Erträge „Nachtfalter“ 1989–2026 laut Auskunft rund 2,3 Mio. Euro.
+    hotspots:
+      - { item: tw1, insight: in_anmeldung_0211 }
+
+  - id: ev_zeitung_1989
+    title: Wendelstedter Anzeiger, März 1989
+    summary: Lokalteil, Seite 3.
+    source: Stadtarchiv
+    unlock: { phase: luegen }
+    content:
+      kind: document
+      docType: newspaper
+      heading: „Nachtfalter“ stürmt die Charts – Bürgermeister gratuliert dem Neffen
+      lines:
+        - { id: zt1, text: "Wendelstedt ist stolz: Michael Gerstner (23) steht mit „Nachtfalter“ auf Platz 4 der Hitparade." }
+        - { id: zt2, text: "Bürgermeister Helmut Gerstner empfing seinen Neffen im Rathaus: „Ich wusste immer, dass in dem Jungen etwas steckt.“" }
+        - { id: zt3, text: "Das Lied, so Gerstner, habe er „in einer einsamen Nacht im Herbst 87“ geschrieben." }
+        - { id: zt4, text: "An die tragisch verunglückte Sängerin seiner früheren Band erinnert er mit einer Widmung auf der Platte." }
+    hotspots:
+      - { item: zt2, insight: in_onkel_buergermeister }
+      - { item: zt1, insight: in_hit_1989 }
+
+  - id: ev_aktennotiz
+    title: Handschriftliche Aktennotiz Sommer
+    summary: Von Erich Sommer 2026 aus seinem privaten Nachlass übergeben.
+    source: Erich Sommer
+    unlock: { any: [{ topic: sommer.abschluss }, { event: ev_sommer_bricht }] }
+    content:
+      kind: document
+      docType: note
+      heading: Notiz für mich – 28.11.1987
+      lines:
+        - { id: an1, text: "Heute Anruf BM Gerstner. Fall Haupt vor dem Stadtfest abschließen, „kein Mordgerede in Wendelstedt“." }
+        - { id: an2, text: "Zeuge Hinrichs und Reifenspuren nicht weiter verfolgen. Obduzent soll Ertrinken bestätigen." }
+        - { id: an3, text: "Mir gefällt das nicht. Die Lunge war trocken. Aber ich habe Familie." }
+    hotspots:
+      - { item: an1, insight: in_vertuschung }
+      - { item: an2, insight: in_vertuschung }
+
+  - id: ev_gutachten_2026
+    title: Rechtsmedizinisches Gutachten 2026
+    summary: Neubewertung der Akte durch Prof. Dr. Amira Saleh, LKA.
+    source: Landeskriminalamt
+    unlock: { any: [{ insight: in_trockene_lunge }, { insight: in_leichenflecken }] }
+    content:
+      kind: document
+      docType: report
+      heading: Gutachterliche Stellungnahme – Az. 4 Js 1187/87
+      lines:
+        - { id: gu1, text: "Trockene Lungen ohne Schaumpilz schließen ein Ertrinken weitgehend aus. Die Geschädigte war beim Eintritt ins Wasser bereits tot." }
+        - { id: gu2, text: "Fixierte Totenflecken am Rücken bei Auffindung in Bauchlage: Die Tote lag nach Eintritt des Todes mindestens ein bis zwei Stunden auf dem Rücken." }
+        - { id: gu3, text: "Die Kopfverletzung weist geradlinige Ränder und einen rechten Winkel auf – typisch für eine harte, kantige Ecke (Metall). Die abgerundete Wehrkante scheidet aus." }
+        - { id: gu4, text: "Fazit: Tötung an einem anderen Ort, späteres Verbringen an den Mühlbach." }
+    hotspots:
+      - { item: gu1, insight: in_tot_vor_wasser }
+      - { item: gu2, insight: in_tot_vor_wasser }
+      - { item: gu3, insight: in_kante }
+
+  - id: ev_dna
+    title: DNA-Befund Verstärker
+    summary: Ergebnis des LKA-Labors.
+    source: Landeskriminalamt
+    unlock: { event: ev_labor }
+    content:
+      kind: table
+      heading: Spurenauswertung – Verstärker „Falke“
+      columns: [Spur, Material, Ergebnis]
+      rows:
+        - { id: dn1, cells: ["Metallecke unten links", "Blut, eingetrocknet", "DNA-Profil: Lena Haupt (Abgleich mit Werner Haupt, Vater)"] }
+        - { id: dn2, cells: ["Metallecke unten links", "Haare (2)", "dunkelblond, Lena Haupt zuzuordnen"] }
+        - { id: dn3, cells: ["Gehäuse", "Wischspuren", "Reste eines Reinigungsmittels"] }
+      note: Die Ecke ist rechtwinklig, Metall, Kantenlänge passt zur Wunde.
+    hotspots:
+      - { item: dn1, insight: in_blut_lena }
+      - { item: dn3, insight: in_klaus_putzte }
+
+  - id: ev_podcast
+    title: Podcast „Akte Wendelstedt“ – Interview mit Mike Gerstner
+    summary: Rohaufnahme vom 9. Oktober 2026, zur Verfügung gestellt von Nora Bach.
+    source: Nora Bach
+    unlock: { phase: luegen }
+    content:
+      kind: audio
+      duration: "38:20"
+      recordedAt: "9. Oktober 2026"
+      lines:
+        - { id: pc1, t: "02:14", speaker: "Mike Gerstner", text: "Lena war das größte Talent, das diese Stadt je hatte. Ich vermisse sie jeden Tag." }
+        - { id: pc2, t: "07:40", speaker: "Nora Bach", text: "Wann haben Sie Lena zuletzt gesehen?" }
+        - { id: pc3, t: "07:45", speaker: "Mike Gerstner", text: "Auf der Bühne. Das Letzte, was ich von ihr im Kopf habe, ist dieses rote Kleid, das sie so liebte. Wie eine Flamme." }
+        - { id: pc4, t: "12:03", speaker: "Mike Gerstner", text: "„Nachtfalter“ habe ich für sie geschrieben. Als Erinnerung." }
+        - { id: pc5, t: "15:30", speaker: "Mike Gerstner", text: "Den Proberaum habe ich um Viertel vor eins abgeschlossen. Da war niemand mehr." }
+        - { id: pc6, t: "21:10", speaker: "Mike Gerstner", text: "Das mit dem Tagebuch … das ist doch dreißig Jahre her. Mädchen schreiben viel, wenn sie verletzt sind." }
+
+  - id: ev_tanja
+    title: Brief von Tanja Rudnik
+    summary: Per Post an den Podcast geschickt, nach der dritten Folge.
+    source: Nora Bach
+    unlock: { event: ev_tanja_schreibt }
+    content:
+      kind: document
+      docType: letter
+      heading: Liebe Frau Bach,
+      lines:
+        - { id: ta1, text: "ich war damals siebzehn und durfte eigentlich gar nicht im Kesselhaus sein. Deshalb habe ich nie etwas gesagt." }
+        - { id: ta2, text: "Ich stand nach dem Konzert draußen am Seiteneingang und habe auf ein Autogramm gewartet." }
+        - { id: ta3, text: "Um Viertel nach zwölf ging Lena in den Proberaum, im roten Kleid. Um fünf vor halb eins kam Mike, schloss auf und ging hinterher." }
+        - { id: ta4, text: "Ich habe Stimmen gehört, laute. Dann bin ich nach Hause gerannt. Ich schäme mich seit 39 Jahren." }
+    hotspots:
+      - { item: ta3, insight: in_mike_folgt }
+
+  - id: ev_jojo_2026
+    title: Neue Aussage Jürgen Pallas (2026)
+    summary: Jojo hat sich beim LKA gemeldet – mit Anwalt.
+    source: Landeskriminalamt
+    unlock: { event: ev_jojo_bricht }
+    content:
+      kind: document
+      docType: statement
+      heading: Zeuge Jürgen Pallas, 61
+      lines:
+        - { id: jo1, text: "1987 habe ich gelogen. Ich bin nicht um halb eins nach Hause. Ich stand hinterm Kesselhaus und habe verkauft, bis kurz vor zwei." }
+        - { id: jo2, text: "Um 01:40 kam Mikes weißer Golf vom Bandeingang. Ohne Licht. Er ist Richtung Mühlweg gefahren." }
+        - { id: jo3, text: "Ich dachte, der hat was getrunken. Als man Lena gefunden hat, hatte ich Angst – wegen dem Zeug, das ich verkauft habe." }
+        - { id: jo4, text: "Mike hat mich später mal gefragt, ob ich in der Nacht ‚was gesehen‘ hätte. Ich habe nein gesagt. Er hat mir dann Geld für meinen ersten Laden geliehen." }
+    hotspots:
+      - { item: jo2, insight: in_jojo_sah_golf }
+      - { item: jo1, insight: in_jojo_sah_golf }
+
+connections:
+  - { id: c_falke, a: in_spitznamen, b: in_falke_lieder, insight: in_falke_mike }
+  - { id: c_spange, a: in_haarspange, b: ev_konzertfoto, insight: in_spange_lena }
+  - { id: c_mike_luegt, a: in_mike_folgt, b: in_mike_alibi_1987, insight: in_mike_luegt }
+
+interrogations:
+  - character: mike
+    intro: Mike Gerstner empfängt im Tonstudio, Goldene Schallplatten an der Wand. Er bietet Espresso an und lächelt viel.
+    topics:
+      - id: nacht
+        question: Erzählen Sie uns von der Nacht des Konzerts.
+        responses:
+          - mood: ruhig
+            text: "Es war unser bestes Konzert. Danach habe ich abgebaut, abgeschlossen und bin um Viertel vor eins nach Hause. Lena habe ich nach dem Konzert nicht mehr gesehen. Das verfolgt mich bis heute."
+      - id: lied
+        question: Wer hat „Nachtfalter“ geschrieben?
+        responses:
+          - when: { insight: in_lied_von_lena }
+            mood: wuetend
+            stress: 80
+            text: "Die Band hat Lieder gemeinsam entwickelt! Lena hatte Ideen, ich habe daraus Songs gemacht. Jemand musste die Rechte sichern, sonst hätte sie irgendein Plattenboss geklaut."
+          - mood: arrogant
+            stress: 20
+            text: "Ich. In einer einsamen Nacht im Herbst 87. Für Lena, als Erinnerung. Steht auf jeder Platte."
+      - id: proberaum
+        question: Wer hatte den Schlüssel zum Proberaum?
+        responses:
+          - mood: ruhig
+            text: "Ich, als Bandleiter. Ein Vorhängeschloss, ein Schlüssel. Ich habe um Viertel vor eins abgeschlossen."
+      - id: kleid
+        question: Woher wissen Sie, dass Lena ein rotes Kleid trug?
+        unlock: { insight: in_taeterwissen }
+        responses:
+          - mood: verzweifelt
+            stress: 90
+            text: "Ich … das stand bestimmt in der Zeitung. Oder Sabine hat es erzählt. Sie hat das Kleid geliebt, jeder wusste das. Auf der Bühne? Ich … ich habe mich vielleicht falsch erinnert."
+      - id: tanja
+        question: Eine Zeugin sah Sie um 00:25 Uhr in den Proberaum gehen.
+        unlock: { insight: in_mike_folgt }
+        responses:
+          - when: { insight: in_jojo_sah_golf }
+            mood: gebrochen
+            stress: 100
+            text: "Sie hat mich angeschrien. Sie wollte zur Zeitung, mein Onkel, meine Zukunft … Ich habe sie nur weggestoßen. Sie ist gegen den Verstärker gefallen und hat sich nicht mehr bewegt. Ich saß eine Stunde neben ihr. Dann habe ich sie zum Bach gebracht. Neununddreißig Jahre habe ich ihr Lied gesungen."
+          - mood: wuetend
+            stress: 85
+            text: "Eine Siebzehnjährige, nachts, nach 39 Jahren? Kommen Sie. Ich war kurz drin, Kabel holen. Lena war schon weg."
+      - id: jojo
+        question: Warum haben Sie Jojo Pallas Geld geliehen?
+        unlock: { insight: in_jojo_sah_golf }
+        responses:
+          - mood: nervoes
+            stress: 75
+            text: "Weil er ein Freund war. Ein alter Bandkollege. Man hilft sich. Was hat er Ihnen erzählt?"
+
+  - character: rolf
+    intro: Rolf Brenner sitzt in Arbeitskleidung da. Er sieht niemandem in die Augen.
+    topics:
+      - id: streit
+        question: Worüber haben Sie mit Lena gestritten?
+        responses:
+          - mood: wuetend
+            stress: 40
+            reveals: in_streit_rolf
+            text: "Berlin. Sie wollte weg, ohne mich. Ich habe rumgeschrien wie ein Idiot. Das Letzte, was ich zu ihr gesagt habe, war ‚Dann geh doch‘."
+      - id: arm
+        question: Sabine sagt, Sie hätten Lena einmal am Arm verletzt.
+        unlock: { insight: in_streit_rolf }
+        responses:
+          - mood: gebrochen
+            stress: 60
+            text: "Ja. Einmal. Ich habe sie am Arm gepackt. Ich habe mich entschuldigt, tausendmal. Ich habe sie nie geschlagen. Aber seit 39 Jahren denkt die halbe Stadt, ich hätte sie umgebracht."
+      - id: nacht
+        question: Wo waren Sie nach dem Streit?
+        responses:
+          - mood: ruhig
+            text: "Mit Henning, Paule und Tom im Imbiss am Markt. Ab halb eins bis zwei. Das hat der alte Kowalski damals alles bestätigt. Hat nur keinen interessiert."
+      - id: mike
+        question: Wie war Lenas Verhältnis zu Mike?
+        unlock: { phase: funde }
+        responses:
+          - mood: ruhig
+            text: "Am Ende schlecht. Sie hat gesagt, Falke klaut ihr was. Ich dachte, sie meint Gitarrensoli. Ich habe nicht zugehört. Ich habe ihr nie zugehört."
+
+  - character: sabine
+    intro: Sabine Kaltenbach hat ein altes Fotoalbum auf dem Schoß. Ihre Hände liegen darauf, als müsse sie es festhalten.
+    topics:
+      - id: nacht
+        question: Was geschah nach dem Konzert?
+        responses:
+          - mood: ruhig
+            text: "Lena hat sich umgezogen, in ihr rotes Kleid, für die Aftershow. Dann sagte sie, sie müsse noch mit jemandem reden, im Proberaum. Ich bin um zwanzig nach zwölf mit meiner Schwester heim. Ich hätte bleiben sollen."
+      - id: versteck
+        question: Hatte Lena ein Versteck?
+        unlock: { phase: funde }
+        responses:
+          - mood: verzweifelt
+            stress: 50
+            text: "Hinter der Verkleidung im Proberaum. Ich wusste es. Ich habe es damals nicht gesagt, weil ich Angst hatte, was sie über mich und Rolf geschrieben hat. Es tut mir so leid."
+      - id: rolf
+        question: Waren Sie in Rolf verliebt?
+        unlock: { insight: in_sabine_schwester }
+        responses:
+          - mood: verzweifelt
+            stress: 40
+            text: "Ja. Und ich war eifersüchtig. Aber ich habe Lena geliebt. Sie war meine beste Freundin. Ich war um halb eins längst im Bett, fragen Sie meine Schwester."
+      - id: kleid
+        question: Wer wusste vom roten Kleid?
+        unlock: { insight: in_kleid_geheim }
+        responses:
+          - mood: ruhig
+            text: "Nur ich – und wer sie nach zehn nach zwölf noch gesehen hat. Auf der Bühne trug sie Jeans. Die Polizei hat mir damals gesagt, ich solle über die Kleidung nicht reden. Ich habe nie darüber geredet. Mit niemandem."
+
+  - character: jojo
+    intro: Jojo Pallas sitzt breitbeinig da und dreht einen Autoschlüssel in der Hand.
+    topics:
+      - id: nacht
+        question: Wann sind Sie in jener Nacht nach Hause gegangen?
+        responses:
+          - when: { insight: in_jojo_sah_golf }
+            mood: gebrochen
+            stress: 70
+            text: "Steht alles in meiner neuen Aussage. Ich war ein Feigling. Ich hab geschwiegen, weil ich Angst um mich hatte – und dann hat Mike mir Geld geliehen, und dann war's zu spät."
+          - mood: ausweichend
+            stress: 40
+            text: "Um halb eins. Zu Fuß. Ich war müde. Hab nichts gesehen, nichts gehört."
+      - id: geschaefte
+        question: Lena schrieb, Sie hätten hinter dem Kesselhaus verkauft.
+        unlock: { phase: funde }
+        responses:
+          - mood: nervoes
+            stress: 60
+            text: "Das ist neununddreißig Jahre her und verjährt. Ja. Ein bisschen Gras. Lena wollte mich deshalb rauswerfen. Aber deswegen bringt man doch niemanden um!"
+      - id: mike
+        question: Hat Mike Ihnen je geholfen?
+        unlock: { phase: luegen }
+        responses:
+          - mood: ausweichend
+            stress: 50
+            text: "Er hat mir mal Geld geliehen, für meinen ersten Autohandel. Neunzig. Zinslos. Hat nie zurückgefordert. Netter Kerl, der Mike."
+
+  - character: werner
+    intro: Werner Haupt sitzt in Lenas altem Zimmer, das seit 39 Jahren unverändert ist.
+    topics:
+      - id: streit
+        question: Sie haben mit Lena über Berlin gestritten?
+        responses:
+          - mood: gebrochen
+            stress: 50
+            text: "Ich habe gesagt, sie braucht gar nicht mehr heimzukommen, wenn sie nach Berlin geht. Das war das Letzte, was ich zu ihr gesagt habe. Damit lebe ich."
+      - id: nacht
+        question: Wo waren Sie in der Nacht?
+        responses:
+          - mood: ruhig
+            text: "Bis eins bin ich herumgefahren und habe sie gesucht. Dann bin ich zur Wache. Da saß ich bis halb drei. Der Sommer hat mich nach Hause geschickt."
+      - id: kassette
+        question: Lena hat Ihnen auf der Kassette etwas gewidmet.
+        unlock: { insight: in_lena_autorin }
+        responses:
+          - mood: gebrochen
+            stress: 30
+            text: "„Für Papa. Auch wenn er's nicht hören will.“ … Ich will. Ich will es jeden Tag hören. Spielen Sie es noch einmal."
+
+  - character: klaus
+    intro: Klaus Dietrich hat sich die Mütze tief ins Gesicht gezogen. Er erwartet Vorwürfe.
+    topics:
+      - id: nacht
+        question: Was haben Sie in der Nacht gemacht?
+        responses:
+          - mood: ruhig
+            text: "Um zwanzig vor eins den Haupteingang abgeschlossen, dann in die Krone, Stammtisch bis nach drei. Den Proberaum hatte die Band. Da hatte ich keinen Schlüssel."
+      - id: putzen
+        question: Haben Sie am Sonntag den Proberaum geputzt?
+        unlock: { phase: funde }
+        responses:
+          - when: { insight: in_blut_lena }
+            mood: gebrochen
+            stress: 80
+            text: "Es war Blut. An dem großen Verstärker von dem Gerstner-Jungen. Ich dachte, da hat sich einer geprügelt. Wenn das rauskommt, machen sie das Jugendzentrum zu. Also habe ich geputzt. Ich habe es nie jemandem gesagt. Gott vergib mir."
+          - mood: ausweichend
+            stress: 50
+            text: "Ich putze jeden Sonntag. Das ist mein Job. Da war nichts Besonderes."
+      - id: geruechte
+        question: Über Sie gab es damals Gerüchte.
+        responses:
+          - mood: wuetend
+            stress: 45
+            text: "Gerüchte! Weil ich geschieden war und allein gewohnt habe. Ich habe nie ein Mädchen angefasst. Aber in Wendelstedt reicht ein Gerücht für ein ganzes Leben."
+
+  - character: sommer
+    intro: Erich Sommer trägt Krawatte, obwohl er seit zwanzig Jahren pensioniert ist. Er hat die alte Akte selbst mitgebracht.
+    topics:
+      - id: ermittlung
+        question: Warum wurde der Fall nach acht Tagen eingestellt?
+        responses:
+          - when: { insight: in_trockene_lunge }
+            mood: nervoes
+            stress: 60
+            text: "Die trockene Lunge … ja. Das ist mir damals auch aufgefallen. Der Obduzent sagte, das komme vor. Und es gab … Druck. Mehr möchte ich dazu nicht sagen."
+          - mood: ruhig
+            stress: 20
+            text: "Keine Hinweise auf Fremdverschulden, Alkohol, das Wehr. Wir hatten damals nicht die Methoden von heute."
+      - id: abschluss
+        question: Wer hat Druck auf Sie ausgeübt?
+        unlock: { insight: in_trockene_lunge }
+        responses:
+          - mood: gebrochen
+            stress: 75
+            text: "Der Bürgermeister. Helmut Gerstner. Er rief an: Vor dem Stadtfest kein Mordgerede. Ich hatte drei Kinder und eine Beförderung in Aussicht. Ich habe mir damals eine Notiz gemacht. Hier ist sie."
+      - id: hinrichs
+        question: Warum wurde der Landwirt Hinrichs nie befragt?
+        unlock: { insight: in_auto_muehlweg }
+        responses:
+          - mood: verzweifelt
+            stress: 70
+            text: "Weil ich es nicht durfte. Ein heller Kleinwagen mit Bandaufkleber – ich wusste, dass der Neffe des Bürgermeisters so einen fuhr. Ich habe es nicht wissen wollen."
+      - id: nacht
+        question: Wo waren Sie in der Nacht?
+        responses:
+          - mood: kooperativ
+            text: "Nachtdienst auf der Wache, von zehn bis sechs. Steht im Wachbuch. Werner Haupt kam um zwanzig nach eins. Ich habe ihm Kaffee gemacht und ihn um halb drei heimgeschickt."
+
+  - character: tanja
+    intro: Tanja Rudnik ist mit dem Zug angereist. Sie hält den Brief in der Hand, den sie an den Podcast geschrieben hat.
+    topics:
+      - id: nacht
+        question: Was haben Sie damals gesehen?
+        unlock: { event: ev_tanja_schreibt }
+        responses:
+          - mood: verzweifelt
+            stress: 40
+            text: "Lena im roten Kleid, um Viertel nach zwölf. Dann Mike, kurz vor halb eins. Er hat aufgeschlossen und ist rein. Dann die Stimmen. Ich bin weggerannt. Ich war siebzehn."
+      - id: sicher
+        question: Sind Sie sicher, dass es Mike war?
+        unlock: { event: ev_tanja_schreibt }
+        responses:
+          - mood: ruhig
+            text: "Ich hatte ein Poster von ihm über dem Bett. Natürlich war ich sicher."
+
+puzzles:
+  - id: p_falke
+    title: Wer ist Falke?
+    type: combine
+    prompt: Lena schreibt in ihrem Tagebuch nur von „Falke“. Wer ist gemeint? (Vor- und Nachname)
+    evidence: [ev_tagebuch, ev_plakat]
+    unlock: { insight: in_falke_lieder }
+    input: { kind: text, placeholder: "Vor- und Nachname" }
+    answer: { accept: ["Mike Gerstner", "Michael Gerstner", "Gerstner", "Mike", "Michael Mike Gerstner"] }
+    hints:
+      - Die Band hatte Spitznamen. Wo könnten die öffentlich gestanden haben?
+      - Auf dem Konzertplakat steht hinter jedem Namen ein Spitzname.
+    reveals: [in_falke_mike]
+    success: Falke ist Mike Gerstner, der Bandleiter.
+
+  - id: p_urheberin
+    title: Wer schrieb „Nachtfalter“?
+    type: compare
+    prompt: Vergleicht die Daten. Wer ist die wahre Urheberin bzw. der wahre Urheber von „Nachtfalter“?
+    evidence: [ev_kassette, ev_tonwerk, ev_tagebuch, ev_zeitung_1989]
+    unlock: { all: [{ insight: in_anmeldung_0211 }, { insight: in_demo_datum }] }
+    input:
+      kind: choice
+      options:
+        - { id: u_mike, label: "Mike Gerstner – er meldete es an" }
+        - { id: u_band, label: "Die Band gemeinsam" }
+        - { id: u_lena, label: "Lena Haupt" }
+        - { id: u_sabine, label: "Sabine Kaltenbach" }
+    answer: { choice: u_lena }
+    hints:
+      - Was war zuerst da – die Aufnahme oder die Anmeldung?
+      - "Kassette: 3. Oktober, mit Lenas eigener Ansage. Anmeldung: 2. November. Mike behauptet, er habe es „im Herbst 87 allein“ geschrieben."
+    reveals: [in_lied_von_lena]
+    success: Lena nahm das Lied einen Monat vor der Anmeldung auf und nannte sich selbst als Autorin. Der Hit, der Mike reich machte, gehörte ihr.
+
+  - id: p_tatort
+    title: Wo starb Lena?
+    type: logic
+    prompt: Die alte Akte sagt „am Wehr ertrunken“. Wo ist Lena wirklich gestorben?
+    evidence: [ev_obduktion_1987, ev_gutachten_2026, ev_fund_wand, ev_dna]
+    unlock: { all: [{ insight: in_tot_vor_wasser }, { insight: in_kante }, { insight: in_blut_lena }] }
+    input:
+      kind: choice
+      options:
+        - { id: t_wehr, label: "Am Wehr Nord – sie stürzte und ertrank" }
+        - { id: t_proberaum, label: "Im Proberaum des Kesselhauses" }
+        - { id: t_muehlweg, label: "Auf dem Mühlweg – ein Unfall mit dem Auto" }
+        - { id: t_zuhause, label: "Zu Hause bei ihrem Vater" }
+    answer: { choice: t_proberaum }
+    hints:
+      - Trockene Lunge und Totenflecken am Rücken – sie war tot, bevor sie ins Wasser kam.
+      - Welche rechtwinklige Metallkante trägt Lenas Blut?
+    reveals: [in_tatort_proberaum]
+    success: Lena starb im Proberaum an der Kante des Verstärkers „Falke“. Erst danach wurde sie zum Bach gebracht.
+
+  - id: p_auto
+    title: Das Auto ohne Licht
+    type: combine
+    prompt: Wem gehörte das Auto, das Landwirt Hinrichs um 01:45 Uhr auf dem Mühlweg sah?
+    evidence: [ev_hinrichs, ev_kfz]
+    unlock: { all: [{ insight: in_auto_muehlweg }, { evidence: ev_kfz }] }
+    input:
+      kind: choice
+      options:
+        - { id: a_mike, label: Michael Gerstner }
+        - { id: a_rolf, label: Rolf Brenner }
+        - { id: a_ute, label: Ute Kaltenbach (Sabines Schwester) }
+        - { id: a_klaus, label: Klaus Dietrich }
+        - { id: a_werner, label: Werner Haupt }
+    answer: { choice: a_mike }
+    hints:
+      - Drei Merkmale – hell, Kleinwagen, Bandaufkleber, Endziffer 7.
+      - Rolfs Kennzeichen endet auch auf 7 und hat einen Aufkleber – aber ist ein Motorrad ein Kleinwagen?
+    reveals: [in_auto_mike]
+    success: Weißer Golf, Bandaufkleber, WS-MG 87 – Mikes Auto.
+
+  - id: p_taeterwissen
+    title: Täterwissen
+    type: contradiction
+    prompt: Welche Aussage aus Mikes Podcast-Interview verrät, dass er Lena nach dem Konzert noch gesehen hat?
+    evidence: [ev_podcast, ev_konzertfoto, ev_deckblatt, ev_sabine_1987]
+    unlock: { all: [{ insight: in_kleid_geheim }, { insight: in_buehne_jeans }, { evidence: ev_podcast }] }
+    input:
+      kind: choice
+      options:
+        - { id: q_talent, label: "„Lena war das größte Talent, das diese Stadt je hatte.“" }
+        - { id: q_kleid, label: "„Das Letzte, was ich von ihr im Kopf habe, ist dieses rote Kleid.“" }
+        - { id: q_schloss, label: "„Den Proberaum habe ich um Viertel vor eins abgeschlossen.“" }
+        - { id: q_tagebuch, label: "„Mädchen schreiben viel, wenn sie verletzt sind.“" }
+    answer: { choice: q_kleid }
+    hints:
+      - Was trug Lena auf der Bühne? Und wann zog sie sich um?
+      - Die Kleidung der Toten wurde nie veröffentlicht.
+    reveals: [in_taeterwissen]
+    success: Auf der Bühne trug Lena Jeans. Das rote Kleid sah nur, wer ihr nach 00:10 Uhr begegnete – und die Polizei hat es nie veröffentlicht.
+
+  - id: p_nacht
+    title: Die Nacht zum 22. November
+    type: order
+    prompt: Bringt die Ereignisse der Nacht in die richtige Reihenfolge.
+    evidence: [ev_sabine_1987, ev_tanja, ev_jojo_2026, ev_hinrichs, ev_wachbuch]
+    unlock: { all: [{ insight: in_mike_folgt }, { insight: in_jojo_sah_golf }] }
+    input:
+      kind: order
+      items:
+        - { id: n_golf, label: "Mikes Golf verlässt ohne Licht den Bandeingang" }
+        - { id: n_kleid, label: "Lena zieht das rote Kleid an" }
+        - { id: n_wache, label: "Werner Haupt meldet Lena als vermisst" }
+        - { id: n_mike, label: "Mike folgt Lena in den Proberaum" }
+        - { id: n_streit, label: "Lena und Rolf streiten" }
+        - { id: n_muehlweg, label: "Hinrichs sieht ein Auto ohne Licht am Mühlweg" }
+        - { id: n_proberaum, label: "Lena geht in den Proberaum" }
+    answer: { order: [n_streit, n_kleid, n_proberaum, n_mike, n_wache, n_golf, n_muehlweg] }
+    hints:
+      - Die Uhrzeiten stehen in Sabines Aussage, Tanjas Brief, im Wachbuch, bei Jojo und bei Hinrichs.
+      - "23:40 – 00:10 – 00:15 – 00:25 – 01:20 – 01:40 – 01:45."
+    reveals: [in_nacht_rekonstruiert]
+    success: Von 00:25 bis 01:40 Uhr war Lena mit Mike im Proberaum. Niemand sonst hatte die Gelegenheit.
+
+events:
+  - id: ev_labor
+    title: Das Labor meldet sich
+    source: Landeskriminalamt
+    text: Die Kriminaltechnik hat die Anhaftungen am alten Verstärker untersucht und mit einer Speichelprobe von Werner Haupt abgeglichen.
+    trigger: { minutes: 20, when: { insight: in_blut_amp } }
+  - id: ev_tanja_schreibt
+    title: Post für den Podcast
+    source: Nora Bach
+    text: "Nora Bach ruft an: „Nach der dritten Folge kam ein handgeschriebener Brief. Von einer Frau, die damals siebzehn war. Ich glaube, sie sagt die Wahrheit.“"
+    trigger: { minutes: 45, when: { phase: luegen } }
+  - id: ev_jojo_bricht
+    title: Jojo meldet sich beim LKA
+    source: Landeskriminalamt
+    text: "Ein Anwalt ruft an: „Mein Mandant Jürgen Pallas möchte seine Aussage von 1987 korrigieren. Er hat gehört, dass Sie nach einem Auto fragen.“"
+    trigger: { when: { any: [{ insight: in_auto_mike }, { insight: in_taeterwissen }] } }
+  - id: ev_sommer_bricht
+    title: Ein Umschlag von Erich Sommer
+    source: Erich Sommer
+    text: "Ein Umschlag ohne Absender, darin eine vergilbte Notiz. Auf einem Zettel dazu: „Ich hätte das vor 39 Jahren tun sollen. – E. S.“"
+    trigger: { when: { wrongAccusations: 1 } }
+    reveals: [in_vertuschung]
+
+accusation:
+  question: Wer ist für den Tod von Lena Haupt verantwortlich?
+  proof:
+    question: Was überführt den Täter nach 39 Jahren am stärksten?
+    options:
+      - { id: pr_kleid, label: "Sein Wissen über das rote Kleid, das nur jemand haben konnte, der Lena nach 00:10 Uhr sah", correct: true }
+      - { id: pr_streit, label: "Der Streit mit Lena wegen Berlin" }
+      - { id: pr_putzen, label: "Das weggewischte Blut am Sonntagmorgen" }
+      - { id: pr_notiz, label: "Die Aktennotiz über den Druck aus dem Rathaus" }
+
+gmNotes:
+  - { phase: akte, text: "Die alte Akte trägt die Lösung schon in sich: trockene Lunge, Totenflecken am Rücken, kaum Alkohol, Reifenspuren – und der Vermerk, dass das rote Kleid geheim blieb." }
+  - { phase: funde, text: "Tagebuch + Plakat → Falke = Mike. Kassette (3.10.) vor TONWERK-Anmeldung (2.11.). Unter der Bühne die Haarspange, im Lager der Verstärker → Laborbefund nach ~20 Minuten." }
+  - { phase: luegen, text: "Die Alibitabelle entlastet Rolf, Sabine, Klaus, Werner. Sommer bricht ein, wenn man ihn auf die trockene Lunge anspricht. Der Podcast enthält das Täterwissen (rotes Kleid)." }
+  - { phase: nacht, text: "Tanjas Brief (nach ~45 Min.) und Jojos neue Aussage schließen die Lücke 00:25–01:40." }
+  - { text: "Ebenen der Täuschung: (1) Unfall-Inszenierung am Wehr, (2) Vertuschung durch den Bürgermeister, (3) Klaus' Putzaktion, (4) Jojos Schweigen gegen Geld, (5) Mikes öffentliche Trauer-Legende." }
+
+solution:
+  culprit: mike
+  headline: Michael „Mike“ Gerstner – der Mann, der 39 Jahre lang Lenas Lied sang, hat sie getötet.
+  motive: Mike hatte Lenas Lieder heimlich unter seinem Namen bei TONWERK angemeldet. Lena stellte ihn nach dem Konzert im Proberaum zur Rede und drohte, zur Zeitung zu gehen. Das hätte seine Karriere beendet – und seinen Onkel, den Bürgermeister, blamiert.
+  method: Mike folgte Lena um 00:25 Uhr in den Proberaum. Im Streit stieß er sie, sie schlug mit dem Hinterkopf gegen die Metallecke seines Verstärkers und starb. Mike blieb über eine Stunde bei ihr – sie lag auf dem Rücken, daher die Totenflecken. Um 01:40 Uhr brachte er sie mit seinem Golf ohne Licht über den Mühlweg zum Bach und ließ sie ins Wasser gleiten, um einen Sturz am Wehr vorzutäuschen. Er schloss den Proberaum ab und gab an, um 00:45 Uhr nach Hause gefahren zu sein. Sein Onkel sorgte dafür, dass der Fall schnell geschlossen wurde; Klaus putzte das Blut weg; Jojo schwieg gegen Geld.
+  summary: Schon die alte Akte widersprach dem Unfall – trockene Lunge, Totenflecken am Rücken, kaum Alkohol. Das Tagebuch nennt „Falke“, das Plakat entlarvt ihn als Mike; die Kassette beweist, dass „Nachtfalter“ Lenas Lied war. Lenas Blut klebt an seinem Verstärker. Tanja sah ihn ihr in den Proberaum folgen, Jojo und Hinrichs sahen sein Auto ohne Licht zum Bach fahren. Und im Podcast verriet er sich selbst – mit dem roten Kleid, das nur sah, wer Lena nach dem Konzert begegnete.
+  keyInsights: [in_tot_vor_wasser, in_lied_von_lena, in_blut_lena, in_taeterwissen, in_mike_folgt, in_jojo_sah_golf, in_auto_mike]
+  chain:
+    - { insight: in_trockene_lunge, explanation: "Die trockene Lunge stand schon 1987 in der Akte – Lena ist nicht ertrunken." }
+    - { insight: in_tot_vor_wasser, explanation: "Das Gutachten 2026: tot, bevor sie ins Wasser kam, und stundenlang in Rückenlage." }
+    - { insight: in_falke_mike, explanation: "„Falke“ aus dem Tagebuch ist laut Plakat Mike Gerstner." }
+    - { insight: in_lied_von_lena, explanation: "Die Kassette vom 3. Oktober beweist: „Nachtfalter“ war Lenas Lied – Mikes Motiv." }
+    - { insight: in_blut_lena, explanation: "Lenas Blut an der Metallecke von Mikes Verstärker – der wahre Tatort war der Proberaum." }
+    - { insight: in_taeterwissen, explanation: "Mike kannte das rote Kleid, das sie erst nach dem Konzert anzog und das nie veröffentlicht wurde." }
+    - { insight: in_mike_folgt, explanation: "Tanja sah, wie Mike Lena um 00:25 Uhr in den Proberaum folgte." }
+    - { insight: in_auto_mike, explanation: "Der helle Kleinwagen ohne Licht am Mühlweg war Mikes Golf." }
+    - { insight: in_jojo_sah_golf, explanation: "Jojo bestätigt: um 01:40 Uhr fuhr Mikes Golf ohne Licht vom Bandeingang zum Bach." }
+  truthTimeline:
+    - { time: "03.10.1987", text: "Lena nimmt „Nachtfalter“ allein im Proberaum auf." }
+    - { time: "02.11.1987", text: "Mike meldet Lenas Lieder bei TONWERK auf seinen Namen an." }
+    - { time: "21.11., 23:30", text: "Konzertende. Lena streitet mit Rolf." }
+    - { time: "00:10", text: "Lena zieht das rote Kleid an." }
+    - { time: "00:15", text: "Lena geht in den Proberaum, um Mike zur Rede zu stellen." }
+    - { time: "00:25", text: "Mike folgt ihr. Im Streit stößt er sie gegen den Verstärker. Sie stirbt." }
+    - { time: "01:20", text: "Werner Haupt meldet seine Tochter auf der Wache als vermisst." }
+    - { time: "01:40", text: "Mike fährt Lena ohne Licht zum Mühlbach." }
+    - { time: "01:45", text: "Hinrichs sieht den Wagen auf dem Mühlweg." }
+    - { time: "22.11. morgens", text: "Klaus Dietrich wischt das Blut vom Verstärker." }
+    - { time: "28.11.1987", text: "Bürgermeister Gerstner drängt Sommer, den Fall zu schließen." }
+    - { time: "1989", text: "„Nachtfalter“ wird ein Hit – unter Mikes Namen." }
+  redHerrings:
+    - { character: rolf, clue: "Der eifersüchtige Freund, Streit und ein blauer Fleck", debunkedBy: in_rolf_imbiss, explanation: "Er saß von 00:30 bis 02:00 Uhr mit drei Freunden im Imbiss." }
+    - { character: sabine, clue: "Die eifersüchtige beste Freundin, die als Letzte mit Lena sprach", debunkedBy: in_sabine_schwester, explanation: "Ihre Schwester holte sie um 00:20 Uhr ab." }
+    - { character: jojo, clue: "Der Dealer, den Lena aus der Band werfen wollte und der über seine Heimkehr log", debunkedBy: in_jojo_sah_golf, explanation: "Er log, um seine Geschäfte zu verbergen – und war genau deshalb der Zeuge, der Mikes Golf sah." }
+    - { character: werner, clue: "Der strenge Vater ohne Zeugen für seine Suchfahrt", debunkedBy: in_werner_wache, explanation: "Er saß von 01:20 bis 02:30 Uhr auf der Wache – genau als Lena zum Bach gebracht wurde." }
+    - { character: klaus, clue: "Der Hausmeister, der Spuren beseitigte", debunkedBy: in_klaus_krone, explanation: "Er saß bis nach drei am Stammtisch; das Blut wischte er aus Angst um das Jugendzentrum weg." }
+    - { character: sommer, clue: "Der Ermittler, der den Fall vertuschte", debunkedBy: in_sommer_dienst, explanation: "Er war die ganze Nacht auf der Wache. Er vertuschte – aber auf Weisung des Bürgermeisters, nicht als Täter." }
+  epilogue: Die Staatsanwaltschaft klagte Michael Gerstner wegen Mordes an, denn Mord verjährt nie. Das Gericht sah jedoch keine Mordmerkmale – als Totschlag war die Tat nach 39 Jahren verjährt. Freigesprochen wurde Mike nie; er verlor trotzdem alles. TONWERK trägt „Nachtfalter“ heute unter dem Namen Lena Haupt, die Erträge gehen an ihre Familie. Werner Haupt hörte die Kassette jeden Abend, bis er im Frühjahr starb. Rolf Brenner spielte auf seiner Beerdigung Schlagzeug. Das neue Jugendzentrum am Platz des Kesselhauses heißt „Lenas Haus“.

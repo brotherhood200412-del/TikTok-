@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource/special-elite';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/playfair-display/700-italic.css';
+
+/* ------------------------------------------------------------------ */
+/* COMMUNITY DETECTIVES – Designsystem                                  */
+/* Anthrazit & Schwarz, dezentes Rot, cremefarbene Dokumente.           */
+/* ------------------------------------------------------------------ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-type: 'Special Elite', 'Courier New', monospace;
+
+  --color-ink-950: #0a0a0b;
+  --color-ink-900: #0f1012;
+  --color-ink-850: #141518;
+  --color-ink-800: #1a1b1f;
+  --color-ink-750: #202126;
+  --color-ink-700: #27282e;
+  --color-ink-600: #34353c;
+  --color-ink-500: #4a4b53;
+  --color-ink-400: #6f7079;
+  --color-ink-300: #9c9ca4;
+  --color-ink-200: #c8c8ce;
+  --color-ink-100: #e8e7e3;
+
+  --color-blood-800: #5e1318;
+  --color-blood-700: #7d1a20;
+  --color-blood-600: #9e2229;
+  --color-blood-500: #b3262e;
+  --color-blood-400: #d23a3a;
+  --color-blood-300: #e86a6a;
+
+  --color-paper-50: #f7f1e3;
+  --color-paper-100: #efe6d2;
+  --color-paper-200: #e3d6b9;
+  --color-paper-300: #cdbb95;
+  --color-paper-ink: #2b2620;
+  --color-paper-faded: #6b5f4d;
+
+  --color-brass-300: #e0c486;
+  --color-brass-400: #c9a45c;
+  --color-brass-500: #a8853f;
+
+  --color-ok-400: #6fbf8e;
+  --color-ok-600: #2f7a4f;
+
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 12px 30px -12px rgb(0 0 0 / 0.7);
+  --shadow-paper: 0 1px 2px rgb(0 0 0 / 0.35), 0 10px 25px -10px rgb(0 0 0 / 0.6);
+
+  --animate-fade-up: fade-up 0.35s ease-out both;
+  --animate-pulse-red: pulse-red 2.2s ease-in-out infinite;
+  --animate-stamp: stamp 0.45s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+  --animate-flicker: flicker 6s linear infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgb(210 58 58 / 0.0); }
+    50% { box-shadow: 0 0 0 6px rgb(210 58 58 / 0.18); }
+  }
+  @keyframes stamp {
+    from { opacity: 0; transform: scale(1.8) rotate(-14deg); }
+    to { opacity: 1; transform: scale(1) rotate(-8deg); }
+  }
+  @keyframes flicker {
+    0%, 96%, 100% { opacity: 1; }
+    97% { opacity: 0.82; }
+    98% { opacity: 1; }
+    99% { opacity: 0.9; }
+  }
+}
+
+@layer base {
+  html { color-scheme: dark; -webkit-tap-highlight-color: transparent; }
+  body {
+    @apply bg-ink-900 text-ink-100 font-sans antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgb(179 38 46 / 0.07), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgb(201 164 92 / 0.05), transparent 60%);
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+  ::selection { background: rgb(179 38 46 / 0.55); color: white; }
+  :focus-visible { outline: 2px solid var(--color-brass-400); outline-offset: 2px; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
+
+
+@utility card {
+  @apply rounded-xl border border-ink-700/80 bg-ink-850/90 backdrop-blur-sm;
+  box-shadow: var(--shadow-card);
+}
+@utility card-inset { @apply rounded-lg border border-ink-700/70 bg-ink-900/70; }
+@utility label { @apply text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-300; }
+@utility title-display { @apply font-display font-bold tracking-tight; }
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-semibold transition
+    disabled:opacity-40 select-none whitespace-nowrap;
+}
+@utility btn-primary { @apply btn bg-blood-500 text-white hover:bg-blood-400 active:bg-blood-600 shadow-[0_6px_20px_-8px_rgb(179_38_46/0.8)]; }
+@utility btn-secondary { @apply btn bg-ink-700 text-ink-100 hover:bg-ink-600 border border-ink-600; }
+@utility btn-ghost { @apply btn text-ink-200 hover:bg-ink-750 hover:text-white; }
+@utility btn-paper { @apply btn bg-paper-100 text-paper-ink hover:bg-paper-50; }
+@utility btn-sm { @apply px-2.5 py-1.5 text-xs; }
+
+@utility input {
+  @apply w-full rounded-lg border border-ink-600 bg-ink-950/60 px-3 py-2 text-sm text-ink-100 placeholder:text-ink-400
+    focus:border-brass-400 focus:outline-none;
+}
+
+@utility chip { @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold; }
+
+/* Papier & Akten */
+@utility paper {
+  @apply rounded-sm text-paper-ink;
+  background-color: var(--color-paper-100);
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.35), rgb(255 255 255 / 0)),
+    radial-gradient(circle at 20% 10%, rgb(255 255 255 / 0.4), transparent 40%),
+    repeating-linear-gradient(0deg, rgb(0 0 0 / 0.012) 0 1px, transparent 1px 3px);
+  box-shadow: var(--shadow-paper);
+}
+@utility paper-lines { background-image: repeating-linear-gradient(transparent 0 27px, rgb(107 95 77 / 0.18) 27px 28px); }
+@utility font-typewriter { font-family: var(--font-type); }
+
+@utility stamp {
+  @apply inline-block border-[3px] px-2 py-0.5 font-display text-sm font-bold uppercase tracking-[0.2em];
+  color: var(--color-blood-500);
+  border-color: var(--color-blood-500);
+  transform: rotate(-8deg);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+@utility corkboard {
+  background-color: #17181b;
+  background-image:
+    radial-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    radial-gradient(rgb(0 0 0 / 0.35) 1px, transparent 1px);
+  background-size: 18px 18px, 23px 23px;
+  background-position: 0 0, 9px 11px;
+}
+
+@utility pin {
+  @apply absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full;
+  background: radial-gradient(circle at 35% 35%, #ff8a8a, #b3262e 55%, #5e1318);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.6);
+}
+
+@utility scroll-thin { scrollbar-width: thin; scrollbar-color: var(--color-ink-600) transparent; }
+
+@utility hotspot-found {
+  outline: 2px solid var(--color-blood-400);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+
+/* Overlay: transparenter Hintergrund für OBS */
+body.overlay-mode { background: transparent !important; background-image: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,989 @@
+# COMMUNITY DETECTIVES – Fall: Der letzte Zug um 23:17
+# Alle Personen, Orte und Unternehmen sind frei erfunden.
+id: der-letzte-zug
+version: 1
+title: Der letzte Zug um 23:17
+tagline: Die letzte Regionalbahn der Nacht. Ein verschlossenes Abteil. Und ein Fahrgast, der nie ankam.
+genre: mord
+difficulty: fortgeschritten
+tier: free
+estimatedMinutes: 75
+accent: "#3f6c8f"
+
+briefing:
+  location: RB 47 Halvenstedt – Dornfelde
+  date: Donnerstag, 6. November
+  intro: |
+    Die RB 47 ist der letzte Zug des Abends von Halvenstedt nach Dornfelde. Zwei Wagen, drei Zwischenhalte, kaum Fahrgäste.
+    Um 00:18 Uhr findet Zugbegleiter Tobias Renner bei der Endkontrolle in Dornfelde einen Toten im Erste-Klasse-Abteil von Wagen 1: Dr. Konrad Selbig, 54, Patentanwalt aus Halvenstedt. Der Vorhang war zugezogen, am Türgriff hing ein Schild „Bitte nicht stören“.
+    Selbig wurde mit einem Schlag gegen den Kopf getötet. Seine Tochter Lara wartete am Bahnsteig in Dornfelde auf ihn.
+  objective: Rekonstruiert die Fahrt, prüft jedes Alibi und findet heraus, wer Konrad Selbig getötet hat.
+  question: Wer hat Dr. Konrad Selbig im Zug getötet?
+
+phases:
+  - id: tatort
+    title: Das Abteil
+    goal: Untersucht den Fundort und den Bericht der Rechtsmedizin. Wann und womit wurde Selbig getötet?
+  - id: fahrt
+    title: Die Fahrt
+    goal: Wer war wann in welchem Wagen? Rekonstruiert die Fahrt – Minute für Minute.
+  - id: geld
+    title: Die Spur des Geldes
+    goal: Warum musste Konrad Selbig sterben? Folgt dem Geld.
+
+characters:
+  - id: selbig
+    name: Dr. Konrad Selbig
+    role: victim
+    age: 54
+    occupation: Patentanwalt, Seniorpartner der Kanzlei Selbig & Achterberg
+    color: "#5d5d5d"
+    profile: Erfolgreicher, penibler Patentanwalt. Verwitwet, eine Tochter. Fuhr nach späten Terminen immer mit der letzten Bahn nach Dornfelde.
+    personality: Korrekt bis zur Sturheit. Trug stets seine braune Aktentasche mit dem Monogramm „K.S.“ bei sich.
+    relation: Das Opfer.
+    secret: Hatte am Nachmittag von der Bank erfahren, dass vom Treuhandkonto der Kanzlei Geld verschwunden ist.
+  - id: kahl
+    name: Benedikt Kahl
+    role: suspect
+    age: 35
+    occupation: Büroleiter der Kanzlei Selbig & Achterberg
+    color: "#6b6f78"
+    profile: Seit sechs Jahren Selbigs rechte Hand. Wohnt in Brückenau. Trägt bei jedem Wetter seinen grauen Wollmantel.
+    personality: Höflich, hilfsbereit, auffallend gut vorbereitet. Spricht gern in Uhrzeiten.
+    relation: Selbigs Büroleiter, saß mit ihm im selben Zug.
+    alibi: Ist um 23:31 Uhr in Brückenau ausgestiegen und zu Fuß nach Hause gegangen.
+    motive: Keins bekannt – er galt als Selbigs Vertrauter.
+    secret: Hat über eine eigene Firma (BK Consulting) 48.500 € vom Treuhandkonto abgezweigt. Selbig wollte ihn im Zug zur Rede stellen.
+  - id: duran
+    name: Elif Duran
+    role: suspect
+    age: 44
+    occupation: Ingenieurin und Erfinderin
+    color: "#7a5a3c"
+    profile: Entwickelte ein neuartiges Ventil. Selbigs Kanzlei versäumte eine Frist – ihr Patent ist verfallen.
+    personality: Temperamentvoll, direkt, nachtragend – aber ehrlich.
+    relation: Ehemalige Mandantin, hasst Selbig.
+    alibi: Saß die ganze Fahrt über in Wagen 2.
+    motive: Selbigs Fehler hat sie ihre Erfindung gekostet.
+    secret: Hat Selbig am Bahnsteig angeschrien und ihm gedroht. Danach hat sie Wagen 2 nicht mehr verlassen.
+  - id: renner
+    name: Tobias Renner
+    role: suspect
+    age: 29
+    occupation: Zugbegleiter
+    color: "#3f6c8f"
+    profile: Fährt die Strecke seit drei Jahren. Hat einen Generalschlüssel für alle Türen des Zuges.
+    personality: Freundlich, etwas fahrig, vermeidet Ärger.
+    relation: Fand die Leiche bei der Endkontrolle.
+    alibi: War bis Kalten in Wagen 2 und auf dem Bahnsteig.
+    motive: Hätte jederzeit ins Abteil gelangen können.
+    secret: Hat das Abteil mit dem „Bitte nicht stören“-Schild bei der Kontrolle nach Kalten nicht geöffnet – Vorschrift wäre gewesen, zu klopfen und nachzusehen. Er fürchtet eine Abmahnung.
+  - id: lara
+    name: Lara Selbig
+    role: suspect
+    age: 24
+    occupation: Studentin, Tochter des Opfers
+    color: "#8a4f63"
+    profile: Studiert Medizin in Dornfelde. Einzige Erbin ihres Vaters.
+    personality: Gefasst, analytisch, kämpft um Haltung.
+    relation: Tochter. Wartete in Dornfelde am Bahnsteig.
+    alibi: Wartete ab kurz vor Mitternacht in Dornfelde.
+    motive: Erbt die Kanzleianteile und das Haus.
+    secret: Hatte mit ihrem Vater gestritten, weil sie das Studium abbrechen wollte. Sie fühlt sich schuldig.
+  - id: achterberg
+    name: Miriam Achterberg
+    role: suspect
+    age: 47
+    occupation: Patentanwältin, Partnerin der Kanzlei
+    color: "#4f7a6a"
+    profile: Seit zwölf Jahren Selbigs Partnerin. Will die Kanzlei modernisieren – Selbig blockierte jede Veränderung.
+    personality: Ehrgeizig, kontrolliert, wählt jedes Wort genau.
+    relation: Geschäftspartnerin. Hat Selbig an diesem Abend zum Bahnhof gefahren.
+    alibi: Hat Selbig um 23:03 Uhr am Bahnhof abgesetzt und ist sofort nach Hause gefahren.
+    motive: Wollte Selbig aus der Kanzlei drängen; nach seinem Tod gehört sie ihr fast allein.
+    secret: Hatte mit Selbig im Auto einen heftigen Streit über den Verkauf seiner Anteile. Sie verschweigt das zunächst.
+  - id: grevenbroich
+    name: Hannes Grevenbroich
+    role: witness
+    age: 66
+    occupation: Pensionierter Kriminalhauptkommissar
+    color: "#7a7a5a"
+    profile: Fuhr in Wagen 1, im Großraumbereich direkt vor dem Erste-Klasse-Abteil, zu seiner Schwester nach Dornfelde.
+    personality: Ruhig, genau, ein bisschen stolz darauf, „immer noch ein Auge für Details“ zu haben.
+    relation: Fahrgast in Wagen 1.
+    secret: Ehrlicher Zeuge. Hat die Person im grauen Mantel nur von hinten gesehen.
+
+insights:
+  - id: in_todeszeit
+    title: Todeszeitpunkt 23:35–23:55
+    text: Laut Rechtsmedizin starb Selbig zwischen 23:35 und 23:55 Uhr.
+    category: zeitlinie
+    characters: [selbig]
+  - id: in_waffe_form
+    title: Ein Werkzeug mit Spitze
+    text: Die Kopfverletzung stammt von einem schweren Gegenstand mit kegelförmiger Spitze, etwa 1 cm Durchmesser.
+    category: spur
+  - id: in_nothammer_fehlt
+    title: Der Nothammer fehlt
+    text: Im Abteil ist die Halterung des Nothammers leer. Der Hammer ist verschwunden.
+    category: spur
+  - id: in_waffe_nothammer
+    title: Tatwaffe Nothammer
+    text: Die kegelförmige Wunde passt exakt zur Spitze eines Nothammers. Der Täter hat die Waffe im Abteil vorgefunden – und mitgenommen.
+    category: spur
+  - id: in_koffer_fehlt
+    title: Die Aktentasche ist weg
+    text: Selbigs braune Aktentasche mit dem Monogramm „K.S.“ ist nicht im Abteil. Er hatte sie immer dabei.
+    category: spur
+    characters: [selbig]
+  - id: in_zwei_becher
+    title: Zwei Kaffeebecher
+    text: Im Abteil stehen zwei Kaffeebecher vom Bahnhofskiosk Halvenstedt. Selbig war nicht allein.
+    category: spur
+  - id: in_verspaetung
+    title: Neun Minuten zu spät
+    text: Wegen einer Signalstörung fuhr der Zug erst um 23:26 statt 23:17 Uhr ab. Alle Halte verschoben sich um neun Minuten.
+    category: zeitlinie
+    timeline: { time: "23:26", sort: 30, text: "Der Zug fährt mit neun Minuten Verspätung in Halvenstedt ab." }
+  - id: in_brueckenau_2340
+    title: Halt in Brückenau um 23:40
+    text: Der Zug hielt nicht um 23:31, sondern erst um 23:40 Uhr in Brückenau.
+    category: zeitlinie
+    timeline: { time: "23:40", sort: 50, text: "Halt in Brückenau (planmäßig 23:31)." }
+  - id: in_tuer_gesperrt
+    title: Die Übergangstür klemmt
+    text: Die Tür zwischen Wagen 1 und Wagen 2 klemmte ab 23:20 Uhr und war gesperrt. Zwischen den Wagen gab es während der Fahrt keinen Durchgang.
+    category: spur
+    timeline: { time: "23:20", sort: 25, text: "Übergangstür zwischen den Wagen klemmt – gesperrt." }
+  - id: in_niemand_ausgestiegen
+    title: In Brückenau stieg niemand aus Wagen 1
+    text: Die Bahnsteigkamera und Grevenbroich bestätigen – in Brückenau hat niemand Wagen 1 verlassen.
+    category: widerspruch
+  - id: in_kein_wechsel
+    title: Niemand wechselte den Wagen
+    text: Wegen der gesperrten Übergangstür hätte man nur in Brückenau über den Bahnsteig wechseln können. Die Kamera zeigt, dass das niemand tat. Wer in Wagen 2 saß, kam nicht an Selbig heran.
+    category: entlastung
+    characters: [duran]
+  - id: in_schlag_2347
+    title: Ein dumpfer Schlag um 23:47
+    text: Grevenbroich hörte um 23:47 Uhr einen dumpfen Schlag aus dem Erste-Klasse-Abteil.
+    category: zeitlinie
+    timeline: { time: "23:47", sort: 60, text: "Dumpfer Schlag aus dem Abteil." }
+  - id: in_mann_grauer_mantel
+    title: Der Mann im grauen Mantel
+    text: Kurz vor Kalten ging ein Mann im grauen Mantel mit einer braunen Aktentasche aus Richtung Abteil zur Tür.
+    category: spur
+  - id: in_tatfenster
+    title: Tat zwischen Brückenau und Kalten
+    text: Selbig lebte um 23:35 noch, der Schlag fiel um 23:47 – zwischen den Halten Brückenau (23:40) und Kalten (23:53).
+    category: spur
+  - id: in_kalten_mann
+    title: Kalten, 23:53
+    text: Die Bahnsteigkamera in Kalten zeigt um 23:53 Uhr einen Mann im grauen Wollmantel, der mit einer braunen Aktentasche Wagen 1 verlässt und kurz an einem Mülleimer stehen bleibt.
+    category: spur
+    timeline: { time: "23:53", sort: 70, text: "Ein Mann im grauen Mantel verlässt in Kalten Wagen 1." }
+  - id: in_mantel_kahl
+    title: Der graue Mantel
+    text: Benedikt Kahl trägt bei jedem Wetter einen grauen Wollmantel – genau wie der Mann auf der Kamera in Kalten.
+    category: identitaet
+    characters: [kahl]
+  - id: in_kahl_halvenstedt
+    title: Kahl und Selbig am Bahnsteig
+    text: Um 23:08 Uhr warten Kahl und Selbig gemeinsam am Bahnsteig in Halvenstedt.
+    category: zeitlinie
+    characters: [kahl]
+    timeline: { time: "23:08", sort: 10, text: "Kahl und Selbig warten gemeinsam am Bahnsteig." }
+  - id: in_kiosk_4471
+    title: Zwei Kaffee, Karte ****4471
+    text: Am Bahnhofskiosk wurden um 23:09 Uhr zwei große Kaffee mit einer Karte mit der Endung 4471 bezahlt.
+    category: spur
+    timeline: { time: "23:09", sort: 15, text: "Zwei Kaffee am Kiosk, bezahlt mit Karte ****4471." }
+  - id: in_kahl_kaffee
+    title: Kahl saß bei Selbig
+    text: Karte ****4471 ist Kahls Firmenkarte. Er hat beide Kaffees gekauft – der zweite Becher im Abteil war seiner.
+    category: identitaet
+    characters: [kahl]
+  - id: in_kahl_taxi
+    title: Taxi ab Kalten um 23:58
+    text: Das Taxi von Kalten nach Brückenau um 23:58 Uhr wurde mit Kahls Firmenkarte ****4471 bezahlt.
+    category: widerspruch
+    characters: [kahl]
+    timeline: { time: "23:58", sort: 80, text: "Kahl nimmt in Kalten ein Taxi nach Brückenau." }
+  - id: in_wilke_0020
+    title: Heimkehr um 00:20
+    text: Kahls Nachbarin sah ihn gegen 00:20 Uhr aus einem Taxi steigen – nicht um 23:45 zu Fuß, wie er behauptet.
+    category: widerspruch
+    characters: [kahl]
+    timeline: { time: "00:20", sort: 90, text: "Kahl steigt vor seinem Haus in Brückenau aus einem Taxi." }
+  - id: in_kahl_luegt
+    title: Kahl kannte die Verspätung nicht
+    text: Kahl behauptet, „pünktlich um 23:31“ in Brückenau ausgestiegen zu sein. Der Zug war aber erst um 23:40 dort. Wer wirklich ausgestiegen wäre, hätte die Verspätung erlebt.
+    category: widerspruch
+    characters: [kahl]
+  - id: in_nachricht_2335
+    title: „Kahl sitzt mir gegenüber“
+    text: "Selbigs letzte Nachricht an seine Tochter, 23:35 Uhr: „Kahl sitzt mir gegenüber. Es geht um das Treuhandkonto. Ich kläre das jetzt.“"
+    category: wendung
+    characters: [kahl, selbig]
+    timeline: { time: "23:35", sort: 45, text: "Selbigs letzte Nachricht: „Kahl sitzt mir gegenüber.“" }
+  - id: in_bank_rueckfrage
+    title: Rückfrage der Bank
+    text: Am Nachmittag fragte die Bank bei Selbig nach auffälligen Überweisungen vom Treuhandkonto an eine „BK Consulting UG“. Selbig antwortete, er kläre das „heute Abend persönlich“.
+    category: motiv
+    characters: [selbig]
+  - id: in_bk_kahl
+    title: BK Consulting gehört Kahl
+    text: Laut Handelsregister ist Benedikt Kahl alleiniger Geschäftsführer der BK Consulting UG mit Sitz in Brückenau.
+    category: identitaet
+    characters: [kahl]
+  - id: in_veruntreuung
+    title: 48.500 Euro veruntreut
+    text: Vom Treuhandkonto flossen in fünf Überweisungen insgesamt 48.500 € an die BK Consulting – an Kahl.
+    category: motiv
+    characters: [kahl]
+  - id: in_tatwaffe
+    title: Fund im Mülleimer
+    text: Im Mülleimer am Bahnsteig Kalten liegen der Nothammer mit Blutspuren und Selbigs leere Aktentasche. Die Bankunterlagen fehlen.
+    category: wendung
+  - id: in_wollfasern
+    title: Graue Wollfasern
+    text: Am Griff des Nothammers haften graue Wollfasern – wie von einem Wollmantel.
+    category: spur
+    characters: [kahl]
+  - id: in_renner_wagen2
+    title: Renner war in Wagen 2
+    text: Laut Kontrollgerät und Elif Duran war Renner von 23:41 bis 23:52 in Wagen 2. Wegen der klemmenden Tür kam er erst in Kalten über den Bahnsteig in Wagen 1.
+    category: entlastung
+    characters: [renner]
+  - id: in_lara_dornfelde
+    title: Lara wartete in Dornfelde
+    text: Laras Parkticket in Dornfelde ist um 23:58 Uhr gezogen. Dornfelde liegt 40 Bahnminuten hinter Kalten – sie war nie im Zug.
+    category: entlastung
+    characters: [lara]
+  - id: in_achterberg_weg
+    title: Achterberg fuhr sofort weg
+    text: Die Bahnhofskamera zeigt Achterbergs silbernen Volvo um 23:03 Uhr ankommen und um 23:04 Uhr wieder abfahren. Sie stieg nicht in den Zug.
+    category: entlastung
+    characters: [achterberg]
+  - id: in_duran_streit
+    title: Streit am Bahnsteig
+    text: Um 23:12 Uhr streiten Elif Duran und Selbig lautstark am Bahnsteig. Duran steigt danach in Wagen 2.
+    category: motiv
+    characters: [duran]
+    timeline: { time: "23:12", sort: 20, text: "Elif Duran streitet mit Selbig und steigt in Wagen 2." }
+
+evidence:
+  - id: ev_abteil
+    title: Fundort – Erste-Klasse-Abteil
+    summary: Aufnahme der Spurensicherung in Dornfelde, 00:41 Uhr.
+    source: Spurensicherung
+    content:
+      kind: photo
+      scene: interior
+      caption: Wagen 1, Erste-Klasse-Abteil, Blick vom Gang
+      timestamp: "07.11. 00:41"
+      elements:
+        - { id: opfer, label: Das Opfer, detail: "Selbig sitzt zusammengesunken am Fenster, Blickrichtung Fahrtrichtung. Keine Abwehrverletzungen – er hat den Schlag nicht kommen sehen.", x: 60, y: 30, w: 16, h: 50, shape: person }
+        - { id: ablage, label: Gepäckablage, detail: "Die Gepäckablage über Selbigs Platz ist leer. Kein Koffer, keine Tasche.", x: 50, y: 6, w: 40, h: 8, shape: shelf }
+        - { id: halterung, label: Halterung Nothammer, detail: "Neben dem Fenster: eine rote Halterung mit der Aufschrift „Nothammer“. Sie ist leer.", x: 90, y: 20, w: 6, h: 14, shape: box }
+        - { id: becher, label: Kaffeebecher, detail: "Zwei große Pappbecher „Kiosk Halvenstedt Hbf“ auf dem Klapptisch – einer vor Selbig, einer auf dem Platz gegenüber.", x: 42, y: 52, w: 14, h: 10, shape: table }
+        - { id: schild, label: Türschild, detail: "„Bitte nicht stören“ – in Selbigs Handschrift ist nichts vermerkt, das Schild ist ein Standardschild der Bahn.", x: 4, y: 24, w: 10, h: 12, shape: paper }
+        - { id: vorhang, label: Vorhang, detail: "Der Gangvorhang ist vollständig zugezogen.", x: 14, y: 8, w: 12, h: 60, shape: rect }
+        - { id: zeitung, label: Zeitung, detail: "Halvenstedter Abendblatt, aufgeschlagen beim Wirtschaftsteil.", x: 26, y: 62, w: 14, h: 8, shape: paper }
+    hotspots:
+      - { item: ablage, insight: in_koffer_fehlt, feedback: "Ein Anwalt ohne Aktentasche? Die Tochter wird bestätigen: Er hatte sie immer dabei." }
+      - { item: halterung, insight: in_nothammer_fehlt }
+      - { item: becher, insight: in_zwei_becher, feedback: "Zwei Becher – wer saß ihm gegenüber?" }
+
+  - id: ev_rechtsmedizin
+    title: Vorläufiger Obduktionsbericht
+    summary: Kurzbericht des Instituts für Rechtsmedizin Halvenstedt.
+    source: Rechtsmedizin
+    content:
+      kind: document
+      docType: report
+      heading: Vorläufiger Befund – Selbig, Konrad, Dr.
+      meta:
+        - { label: Aktenzeichen, value: "RM 2311/07" }
+        - { label: Untersucht, value: "07.11., 06:30 Uhr" }
+      lines:
+        - { id: rm1, text: "Todesursache: Schädel-Hirn-Trauma durch einzelnen Schlag gegen die linke Schläfe." }
+        - { id: rm2, text: "Wundform: kreisrund, kegelförmig eingedrückt, Durchmesser ca. 1 cm – Werkzeug mit gehärteter Spitze." }
+        - { id: rm3, text: "Keine Abwehrverletzungen. Der Schlag erfolgte vermutlich von schräg gegenüber." }
+        - { id: rm4, text: "Todeszeitpunkt (Körpertemperatur, Leichenflecken): zwischen 23:35 und 23:55 Uhr." }
+        - { id: rm5, text: "Mageninhalt: Kaffee, ca. 30 Minuten vor dem Tod getrunken." }
+    hotspots:
+      - { item: rm4, insight: in_todeszeit }
+      - { item: rm2, insight: in_waffe_form }
+
+  - id: ev_fahrplan
+    title: Fahrplan RB 47
+    summary: Aushangfahrplan am Bahnhof Halvenstedt.
+    source: Regionalbahn Nordwest
+    content:
+      kind: table
+      heading: RB 47 Halvenstedt – Dornfelde (letzte Fahrt)
+      columns: [Halt, Ankunft, Abfahrt]
+      rows:
+        - { id: fp1, cells: ["Halvenstedt Hbf", "–", "23:17"] }
+        - { id: fp2, cells: ["Brückenau", "23:31", "23:31"] }
+        - { id: fp3, cells: ["Kalten", "23:44", "23:44"] }
+        - { id: fp4, cells: ["Dornfelde", "00:09", "–"] }
+      note: Wagen 1 mit Erste-Klasse-Abteil an der Zugspitze.
+
+  - id: ev_betrieb
+    title: Betriebsprotokoll des Triebfahrzeugführers
+    summary: Auszug aus dem elektronischen Fahrtenbuch.
+    source: Regionalbahn Nordwest
+    content:
+      kind: document
+      docType: log
+      heading: Fahrtenbuch RB 47 – 06.11.
+      lines:
+        - { id: bp1, text: "23:15  Signalstörung Ausfahrt Halvenstedt, Warten auf Freigabe" }
+        - { id: bp3, text: "23:20  Meldung Zub: Übergangstür Wg1/Wg2 klemmt – gesperrt, Werkstatt informiert" }
+        - { id: bp2, text: "23:26  Abfahrt Halvenstedt (+9)" }
+        - { id: bp4, text: "Alle folgenden Halte mit konstant +9 Minuten" }
+        - { id: bp5, text: "00:18  Ankunft Dornfelde, Endkontrolle durch Zub" }
+        - { id: bp6, text: "00:24  Notruf durch Zub, Polizei verständigt" }
+    hotspots:
+      - { item: bp2, insight: in_verspaetung }
+      - { item: bp4, insight: in_verspaetung }
+      - { item: bp3, insight: in_tuer_gesperrt }
+
+  - id: ev_kamera_halvenstedt
+    title: Videoauswertung Bahnhof Halvenstedt
+    summary: Bahnsteig 3 und Vorplatz, 23:00–23:30 Uhr.
+    source: Bundespolizei
+    unlock: { phase: fahrt }
+    content:
+      kind: table
+      heading: Kameraauswertung Halvenstedt Hbf
+      columns: [Zeit, Kamera, Beobachtung]
+      rows:
+        - { id: kh1, cells: ["23:03", "Vorplatz", "Silberner Volvo (HV-MA 220) hält, Selbig steigt aus"] }
+        - { id: kh2, cells: ["23:04", "Vorplatz", "Volvo fährt ab"] }
+        - { id: kh3, cells: ["23:08", "Gleis 3", "Selbig und ein Mann im grauen Mantel warten gemeinsam"] }
+        - { id: kh4, cells: ["23:12", "Gleis 3", "Frau (dunkle Locken) gestikuliert heftig vor Selbig, steigt dann in Wagen 2"] }
+        - { id: kh5, cells: ["23:16", "Gleis 3", "Selbig und Begleiter steigen in Wagen 1"] }
+      note: Kennzeichen HV-MA 220 ist auf Miriam Achterberg zugelassen.
+    hotspots:
+      - { item: kh2, insight: in_achterberg_weg }
+      - { item: kh3, insight: in_kahl_halvenstedt }
+      - { item: kh4, insight: in_duran_streit }
+
+  - id: ev_aussage_grevenbroich
+    title: Zeugenaussage Hannes Grevenbroich
+    summary: Der pensionierte Kommissar saß in Wagen 1, direkt vor dem Abteil.
+    source: Polizei Dornfelde
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugenaussage – Hannes Grevenbroich, 66
+      meta:
+        - { label: Aufgenommen, value: "07.11., 01:10 Uhr" }
+      lines:
+        - { id: g1, text: "Ich saß im Großraum von Wagen 1, zwei Reihen vor dem Erste-Klasse-Abteil, Blick zur Tür." }
+        - { id: g2, text: "In Brückenau ist aus unserem Wagen niemand ausgestiegen. Ich weiß das, ich habe extra hingeschaut – ich bin so." }
+        - { id: g3, text: "Um 23:47 – ich hatte gerade auf meine Uhr gesehen – kam ein dumpfer Schlag aus dem Abteil. Ich dachte, ein Koffer ist heruntergefallen." }
+        - { id: g4, text: "Kurz vor Kalten ging ein Mann im grauen Mantel an mir vorbei zur Tür. Er trug eine braune Aktentasche. Das Gesicht habe ich nicht gesehen." }
+        - { id: g5, text: "Nach Kalten kam der Schaffner von außen in unseren Wagen und hat meine Karte kontrolliert." }
+    hotspots:
+      - { item: g2, insight: in_niemand_ausgestiegen }
+      - { item: g3, insight: in_schlag_2347 }
+      - { item: g4, insight: in_mann_grauer_mantel }
+
+  - id: ev_kamera_brueckenau
+    title: Bahnsteigkamera Brückenau
+    summary: Auswertung des Halts in Brückenau.
+    source: Bundespolizei
+    unlock: { phase: fahrt }
+    content:
+      kind: table
+      heading: Bahnsteigkamera Brückenau – RB 47
+      columns: [Zeit, Wagen, Beobachtung]
+      rows:
+        - { id: kb1, cells: ["23:40:12", "–", "Zug fährt ein"] }
+        - { id: kb2, cells: ["23:40:30", "Wagen 2", "Eine Frau mit Kinderwagen steigt aus"] }
+        - { id: kb3, cells: ["23:40:35", "Wagen 2", "Zugbegleiter steht am Bahnsteig, Türschließdienst"] }
+        - { id: kb4, cells: ["23:40:40", "Wagen 1", "Keine Türöffnung"] }
+        - { id: kb5, cells: ["23:41:05", "–", "Zug fährt ab. Niemand wechselt zwischen den Wagen."] }
+    hotspots:
+      - { item: kb4, insight: in_niemand_ausgestiegen }
+      - { item: kb5, insight: in_kein_wechsel }
+      - { item: kb1, insight: in_brueckenau_2340 }
+
+  - id: ev_kontrollgeraet
+    title: Kontrollgerät Tobias Renner
+    summary: Gespeicherte Fahrkartenprüfungen des Zugbegleiters.
+    source: Regionalbahn Nordwest
+    unlock: { phase: fahrt }
+    content:
+      kind: table
+      heading: Mobiles Terminal Zub 4417 – RB 47
+      columns: [Zeit, Wagen, Vorgang]
+      rows:
+        - { id: kg1, cells: ["23:28", "2", "Prüfung Einzelfahrt (Duran, E.)"] }
+        - { id: kg2, cells: ["23:33", "2", "Prüfung Monatskarte"] }
+        - { id: kg3, cells: ["23:44", "2", "Nachlöseticket Duran, E. (Zone Dornfelde)"] }
+        - { id: kg4, cells: ["23:51", "2", "Prüfung Fahrradkarte"] }
+        - { id: kg5, cells: ["23:55", "1", "Prüfung Seniorenticket (Grevenbroich, H.)"] }
+        - { id: kg6, cells: ["00:18", "1", "Endkontrolle"] }
+      note: Wagen 1 wurde wegen der gesperrten Übergangstür erst nach Kalten betreten.
+    hotspots:
+      - { item: kg3, insight: in_renner_wagen2 }
+      - { item: kg4, insight: in_renner_wagen2 }
+
+  - id: ev_kamera_kalten
+    title: Standbild Bahnsteig Kalten
+    summary: Standbild der Bahnsteigkamera beim Halt in Kalten.
+    source: Bundespolizei
+    unlock: { any: [{ insight: in_mann_grauer_mantel }, { insight: in_tatfenster }] }
+    content:
+      kind: photo
+      scene: platform
+      caption: Kalten, Gleis 1, Kamera 2
+      timestamp: "06.11. 23:53:20"
+      elements:
+        - { id: mann, label: Mann im Mantel, detail: "Ein Mann im knielangen grauen Wollmantel verlässt Wagen 1. In der rechten Hand eine braune Aktentasche.", x: 30, y: 26, w: 10, h: 48, shape: person }
+        - { id: muell, label: Mülleimer, detail: "Ein Abfallbehälter am Bahnsteig. Der Mann bleibt hier laut Video vier Sekunden stehen.", x: 46, y: 54, w: 6, h: 18, shape: box }
+        - { id: zug, label: Wagen 1, detail: "Die vordere Tür von Wagen 1 ist geöffnet.", x: 0, y: 14, w: 26, h: 52, shape: rect }
+        - { id: taxi, label: Taxistand, detail: "Am Ende des Bahnsteigs: Schild „Taxi“. Ein Wagen wartet mit eingeschaltetem Licht.", x: 78, y: 40, w: 18, h: 14, shape: car }
+        - { id: uhr, label: Bahnhofsuhr, detail: "Die Bahnhofsuhr zeigt 23:53.", x: 58, y: 6, w: 8, h: 12, shape: clock }
+    hotspots:
+      - { item: mann, insight: in_kalten_mann }
+      - { item: muell, insight: in_kalten_mann, feedback: "Was hat er dort hineingeworfen?" }
+
+  - id: ev_kiosk
+    title: Kassenbon Bahnhofskiosk
+    summary: Rekonstruiert aus dem Kassensystem des Kiosks Halvenstedt Hbf.
+    source: Kiosk Halvenstedt Hbf
+    unlock: { insight: in_zwei_becher }
+    content:
+      kind: document
+      docType: receipt
+      heading: Kiosk Halvenstedt Hbf – Bon 0612
+      lines:
+        - { id: ki1, text: "06.11.  23:09" }
+        - { id: ki2, text: "2 × Kaffee groß      7,80 EUR" }
+        - { id: ki3, text: "Kartenzahlung  ****4471" }
+        - { id: ki4, text: "Vielen Dank und gute Fahrt!" }
+    hotspots:
+      - { item: ki3, insight: in_kiosk_4471 }
+      - { item: ki2, insight: in_kiosk_4471 }
+
+  - id: ev_spesen
+    title: Spesenabrechnung Oktober – B. Kahl
+    summary: Aus der Buchhaltung der Kanzlei, übergeben von Miriam Achterberg.
+    source: Kanzlei Selbig & Achterberg
+    unlock: { topic: achterberg.kanzlei }
+    content:
+      kind: document
+      docType: form
+      heading: Spesenabrechnung Oktober
+      meta:
+        - { label: Mitarbeiter, value: "Benedikt Kahl, Büroleitung" }
+        - { label: Firmenkreditkarte, value: "Visa ****4471" }
+      lines:
+        - { id: sp1, text: "02.10.  Bahnfahrt Halvenstedt – Kalten, Mandantentermin      14,20" }
+        - { id: sp2, text: "15.10.  Bewirtung Mandant Hofmeister                        86,50" }
+        - { id: sp3, text: "28.10.  Taxi Kalten – Brückenau                             38,00" }
+        - { id: sp4, text: "Alle Belege über Firmenkarte ****4471." }
+      footer: "geprüft: K. Selbig"
+
+  - id: ev_taxi
+    title: Fahrtbeleg Taxizentrale Kalten
+    summary: Von der Taxizentrale nach dem Aufruf der Polizei übermittelt.
+    source: Taxizentrale Kalten
+    unlock: { event: ev_taxizentrale }
+    content:
+      kind: document
+      docType: receipt
+      heading: Funktaxi Kalten – Wagen 7
+      lines:
+        - { id: tx1, text: "Abholung: Bahnhof Kalten, 23:58" }
+        - { id: tx2, text: "Ziel: Lindenstraße 12, Brückenau – an 00:16" }
+        - { id: tx3, text: "Fahrpreis: 38,00 EUR, Kartenzahlung ****4471" }
+        - { id: tx4, text: "Fahrgast: Mann, ca. 35, grauer Mantel, sehr wortkarg" }
+
+  - id: ev_aussage_wilke
+    title: Aussage der Nachbarin
+    summary: Gerda Wilke wohnt gegenüber von Benedikt Kahl in Brückenau.
+    source: Polizei Brückenau
+    unlock: { topic: kahl.alibi }
+    content:
+      kind: document
+      docType: statement
+      heading: Zeugenaussage – Gerda Wilke, 71
+      lines:
+        - { id: w1, text: "Herr Kahl ist ein netter junger Mann, immer höflich." }
+        - { id: w2, text: "Gestern Abend? Ich schlafe schlecht, ich saß am Fenster." }
+        - { id: w3, text: "Um Viertel vor zwölf war bei ihm noch alles dunkel." }
+        - { id: w4, text: "Gegen 00:20 hielt ein Taxi vor seinem Haus, und er stieg aus. Ich weiß die Zeit, das Nachtprogramm hatte gerade angefangen." }
+    hotspots:
+      - { item: w4, insight: in_wilke_0020 }
+      - { item: w3, insight: in_wilke_0020 }
+
+  - id: ev_bankmail
+    title: E-Mail der Hansa Privatbank
+    summary: Ausdruck aus Selbigs Postfach, gefunden im Büro.
+    source: Kanzlei Selbig & Achterberg
+    unlock: { topic: achterberg.abend }
+    content:
+      kind: document
+      docType: email
+      heading: "Rückfrage Treuhandkonto 4401 22"
+      meta:
+        - { label: Von, value: "compliance@hansa-privatbank.example" }
+        - { label: An, value: "k.selbig@selbig-achterberg.example" }
+        - { label: Datum, value: "06.11., 16:12" }
+      lines:
+        - { id: bm1, text: "Sehr geehrter Herr Dr. Selbig," }
+        - { id: bm2, text: "uns sind mehrere Überweisungen von Ihrem Treuhandkonto an die BK Consulting UG aufgefallen, die keinem Mandat zugeordnet sind." }
+        - { id: bm3, text: "Wir bitten um Erläuterung bis Freitag." }
+        - { id: bm4, text: "— Antwort K. Selbig, 17:40: Davon wusste ich nichts. Ich kläre das heute Abend persönlich." }
+    hotspots:
+      - { item: bm2, insight: in_bank_rueckfrage }
+      - { item: bm4, insight: in_bank_rueckfrage }
+
+  - id: ev_kontoauszug
+    title: Umsätze Treuhandkonto
+    summary: Von der Bank angeforderter Auszug der letzten sechs Monate (gefiltert).
+    source: Hansa Privatbank
+    unlock: { insight: in_bank_rueckfrage }
+    content:
+      kind: table
+      heading: Treuhandkonto 4401 22 – Ausgänge Mai–Oktober (Auszug)
+      columns: [Datum, Empfänger, Verwendungszweck, Betrag]
+      rows:
+        - { id: kt1, cells: ["14.05.", "BK Consulting UG", "Gutachten Az 22-118", "7.500,00"] }
+        - { id: kt2, cells: ["02.06.", "Patentamt", "Gebühr Az 22-140", "1.230,00"] }
+        - { id: kt3, cells: ["27.06.", "BK Consulting UG", "Recherche Az 22-131", "12.000,00"] }
+        - { id: kt4, cells: ["19.07.", "BK Consulting UG", "Übersetzung Az 22-102", "9.000,00"] }
+        - { id: kt5, cells: ["30.08.", "Dr. Hofmeister", "Rückzahlung Vorschuss", "4.400,00"] }
+        - { id: kt6, cells: ["11.09.", "BK Consulting UG", "Gutachten Az 22-155", "15.000,00"] }
+        - { id: kt7, cells: ["24.10.", "BK Consulting UG", "Recherche Az 22-160", "5.000,00"] }
+      note: Laut Kanzlei existieren keine Mandate mit den Aktenzeichen 22-118, 22-131, 22-102, 22-155 und 22-160.
+
+  - id: ev_handelsregister
+    title: Handelsregisterauszug
+    summary: Online-Abruf beim Registergericht Halvenstedt.
+    source: Registergericht
+    unlock: { insight: in_bank_rueckfrage }
+    content:
+      kind: document
+      docType: form
+      heading: Handelsregister B – HRB 40218
+      lines:
+        - { id: hr1, text: "Firma: BK Consulting UG (haftungsbeschränkt)" }
+        - { id: hr2, text: "Sitz: Brückenau, Lindenstraße 12" }
+        - { id: hr3, text: "Geschäftsführer: Benedikt Kahl, Brückenau" }
+        - { id: hr4, text: "Eingetragen: 3. Mai" }
+    hotspots:
+      - { item: hr3, insight: in_bk_kahl }
+      - { item: hr2, insight: in_bk_kahl }
+
+  - id: ev_handy
+    title: Selbigs Smartphone
+    summary: Entsperrt mit Hilfe der Tochter. Chatverlauf mit Lara.
+    source: Polizei Dornfelde
+    unlock: { puzzle: p_pin }
+    content:
+      kind: messages
+      app: Messenger
+      owner: Konrad
+      messages:
+        - { id: h1, from: Lara, time: "22:58", text: "Papa, ich hol dich in Dornfelde ab. 00:09?" }
+        - { id: h2, from: Konrad, time: "23:21", text: "Signalstörung. Abfahrt erst 23:26. Ankunft also 00:18." }
+        - { id: h3, from: Lara, time: "23:22", text: "Ok 🙄 ich bin trotzdem früher da." }
+        - { id: h4, from: Konrad, time: "23:35", text: "Kahl sitzt mir gegenüber. Es geht um das Treuhandkonto. Ich kläre das jetzt." }
+        - { id: h5, from: Lara, time: "23:36", text: "Papa?? Was ist los?" }
+        - { id: h6, from: Lara, time: "00:05", text: "Bin da. Gleis 1." }
+    hotspots:
+      - { item: h4, insight: in_nachricht_2335 }
+      - { item: h2, insight: in_verspaetung }
+
+  - id: ev_patentbrief
+    title: Schreiben an Elif Duran
+    summary: Kopie aus der Mandantenakte Duran.
+    source: Kanzlei Selbig & Achterberg
+    unlock: { topic: duran.selbig }
+    content:
+      kind: document
+      docType: letter
+      heading: Ihr Patent DE 10 2021 044 Ventileinheit
+      meta:
+        - { label: Datum, value: "3. März" }
+      lines:
+        - { id: pb1, text: "Sehr geehrte Frau Duran," }
+        - { id: pb2, text: "zu unserem Bedauern müssen wir Ihnen mitteilen, dass die Frist zur Zahlung der Jahresgebühr versäumt wurde." }
+        - { id: pb3, text: "Das Schutzrecht ist damit erloschen. Eine Wiedereinsetzung wurde abgelehnt." }
+        - { id: pb4, text: "Mit freundlichen Grüßen, Dr. K. Selbig" }
+
+  - id: ev_parkticket
+    title: Parkticket Bahnhof Dornfelde
+    summary: Von Lara Selbig vorgelegt.
+    source: Lara Selbig
+    unlock: { topic: lara.abend }
+    content:
+      kind: document
+      docType: receipt
+      heading: P+R Dornfelde Bahnhof
+      lines:
+        - { id: pt1, text: "Einfahrt: 06.11.  23:58" }
+        - { id: pt2, text: "Ausfahrt: 07.11.  02:40" }
+        - { id: pt3, text: "Kennzeichen: DO-LS 24" }
+    hotspots:
+      - { item: pt1, insight: in_lara_dornfelde }
+
+  - id: ev_fund_kalten
+    title: Fund im Mülleimer – Bahnhof Kalten
+    summary: Sichergestellt von der Bundespolizei am Morgen nach der Tat.
+    source: Bundespolizei
+    unlock: { event: ev_bahnpolizei }
+    content:
+      kind: object
+      description: Aus dem Abfallbehälter an Gleis 1 in Kalten wurden zwei Gegenstände sichergestellt.
+      details:
+        - { id: f1, text: "Ein roter Nothammer der Bahn mit Blutanhaftungen an der Spitze." }
+        - { id: f2, text: "Am Kunststoffgriff des Hammers: mehrere graue Wollfasern." }
+        - { id: f3, text: "Eine braune Lederaktentasche mit Monogramm „K.S.“ – leer." }
+        - { id: f4, text: "Keine Fingerabdrücke am Hammer – der Griff wurde abgewischt." }
+    hotspots:
+      - { item: f1, insight: in_tatwaffe }
+      - { item: f3, insight: in_tatwaffe }
+      - { item: f2, insight: in_wollfasern }
+
+connections:
+  - { id: c_waffe, a: in_waffe_form, b: in_nothammer_fehlt, insight: in_waffe_nothammer }
+  - { id: c_kaffee, a: ev_kiosk, b: ev_spesen, insight: in_kahl_kaffee }
+  - { id: c_taxi, a: ev_taxi, b: ev_spesen, insight: in_kahl_taxi }
+  - { id: c_mantel, a: in_kalten_mann, b: kahl, insight: in_mantel_kahl }
+  - { id: c_renner, a: ev_kontrollgeraet, b: renner, insight: in_renner_wagen2 }
+
+interrogations:
+  - character: kahl
+    intro: Benedikt Kahl sitzt aufrecht, den grauen Mantel ordentlich über die Stuhllehne gelegt. Er wirkt bestürzt – und sehr gefasst.
+    topics:
+      - id: alibi
+        question: Wann haben Sie den Zug verlassen?
+        responses:
+          - when: { insight: in_kahl_taxi }
+            mood: verzweifelt
+            stress: 85
+            text: "Ich … also gut. Ich bin bis Kalten gefahren. Ich wollte noch nachdenken. Dann bin ich mit dem Taxi zurück. Aber Konrad lebte noch, als ich ging!"
+          - mood: ruhig
+            stress: 10
+            text: "In Brückenau, ganz normal, um 23:31. Pünktlich auf die Minute. Ich war um Viertel vor zwölf zu Hause – fragen Sie meine Nachbarin, Frau Wilke, die sitzt immer am Fenster."
+      - id: verspaetung
+        question: War der Zug pünktlich?
+        unlock: { insight: in_brueckenau_2340 }
+        responses:
+          - mood: nervoes
+            stress: 60
+            reveals: in_kahl_luegt
+            text: "Pünktlich? Ja … ich glaube schon. Ich habe nicht darauf geachtet. Wieso? … Neun Minuten? Dann habe ich mich eben vertan."
+      - id: selbig
+        question: Worüber haben Sie mit Dr. Selbig gesprochen?
+        responses:
+          - when: { insight: in_nachricht_2335 }
+            mood: wuetend
+            stress: 80
+            text: "Er hat mir das geschrieben? … Ja, er hat mich angeschrien. Wegen eines Missverständnisses mit dem Treuhandkonto. Das hätte sich alles aufgeklärt!"
+          - mood: kooperativ
+            text: "Über den Mandanten Hofmeister, über Termine. Konrad war müde. Ich habe ihm einen Kaffee spendiert, das war alles."
+      - id: kaffee
+        question: Wer hat den Kaffee am Kiosk bezahlt?
+        unlock: { insight: in_kiosk_4471 }
+        responses:
+          - mood: ausweichend
+            stress: 40
+            text: "Ich, mit der Firmenkarte. Das ist doch kein Geheimnis. Ich saß ja bis Brückenau bei ihm."
+      - id: geld
+        question: Was ist die BK Consulting UG?
+        unlock: { insight: in_bk_kahl }
+        responses:
+          - when: { insight: in_veruntreuung }
+            mood: gebrochen
+            stress: 95
+            text: "Ich wollte es zurückzahlen. Alles. Konrad wollte die Polizei rufen, gleich morgen früh. Er hat gesagt, ich sei für ihn gestorben. Und dann … der Hammer hing da einfach. Ich wollte das nicht."
+          - mood: arrogant
+            stress: 70
+            text: "Eine Nebentätigkeit. Völlig legal und genehmigt. Recherchen, Übersetzungen. Die Kanzlei hat davon profitiert."
+      - id: mantel
+        question: Tragen Sie immer diesen grauen Mantel?
+        unlock: { insight: in_mantel_kahl }
+        responses:
+          - mood: nervoes
+            stress: 65
+            text: "Viele Männer tragen graue Mäntel. Das beweist gar nichts."
+
+  - character: duran
+    intro: Elif Duran trommelt mit den Fingern auf den Tisch. Sie macht kein Geheimnis aus ihrer Abneigung.
+    topics:
+      - id: selbig
+        question: Woher kannten Sie Dr. Selbig?
+        responses:
+          - mood: wuetend
+            stress: 40
+            text: "Er war mein Anwalt. Seine Kanzlei hat eine Frist verschlafen, und mein Patent war weg. Sieben Jahre Arbeit! Lesen Sie den Brief, den er mir geschrieben hat."
+      - id: streit
+        question: Sie haben am Bahnsteig mit ihm gestritten.
+        unlock: { insight: in_duran_streit }
+        responses:
+          - mood: wuetend
+            stress: 55
+            text: "Ja! Ich habe ihn angeschrien. Ich habe gesagt, er soll zur Hölle fahren. Aber ich habe ihn nicht dorthin geschickt. Danach bin ich in Wagen 2 gestiegen und habe mich nicht mehr bewegt."
+      - id: fahrt
+        question: Was haben Sie während der Fahrt gemacht?
+        responses:
+          - mood: kooperativ
+            text: "Gesessen und gekocht vor Wut. Ab Brückenau hat der Schaffner ewig bei mir gestanden – ich hatte das falsche Ticket, er musste nachlösen und dann kam noch jemand mit Fahrrad. Bis Kalten war der quasi bei uns im Wagen."
+      - id: tuer
+        question: Hätten Sie in Wagen 1 wechseln können?
+        unlock: { insight: in_tuer_gesperrt }
+        responses:
+          - mood: ruhig
+            text: "Die Tür hat geklemmt, der Schaffner hat ein Schild drangehängt. Ich hätte ja aussteigen und vorne wieder einsteigen müssen. Hab ich nicht."
+
+  - character: renner
+    intro: Tobias Renner hat noch seine Uniform an. Seine Hände zittern leicht.
+    topics:
+      - id: kontrolle
+        question: Wann haben Sie Wagen 1 kontrolliert?
+        responses:
+          - when: { topic: renner.abteil }
+            mood: verzweifelt
+            stress: 50
+            text: "Nach Kalten, 23:55, beim Herrn Grevenbroich. Das Abteil … ich habe nicht reingeschaut. Da hing das Schild. Ich weiß, ich hätte klopfen müssen."
+          - mood: nervoes
+            stress: 30
+            text: "Erst nach Kalten. Die Übergangstür klemmte ja seit 23:20, die hab ich selbst gesperrt. Vorher war ich in Wagen 2 und in Brückenau auf dem Bahnsteig."
+      - id: abteil
+        question: Haben Sie das Abteil vor der Endkontrolle geöffnet?
+        responses:
+          - mood: verzweifelt
+            stress: 55
+            text: "Nein. Bitte nicht stören – manche Fahrgäste schlafen. Wenn ich da reingeschaut hätte … vielleicht hätte er noch gelebt? Nein, oder? Er war doch schon …"
+      - id: brueckenau
+        question: Wer ist in Brückenau ausgestiegen?
+        unlock: { phase: fahrt }
+        responses:
+          - mood: kooperativ
+            text: "Nur eine Frau mit Kinderwagen aus Wagen 2. Aus Wagen 1 niemand, da ging keine Tür auf, das sieht man am Display. Und wir hatten neun Minuten Verspätung, wir waren erst um 23:40 da."
+      - id: schluessel
+        question: Wer hat Schlüssel für die Übergangstür?
+        unlock: { insight: in_tuer_gesperrt }
+        responses:
+          - mood: ruhig
+            text: "Ich. Aber die Tür ging nicht mal mit Schlüssel – das Schloss war verklemmt. Die Werkstatt hat sie heute früh aufgeflext."
+
+  - character: lara
+    intro: Lara Selbig hält einen Pappbecher Tee, den sie nicht trinkt. Ihre Stimme ist sehr ruhig.
+    topics:
+      - id: abend
+        question: Wo waren Sie am Abend?
+        responses:
+          - mood: ruhig
+            text: "In Dornfelde. Ich bin kurz vor Mitternacht zum Bahnhof gefahren, das Parkticket habe ich noch. Ich habe auf Papas Zug gewartet. Er kam an. Er stieg nicht aus."
+      - id: vater
+        question: Wie war Ihr Verhältnis zu Ihrem Vater?
+        responses:
+          - mood: verzweifelt
+            stress: 30
+            text: "Wir haben gestritten. Ich will das Studium abbrechen. Er war enttäuscht. Aber er hat mich trotzdem jeden Donnerstag gefragt, ob ich ihn abhole."
+      - id: tasche
+        question: Hatte Ihr Vater eine Tasche dabei?
+        unlock: { insight: in_koffer_fehlt }
+        responses:
+          - mood: ruhig
+            text: "Immer. Braunes Leder, mit seinen Initialen. Die hat ihm meine Mutter geschenkt. Ohne die Tasche ist er nirgendwo hingegangen."
+      - id: handy
+        question: Kennen Sie die PIN seines Handys?
+        responses:
+          - mood: kooperativ
+            text: "Er hat für alles meinen Geburtstag genommen, Tag und Monat. Ich habe ihm hundertmal gesagt, das ist unsicher. Ich bin am dritten November geboren."
+      - id: kahl
+        question: Kennen Sie Benedikt Kahl?
+        unlock: { insight: in_kahl_halvenstedt }
+        responses:
+          - mood: ruhig
+            text: "Papas Büroleiter. Er war immer da, immer freundlich. Papa sagte, er sei der Einzige, auf den er sich blind verlassen könne."
+
+  - character: achterberg
+    intro: Miriam Achterberg sitzt sehr gerade. Sie hat ihren Anwalt nicht mitgebracht – noch nicht.
+    topics:
+      - id: abend
+        question: Wann haben Sie Dr. Selbig zuletzt gesehen?
+        responses:
+          - when: { insight: in_achterberg_weg }
+            mood: nervoes
+            stress: 40
+            text: "Um 23:03 am Bahnhof, wie gesagt. Wir … haben im Auto gestritten. Über seine Anteile. Er war heute ohnehin außer sich – wegen einer E-Mail der Bank, die liegt noch in seinem Büro."
+          - mood: ruhig
+            text: "Ich habe ihn nach unserem Abendtermin zum Bahnhof gefahren und bin nach Hause. Er war heute sehr angespannt – wegen irgendeiner E-Mail der Bank. Sie liegt noch in seinem Büro, ich gebe Ihnen eine Kopie."
+      - id: kanzlei
+        question: Wie liefen die Geschäfte der Kanzlei?
+        responses:
+          - mood: kooperativ
+            text: "Gut, aber altmodisch. Konrad hat jede Rechnung selbst abgezeichnet. Sie können gern unsere Buchhaltung sehen – hier, die aktuellen Spesenabrechnungen, wenn Sie wollen."
+      - id: anteile
+        question: Sie wollten Selbig aus der Kanzlei drängen?
+        responses:
+          - mood: arrogant
+            stress: 30
+            text: "Ich wollte seine Anteile kaufen, zu einem fairen Preis. Das ist kein Mordmotiv, das ist Unternehmertum. Außerdem: Mit Konrads Tod erbt seine Tochter die Anteile – nicht ich."
+      - id: kahl
+        question: Was halten Sie von Benedikt Kahl?
+        unlock: { insight: in_bank_rueckfrage }
+        responses:
+          - mood: ruhig
+            text: "Fleißig. Zu fleißig vielleicht. Er hatte Vollmacht für das Treuhandkonto – Konrad hat ihm alles anvertraut."
+
+  - character: grevenbroich
+    intro: Grevenbroich reicht den Ermittlern die Hand, als wären sie alte Kollegen.
+    topics:
+      - id: fahrt
+        question: Was ist Ihnen während der Fahrt aufgefallen?
+        responses:
+          - mood: kooperativ
+            text: "Zwei Männer stiegen in Halvenstedt in das Abteil – der Herr Selbig und ein jüngerer. Danach Vorhang zu. In Brückenau stieg niemand aus. Um 23:47 dieser Schlag. Kurz vor Kalten der Mann im grauen Mantel."
+      - id: gesicht
+        question: Würden Sie den Mann wiedererkennen?
+        unlock: { insight: in_mann_grauer_mantel }
+        responses:
+          - when: { insight: in_kalten_mann }
+            mood: ruhig
+            text: "Die Kamera in Kalten haben Sie also. Dann wissen Sie mehr als ich – ich habe nur den Rücken gesehen. Aber derselbe Mantel, dieselbe Tasche. Und er kam aus Richtung Abteil, da gibt es nichts anderes."
+          - mood: ruhig
+            text: "Nur von hinten. Grauer Wollmantel, knielang, braune Aktentasche. Ein Mann, der wusste, wohin er wollte."
+
+puzzles:
+  - id: p_verspaetung
+    title: Wann war der Zug in Brückenau?
+    type: time
+    prompt: Fahrplan und Wirklichkeit stimmen in dieser Nacht nicht überein. Um wie viel Uhr hielt der Zug tatsächlich in Brückenau? (Format HH:MM)
+    evidence: [ev_fahrplan, ev_betrieb]
+    unlock: { insight: in_verspaetung }
+    input: { kind: text, placeholder: "HH:MM" }
+    answer: { accept: ["23:40", "2340", "23.40"] }
+    hints:
+      - Der Fahrplan nennt die geplante Zeit. Das Fahrtenbuch nennt die Verspätung.
+      - "23:31 plus neun Minuten."
+    reveals: [in_brueckenau_2340]
+    success: "23:40 – neun Minuten später als im Fahrplan. Wer behauptet, „pünktlich um 23:31“ ausgestiegen zu sein, war entweder nicht da – oder lügt."
+
+  - id: p_pin
+    title: Die PIN des Opfers
+    type: code
+    prompt: Selbigs Smartphone ist gesperrt – vierstellige PIN. Seine Tochter hat einen Hinweis gegeben.
+    evidence: []
+    unlock: { topic: lara.handy }
+    input: { kind: text, placeholder: "4 Ziffern" }
+    answer: { accept: ["0311"] }
+    hints:
+      - Lara sagt, er habe ihren Geburtstag verwendet – Tag und Monat.
+      - "Dritter November: TT MM."
+    reveals: [in_nachricht_2335]
+    success: Das Handy ist entsperrt. Die letzte Nachricht ist von 23:35 Uhr.
+
+  - id: p_tatfenster
+    title: Das Tatfenster
+    type: logic
+    prompt: Zwischen welchen beiden Halten muss Selbig getötet worden sein?
+    evidence: [ev_rechtsmedizin, ev_aussage_grevenbroich]
+    unlock: { all: [{ insight: in_schlag_2347 }, { insight: in_brueckenau_2340 }] }
+    input:
+      kind: choice
+      options:
+        - { id: t_hb, label: "Zwischen Halvenstedt und Brückenau" }
+        - { id: t_bk, label: "Zwischen Brückenau und Kalten" }
+        - { id: t_kd, label: "Zwischen Kalten und Dornfelde" }
+    answer: { choice: t_bk }
+    hints:
+      - Der Schlag fiel um 23:47. Wann hielt der Zug wirklich in Brückenau – und wann in Kalten?
+      - "Brückenau 23:40, Kalten 23:53."
+    reveals: [in_tatfenster]
+    success: Der Täter war nach Brückenau noch im Zug – und musste ihn spätestens in Kalten verlassen.
+
+  - id: p_summe
+    title: Die Spur des Geldes
+    type: compare
+    prompt: Wie viel Euro sind insgesamt vom Treuhandkonto an die BK Consulting UG geflossen?
+    evidence: [ev_kontoauszug]
+    unlock: { evidence: ev_kontoauszug }
+    input: { kind: text, placeholder: "Betrag in Euro" }
+    answer: { accept: ["48500", "48.500", "48.500 €", "48.500,00", "48500 Euro", "48.500 Euro"] }
+    hints:
+      - Nur die Zeilen mit dem Empfänger „BK Consulting UG“ zählen.
+      - "7.500 + 12.000 + 9.000 + 15.000 + 5.000."
+    reveals: [in_veruntreuung]
+    success: 48.500 Euro für Aufträge, die es nie gab.
+
+events:
+  - id: ev_taxizentrale
+    title: Die Taxizentrale Kalten meldet sich
+    source: Taxizentrale Kalten
+    text: "Nach dem Zeugenaufruf im Radio ruft die Disponentin an: „Wir hatten in der Nacht nur eine einzige Fahrt ab Bahnhof Kalten. Kurz vor Mitternacht. Der Beleg kommt per Mail.“"
+    trigger: { minutes: 25, when: { phase: fahrt } }
+  - id: ev_bahnpolizei
+    title: Die Bundespolizei durchsucht Kalten
+    source: Bundespolizei
+    text: Nach Auswertung des Kameravideos durchsuchen Beamte den Bahnsteig in Kalten. Im Mülleimer, an dem der Mann stehen geblieben war, werden sie fündig.
+    trigger: { when: { insight: in_kalten_mann } }
+  - id: ev_hinweis_bruecke
+    title: Eine anonyme Nachricht
+    source: Hinweisportal
+    text: "„Ihr fragt die Falschen. Fragt lieber, wer in Brückenau wirklich ausgestiegen ist. Der Zug war doch zu spät.“"
+    trigger: { when: { wrongAccusations: 1 } }
+    reveals: [in_verspaetung, in_niemand_ausgestiegen]
+
+accusation:
+  question: Wer hat Dr. Konrad Selbig getötet?
+  proof:
+    question: Welcher Beweis widerlegt das Alibi des Täters am deutlichsten?
+    options:
+      - { id: pr_karte, label: "Die Firmenkarte ****4471: Kaffee in Halvenstedt und Taxi ab Kalten", correct: true }
+      - { id: pr_brief, label: "Der Brief über das verfallene Patent" }
+      - { id: pr_schild, label: "Das Schild „Bitte nicht stören“" }
+      - { id: pr_parkticket, label: "Das Parkticket aus Dornfelde" }
+
+gmNotes:
+  - { phase: tatort, text: "Wichtig: Zwei Kaffeebecher (→ Kioskbon) und die fehlende Aktentasche. Die Rechtsmedizin liefert Todeszeit und Wundform." }
+  - { phase: fahrt, text: "Kern des Falls: Der Zug war neun Minuten zu spät. Kahls Alibi „23:31 pünktlich“ ist damit eine Lüge. Grevenbroich + Kamera Brückenau: niemand stieg aus Wagen 1." }
+  - { phase: geld, text: "Achterberg gibt Spesenabrechnung (Karte ****4471) und den Hinweis auf die Bankmail. Kontoauszug + Handelsregister → Veruntreuung." }
+  - { text: "Falsche Fährten: Duran (Streit, Motiv – aber Wagen 2, Tür gesperrt), Renner (Schlüssel – aber in Wagen 2), Lara (Erbin – aber in Dornfelde), Achterberg (Anteile – aber nie im Zug)." }
+
+solution:
+  culprit: kahl
+  headline: Benedikt Kahl – der loyale Büroleiter erschlug seinen Chef, um eine Veruntreuung zu vertuschen.
+  motive: Kahl hatte über seine Scheinfirma BK Consulting 48.500 € vom Treuhandkonto abgezweigt. Selbig erfuhr es am Nachmittag von der Bank und stellte ihn im Zug zur Rede – er wollte am nächsten Morgen Anzeige erstatten.
+  method: Kahl begleitete Selbig zum Zug, spendierte ihm einen Kaffee und setzte sich ihm im Abteil gegenüber. Nach dem Streit griff er um 23:47 zum Nothammer an der Wand und schlug zu. Er zog den Vorhang zu, hängte das „Bitte nicht stören“-Schild auf, nahm die Aktentasche mit den Bankunterlagen und stieg in Kalten aus. Hammer und leere Tasche warf er in den Mülleimer, dann fuhr er mit dem Taxi nach Brückenau. Sein Alibi – „pünktlich um 23:31 in Brückenau ausgestiegen“ – hatte er sich vorher zurechtgelegt. Er wusste nicht, dass der Zug an diesem Abend neun Minuten Verspätung hatte.
+  summary: Kahl gab vor, um 23:31 in Brückenau ausgestiegen zu sein – doch der Zug war erst um 23:40 dort, und aus Wagen 1 stieg niemand aus. Selbigs letzte Nachricht nennt Kahl als Gegenüber. Kahls Firmenkarte bezahlte die beiden Kaffees und das Taxi ab Kalten, die Nachbarin sah ihn um 00:20 heimkommen. Die Wollfasern am Nothammer und 48.500 veruntreute Euro schließen den Fall.
+  keyInsights: [in_kahl_luegt, in_niemand_ausgestiegen, in_nachricht_2335, in_kahl_taxi, in_veruntreuung, in_tatwaffe]
+  chain:
+    - { insight: in_verspaetung, explanation: "Der Zug fuhr neun Minuten zu spät ab – alle Halte verschoben sich." }
+    - { insight: in_kahl_luegt, explanation: "Kahl behauptete, „pünktlich um 23:31“ ausgestiegen zu sein. Er kannte die Verspätung nicht, weil er in Brückenau gar nicht ausstieg." }
+    - { insight: in_niemand_ausgestiegen, explanation: "Kamera und Zeuge: In Brückenau öffnete sich keine Tür von Wagen 1." }
+    - { insight: in_nachricht_2335, explanation: "Um 23:35 schrieb Selbig: „Kahl sitzt mir gegenüber.“" }
+    - { insight: in_kalten_mann, explanation: "In Kalten stieg ein Mann im grauen Mantel mit Selbigs Aktentasche aus." }
+    - { insight: in_kahl_taxi, explanation: "Das Taxi ab Kalten wurde mit Kahls Firmenkarte bezahlt." }
+    - { insight: in_tatwaffe, explanation: "Hammer und leere Tasche lagen genau dort, wo der Mann stehen blieb." }
+    - { insight: in_veruntreuung, explanation: "48.500 € vom Treuhandkonto an Kahls Firma – das Motiv." }
+  truthTimeline:
+    - { time: "16:12", text: "Die Bank fragt Selbig nach Überweisungen an die BK Consulting." }
+    - { time: "23:03", text: "Achterberg setzt Selbig am Bahnhof ab." }
+    - { time: "23:09", text: "Kahl kauft zwei Kaffee mit seiner Firmenkarte und wartet mit Selbig." }
+    - { time: "23:26", text: "Abfahrt mit neun Minuten Verspätung. Kahl sitzt Selbig im Abteil gegenüber." }
+    - { time: "23:35", text: "Selbig schreibt seiner Tochter: „Kahl sitzt mir gegenüber.“" }
+    - { time: "23:40", text: "Halt in Brückenau. Kahl steigt nicht aus." }
+    - { time: "23:47", text: "Kahl erschlägt Selbig mit dem Nothammer." }
+    - { time: "23:53", text: "Kahl verlässt in Kalten den Zug und entsorgt Hammer und Tasche." }
+    - { time: "23:58", text: "Taxi von Kalten nach Brückenau, bezahlt mit Karte ****4471." }
+    - { time: "00:18", text: "Renner findet die Leiche bei der Endkontrolle." }
+  redHerrings:
+    - { character: duran, clue: "Lautstarker Streit am Bahnsteig, starkes Motiv", debunkedBy: in_kein_wechsel, explanation: "Sie saß in Wagen 2. Die Übergangstür war gesperrt, in Brückenau wechselte niemand den Wagen." }
+    - { character: renner, clue: "Generalschlüssel und Leichenfund", debunkedBy: in_renner_wagen2, explanation: "Er war bis Kalten nachweislich in Wagen 2 – sein einziges Vergehen war, das Abteil nicht zu öffnen." }
+    - { character: lara, clue: "Die Erbin wartete allein am Bahnhof", debunkedBy: in_lara_dornfelde, explanation: "Ihr Parkticket in Dornfelde belegt, dass sie nicht im Zug war." }
+    - { character: achterberg, clue: "Die Partnerin, die ihn loswerden wollte", debunkedBy: in_achterberg_weg, explanation: "Sie fuhr um 23:04 vom Bahnhof weg und stieg nie in den Zug." }
+  epilogue: Kahl legte noch in derselben Nacht ein Geständnis ab. Die Bankunterlagen fand die Polizei in seinem Kaminofen – halb verbrannt, aber lesbar. Lara Selbig verkaufte die Kanzleianteile an Miriam Achterberg und spendete den Erlös einer Stiftung für junge Erfinderinnen. Die erste Spende ging an Elif Duran.
