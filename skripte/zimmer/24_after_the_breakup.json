@@ -1,0 +1,17 @@
+{
+  "title": "After the Breakup",
+  "caption": "Same heartbreak. Two different years. Wait for the end... 💔➡️💪 #breakup #glowup #mindset #selfimprovement #motivation #gym #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME HEARTBREAK",
+  "punch1": "The best revenge",
+  "punch2": "is becoming better.",
+  "stages": [
+    {"header": "DAY", "label": 1, "intro": true, "checks": 14, "glow": 0, "fat_r": 0.4, "sky": "MAR"},
+    {"header": "WEEK", "label": 2, "checks": 160, "glow": 8, "fat_r": 0.36, "sky": "MAR", "zoom": ["L", 0.6, 3.2]},
+    {"header": "MONTH", "label": 1, "checks": 340, "glow": 18, "fat_r": 0.3, "sky": "MAY", "zoom": ["R", 0.6, 3.4]},
+    {"header": "MONTH", "label": 3, "checks": 610, "glow": 35, "fat_r": 0.22, "sky": "JUL", "zoom": ["L", 5.4, 8.0]},
+    {"header": "MONTH", "label": 6, "checks": 880, "glow": 58, "fat_r": 0.14, "sky": "SEP", "zoom": ["R", 5.4, 7.6]},
+    {"header": "MONTH", "label": 9, "checks": 1150, "glow": 80, "fat_r": 0.07, "sky": "NOV"},
+    {"header": "YEAR", "label": 1, "checks": 1460, "glow": 100, "fat_r": 0.0, "sky": "DEC", "dur": 11.0, "zoom": ["R", 4.0, 7.4]}
+  ]
+}

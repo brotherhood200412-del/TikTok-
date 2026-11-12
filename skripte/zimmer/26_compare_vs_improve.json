@@ -1,0 +1,17 @@
+{
+  "title": "Compare vs. Improve",
+  "caption": "One compared himself to everyone online. One compared himself to who he was yesterday. 1% better every day = 37x in a year 📈 #mindset #comparison #selfimprovement #motivation #1percentbetter #discipline #fyp",
+  "watermark": "@informat1onen",
+  "subtitle": "SAME LIFE · DIFFERENT FOCUS",
+  "punch1": "Compare yourself to",
+  "punch2": "who you were yesterday.",
+  "stages": [
+    {"header": "DAY", "label": 1, "happy": 70, "x": 1.01, "sky": "JAN"},
+    {"header": "WEEK", "label": 2, "happy": 58, "x": 1.15, "sky": "MAR", "zoom": ["L", 0.9, 4.8]},
+    {"header": "MONTH", "label": 1, "happy": 47, "x": 1.35, "sky": "MAY", "zoom": ["R", 5.4, 7.8]},
+    {"header": "MONTH", "label": 3, "happy": 36, "x": 2.45, "sky": "JUL"},
+    {"header": "MONTH", "label": 6, "happy": 27, "x": 6.0, "sky": "SEP", "zoom": ["L", 0.9, 4.8]},
+    {"header": "MONTH", "label": 9, "happy": 18, "x": 14.68, "sky": "NOV", "zoom": ["R", 5.4, 7.8]},
+    {"header": "YEAR", "label": 1, "happy": 12, "x": 37.78, "sky": "DEC", "dur": 11.0}
+  ]
+}

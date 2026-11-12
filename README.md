@@ -39,6 +39,9 @@ Oben läuft ein Abreißkalender durchs Jahr, unten zählt „SAVED“ mit. Texte
 | `videos/21_talk_vs_do.mp4` | 🧠 Talk vs. Do: Links redet er über sein Business (LIKES ON PLANS 640), rechts baut er es still (CUSTOMERS 10,000). Schluss: „Stop announcing. Start doing.“ (65 s) |
 | `videos/22_your_5_friends.mp4` | 🧠 Your 5 Friends: Gleiche Ideen, andere Freunde. Links lachen sie ihn aus („DREAM CANCELLED“), rechts pushen sie ihn (GOALS REACHED 7). Schluss: „You become who you sit with.“ (65 s) |
 | `videos/23_comfort_zone.mp4` | 🧠 Comfort Zone: Ein leuchtender Kreis auf dem Boden. Links „Maybe later...“, und der Kreis schrumpft. Rechts stellt er sich der Angst, und der Kreis wächst (FEARS FACED 7). Schluss: „Growth begins where comfort ends.“ (65 s) |
+| `videos/24_after_the_breakup.mp4` | 🧠 After the Breakup: Links checkt er ihr Profil (PROFILE CHECKS 1,460) und schreibt um 3 Uhr „u up?“. Rechts arbeitet er an seinem Glow-up (100%). Twist: Sie schreibt ihm. Schluss: „The best revenge is becoming better.“ (65 s) |
+| `videos/25_overthinking.mp4` | 🧠 Overthinking vs. Doing: Links füllen Gedankenblasen das Zimmer („STUCK“, 1,460 h). Rechts geht es von STARTED über FAILED bis 100 CUSTOMERS. Schluss: „You can't think your way into a new life.“ (65 s) |
+| `videos/26_compare_vs_improve.mp4` | 🧠 Compare vs. Improve: Links Instagram-Vergleiche (HAPPINESS 12%), rechts +1% am Tag (x37.78). Schluss: „Compare yourself to who you were yesterday.“ (65 s) |
 
 ```bash
 python3 generator/zimmer_video.py skripte/zimmer/07_one_year_salary.json
@@ -58,6 +61,9 @@ python3 generator/birth_video.py skripte/zimmer/20_one_dollar_from_birth.json
 python3 generator/talk_video.py skripte/zimmer/21_talk_vs_do.json
 python3 generator/friends_video.py skripte/zimmer/22_your_5_friends.json
 python3 generator/comfort_video.py skripte/zimmer/23_comfort_zone.json
+python3 generator/breakup_video.py skripte/zimmer/24_after_the_breakup.json
+python3 generator/overthink_video.py skripte/zimmer/25_overthinking.json
+python3 generator/compare_video.py skripte/zimmer/26_compare_vs_improve.json
 ```
 Wasserzeichen: In der JSON-Datei bei `"watermark"` deinen TikTok-Namen eintragen (z. B. `"@deinname"`).
 
